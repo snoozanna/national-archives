@@ -158,6 +158,22 @@ img.logomott {
   text-transform: uppercase;
 }
 
+.button-wrapper.orange > button {
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border: none;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.hint-button > button {
+  background-color: var(--orange);
+  border: white 1px solid;
+  border-radius: 4px;
+  color: white;
+}
+
 /* TRANSPASS */
 @-webkit-keyframes rotateIn {
   0% {
@@ -210,6 +226,10 @@ img.logomott {
 
 img.logoRot {
   border-radius: 100%;
+}
+
+.safeguard.center {
+  text-align: center;
 }
 
 /* VIDEO PAGES  */
@@ -430,6 +450,8 @@ a.grid-item > .menu-item > img.option {
   margin-left: 3rem;
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .content-item.sidebar > .title-wrapper {
@@ -479,7 +501,7 @@ a.grid-item > .menu-item > img.option {
 }
 
 .scrambled > span {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   text-decoration: underline;
 }
@@ -515,6 +537,10 @@ input.macro-textbox {
 }
 
 h3.orange {
+  color: var(--orange);
+}
+
+h3.subtitle > span.orange {
   color: var(--orange);
 }
 
@@ -858,6 +884,24 @@ footer.mission {
   margin-inline-end: 2rem;
 }
 
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
 /* CIPHER */
 
 .wrapper.mission.joseph.napolean {
@@ -903,6 +947,7 @@ footer.mission {
   font-size: 2rem;
   gap: 1rem;
   margin-block-end: 2rem;
+  margin-inline-end: 2rem;
 }
 
 .CodeGrid-item {
@@ -945,4 +990,16 @@ passage-thirtyeight > div#main {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.cipher-check > button {
+  color: white;
+  border: 1px solid;
+}
+
+.check-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
