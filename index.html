@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="MOTT Chapter 2" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
+	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="MOTT Chapter 2" startnode="38" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
 
 @import url("generics.css");
 @import url("styles.css");s
@@ -670,7 +670,7 @@ LEVEL 5 ALARM&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Thirteen" tags="nobr" position="925,950" size="100,100">&lt;&lt;set $seconds to 10&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
-&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
+&lt;&lt;include &quot;headermenugrid&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 	
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -678,77 +678,80 @@ LEVEL 5 ALARM&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;
 	&lt;div class=&quot;content-wrapper&quot;&gt;
 		&lt;&lt;include &quot;sidebarfog&quot;&gt;&gt;
 		&lt;div class=&quot;content-item content text&quot;&gt;
-					&lt;span id=&quot;countdown&quot; class=&quot;countdown&quot;&gt;$seconds&lt;/span&gt;
-			
-				&lt;div id=&quot;gameContent&quot; class=&quot;game-content&quot;&gt;
-					
-					&lt;h3 class=&quot;subtitle&quot;&gt; &lt;span id=&quot;image-text&quot;&gt;How many women are in the picture?&lt;&lt;set $seconds to 10&gt;&gt;
+			&lt;div id=&quot;gameContent&quot; class=&quot;game-content&quot;&gt;
+				&lt;h3 class=&quot;subtitle&quot;&gt; &lt;span id=&quot;image-text&quot;&gt;How many women are in the picture?&lt;&lt;set $seconds to 10&gt;&gt;
 							&lt;&lt;silently&gt;&gt;
 								&lt;&lt;repeat 1s&gt;&gt;
 									&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 								
 									&lt;&lt;if $seconds gt 0&gt;&gt;
-											&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+											&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 											&lt;&lt;else&gt;&gt;&lt;&lt;stop&gt;&gt;
 									&lt;&lt;/if&gt;&gt;
 								&lt;&lt;/repeat&gt;&gt;
 							&lt;&lt;/silently&gt;&gt;
 					&lt;/span&gt;&lt;/h3&gt;
-					
-					&lt;div id=&quot;image&quot; class=&quot;fog-img-wrapper&quot;&gt;&lt;img src=&quot;./assets/img/women.jpeg&quot; id=&quot;img1&quot; alt=&quot;five women&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
-					
-				&lt;/div&gt;
+				&lt;div class=&quot;fog-content-wrapper&quot;&gt;	
+					&lt;div id=&quot;image&quot; class=&quot;fog-img-wrapper&quot;&gt;
+						&lt;img src=&quot;./assets/img/women.jpeg&quot; id=&quot;img1&quot; alt=&quot;five women&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;timer &quot;&gt;
+						&lt;span id=&quot;countdown&quot; class=&quot;countdown&quot;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;/span&gt;
+						&lt;img src=&quot;./assets/img/timer.png&quot; id=&quot;timer&quot; alt=&quot;an hourglass timer&quot; class=&quot;logoRot&quot;&gt;
+					&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;/div&gt;
 	
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;&lt;silently&gt;&gt;
 	&lt;&lt;timed 10s&gt;&gt;
-		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-		&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/parrots.jpeg&quot; id=&quot;img2&quot; alt=&quot;woman holding two parrots&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;X&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/parrots.jpeg&quot; id=&quot;img2&quot; alt=&quot;woman holding two parrots&quot; class=&quot;smaller&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;How many parrots?
 			&lt;&lt;set $seconds to 10&gt;&gt;
 				&lt;&lt;silently&gt;&gt;
-					&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+					&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 					&lt;&lt;repeat 1s&gt;&gt;
 							&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 							&lt;&lt;if $seconds gt 0&gt;&gt;
-						&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
-										&lt;&lt;else&gt;&gt;&lt;&lt;stop&gt;&gt;
+						&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
+							&lt;&lt;else&gt;&gt;&lt;&lt;stop&gt;&gt;
 							&lt;&lt;/if&gt;&gt;
 					&lt;&lt;/repeat&gt;&gt;
 				&lt;&lt;/silently&gt;&gt;
 		&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/timed&gt;&gt;	
-		
-	&lt;&lt;timed 20s&gt;&gt;
+
+	&lt;&lt;timed 21s&gt;&gt;
 		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;X&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/chewinggum.jpeg&quot; id=&quot;img3&quot; alt=&quot;Packet of chewing gum for two a penny&quot;&gt;
 		&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/9. Challenge 2 - pic 3.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
-		&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;How many Chewing Gums did you get for a penny?
+		&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;How much did the chewing gum cost?
 			&lt;&lt;set $seconds to 10&gt;&gt;
 			&lt;&lt;silently&gt;&gt;
-				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 				&lt;&lt;repeat 1s&gt;&gt;
 					&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 					&lt;&lt;if $seconds gt 0&gt;&gt;
-						&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+						&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 						&lt;&lt;else&gt;&gt;&lt;&lt;stop&gt;&gt;
 					&lt;&lt;/if&gt;&gt;
-			&lt;&lt;/repeat&gt;&gt;
+				&lt;&lt;/repeat&gt;&gt;
 			&lt;&lt;/silently&gt;&gt;
 		&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/timed&gt;&gt;
 	
-	&lt;&lt;timed 30s&gt;&gt;
+	&lt;&lt;timed 31s&gt;&gt;
 	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;X&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/numberplate.jpeg&quot; id=&quot;img4&quot; alt=&quot;Car with the license plate YYX328T&quot;&gt;
+	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/numberplate.jpeg&quot; id=&quot;img4&quot; alt=&quot;Car with the license plate YYX328T&quot; class=&quot;smaller&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/10. Challenge 2 - pic 4 EDIT.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;What are the numbers on the licence plate?&lt;&lt;set $seconds to 10&gt;&gt;&lt;&lt;silently&gt;&gt;
-	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;What are the numbers on the number plate?&lt;&lt;set $seconds to 10&gt;&gt;&lt;&lt;silently&gt;&gt;
+	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;repeat 1s&gt;&gt;
 			&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 			&lt;&lt;if $seconds gt 0&gt;&gt;
-		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 						&lt;&lt;else&gt;&gt;&lt;&lt;stop&gt;&gt;
 			&lt;&lt;/if&gt;&gt;
 		&lt;&lt;/repeat&gt;&gt;
@@ -757,16 +760,16 @@ LEVEL 5 ALARM&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/timed&gt;&gt;
 	
-	&lt;&lt;timed 40s&gt;&gt;
+	&lt;&lt;timed 41s&gt;&gt;
 	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;X&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/moonlanding.jpeg&quot; id=&quot;img5&quot; alt=&quot;The telephone number on this telegram I 1622&quot;&gt;
+	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/moonlanding.jpeg&quot; id=&quot;img5&quot; alt=&quot;The telephone number on this telegram I 1622&quot; class=&quot;smaller&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/11. Challenge 2 - pic 5.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;What&#39;s the Telephone Number of this restricted Moon Landing call?&lt;&lt;set $seconds to 10&gt;&gt;
 		&lt;&lt;silently&gt;&gt;
 		&lt;&lt;repeat 1s&gt;&gt;
 			&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 			&lt;&lt;if $seconds gt 0&gt;&gt;
-				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 				&lt;&lt;else&gt;&gt;&lt;&lt;stop&gt;&gt;
 			&lt;&lt;/if&gt;&gt;
 		&lt;&lt;/repeat&gt;&gt;
@@ -775,9 +778,9 @@ LEVEL 5 ALARM&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/timed&gt;&gt;
 	
-	&lt;&lt;timed 50s&gt;&gt;
+	&lt;&lt;timed 51s&gt;&gt;
 	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;replace &quot;#gameContent&quot;&gt;&gt;Did you get that?
+	&lt;&lt;replace &quot;#gameContent&quot;&gt;&gt;&lt;p&gt;Did you get that?&lt;/p&gt;
 	
 	&lt;br&gt;&lt;br&gt; [[No - REPLAY|Thirteen]]
 	&lt;br&gt;Yes - Enter Codeword
@@ -944,14 +947,15 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;&lt;include &quot;sidebarfire&quot;&gt;&gt;
 		&lt;div class=&quot;content-item content text&quot;&gt;
 				
-					&lt;&lt;timed 40ms t8n&gt;&gt;&lt;div id=&quot;flour&quot;&gt;Flour&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+					/* &lt;&lt;timed 40ms t8n&gt;&gt;&lt;div id=&quot;flour&quot;&gt;Flour&lt;/div&gt;&lt;&lt;/timed&gt;&gt; */
+					&lt;&lt;timed 40ms t8n&gt;&gt;&lt;span class=&quot;flour-wrapper intext&quot; &gt;&lt;img src=&quot;./assets/img/flour.png&quot; alt=&quot;spells flour backwards&quot; class=&quot;&quot;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 					&lt;p id=&quot;text&quot;&gt;Type it in below to discover what we found out.&lt;/p&gt;
 	
 	&lt;p id=&quot;hint&quot;&gt;If you need a hint, you can click 
 	
-	&lt;&lt;if $audioOn is true&gt;&gt;&lt;span onclick=&quot;document.getElementById(&#39;player&#39;).pause()&quot; role=&quot;button&quot; aria-label=&quot;Hint Button&quot; class=&quot;hint-button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/13. Challenge 3 - 4.mp3&quot; autoplay&gt;&lt;/audio&gt;You&#39;ll discover the truth through its reflection (a mirror or a selfie may help)&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;
+	&lt;&lt;if $audioOn is true&gt;&gt;&lt;span onclick=&quot;document.getElementById(&#39;player&#39;).pause()&quot; role=&quot;button&quot; aria-label=&quot;Hint Button&quot; class=&quot;hint-button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/13. Challenge 3 - 4.mp3&quot; autoplay&gt;&lt;/audio&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection&lt;/em&gt;&lt;/p&gt; &lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;
 	
-	&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Hint Button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;You&#39;ll discover the truth through its reflection (a mirror or a selfie may help)&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/if&gt;&gt;
+	&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Hint Button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection &lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/if&gt;&gt;
 	
 	&lt;/p&gt;
 	
@@ -1174,6 +1178,14 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;div class=&quot;content-wrapper&quot;&gt;
 		&lt;&lt;include &quot;sidebartime&quot;&gt;&gt;
 		&lt;div class=&quot;content-item content text&quot;&gt;
+				&lt;p&gt;To register you&#39;ll need to send the word &lt;strong&gt;IGNITE&lt;/strong&gt; to &lt;strong&gt;&lt;a href=&quot;tel:0748-078-6415&quot;&gt;0748-078-6415&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You&#39;ll recieve the codeword to move on through the Signal Fire System.&lt;/p&gt;
+
+
+&lt;span role=&quot;input&quot; aria-label=&quot;Password Input&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+
+&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 				
 				&lt;br&gt;&lt;div id=&quot;code&quot;&gt;
 &lt;div id=&quot;CoC&quot;&gt;
@@ -1201,7 +1213,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;span class=&quot;CoCTitle&quot;&gt;&lt;h2&gt;Time&lt;/h2&gt; Time is Tricky. Don&#39;t worry if not everything makes sense, we recieve messages from a faraway future through a time machine, not everything makes sense.&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-		&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentySevenTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+		/* &lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[&quot;I&#39;ve read it&quot;|TwentySevenTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; */
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -1322,8 +1334,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;div class=&quot;content-item content text &quot;&gt;
 				&lt;div class=&quot;title-wrapper mission&quot;&gt;
 					
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-					&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
+		
+	
+					
 				&lt;/div&gt;
 			&lt;p&gt;In this challenge you will use the real Signal Fire System-&lt;/p&gt;
  &lt;p&gt;I told you you&#39;d need to use it sooner rather than later!&lt;/p&gt;
@@ -1356,7 +1369,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
 				&lt;div class=&quot;title-wrapper mission&quot;&gt;
 			
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
+					&lt;p&gt;&lt;/p&gt;
 							&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
 				&lt;/div&gt;
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
@@ -1382,7 +1395,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;&lt;include &quot;oldman&quot;&gt;&gt;
+&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
@@ -1414,14 +1427,14 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
 				&lt;div class=&quot;title-wrapper mission&quot;&gt;
 			
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
+					&lt;p&gt;&lt;/p&gt;
 							&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
 				&lt;/div&gt;
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;&lt;include &quot;oldman&quot;&gt;&gt;
+&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
@@ -1457,11 +1470,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+				
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;
 				&lt;p&gt;Let’s see what The National Archives have for us...&lt;/p&gt;
@@ -1481,7 +1490,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;&lt;include &quot;oldman&quot;&gt;&gt;
+&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
@@ -1511,11 +1520,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+			
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;
 				&lt;p&gt;Trumpet sounds – TADAH!&lt;/p&gt;
@@ -1546,11 +1551,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+				
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;p&gt;I don’t think that would be too much of a bad thing...&lt;/p&gt;
 &lt;p&gt;but I see now what TADAH have done...&lt;/p&gt;
@@ -1581,11 +1582,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+				
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;
 					&lt;&lt;timed 0.1s&gt;&gt;
@@ -1593,8 +1590,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 	&lt;p&gt;a letter from Joseph Bonaparte &lt;/p&gt;
 	&lt;p&gt;to his brother Napoleon Bonaparte.&lt;/p&gt; 
-	/* &lt;&lt;addclass &quot;#wrapper&quot; &quot;joseph&quot;&gt;&gt;
-	&lt;img src=&quot;./assets/img/napolean.png&quot; alt=&quot;Napoleon Bonaparte &quot; class=&quot;disappear&quot;&gt; */
+
 	 &lt;p&gt;I’m going to need you to break the rest of the letter. &lt;/p&gt;
 	&lt;p&gt;If you can do that, then we can work out where the French are going to be &lt;/p&gt;
 	&lt;p&gt;and then hopefully the British can get the Great Paris Cipher.&lt;/p&gt;
@@ -1610,7 +1606,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;&lt;include &quot;joseph&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="ThirtyEight" tags="nobr mission cypher" position="1825,1925" size="100,100">&lt;&lt;set $title to &quot;Cy&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="ThirtyEight" tags="nobr mission cypher" position="1825,1925" size="100,100">/* CYPHER  */
+&lt;&lt;set $title to &quot;Cy&quot;&gt;&gt;
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1623,12 +1620,12 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;div role=&quot;text&quot; aria-label=&quot;The letter to Napoleon Bonaparte&quot; class=&quot;napoleon-letter&quot;&gt;
 	From Joseph Bonaparte to Emperor Napoléon Bonaparte,
 	&lt;br&gt;
-	Brother, I hope the Army of the South will not delay in gathering in &lt;span id=&quot;CODE1&quot;  role=&quot;text&quot; aria-label=&quot;The first code&quot;&gt;13.21.18.3.9.1^^1^^&lt;/span&gt;.
+	Brother, I hope the Army of the South will not delay in gathering in &lt;span id=&quot;CODE1&quot;  role=&quot;text&quot; aria-label=&quot;1st code word  13.21.18.3.9.1&quot;&gt;13.21.18.3.9.1^^1^^&lt;/span&gt;.
 
-	&lt;br&gt;We will have 100,000 troops along the lines of the &lt;span id=&quot;CODE2&quot; role=&quot;text&quot; aria-label=&quot;The second and third code words&quot; &gt;4.21.5.18.15&amp;nbsp;^^2^^and&amp;nbsp;20.1.7.21.19^^3^^&lt;/span&gt; Rivers.
+	&lt;br&gt;We will have 100,000 troops along the lines of the &lt;span id=&quot;CODE2&quot; role=&quot;text&quot; aria-label=&quot;2nd code word 4.21.5.18.15 and 3rd code word 20.1.7.21.19&quot; &gt;4.21.5.18.15&amp;nbsp;^^2^^and&amp;nbsp;20.1.7.21.19^^3^^&lt;/span&gt; Rivers.
 
 
-	&lt;br&gt;Our troops will not be in &lt;span id=&quot;CODE3&quot; role=&quot;text&quot; aria-label=&quot;the fourth code word&quot;&gt;3.15.18.21.14.14.1^^4^^&lt;/span&gt;. 
+	&lt;br&gt;Our troops will not be in &lt;span id=&quot;CODE3&quot; role=&quot;text&quot; aria-label=&quot;4th code word 3.15.18.21.14.14.1&quot;&gt;3.15.18.21.14.14.1^^4^^&lt;/span&gt;. 
 &lt;/div&gt;
 
 &lt;div class=&quot;grid-answer-wrapper&quot;&gt;
@@ -1664,10 +1661,10 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	
 	/* Inpout boxes */
 	&lt;div id=&quot;Answers&quot; class=&quot;solutions-wrapper&quot; role=&quot;text&quot; aria-label=&quot;Four input boxes for the passwords&quot;&gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^1^^&lt;&lt;textbox &quot;$password1&quot;  &quot;_ _ _ _ _ _&quot;&gt;&gt; &lt;/div&gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^2^^&lt;&lt;textbox &quot;$password2&quot; &quot;_ _ _ _ _&quot;&gt;&gt; &lt;/div&gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^3^^&lt;&lt;textbox &quot;$password22&quot; &quot;_ _ _ _ _&quot;&gt;&gt;&lt;/div &gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^4^^&lt;&lt;textbox &quot;$password3&quot; &quot;_ _ _ _ _ _ _&quot;&gt;&gt;&lt;/div&gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;^^1^^&lt;&lt;textbox &quot;$password1&quot;  &quot;&quot;&gt;&gt; &lt;/div&gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;^^2^^&lt;&lt;textbox &quot;$password2&quot; &quot;&quot;&gt;&gt; &lt;/div&gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;^^3^^&lt;&lt;textbox &quot;$password22&quot; &quot;&quot;&gt;&gt;&lt;/div &gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;^^4^^&lt;&lt;textbox &quot;$password3&quot; &quot;&quot;&gt;&gt;&lt;/div&gt;
 	&lt;/div&gt;
 	
 	&lt;/div&gt;
@@ -1789,11 +1786,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+			
 				&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -1862,15 +1855,29 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;div class=&quot;wrapper menu codeword question&quot; id=&quot;wrapper&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
-&lt;div class=&quot;content-wrapper&quot; id=&quot;content&quot;&gt;
-
-	
+&lt;div class=&quot;content-wrapper&quot; id=&quot;content&quot;&gt;	
 &lt;div class=&quot;content-item sidebar&quot;&gt;
 		&lt;p&gt;&lt;/p&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;content-item content text &quot;&gt;
-			
-				&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;
+			&lt;div id=&quot;text&quot;&gt;
+				&lt;p&gt;Well done on completing the tutorial mission.&lt;/p&gt;
+				&lt;p&gt;You did it.&lt;/p&gt;
+				&lt;p&gt;This was obviously a fictional mission – to test you. &lt;/p&gt;
+				&lt;p&gt;Some of those codes were not as they would have been. &lt;/p&gt;
+				&lt;p&gt;But, in a real mission your nudge here would have stopped TADAH causing havoc in the past.&lt;/p&gt;
+
+				&lt;p&gt;Don’t worry, Scovell wouldn’t have remembered about the nudge.&lt;/p&gt;
+
+				&lt;p&gt;He’d soon begin to think it was his own idea – his own thought.&lt;/p&gt;
+				&lt;p&gt;That is why people don’t know about us.&lt;/p&gt;
+				&lt;p&gt;The suggestion gets foggy.&lt;/p&gt;
+				&lt;p&gt;The nudge is just that... a nudge.&lt;/p&gt;
+				&lt;p&gt;A nudge in a direction.&lt;/p&gt;
+				&lt;p&gt;I think it is time for the final video. &lt;/p&gt;
+
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;FourtyThree&quot;&gt;&gt;&lt;&lt;set $next to &quot;Sixteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -1882,56 +1889,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;replace &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/37. Well done.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
-
-&lt;&lt;replace &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;Well done on completing the tutorial mission.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;You did it.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 7s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;This was obviously a fictional mission – to test you. &lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 12s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;Some of those codes were not as they would have been. &lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 13s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;But, in a real mission your nudge here would have stopped TADAH causing havoc in the past.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 20s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;Don’t worry, Scovell wouldn’t have remembered about the nudge.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 323s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;He’d soon begin to think it was his own idea – his own thought.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 28s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;That is why people don’t know about us.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 31s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;The suggestion gets foggy.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 33s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;The nudge is just that... a nudge.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 37s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;A nudge in a direction.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 43s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;I think it is time for the final video. &lt;/p&gt;&lt;span id=&quot;bottom4&quot;&gt;&lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom4&quot; false&gt;&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 37s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;FourtyThree&quot;&gt;&gt;&lt;&lt;set $next to &quot;Sixteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="FourtyThree" tags="nobr video" position="2100,1400" size="100,100">/* VIDEO  */
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot;&gt;&lt;&lt;set $title to &quot;V6&quot;&gt;&gt;
@@ -1954,44 +1912,27 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text&quot;&gt;
-				&lt;div class=&quot;title-wrapper&quot;&gt;
-					
-					&lt;h2&gt;Goodbye&lt;/h2&gt;
-				&lt;/div&gt;
-				&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;
+				&lt;div id=&quot;text&quot;&gt;
+				&lt;p&gt;Thank you for taking your training. &lt;/p&gt;
+
+&lt;p&gt;You’ll receive information on future missions by keeping an eye out on The National Archives website.&lt;/p&gt;
+
+&lt;p&gt;Keep an eye out for TADAH agents. &lt;/p&gt;
+
+&lt;p&gt;We’ll be in touch soon.&lt;/p&gt;
+
+/* &lt;img src=&quot;/assets/img/mottlogo-w.png&quot; alt=&quot;The Ministry of Time Travel Logo&quot;  class=&quot;logo mott logo-item&quot;&gt; */
+
+&lt;p&gt;To hear more about the Ministry of Time Travel&#39;s missions please click &lt;a aria-label=&quot;Button&quot; href=&quot;https://www.nationalarchives.gov.uk/contact-us/email-updates/&quot; target=&quot;_blank&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And if you&#39;re happy to tell us how you liked this mission, please click &lt;a aria-label=&quot;Button&quot; href=&quot;https://www.smartsurvey.co.uk/s/OKRCPD/&quot; target=&quot;_blank&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;	
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;
-
-&lt;&lt;silently&gt;&gt;
-&lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;Thank you for taking your training. &lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;You’ll receive information on future missions by keeping an eye out on The National Archives website.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;Keep an eye out for TADAH agents. &lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 12s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;type 40ms none skipkey &quot;#&quot;&gt;&gt;
-&lt;p&gt;We’ll be in touch soon.&lt;/p&gt;
-&lt;&lt;/type&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 15s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;
-&lt;span id=&quot;stamp&quot;&gt;&lt;/span&gt;
-&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 19s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;
-&lt;p&gt;To hear more about the Ministry of Time Travel&#39;s missions please click &lt;a aria-label=&quot;Button&quot; href=&quot;https://www.nationalarchives.gov.uk/contact-us/email-updates/&quot; target=&quot;_blank&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;
-
-
-&lt;p&gt;And if you&#39;re happy to tell us how you liked this mission, please click &lt;a aria-label=&quot;Button&quot; href=&quot;https://www.smartsurvey.co.uk/s/OKRCPD/&quot; target=&quot;_blank&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;
-
-&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="ThirtyFour" tags="nobr mission" position="1788,1025" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="ThirtyFour" tags="nobr mission" position="1788,1025" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2003,11 +1944,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+			
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;&lt;p&gt;Scovell was very clever so I’m unsure why he wouldn’t be able to break the code...&lt;/p&gt;
 
@@ -2023,10 +1960,6 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
 
-
-
-
-
 &lt;&lt;timed 20s t8n&gt;&gt;&lt;&lt;goto &quot;Conversation&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Conversation" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION */
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission &quot;&gt;
@@ -2039,10 +1972,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 		&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;span class=&quot;code img&quot; id=&quot;code3&quot;&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/img/code3.png&quot; alt=&quot;George Scovell’s attempts to decipher the Great Paris Cypher&quot;&gt;&lt;/p&gt;
-/* &lt;span role=&quot;button&quot; aria-label=&quot;click to close&quot;&gt;&lt;&lt;link &quot;X&quot;&gt;&gt;&lt;&lt;addclass &quot;#code3&quot; &quot;disappear&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; */
-&lt;/span&gt;
+
 	&lt;/main&gt;
 	&lt;&lt;include &quot;oldman&quot;&gt;&gt;
 	&lt;&lt;include &quot;scovell&quot;&gt;&gt;
@@ -2050,9 +1980,6 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;/div&gt;
 
 &lt;&lt;silently&gt;&gt;
-
-
-
 
 &lt;&lt;timed 7.2s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;addclass &quot;#text&quot; &quot;chat&quot;&gt;&gt;
 &lt;span class=&quot;SFS left last&quot;  role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt; &lt;p&gt;Scovell, we don’t have much time. &lt;/p&gt;
@@ -2108,7 +2035,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
 			&lt;div class=&quot;title-wrapper mission&quot;&gt;
 					
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
+					&lt;p&gt;&lt;/p&gt;
 					&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
 				&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;
@@ -2156,7 +2083,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 						&lt;/div &gt;
 				&lt;/div&gt;
 		&lt;/div&gt;
-		&lt;&lt;include &quot;oldman&quot;&gt;&gt;
+		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
@@ -2183,7 +2110,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;p&gt;And Baguette. Baguette. Baguette.&lt;/p&gt;&lt;/div&gt;
 				&lt;/div&gt;
 		&lt;/div&gt;
-		&lt;&lt;include &quot;oldman&quot;&gt;&gt;
+		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
@@ -2327,7 +2254,8 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	&lt;/main&gt;
 			&lt;&lt;include &quot;footer&quot;&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;back&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="TwentySevenTwo" tags="nobr" position="1534.6666666666667,659.6666666666669" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;&lt;&lt;set $title to &quot;cc&quot;&gt;&gt;
+&lt;div id=&quot;back&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="TwentySevenTwo" tags="nobr" position="1534.6666666666667,659.6666666666669" size="100,100">/* REDUNDANT  */
+&lt;div class=&quot;wrapper menu&quot;&gt;&lt;&lt;set $title to &quot;cc&quot;&gt;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 &lt;main id=&quot;main&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/code of conduct strings.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/21b. Challenge 4 - 4.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;div class=&quot;content-wrapper&quot;&gt;
@@ -2408,13 +2336,9 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
-
 				&lt;div id=&quot;text&quot;&gt;
+				&lt;p&gt;&lt;/p&gt;
+				&lt;p&gt;&lt;/p&gt;
 					&lt;p&gt;So, what do we know? &lt;/p&gt;
 					&lt;p&gt;Well, on the 22nd of December, Wellington,&lt;/p&gt; 
 					
@@ -2444,11 +2368,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+			
 			
 				&lt;div id=&quot;text&quot;&gt;
 				&lt;p&gt;We should have the device the French used to make the codes - &lt;/p&gt;
@@ -2468,7 +2388,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;&lt;include &quot;oldman&quot;&gt;&gt;
+&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
@@ -2490,11 +2410,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
+		
 			
 				&lt;div id=&quot;text&quot;&gt;&lt;p&gt;And don’t worry, you won’t need to read the letter in French. &lt;/p&gt;
 
@@ -2528,12 +2444,6 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 		&lt;p&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;content-item content text mission&quot;&gt;
-				&lt;div class=&quot;title-wrapper &quot;&gt;
-				&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
-					&lt;p&gt;&lt;span&gt;5. &lt;/span&gt;Mission&lt;/p&gt;
-						
-				&lt;/div&gt;
-			
 				&lt;div id=&quot;text&quot;&gt;
 				&lt;p&gt;There isn’t much time.&lt;/p&gt;
 &lt;p&gt;Not all the letter is in the code – just the key words.&lt;/p&gt;

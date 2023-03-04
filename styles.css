@@ -354,7 +354,7 @@ header.menu-grid > .logo-wrapper > img.logo.na {
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 0.7fr 2fr;
   grid-template-areas:
     "sidebar  content"
     "sidebar  content"
@@ -632,17 +632,37 @@ h3.subtitle > span.orange {
 
 /* FOG CLEARING  */
 
-.fog-img-wrapper > img {
-  max-width: 60%;
+.fog-content-wrapper {
+  display: flex;
 }
 
-.title-wrapper > span.countdown {
-  font-size: 3rem;
+.fog-content-wrapper > .timer > img {
+  /* max-width: 60%; */
+}
+.fog-content-wrapper > .timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  max-width: 30%;
+}
+
+.fog-img-wrapper {
+  flex-grow: 2;
+}
+
+.timer > .countdown > h3.timer {
+  font-size: 5rem;
   justify-self: flex-end;
+  margin-bottom: 0;
 }
 
 .game-content > span#image-text {
   font-weight: 300;
+}
+
+img.smaller {
+  width: 60%;
 }
 
 /* FIRE SYSTEM  */
@@ -664,6 +684,14 @@ h3.subtitle > span.orange {
   padding: 0.5em 0.5em 1em 0.5em;
 }
 
+.flour-wrapper {
+  max-width: 300px;
+}
+
+.flour-wrapper.intext {
+  opacity: 1;
+}
+
 .wrapper.menu.fire.answer1 {
   background-image: url("./assets/img/fog-write.png");
   background-size: contain;
@@ -679,7 +707,7 @@ h3.subtitle > span.orange {
   color: #241004;
   padding: 2em;
   margin: 1em auto;
-  /* width: max-content; */
+  width: max-content;
   z-index: 2;
   position: relative;
   background-repeat: no-repeat;
@@ -775,6 +803,9 @@ h3.subtitle > span.orange {
   width: 25%;
   top: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .scovell-wrapper > .caption {
@@ -993,7 +1024,7 @@ span.intext {
   position: inherit;
   transform: scale(2.5);
   left: inherit;
-  top: -50px;
+  top: -70px;
 }
 
 footer.mission {
@@ -1041,12 +1072,6 @@ span.intext.cipher {
   max-width: 30%;
   margin-right: -10rem;
 }
-/* .wrapper.mission.joseph.napolean {
-  background-image: url(./assets/img/joseph.png);
-  background-size: 50vh;
-  background-repeat: no-repeat;
-  background-position: -100px bottom;
-} */
 
 .caption {
   color: rgba(255, 255, 255, 0.547);
@@ -1069,23 +1094,6 @@ span.intext.cipher {
 }
 
 /*Code Grid*/
-
-/* .CodeGrid {
-  display: grid;
-  gap: 0px 0px;
-  justify-items: start;
-  align-items: center;
-  width: 14em !important;
-  grid-template-columns: repeat(auto-fill, 1em);
-  font-size: 1em;
-  margin: 0em auto !important;
-}
-
-.CodeGrid > div > div {
-  border: #1a0805 solid 1px;
-  width: 1em;
-  padding: 0px 2px;
-} */
 
 .CodeGrid {
   display: flex;
@@ -1128,6 +1136,7 @@ passage-thirtyeight > div#main {
 
 .solutions-item > input.macro-textbox {
   letter-spacing: 0.4rem;
+  min-width: inherit;
 }
 
 .grid-answer-wrapper {

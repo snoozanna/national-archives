@@ -7,7 +7,7 @@ MOTT Chapter 2
 	"ifid": "53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "",
+	"start": "Nineteen",
 	"tag-colors": {
 		"code-of-conduct": "blue",
 		"cypher": "gray",
@@ -745,7 +745,7 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 :: Thirteen [nobr] {"position":"925,950","size":"100,100"}
 <<set $seconds to 10>>
 <div class="wrapper menu">
-<<include "headermenu">>
+<<include "headermenugrid">>
 	<main id="main" class="menu">
 	
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
@@ -753,77 +753,80 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 	<div class="content-wrapper">
 		<<include "sidebarfog">>
 		<div class="content-item content text">
-					<span id="countdown" class="countdown">$seconds</span>
-			
-				<div id="gameContent" class="game-content">
-					
-					<h3 class="subtitle"> <span id="image-text">How many women are in the picture?<<set $seconds to 10>>
+			<div id="gameContent" class="game-content">
+				<h3 class="subtitle"> <span id="image-text">How many women are in the picture?<<set $seconds to 10>>
 							<<silently>>
 								<<repeat 1s>>
 									<<set $seconds to $seconds - 1>>
 								
 									<<if $seconds gt 0>>
-											<<replace "#countdown">>$seconds<</replace>>
+											<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 											<<else>><<stop>>
 									<</if>>
 								<</repeat>>
 							<</silently>>
 					</span></h3>
-					
-					<div id="image" class="fog-img-wrapper"><img src="./assets/img/women.jpeg" id="img1" alt="five women"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
-					
-				</div>
+				<div class="fog-content-wrapper">	
+					<div id="image" class="fog-img-wrapper">
+						<img src="./assets/img/women.jpeg" id="img1" alt="five women"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+					</div>
+					<div class="timer ">
+						<span id="countdown" class="countdown"><h3 class="timer">$seconds</h3></span>
+						<img src="./assets/img/timer.png" id="timer" alt="an hourglass timer" class="logoRot">
+					</div>
+			</div>
+			</div>
 	
 		</div>
 	</div>
 	<<silently>>
 	<<timed 10s>>
-		<<replace "#countdown">><</replace>>
-		<<replace "#image">><img src="./assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+		<<replace "#countdown">>X<</replace>>
+		<<replace "#image">><img src="./assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 		<<replace "#image-text">>How many parrots?
 			<<set $seconds to 10>>
 				<<silently>>
-					<<replace "#countdown">>$seconds<</replace>>
+					<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 					<<repeat 1s>>
 							<<set $seconds to $seconds - 1>>
 							<<if $seconds gt 0>>
-						<<replace "#countdown">>$seconds<</replace>>
-										<<else>><<stop>>
+						<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
+							<<else>><<stop>>
 							<</if>>
 					<</repeat>>
 				<</silently>>
 		<</replace>>
 	<</timed>>	
-		
-	<<timed 20s>>
+
+	<<timed 21s>>
 		<<replace "#countdown">>X<</replace>>
 		<<replace "#image">><img src="./assets/img/chewinggum.jpeg" id="img3" alt="Packet of chewing gum for two a penny">
 		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/9. Challenge 2 - pic 3.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
-		<<replace "#image-text">>How many Chewing Gums did you get for a penny?
+		<<replace "#image-text">>How much did the chewing gum cost?
 			<<set $seconds to 10>>
 			<<silently>>
-				<<replace "#countdown">>$seconds<</replace>>
+				<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 				<<repeat 1s>>
 					<<set $seconds to $seconds - 1>>
 					<<if $seconds gt 0>>
-						<<replace "#countdown">>$seconds<</replace>>
+						<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 						<<else>><<stop>>
 					<</if>>
-			<</repeat>>
+				<</repeat>>
 			<</silently>>
 		<</replace>>
 	<</timed>>
 	
-	<<timed 30s>>
+	<<timed 31s>>
 	<<replace "#countdown">>X<</replace>>
-	<<replace "#image">><img src="./assets/img/numberplate.jpeg" id="img4" alt="Car with the license plate YYX328T">
+	<<replace "#image">><img src="./assets/img/numberplate.jpeg" id="img4" alt="Car with the license plate YYX328T" class="smaller">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/10. Challenge 2 - pic 4 EDIT.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
-	<<replace "#image-text">>What are the numbers on the licence plate?<<set $seconds to 10>><<silently>>
-	<<replace "#countdown">>$seconds<</replace>>
+	<<replace "#image-text">>What are the numbers on the number plate?<<set $seconds to 10>><<silently>>
+	<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 		<<repeat 1s>>
 			<<set $seconds to $seconds - 1>>
 			<<if $seconds gt 0>>
-		<<replace "#countdown">>$seconds<</replace>>
+		<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 						<<else>><<stop>>
 			<</if>>
 		<</repeat>>
@@ -832,16 +835,16 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 	<</replace>>
 	<</timed>>
 	
-	<<timed 40s>>
+	<<timed 41s>>
 	<<replace "#countdown">>X<</replace>>
-	<<replace "#image">><img src="./assets/img/moonlanding.jpeg" id="img5" alt="The telephone number on this telegram I 1622">
+	<<replace "#image">><img src="./assets/img/moonlanding.jpeg" id="img5" alt="The telephone number on this telegram I 1622" class="smaller">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/11. Challenge 2 - pic 5.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 	<<replace "#image-text">>What's the Telephone Number of this restricted Moon Landing call?<<set $seconds to 10>>
 		<<silently>>
 		<<repeat 1s>>
 			<<set $seconds to $seconds - 1>>
 			<<if $seconds gt 0>>
-				<<replace "#countdown">>$seconds<</replace>>
+				<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 				<<else>><<stop>>
 			<</if>>
 		<</repeat>>
@@ -850,9 +853,9 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 	<</replace>>
 	<</timed>>
 	
-	<<timed 50s>>
+	<<timed 51s>>
 	<<replace "#countdown">><</replace>>
-	<<replace "#gameContent">>Did you get that?
+	<<replace "#gameContent">><p>Did you get that?</p>
 	
 	<br><br> [[No - REPLAY|Thirteen]]
 	<br>Yes - Enter Codeword
@@ -1056,14 +1059,15 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<<include "sidebarfire">>
 		<div class="content-item content text">
 				
-					<<timed 40ms t8n>><div id="flour">Flour</div><</timed>>
+					/* <<timed 40ms t8n>><div id="flour">Flour</div><</timed>> */
+					<<timed 40ms t8n>><span class="flour-wrapper intext" ><img src="./assets/img/flour.png" alt="spells flour backwards" class=""></span><</timed>>
 					<p id="text">Type it in below to discover what we found out.</p>
 	
 	<p id="hint">If you need a hint, you can click 
 	
-	<<if $audioOn is true>><span onclick="document.getElementById('player').pause()" role="button" aria-label="Hint Button" class="hint-button"><<button "HERE">><<replace "#hint">><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/13. Challenge 3 - 4.mp3" autoplay></audio>You'll discover the truth through its reflection (a mirror or a selfie may help)<</replace>><</button>></span><<else>>
+	<<if $audioOn is true>><span onclick="document.getElementById('player').pause()" role="button" aria-label="Hint Button" class="hint-button"><<button "HERE">><<replace "#hint">><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/13. Challenge 3 - 4.mp3" autoplay></audio><p><em>You'll discover the truth through its reflection</em></p> <p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>></span><<else>>
 	
-	<span role="button" class="button-wrapper" aria-label="Hint Button"><<button "HERE">><<replace "#hint">>You'll discover the truth through its reflection (a mirror or a selfie may help)<</replace>><</button>></span><</if>>
+	<span role="button" class="button-wrapper" aria-label="Hint Button"><<button "HERE">><<replace "#hint">><p><em>You'll discover the truth through its reflection </em></p><p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>></span><</if>>
 	
 	</p>
 	
@@ -1332,6 +1336,14 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <div class="content-wrapper">
 		<<include "sidebartime">>
 		<div class="content-item content text">
+				<p>To register you'll need to send the word <strong>IGNITE</strong> to <strong><a href="tel:0748-078-6415">0748-078-6415</a></strong>.</p>
+
+<p>You'll recieve the codeword to move on through the Signal Fire System.</p>
+
+
+<span role="input" aria-label="Password Input"><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+
+<br><span id="wrong"></span>
 				
 				<br><div id="code">
 <div id="CoC">
@@ -1359,7 +1371,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <span class="CoCTitle"><h2>Time</h2> Time is Tricky. Don't worry if not everything makes sense, we recieve messages from a faraway future through a time machine, not everything makes sense.</span>
 </div>
 </div>
-		<span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentySevenTwo]]>><</button>></span>
+		/* <span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button [["I've read it"|TwentySevenTwo]]>><</button>></span> */
 		</div>
 	</div>
 <<include "mentor">>
@@ -1507,8 +1519,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<div class="content-item content text ">
 				<div class="title-wrapper mission">
 					
-					<p><span>5. </span>Mission</p>
-					<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
+		
+	
+					
 				</div>
 			<p>In this challenge you will use the real Signal Fire System-</p>
  <p>I told you you'd need to use it sooner rather than later!</p>
@@ -1550,7 +1563,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<div class="content-item content text mission">
 				<div class="title-wrapper mission">
 			
-					<p><span>5. </span>Mission</p>
+					<p></p>
 							<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
 				</div>
 				<div id="alarm"></div>
@@ -1576,7 +1589,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 		</div>
 	</div>
-<<include "oldman">>
+<<include "mentor">>
 	</main>
 	<<include "footermission">>
 </div>
@@ -1612,14 +1625,14 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<div class="content-item content text mission">
 				<div class="title-wrapper mission">
 			
-					<p><span>5. </span>Mission</p>
+					<p></p>
 							<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
 				</div>
 				<div id="alarm"></div>
 				<div id="text"></div>
 		</div>
 	</div>
-<<include "oldman">>
+<<include "mentor">>
 	</main>
 	<<include "footermission">>
 </div>
@@ -1659,11 +1672,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+				
 				<div id="alarm"></div>
 				<div id="text">
 				<p>Let’s see what The National Archives have for us...</p>
@@ -1683,7 +1692,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <</append>> <</timed>></div>
 		</div>
 	</div>
-<<include "oldman">>
+<<include "mentor">>
 	</main>
 	<<include "footermission">>
 </div>
@@ -1717,11 +1726,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+			
 				<div id="alarm"></div>
 				<div id="text">
 				<p>Trumpet sounds – TADAH!</p>
@@ -1757,11 +1762,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+				
 				<div id="alarm"></div>
 				<p>I don’t think that would be too much of a bad thing...</p>
 <p>but I see now what TADAH have done...</p>
@@ -1797,11 +1798,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+				
 				<div id="alarm"></div>
 				<div id="text">
 					<<timed 0.1s>>
@@ -1809,8 +1806,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 	<p>a letter from Joseph Bonaparte </p>
 	<p>to his brother Napoleon Bonaparte.</p> 
-	/* <<addclass "#wrapper" "joseph">>
-	<img src="./assets/img/napolean.png" alt="Napoleon Bonaparte " class="disappear"> */
+
 	 <p>I’m going to need you to break the rest of the letter. </p>
 	<p>If you can do that, then we can work out where the French are going to be </p>
 	<p>and then hopefully the British can get the Great Paris Cipher.</p>
@@ -1832,6 +1828,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 
 :: ThirtyEight [nobr mission cypher] {"position":"1825,1925","size":"100,100"}
+/* CYPHER  */
 <<set $title to "Cy">>
 <<addclass "body" "black">>
 <div class="wrapper menu mission">
@@ -1845,12 +1842,12 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <div role="text" aria-label="The letter to Napoleon Bonaparte" class="napoleon-letter">
 	From Joseph Bonaparte to Emperor Napoléon Bonaparte,
 	<br>
-	Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  role="text" aria-label="The first code">13.21.18.3.9.1^^1^^</span>.
+	Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  role="text" aria-label="1st code word  13.21.18.3.9.1">13.21.18.3.9.1^^1^^</span>.
 
-	<br>We will have 100,000 troops along the lines of the <span id="CODE2" role="text" aria-label="The second and third code words" >4.21.5.18.15&nbsp;^^2^^and&nbsp;20.1.7.21.19^^3^^</span> Rivers.
+	<br>We will have 100,000 troops along the lines of the <span id="CODE2" role="text" aria-label="2nd code word 4.21.5.18.15 and 3rd code word 20.1.7.21.19" >4.21.5.18.15&nbsp;^^2^^and&nbsp;20.1.7.21.19^^3^^</span> Rivers.
 
 
-	<br>Our troops will not be in <span id="CODE3" role="text" aria-label="the fourth code word">3.15.18.21.14.14.1^^4^^</span>. 
+	<br>Our troops will not be in <span id="CODE3" role="text" aria-label="4th code word 3.15.18.21.14.14.1">3.15.18.21.14.14.1^^4^^</span>. 
 </div>
 
 <div class="grid-answer-wrapper">
@@ -1886,10 +1883,10 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	
 	/* Inpout boxes */
 	<div id="Answers" class="solutions-wrapper" role="text" aria-label="Four input boxes for the passwords">
-		<div class="solutions-item">^^1^^<<textbox "$password1"  "_ _ _ _ _ _">> </div>
-		<div class="solutions-item">^^2^^<<textbox "$password2" "_ _ _ _ _">> </div>
-		<div class="solutions-item">^^3^^<<textbox "$password22" "_ _ _ _ _">></div >
-		<div class="solutions-item">^^4^^<<textbox "$password3" "_ _ _ _ _ _ _">></div>
+		<div class="solutions-item">^^1^^<<textbox "$password1"  "">> </div>
+		<div class="solutions-item">^^2^^<<textbox "$password2" "">> </div>
+		<div class="solutions-item">^^3^^<<textbox "$password22" "">></div >
+		<div class="solutions-item">^^4^^<<textbox "$password3" "">></div>
 	</div>
 	
 	</div>
@@ -2022,11 +2019,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+			
 				<div id="text"></div>
 		</div>
 	</div>
@@ -2103,15 +2096,29 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 <div class="wrapper menu codeword question" id="wrapper">
 	<<include "headermenu">>
 	<main id="main" class="menu">
-<div class="content-wrapper" id="content">
-
-	
+<div class="content-wrapper" id="content">	
 <div class="content-item sidebar">
 		<p></p>
 	</div>
 	<div class="content-item content text ">
-			
-				<div id="text"></div>
+			<div id="text">
+				<p>Well done on completing the tutorial mission.</p>
+				<p>You did it.</p>
+				<p>This was obviously a fictional mission – to test you. </p>
+				<p>Some of those codes were not as they would have been. </p>
+				<p>But, in a real mission your nudge here would have stopped TADAH causing havoc in the past.</p>
+
+				<p>Don’t worry, Scovell wouldn’t have remembered about the nudge.</p>
+
+				<p>He’d soon begin to think it was his own idea – his own thought.</p>
+				<p>That is why people don’t know about us.</p>
+				<p>The suggestion gets foggy.</p>
+				<p>The nudge is just that... a nudge.</p>
+				<p>A nudge in a direction.</p>
+				<p>I think it is time for the final video. </p>
+
+<<timed 5s t8n>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "FourtyThree">><<set $next to "Sixteen">><</button>></span>
+<</timed>></div>
 	</div>
 	</div>
 	<<include "mentor">>
@@ -2123,56 +2130,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 <<silently>>
 <<timed 1s t8n>><<replace "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/37. Well done.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
-
-<<replace "#text">><<type 40ms none skipkey "#">>
-<p>Well done on completing the tutorial mission.</p>
-<</type>><</replace>> <</timed>>
-<<timed 5s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>You did it.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 7s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>This was obviously a fictional mission – to test you. </p>
-<</type>><</append>> <</timed>>
-
-<<timed 12s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>Some of those codes were not as they would have been. </p>
-<</type>><</append>> <</timed>>
-
-<<timed 13s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>But, in a real mission your nudge here would have stopped TADAH causing havoc in the past.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 20s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>Don’t worry, Scovell wouldn’t have remembered about the nudge.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 323s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>He’d soon begin to think it was his own idea – his own thought.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 28s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>That is why people don’t know about us.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 31s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>The suggestion gets foggy.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 33s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>The nudge is just that... a nudge.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 37s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>A nudge in a direction.</p>
-<</type>><</append>> <</timed>>
-
-<<timed 43s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>I think it is time for the final video. </p><span id="bottom4"></span><<ScrollTo "bottom4" false>>
-<</type>><</append>> <</timed>>
-
-<<timed 37s t8n>><<append "#text">><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "FourtyThree">><<set $next to "Sixteen">><</button>></span>
-<</append>> <</timed>>
+<</timed>>
 <</silently>>
 
 
@@ -2205,11 +2163,21 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 		<p></p>
 		</div>
 		<div class="content-item content text">
-				<div class="title-wrapper">
-					
-					<h2>Goodbye</h2>
-				</div>
-				<div id="text"></div>
+				<div id="text">
+				<p>Thank you for taking your training. </p>
+
+<p>You’ll receive information on future missions by keeping an eye out on The National Archives website.</p>
+
+<p>Keep an eye out for TADAH agents. </p>
+
+<p>We’ll be in touch soon.</p>
+
+/* <img src="/assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo"  class="logo mott logo-item"> */
+
+<p>To hear more about the Ministry of Time Travel's missions please click <a aria-label="Button" href="https://www.nationalarchives.gov.uk/contact-us/email-updates/" target="_blank">HERE</a></p>
+
+<p>And if you're happy to tell us how you liked this mission, please click <a aria-label="Button" href="https://www.smartsurvey.co.uk/s/OKRCPD/" target="_blank">HERE</a></p>
+</div>
 		</div>
 	</div>
 <<include "mentor">>	
@@ -2217,32 +2185,6 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	<<include "footer">>
 </div>
 
-<<silently>>
-<<timed 1s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>Thank you for taking your training. </p>
-<</type>><</append>> <</timed>>
-
-<<timed 4s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>You’ll receive information on future missions by keeping an eye out on The National Archives website.</p>
-<</type>><</append>> <</timed>>
-<<timed 10s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>Keep an eye out for TADAH agents. </p>
-<</type>><</append>> <</timed>>
-<<timed 12s t8n>><<append "#text">><<type 40ms none skipkey "#">>
-<p>We’ll be in touch soon.</p>
-<</type>><</append>> <</timed>>
-<<timed 15s t8n>><<append "#text">>
-<span id="stamp"></span>
-<</append>> <</timed>>
-
-<<timed 19s t8n>><<append "#text">>
-<p>To hear more about the Ministry of Time Travel's missions please click <a aria-label="Button" href="https://www.nationalarchives.gov.uk/contact-us/email-updates/" target="_blank">HERE</a></p>
-
-
-<p>And if you're happy to tell us how you liked this mission, please click <a aria-label="Button" href="https://www.smartsurvey.co.uk/s/OKRCPD/" target="_blank">HERE</a></p>
-
-<</append>> <</timed>>
-<</silently>>
 
 
 :: ThirtyFour [nobr mission] {"position":"1788,1025","size":"100,100"}
@@ -2259,11 +2201,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+			
 				<div id="alarm"></div>
 				<div id="text"><p>Scovell was very clever so I’m unsure why he wouldn’t be able to break the code...</p>
 
@@ -2278,10 +2216,6 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	</main>
 	<<include "footermission">>
 </div>
-
-
-
-
 
 <<timed 20s t8n>><<goto "Conversation">> <</timed>>
 
@@ -2301,10 +2235,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 		<div id="text"></div>
 </div>
-<span class="code img" id="code3">
-<p><img src="./assets/img/code3.png" alt="George Scovell’s attempts to decipher the Great Paris Cypher"></p>
-/* <span role="button" aria-label="click to close"><<link "X">><<addclass "#code3" "disappear">><</link>></span> */
-</span>
+
 	</main>
 	<<include "oldman">>
 	<<include "scovell">>
@@ -2312,9 +2243,6 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 </div>
 
 <<silently>>
-
-
-
 
 <<timed 7.2s t8n>><<append "#text">><<addclass "#text" "chat">>
 <span class="SFS left last"  role="text" aria-label="Wellington"> <p>Scovell, we don’t have much time. </p>
@@ -2375,7 +2303,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 		<div class="content-item content text mission">
 			<div class="title-wrapper mission">
 					
-					<p><span>5. </span>Mission</p>
+					<p></p>
 					<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
 				</div>
 				<div id="text">
@@ -2429,7 +2357,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 						</div >
 				</div>
 		</div>
-		<<include "oldman">>
+		<<include "mentor">>
 	</main>
 	<<include "footermission">>
 </div>
@@ -2459,7 +2387,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <p>And Baguette. Baguette. Baguette.</p></div>
 				</div>
 		</div>
-		<<include "oldman">>
+		<<include "mentor">>
 	</main>
 	<<include "footermission">>
 </div>
@@ -2626,6 +2554,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 
 
 :: TwentySevenTwo [nobr] {"position":"1534.6666666666667,659.6666666666669","size":"100,100"}
+/* REDUNDANT  */
 <div class="wrapper menu"><<set $title to "cc">>
 <<include "headermenu">>
 <main id="main"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/code of conduct strings.mp3" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/21b. Challenge 4 - 4.mp3" autoplay>Sound plays</audio><</if>>
@@ -2716,13 +2645,9 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
-
 				<div id="text">
+				<p></p>
+				<p></p>
 					<p>So, what do we know? </p>
 					<p>Well, on the 22nd of December, Wellington,</p> 
 					
@@ -2757,11 +2682,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+			
 			
 				<div id="text">
 				<p>We should have the device the French used to make the codes - </p>
@@ -2781,7 +2702,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <</timed>></div>
 		</div>
 	</div>
-<<include "oldman">>
+<<include "mentor">>
 	</main>
 	<<include "footermission">>
 </div>
@@ -2808,11 +2729,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
+		
 			
 				<div id="text"><p>And don’t worry, you won’t need to read the letter in French. </p>
 
@@ -2852,12 +2769,6 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 		<p></p>
 		</div>
 		<div class="content-item content text mission">
-				<div class="title-wrapper ">
-				<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-					<p><span>5. </span>Mission</p>
-						
-				</div>
-			
 				<div id="text">
 				<p>There isn’t much time.</p>
 <p>Not all the letter is in the code – just the key words.</p>
