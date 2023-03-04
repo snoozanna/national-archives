@@ -1196,3 +1196,47 @@ passage-thirtyeight > div#main {
     gap: 3rem;
   }
 }
+
+/* CERTIFICATE  */
+
+.wrapper.menu.certificate {
+  background-color: var(--yellow);
+}
+
+.menu.certificate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu.certificate > img.certificate {
+  max-width: 70%;
+  margin: auto;
+}
+/* .wrapper.certificate > main.certificate {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "a b c"
+    "a e f"
+    "a h i";
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+} */
+
+.mentorComplete {
+  grid-area: i;
+}
+
+.logoblack {
+}
+
+.signature {
+}
+
+.biglogo {
+  grid-area: a;
+}
