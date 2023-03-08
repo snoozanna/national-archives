@@ -768,7 +768,7 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 					</span></h3>
 				<div class="fog-content-wrapper">	
 					<div id="image" class="fog-img-wrapper">
-						<img src="./assets/img/women.jpeg" id="img1" alt="five women"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+						<img src="./assets/img/women2.jpeg" id="img1" alt="four women"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 					</div>
 					<div class="timer ">
 						<span id="countdown" class="countdown"><h3 class="timer">$seconds</h3></span>
@@ -860,7 +860,7 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 	<br><br> [[No - REPLAY|Thirteen]]
 	<br>Yes - Enter Codeword
 	<br><span role="input" aria-label="Password Input"><<textbox "_password" "">></span>
-	<span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Next">><<if _password is "5223281622">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	<span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Next">><<if _password is "4223281622">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	<span id="wrong"></span>
 	
 	<</replace>>
