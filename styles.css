@@ -146,7 +146,7 @@ nav.right {
 
 .intro-text > p,
 .intro-text > .flex-container-row > p {
-  background-color: var(--orange);
+  background-color: var(--blue);
   width: fit-content;
   padding: 5px;
 }
@@ -194,23 +194,38 @@ img.logomott {
   justify-content: space-between;
 }
 
+.button-wrapper,
+.button-wrapper.orange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background-color: white;
+  border-radius: 50%;
+  padding: 1.5rem 0;
+}
 .button-wrapper > button,
-.button-wrapper > a {
+.button-wrapper.circle > button,
+.button-wrapper.orange > button {
+  color: var(--orange);
   background-color: transparent;
   font-weight: 700;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   border: none;
   text-transform: uppercase;
 }
 
-.button-wrapper.orange > button {
-  background-color: transparent;
+/* .button-wrapper > button,
+.button-wrapper > a {
+} */
+
+/* .button-wrapper.orange > button {
   font-weight: 700;
   font-size: 1.8rem;
-  border: none;
+
   text-transform: uppercase;
   color: var(--orange);
-}
+} */
 
 .hint-button > button {
   background-color: var(--orange);
@@ -301,27 +316,26 @@ img.logomott {
   -webkit-animation-iteration-count: infinite;
 }
 
-img.logoRot {
-  border-radius: 100%;
-}
-
 .safeguard.center {
   text-align: center;
 }
 
 /* VIDEO PAGES  */
 
-/* .video-wrapper {
+.wrapper > main.video {
+  height: 100%;
+}
+.video-wrapper {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
-} */
+}
 
 iframe {
   width: 100%;
-  height: 500px;
+  height: 100%;
 }
 
 /* MENU PAGE  */
@@ -610,6 +624,10 @@ img.person.two {
   width: 19%;
   top: 25%;
   right: 0%;
+}
+
+#answer > span[role="input"] > input {
+  margin-block-end: 2rem;
 }
 
 input.macro-textbox {
@@ -1229,12 +1247,6 @@ passage-thirtyeight > div#main {
 
 .mentorComplete {
   grid-area: i;
-}
-
-.logoblack {
-}
-
-.signature {
 }
 
 .biglogo {

@@ -181,7 +181,7 @@ Macro.add('ScrollTo', {
 :: One [nobr video] {"position":"787.6666666666667,99.33333333333337","size":"100,100"}
 /* VIDEO  */
 <div class="wrapper">
-	<main id="main"><<set $title to "V1">>
+	<main id="main" class="video"><<set $title to "V1">>
 	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 1 video"><iframe src="https://player.vimeo.com/video/640377198?h=6aeee3d5c8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 1"></iframe></div>
 	</main>
 		<footer><nav><div id="back"><<link "Back" "Zero">><</link>></div><div id="text"></div></nav></footer>
@@ -332,9 +332,7 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 		<div class="content-item content text">
 			<p>We'll start off easy.</p>
 
-<p>Time for you to learn some of the skills you'll need to be a Time Agent.</p>
-
-<p>Unscramble the WORDS OR NAMES to uncover some facts about the MOTT.</p>
+<Unscramble>Time for you to learn some of the skills you'll need to be a Time Agent.Unscramble the WORDS OR NAMES to uncover some facts about the MOTT.</p>
 
 <p>You'll have ONE minute.</p>
 
@@ -422,97 +420,15 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 			<div id="scrambled" class="scrambled"><span>SECRET</span></div>
 						
 <p>Yes, the MOTT is a secret organisation. </p>
-<p>Not even the government know about the MOTT. The PM doesn't know a thing.</p>
-<p>The National Archives staff do, so The National Archives staff have higher clearance!</p> 
-<p>The MOTT is the hidden core - and protected by everyone.</p> 
+<p>Not even the government know about the MOTT. The PM doesn't know a thing. The National Archives staff do, so The National Archives staff have higher clearance! The MOTT is the hidden core - and protected by everyone.</p> 
 <p>You now are part of that.</p> 
-<<timed 5s t8n>><span role="button" class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|Six]]>><</button>></span> <</timed>>
+<<timed 5s t8n>><span role="button" class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|Eight]]>><</button>></span> <</timed>>
 		</div>
 	</div>
 	</main>
 	<<include "mentor">>	<<include "footer">>
 </div>
 
-
-
-
-
-
-
-
-:: Six [nobr] {"position":"698.6666666666666,497.6666666666666","size":"100,100"}
-<div class="wrapper  menu codeword question">
-<<include "headermenu">>
-	<main id="main" class=" menu codeword question "><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
-	
-	<div class="content-wrapper">
-		<<include "sidebarcode">>
-		<div class="content-item content text">
-				
-					<p><div id="text"> </div></p>
-		
-	
-		<h3 class="subtitle">QUESTION 2:</h3>
-	<span id="countdown"><<set $seconds to 60>>60 seconds remaining</span>
-	
-	<div id="scrambled" class="scrambled"><span>AGRET</span></div>
-
-		<<link "Click for a hint">>
-	<<toggleclass "#hint" "disappear">>
-<</link>>
-<p id="hint" class="disappear">  An environmental young person.</p>
-	<h3 class="subtitle"></h3>
-	<div id="answer" style="text-transform: uppercase;">
-	
-	<span role="input" aria-label="Password Field"><<textbox "_password" "" autofocus>></span><span role="button" aria-label="Click Button to go Next" class="button-wrapper"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "GRETA">><<goto "Seven">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
-	
-	<br><span id="wrong"></span></div>
-	</div>
-		</div>
-		<<include "mentor">>
-	</main>
-<<include "footer">>
-</div>
-<<silently>>
-	<<repeat 1s>>
-		<<set $seconds to $seconds - 1>>
-		<<if $seconds gt 0>>
-			<<replace "#countdown">>$seconds seconds remaining<</replace>>
-		<<else>>
-			<<replace "#main">><<goto [[Seven]]>><</replace>>
-			<<stop>>
-		<</if>>
-	<</repeat>>
-<</silently>>
-
-
-:: Seven [nobr] {"position":"850,498.66666666666663","size":"100,100"}
-<div class="wrapper menu codeword question answer2">
-<img src="./assets/img/bg-code-answer2.png" class="disappear" alt="Two circles: one shows a child shhing to illustrate keeping a secret, and the second Greta Thunberg">
-
-<<include "headermenu">>
-	<main id="main" class=" menu codeword question answer2">
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>>
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/4. Challenge 1 - Keyword 3.mp3" autoplay>Audio is not supported on your device</audio><</if>>
-	
-	
-	<div class="content-wrapper">
-		<<include "sidebarcode">>
-		<div class="content-item content text">
-		<h3 class="subtitle">QUESTION 2: <span class="orange">Answer</span></h3>
-			<div id="scrambled" class="scrambled"><span>GRETA</span></div>
-						<p>There are rumours that Greta Thunberg is actually a Time Agent.</p> 
-<p>These have never been confirmed but we think it might be true</p>  <p>as she attempts to save the world today, </p>
-<p>and she wears excellent yellow rain jackets.</p>
-
-<<timed 5s t8n>><br><span role="button" class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|Eight]]>><</button>></span><</timed>>
-	
-		</div>
-</div>
-	</main>
-	<<include "mentor">>
-	<<include "footer">>
-</div>
 
 
 
@@ -529,7 +445,7 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 				
 					<p><div id="text"> </div></p>
 	
-		<h3 class="subtitle">QUESTION 3:</h3>
+		<h3 class="subtitle">QUESTION 2:</h3>
 		<span id="countdown"><<set $seconds to 60>>60 seconds remaining</span>
 	
 		<div id="scrambled" class="scrambled"><span>PRUMTECS</span></div>
@@ -575,13 +491,12 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 		<div class="content-wrapper">
 			<<include "sidebarcode">>
 			<div class="content-item content text">
-			<h3 class="subtitle">QUESTION 3: <span class="orange">Answer</span></h3>
+			<h3 class="subtitle">QUESTION 2: <span class="orange">Answer</span></h3>
 			<div id="scrambled" class="scrambled"><span>CRUMPETS</span></div>
 						<p>This is the favourite food of most members of the Ministry of Time Travel.</p> 
-<p>If you see someone eating a crumpet,</p> 
-<p>they quite possibly are linked to the MOTT!</p>
+<p>If you see someone eating a crumpet, they quite possibly are linked to the MOTT!</p>
 <<timed 5s t8n>>
-<br><div class="border upper"><span role="button" class="button-wrapper orange" aria-label="Click Button to go Next"><<button "Next-->" "CodeComplete">><<set $iconOnly to true>><<set $next to "Ten">><</button>></span></div ><</timed>>
+<br><div class="border upper"><span role="button" class="button-wrapper orange" aria-label="Click Button to go Next"><<button "Next" "CodeComplete">><<set $iconOnly to true>><<set $next to "Ten">><</button>></span></div ><</timed>>
 		</div>
 		</div>
 	
@@ -621,9 +536,9 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 :: Ten [nobr video] {"position":"778.3333333333334,732.3333333333333","size":"100,100"}
 /* VIDEO  */
 <div class="wrapper">
-	<main id="main">
+	<main id="main" class="video">
 	<<set $title to "V2">>
-	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 2 video"><div ><iframe src="https://player.vimeo.com/video/640378731?h=99d45721b2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 2"></iframe></div></div>
+	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 2 video"><iframe src="https://player.vimeo.com/video/640378731?h=99d45721b2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 2"></iframe></div>
 
 	</main>
 	<footer>
@@ -725,7 +640,7 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 
 <p>Interpreting clears the fog.</p>
 
-<p>When you are ready, click Begin.</p>
+<p>When you are ready, click begin.</p>
 
 <<timed 5s t8n>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button [[Begin|TwelveTwo]]>><</button>></span><</timed>>
 		</div>
@@ -839,7 +754,7 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 	<<replace "#countdown">>X<</replace>>
 	<<replace "#image">><img src="./assets/img/moonlanding.jpeg" id="img5" alt="The telephone number on this telegram I 1622" class="smaller">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/11. Challenge 2 - pic 5.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
-	<<replace "#image-text">>What's the Telephone Number of this restricted Moon Landing call?<<set $seconds to 10>>
+	<<replace "#image-text">>What's the telephone number of this restricted Moon Landing call?<<set $seconds to 10>>
 		<<silently>>
 		<<repeat 1s>>
 			<<set $seconds to $seconds - 1>>
@@ -855,13 +770,16 @@ LEVEL 5 ALARM<</replace>> <</timed>>
 	
 	<<timed 51s>>
 	<<replace "#countdown">><</replace>>
-	<<replace "#gameContent">><p>Did you get that?</p>
+	<<replace "#gameContent">>
+	<p>Did you get that?</p>
 	
-	<br><br> [[No - REPLAY|Thirteen]]
-	<br>Yes - Enter Codeword
-	<br><span role="input" aria-label="Password Input"><<textbox "_password" "">></span>
-	<span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Next">><<if _password is "4223281622">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
-	<span id="wrong"></span>
+	<div id="answer">
+		<br><br> [[No - REPLAY|Thirteen]]
+		<br>Yes - Enter Codeword
+		<br><span role="input" aria-label="Password Input"><<textbox "_password" "">></span>
+		<span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Next">><<if _password is "4223281622">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+		<span id="wrong"></span>
+	</div>
 	
 	<</replace>>
 	<</timed>>
@@ -914,9 +832,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 :: Fifteen [nobr video] {"position":"789.6666666666666,1177.6666666666667","size":"100,100"}
 <div class="wrapper">
-	<main id="main">
+	<main id="main" class="video">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay></audio><</if>><<set $title to "V3">>
-	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 3 video"><div ><iframe src="https://player.vimeo.com/video/640379390?h=40c553c519&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 3"></iframe></div></div>
+	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 3 video"><iframe src="https://player.vimeo.com/video/640379390?h=40c553c519&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 3"></iframe></div>
 	</main>
 		<footer><nav><div id="back"><<link "Back" "TwelveTwo">><</link>></div><div id="text"></div></nav></footer>
 </div>
@@ -998,7 +916,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<div class="content-item content text">
 				
 			<p>Welcome to the Signal Fire System challenge.</p> 
-<p>Sometimes we recieve mysterious messages from the Signal Fire System that make little sense until we investigate.</p>
+<p>Sometimes we receive mysterious messages from the Signal Fire System that make little sense until we investigate.</p>
 
 <<timed 5s t8n>><span class="button-wrapper" role="button" aria-label="Click Button to go Next"><<button [[Next|Eighteen]]>><</button>></span> <</timed>>
 		</div>
@@ -1023,18 +941,12 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<<include "sidebarfire">>
 		<div class="content-item content text">
 				
-				<p>One time we recieved a document from over 550 years ago, from medieval times.</p>
-
-<p>It was a very simple document that was sealed shut,</p> 
-
-<p>but with important information inside that we needed to understand.</p>
+				<p>One time we received a document from over 550 years ago, from medieval times. It was a very simple document that was sealed shut, but with important information inside that we needed to understand.</p>
 
 <p>The seal had a code on it that was used in medieval times to keep information secret.</p>
 
 <p>Fortunately, there were some examples in The National Archives so we could break it.</p>
-<p>Let's see if you can work out how to find how to get into the document.</p>
-
-<p>We'll show you the word up close.</p>
+<p>Let's see if you can work out how to find how to get into the document. We'll show you the word up close.</p>
 
 <span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|Nineteen]]>><</button>></span>
 		</div>
@@ -1071,8 +983,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	
 	</p>
 	
-	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Password Input">
-	<<textbox "_password" "" autofocus>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	<div id="answer" style="text-transform: uppercase;"> <span role="input" aria-label="Password Input">
+	<<textbox "_password" "" autofocus>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></span>
 	
 	<br><span id="wrong"></span></div>
 			</div>
@@ -1385,7 +1297,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 :: TwentyEight [nobr video] {"position":"1538,497.9999999999999","size":"100,100"}
 <div class="wrapper">
-	<main id="main">
+	<main id="main" class="video">
 <<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<set $title to "V5">>
 <div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 5 video"><iframe src="https://player.vimeo.com/video/640381100?h=cad3056aaf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 5"></iframe>
 </div>
@@ -1402,7 +1314,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 :: TwentyTwo [nobr video] {"position":"1545.3333333333335,1548.6666666666667","size":"100,100"}
 <div class="wrapper">
-	<main id="main"><<set $title to "V4">>
+	<main id="main" class="video"><<set $title to "V4">>
 <div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 4 video">
 	<iframe src="https://player.vimeo.com/video/640380360?h=f4e91c039a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 4"></iframe>
 </div>
@@ -2139,7 +2051,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 /* VIDEO  */
 <div class="wrapper">
-	<main id="main"><<set $title to "V6">>
+	<main id="main" class="video"><<set $title to "V6">>
 	<div id="video" role="video" aria-label="MOTT Training 6 video"><iframe src="https://player.vimeo.com/video/640381678?h=9ce4d85b97&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 6"></iframe></div>
 	</main>
 		<footer><nav><div id="back"><<link "Back" "Zero">><</link>></div><div id="text"></div></nav></footer>
@@ -2466,34 +2378,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <<include "headertrain">>
 	<main id="main" class=" flex-container-col-cen">
 	<<set $title to "transition">>
-	<<if $iconOnly is true>>
-	<<if $challenge is 1>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
-	<img src="https://remote.co.com/MoTT/AgentTraining/Images/CodeBreaking.svg" alt="Codebreaking Button" id="LogoStill" class="medal cleared">
-	<br><h1>MISSION COMPLETED</h1>
-	<<timed 6s>><<type 400ms none>>Loading...<</type>><</timed>>
-	<<timed 14s>><<goto $next>><</timed>>
 	
-	<<elseif $challenge is 2>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
-	
-	<img src="https://remote.co.com/MoTT/AgentTraining/Images/FogClearing.svg" alt="Fog Clearing Button"  id="LogoStill" class="medal cleared">
-	<br><h1>MISSION COMPLETED</h1>
-	<<timed 6s>><<type 400ms none>>Loading...<</type>><</timed>>
-	<<timed 14s>><<goto $next>><</timed>>
-	
-	<<elseif $challenge is 3>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
-	<img src="https://remote.co.com/MoTT/AgentTraining/Images/Nudging.svg" alt="Nudging Challenge Button"  id="LogoStill" class="medal cleared">
-	<br><h1>MISSION COMPLETED</h1>
-	<<timed 6s>><<type 400ms none>>Loading...<</type>><</timed>>
-	<<timed 14s>><<goto $next>><</timed>>
-	<<else>>
-	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
-	<img src="https://remote.co.com/MoTT/AgentTraining/Images/SignalFireSystem.svg" alt="Signal Fire System Button" id="LogoStill" class="medal cleared">
-	<br><h1>MISSION COMPLETED</h1>
-	<<timed 6s>><<type 400ms none>>Loading...<</type>><</timed>>
-	<<timed 14s>><<goto $next>><</timed>>
-	<</if>>
-	<<else>>
 	
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 3.wav" autoplay>Audio not supported in your browser</audio><</if>>
 	
@@ -2505,7 +2390,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 	<<timed 4s>><<replace "#text">><<type 200ms none>><p>Loading...</p><</type>><</replace>><</timed>>
 	<<timed 8s>><<goto $next>><</timed>>
 	
-	<</if>>
+
 	</main>
 	<footer></footer>
 </div>
@@ -2562,15 +2447,11 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 		<<include "sidebarfog">>
 		<div class="content-item content text">
 				
-		<p>In a moment we'll put five images from The National Archives up on the screen.</p> 
-<p>Within each image you'll need to note down a specific number to move on.</p>
-<p>You'll have ten seconds on each image.</p>
+		<Within>In a moment we'll put five images from The National Archives up on the screen. Within each image you'll need to note down a specific number to move on.</p>
+<So,>You'll have ten seconds on each image. So, we need to be quick spotters who have keen eyes.</p> 
+<You>The numbers will make up the code to move on. You might want a pencil to write them down.</p>
 
-<p>So, we need to be quick spotters who have keen eyes.</p> 
-<p>The numbers will make up the code to move on.</p> 
-<p>You might want a pencil to write them down.</p>
-
-<p>When you are ready, click Begin.</p> 
+<p>When you are ready, click begin.</p> 
 <p class="disappear">If you are using a screen reader, check the alt text on the images for some help.</p>
 
 <<timed 5s t8n>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button [[Begin|Thirteen]]>><</button>></span> <</timed>>
