@@ -2055,7 +2055,8 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 :: FourtyFour-Cert [nobr] {"position":"2093.0000000000005,1217.6666666666665","size":"100,100"}
 <<set $title to "end">>
-	<<if $audioOn is true>><audio src="assets/audio/sign off.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+<<if $audioOn is true>><audio src="assets/audio/new challenge complete.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+	<<timed 3s>><<if $audioOn is true>><audio src="assets/audio/sign off.mp3" autoplay>Audio is not supported on your device</audio><</if>><</timed>>
 <div class="wrapper menu certificate">
 	<main id="main" class="menu certificate">
 <div class="text-wrapper">
