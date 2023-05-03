@@ -1187,6 +1187,10 @@ span.intext.cipher {
   background-position: 105% center;
 }
 
+#frenchDecipher {
+  position: fixed;
+}
+
 /*Code Grid*/
 
 .CodeGrid {
@@ -1294,32 +1298,25 @@ passage-thirtyeight > div#main {
 /* CERTIFICATE  */
 
 .wrapper.menu.certificate {
-  background-color: var(--yellow);
+  background-color: var(--blue);
+  background: linear-gradient(
+    39deg,
+    rgba(14, 113, 120, 1) 25%,
+    rgba(255, 109, 45, 1) 100%
+  );
 }
 
 .menu.certificate {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .menu.certificate > img.certificate {
-  max-width: 70%;
+  max-width: 50%;
   margin: auto;
 }
-/* .wrapper.certificate > main.certificate {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "a b c"
-    "a e f"
-    "a h i";
-  justify-content: center;
-  align-items: center;
-
-  gap: 1rem;
-} */
 
 .mentorComplete {
   grid-area: i;
@@ -1327,4 +1324,13 @@ passage-thirtyeight > div#main {
 
 .biglogo {
   grid-area: a;
+}
+
+/* UNLOCK */
+
+.unlock.begin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
 }
