@@ -142,7 +142,12 @@ Macro.add('ScrollTo', {
 		}
 	}
 });
-/* <<ScrollTo>> macro - End */</script><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot;&gt;
+
+/* <<ScrollTo>> macro - End */
+setup.changeVol = (num) => {
+	const bgAudio = document.getElementById("bgAudio");
+	bgAudio.volume = num
+}</script><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
   	&lt;div class=&quot;audio-container&quot;&gt;
 	  &lt;poweron&gt;&lt;a data-passage=&quot;TutorialOne&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;/poweron&gt;
@@ -215,8 +220,8 @@ Macro.add('ScrollTo', {
 	/* GRID  */
 	&lt;div class=&quot;content-wrapper&quot;&gt;
 		&lt;div class=&quot;content-item sidebar&quot;&gt;
-			&lt;p&gt;Click on the First Challenge: Code Breaking to continue&lt;/p&gt;
-			
+			&lt;p&gt;Let’s begin with Challenge 1. &lt;br/&gt;Click on Number 1 - Code Breaking.&lt;/p&gt;
+
 	
 		&lt;/div&gt;
 	
@@ -466,7 +471,7 @@ over secret files&quot;&gt;
 		/* GRID  */
 		&lt;div class=&quot;content-wrapper&quot;&gt;
 			&lt;div class=&quot;content-item sidebar&quot;&gt;
-				&lt;p&gt;Click on the Second Challenge: Fog Clearing to continue&lt;/p&gt;
+				&lt;p&gt;Time to clear the fog in Challenge 2. Click on it now.&lt;/p&gt;
 	
 			&lt;/div&gt;
 	
@@ -721,7 +726,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		/* GRID  */
 		&lt;div class=&quot;content-wrapper&quot;&gt;
 			&lt;div class=&quot;content-item sidebar&quot;&gt;
-				&lt;p&gt;Click on the Third Challenge: Signal Fire System to continue.&lt;/p&gt;
+				&lt;p&gt;Time to click on the Signal Fire Challenge.&lt;/p&gt;
 			&lt;/div&gt;
 	
 			&lt;div class=&quot;menu-wrapper content-item content menu&quot;&gt;
@@ -980,9 +985,10 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Challenge 4.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 		/* GRID  */
+
 		&lt;div class=&quot;content-wrapper&quot;&gt;
 			&lt;div class=&quot;content-item sidebar&quot;&gt;
-				&lt;p&gt;Click on the Fourth Challenge: Time Nudging to continue&lt;/p&gt;
+				&lt;p&gt;The fourth challenge in the training. Click Time Nudging to begin.&lt;/p&gt;
 			&lt;/div&gt;
 			&lt;div class=&quot;menu-wrapper content-item content menu&quot;&gt;
 
@@ -1038,8 +1044,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="TwentyFour" tags="nobr" position="1539.6666666666665,1262.3333333333335" size="100,100">&lt;&lt;set $challenge to 4&gt;&gt;&lt;&lt;set $title to 5&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
-	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 2.wav&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
-	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/19. Challenge 4 - 1.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
+	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 2.wav&quot;   autoplay id=&quot;bgAudio&quot;&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/19. Challenge 4 - 1.mp3&quot;  autoplay &gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 	&lt;div class=&quot;content-wrapper&quot;&gt;
 	&lt;&lt;include &quot;sidebartime&quot;&gt;&gt;
 		&lt;div class=&quot;content-item content text&quot;&gt;
@@ -1053,7 +1059,10 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;	
 	&lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="TwentyFive" tags="nobr" position="1542.6666666666665,1097" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;/div&gt;
+&lt;&lt;done&gt;&gt;
+&lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="TwentyFive" tags="nobr" position="1542.6666666666665,1097" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/20. Challenge 4 - 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -1123,9 +1132,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;div id=&quot;code&quot;&gt;
 &lt;div id=&quot;CoC&quot;&gt;
 &lt;span class=&quot;Header&quot;&gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/mottlogowords.png&quot;&gt;
-&lt;h1&gt;code of conduct&lt;/h1&gt;&lt;/span&gt;
+&lt;h1&gt;Code of Conduct&lt;/h1&gt;&lt;/span&gt;
 
-&lt;span class=&quot;CoCTitle&quot;&gt;&lt;h2&gt;clean&lt;/h2&gt; a clean desk is a clean mind, and saves on cleaning costs.&lt;/span&gt;
+&lt;span class=&quot;CoCTitle&quot;&gt;&lt;h2&gt;clean&lt;/h2&gt;A clean desk is a clean mind, and saves on cleaning costs.&lt;/span&gt;
 
 &lt;span class=&quot;CoCTitle&quot;&gt;&lt;h2&gt;smile&lt;/h2&gt; Always offer the national archives &amp; ministry staff a smile. It goes a long way.&lt;/span&gt;
 
@@ -1204,7 +1213,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 		/* GRID  */
 		&lt;div class=&quot;content-wrapper&quot;&gt;
 			&lt;div class=&quot;content-item sidebar&quot;&gt;
-				&lt;p&gt;Click on the secret mission to continue&lt;/p&gt;
+				&lt;p&gt;You have unlocked the final part of your training. Click the secret mission icon.&lt;/p&gt;
 			&lt;/div&gt;
 	
 			&lt;div class=&quot;menu-wrapper content-item content menu&quot;&gt;
@@ -1270,7 +1279,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				&lt;/div&gt;
 			&lt;p&gt;In this challenge you will use the real Signal Fire System.&lt;/p&gt; 
 			&lt;p&gt;I told you you&#39;d need to use it sooner rather than later! Are you ready to load a tutorial mission? It will pull on the skills you have learnt from the other challenges.&lt;/p&gt;
-			&lt;p&gt;If you need to complete this later - remember the codeword BAGUETTE to finish your training at a later time. It is the Secret Codeword. &lt;/p&gt;
+			&lt;p&gt;If you need to complete this later - remember the codeword BAGUETTE to finish your training at a later time. It&#39;s the Secret Codeword. &lt;/p&gt;
 
 &lt;&lt;timed 5s t8n&gt;&gt;
 
@@ -1434,7 +1443,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				&lt;div id=&quot;text&quot;&gt;
 				&lt;p&gt;Trumpet sounds – TADAH!&lt;/p&gt;
 &lt;p&gt;This must be what they nudged. They are distracting Scovell so he can’t solve the code.&lt;/p&gt;
-&lt;p&gt;If Scovell doesn’t break the code then the British would never know where to launch their attacks, they would never find The Great Paris Cipher,would lose the battle and it seems, we would all end up speaking French.&lt;/p&gt;
+&lt;p&gt;If Scovell doesn’t break the code then the British would never know where to launch their attacks, they would never find The Great Paris Cipher, would lose the battle and it seems, we would all end up speaking French.&lt;/p&gt;
 
 &lt;&lt;timed 5s&gt;&gt;
 &lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtySix]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;&lt;/div&gt;
@@ -1489,16 +1498,10 @@ but passing those will give you the power to nudge the past if your Time Mission
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;
 					&lt;&lt;timed 0.1s&gt;&gt;
-		&lt;p&gt;We have part of the code to decipher the letter –a letter from Joseph Bonaparte to his brother Napoleon Bonaparte.&lt;/p&gt; 
+		&lt;p&gt;We have part of the code to decipher the letter –a letter from Joseph Bonaparte to his brother Napoleon Bonaparte. I’m going to need you to break the rest of the letter. If you can do that, then we can work out where the French are going to be and then hopefully the British can get the Great Paris Cipher.&lt;/p&gt;
 
-	 &lt;p&gt;I’m going to need you to break the rest of the letter. If you can do that, then we can work out where the French are going to be and then hopefully the British can get the Great Paris Cipher.&lt;/p&gt;
-
-	 &lt;p&gt;There isn’t much time.&lt;/p&gt;
-&lt;p&gt;Not all the letter is in the code – just the key words.&lt;/p&gt;
-&lt;p&gt;Break the code, stop TADAH. &lt;/p&gt;
-&lt;p&gt;If we do that maybe, we’ll not end up speaking français...&lt;/p&gt;
-&lt;p&gt;I mean French.&lt;/p&gt;
-&lt;p&gt; See, it&#39;s already starting to happen.&lt;/p&gt;
+	 &lt;p&gt;There isn’t much time. Not all the letter is in the code – just the key words. Break the code, stop TADAH. &lt;/p&gt;
+&lt;p&gt;If we do that maybe, we’ll not end up speaking français... I mean French. See, it&#39;s already starting to happen.&lt;/p&gt;
 
 &lt;p&gt;Aidez-moi, s&#39;il vous plait&lt;/p&gt;
 &lt;p&gt;Please help!&lt;/p&gt;
@@ -1523,11 +1526,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/33b. Challenge 5 - French Letter.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;timed 32s &gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/DECIPHER THE CODE.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;replace &quot;#frenchDecipher&quot;&gt;&gt;&lt;p&gt;Décrypter le code&lt;/p&gt;
-&lt;p&gt;Decipher the code&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;replace &quot;#frenchDecipher&quot;&gt;&gt;&lt;strong&gt;Décrypter le code • Decipher the code&lt;/strong&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;div id=&quot;frenchDecipher&quot;&gt;
-&lt;/div&gt;
+
 &lt;div id=&quot;page&quot; class=&quot;letter&quot;&gt;
 
 /* Letter  */
@@ -1541,7 +1542,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 	&lt;br&gt;Our troops will not be in &lt;span id=&quot;CODE3&quot; role=&quot;text&quot; aria-label=&quot;4th code word 3.15.18.21.14.14.1&quot;&gt;3.15.18.21.14.14.1^^4^^&lt;/span&gt;. 
 &lt;/div&gt;
-
+&lt;div class=&quot;grid-outer-wrapper&quot;&gt;
 &lt;div class=&quot;grid-answer-wrapper&quot;&gt;
 	/* Code grid  */
 	&lt;div class=&quot;CodeGrid&quot; role=&quot;text&quot; aria-label=&quot;The code grid&quot;&gt;
@@ -1572,7 +1573,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 			&lt;div class=&quot;CodeGrid-item&quot;&gt;&lt;div class=&quot;lettergrid&quot;&gt;Y&lt;/div&gt;&lt;div class=&quot;number&quot;&gt;25&lt;/div&gt;&lt;/div&gt;
 			&lt;div class=&quot;CodeGrid-item&quot;&gt;&lt;div class=&quot;lettergrid&quot;&gt;Z&lt;/div&gt;&lt;div class=&quot;number&quot;&gt;26&lt;/div&gt;&lt;/div&gt;
 	&lt;/div&gt;
-	
+	&lt;div id=&quot;frenchDecipher&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;	
 	/* Inpout boxes */
 	&lt;div id=&quot;Answers&quot; class=&quot;solutions-wrapper&quot; role=&quot;text&quot; aria-label=&quot;Four input boxes for the passwords&quot;&gt;
 		&lt;div class=&quot;solutions-item&quot;&gt;^^1^^&lt;&lt;textbox &quot;$password1&quot;  &quot;&quot;&gt;&gt; &lt;/div&gt;
@@ -1735,10 +1738,11 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;/div&gt;
 
 &lt;div class=&quot;flex-container-col-cen&quot;&gt;
-	&lt;p&gt;INPUT SFS CODE TO CONTINUE &lt;/p&gt;
+	&lt;p id=&quot;mount&quot;&gt;&lt;/p&gt;
 	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Password Input&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span role=&quot;button&quot;  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 &lt;/div &gt;
+		&lt;&lt;timed 60s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;Input Code to Continue&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
@@ -1823,7 +1827,8 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;/div &gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;img src=&quot;./assets/img/certificateteal.jpg&quot; alt=&quot;A certificate reading MOTT Induction Passed, Eligible for Field Duty,Eligible for Historical, Communications Field Guide,Eligible for Signal Fire System Use,Novice Nudger Grad 1,Crumpet Access Granted&quot; class=&quot;certificate&quot;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
+&lt;span role=&quot;button&quot; class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu codeword question&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2000,7 +2005,9 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
 &lt;&lt;timed 1s&gt;&gt;
-&lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav&quot;  autoplay  id=&quot;bgAudio&quot;&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;
+&lt;&lt;done&gt;&gt;
+&lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;&lt;&lt;/done&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 8s t8n&gt;&gt;
 &lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/24. Challenge 5 - French Message.mp3&quot; autoplay&gt;&lt;p&gt;Audio is not supported on your device&lt;/p&gt;&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;
@@ -2032,7 +2039,9 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
-&lt;&lt;timed 0.2s&gt;&gt;&lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 0.2s&gt;&gt;&lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav&quot; autoplay id=&quot;bgAudio&quot;&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;
+&lt;&lt;done&gt;&gt;
+&lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;&lt;&lt;/done&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 10s t8n&gt;&gt;

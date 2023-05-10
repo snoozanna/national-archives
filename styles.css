@@ -1187,10 +1187,6 @@ span.intext.cipher {
   background-position: 105% center;
 }
 
-#frenchDecipher {
-  position: fixed;
-}
-
 /*Code Grid*/
 
 .CodeGrid {
@@ -1237,8 +1233,17 @@ passage-thirtyeight > div#main {
   min-width: inherit;
 }
 
+.grid-outer-wrapper {
+  display: flex;
+  /* flex-direction: column; */
+}
+
 .grid-answer-wrapper {
   display: flex;
+  flex-direction: column;
+}
+#frenchDecipher {
+  /* position: fixed; */
 }
 
 .napoleon-letter {

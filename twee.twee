@@ -69,7 +69,12 @@ Macro.add('ScrollTo', {
 		}
 	}
 });
+
 /* <<ScrollTo>> macro - End */
+setup.changeVol = (num) => {
+	const bgAudio = document.getElementById("bgAudio");
+	bgAudio.volume = num
+}
 
 
 :: Start [nobr] {"position":"134,244.33333333333337","size":"100,100"}
@@ -207,8 +212,8 @@ Macro.add('ScrollTo', {
 	/* GRID  */
 	<div class="content-wrapper">
 		<div class="content-item sidebar">
-			<p>Click on the First Challenge: Code Breaking to continue</p>
-			
+			<p>Let’s begin with Challenge 1. <br/>Click on Number 1 - Code Breaking.</p>
+
 	
 		</div>
 	
@@ -510,7 +515,7 @@ over secret files">
 		/* GRID  */
 		<div class="content-wrapper">
 			<div class="content-item sidebar">
-				<p>Click on the Second Challenge: Fog Clearing to continue</p>
+				<p>Time to clear the fog in Challenge 2. Click on it now.</p>
 	
 			</div>
 	
@@ -799,7 +804,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		/* GRID  */
 		<div class="content-wrapper">
 			<div class="content-item sidebar">
-				<p>Click on the Third Challenge: Signal Fire System to continue.</p>
+				<p>Time to click on the Signal Fire Challenge.</p>
 			</div>
 	
 			<div class="menu-wrapper content-item content menu">
@@ -1108,9 +1113,10 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 	<<if $audioOn is true>><audio src="assets/audio/Challenge 4.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 		/* GRID  */
+
 		<div class="content-wrapper">
 			<div class="content-item sidebar">
-				<p>Click on the Fourth Challenge: Time Nudging to continue</p>
+				<p>The fourth challenge in the training. Click Time Nudging to begin.</p>
 			</div>
 			<div class="menu-wrapper content-item content menu">
 
@@ -1171,8 +1177,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<set $challenge to 4>><<set $title to 5>>
 <div class="wrapper menu">
 	<<include "headermenu">>
-	<main id="main" class="menu"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 2.wav" autoplay>Sound plays</audio><</if>>
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/19. Challenge 4 - 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+	<main id="main" class="menu"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 2.wav"   autoplay id="bgAudio">Sound plays</audio><</if>>
+	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/19. Challenge 4 - 1.mp3"  autoplay >Audio is not supported on your device</audio><</if>>
 	<div class="content-wrapper">
 	<<include "sidebartime">>
 		<div class="content-item content text">
@@ -1187,7 +1193,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	</main>
 <<include "footer">>
 </div>
-
+<<done>>
+<<set $vol to setup.changeVol(0.5)>>
+<</done>>
 
 
 :: TwentyFive [nobr] {"position":"1542.6666666666665,1097","size":"100,100"}
@@ -1274,9 +1282,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 <div id="code">
 <div id="CoC">
 <span class="Header"><img src="https://remote.co.com/MoTT/AgentTraining/Images/mottlogowords.png">
-<h1>code of conduct</h1></span>
+<h1>Code of Conduct</h1></span>
 
-<span class="CoCTitle"><h2>clean</h2> a clean desk is a clean mind, and saves on cleaning costs.</span>
+<span class="CoCTitle"><h2>clean</h2>A clean desk is a clean mind, and saves on cleaning costs.</span>
 
 <span class="CoCTitle"><h2>smile</h2> Always offer the national archives & ministry staff a smile. It goes a long way.</span>
 
@@ -1377,7 +1385,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 		/* GRID  */
 		<div class="content-wrapper">
 			<div class="content-item sidebar">
-				<p>Click on the secret mission to continue</p>
+				<p>You have unlocked the final part of your training. Click the secret mission icon.</p>
 			</div>
 	
 			<div class="menu-wrapper content-item content menu">
@@ -1448,7 +1456,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				</div>
 			<p>In this challenge you will use the real Signal Fire System.</p> 
 			<p>I told you you'd need to use it sooner rather than later! Are you ready to load a tutorial mission? It will pull on the skills you have learnt from the other challenges.</p>
-			<p>If you need to complete this later - remember the codeword BAGUETTE to finish your training at a later time. It is the Secret Codeword. </p>
+			<p>If you need to complete this later - remember the codeword BAGUETTE to finish your training at a later time. It's the Secret Codeword. </p>
 
 <<timed 5s t8n>>
 
@@ -1633,7 +1641,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				<div id="text">
 				<p>Trumpet sounds – TADAH!</p>
 <p>This must be what they nudged. They are distracting Scovell so he can’t solve the code.</p>
-<p>If Scovell doesn’t break the code then the British would never know where to launch their attacks, they would never find The Great Paris Cipher,would lose the battle and it seems, we would all end up speaking French.</p>
+<p>If Scovell doesn’t break the code then the British would never know where to launch their attacks, they would never find The Great Paris Cipher, would lose the battle and it seems, we would all end up speaking French.</p>
 
 <<timed 5s>>
 <span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtySix]]>><</button>></span><</timed>></div>
@@ -1698,16 +1706,10 @@ but passing those will give you the power to nudge the past if your Time Mission
 				<div id="alarm"></div>
 				<div id="text">
 					<<timed 0.1s>>
-		<p>We have part of the code to decipher the letter –a letter from Joseph Bonaparte to his brother Napoleon Bonaparte.</p> 
+		<p>We have part of the code to decipher the letter –a letter from Joseph Bonaparte to his brother Napoleon Bonaparte. I’m going to need you to break the rest of the letter. If you can do that, then we can work out where the French are going to be and then hopefully the British can get the Great Paris Cipher.</p>
 
-	 <p>I’m going to need you to break the rest of the letter. If you can do that, then we can work out where the French are going to be and then hopefully the British can get the Great Paris Cipher.</p>
-
-	 <p>There isn’t much time.</p>
-<p>Not all the letter is in the code – just the key words.</p>
-<p>Break the code, stop TADAH. </p>
-<p>If we do that maybe, we’ll not end up speaking français...</p>
-<p>I mean French.</p>
-<p> See, it's already starting to happen.</p>
+	 <p>There isn’t much time. Not all the letter is in the code – just the key words. Break the code, stop TADAH. </p>
+<p>If we do that maybe, we’ll not end up speaking français... I mean French. See, it's already starting to happen.</p>
 
 <p>Aidez-moi, s'il vous plait</p>
 <p>Please help!</p>
@@ -1738,11 +1740,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 <<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/33b. Challenge 5 - French Letter.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 
 <<timed 32s >><<if $audioOn is true>><audio src="assets/audio/DECIPHER THE CODE.mp3" autoplay>Audio is not supported on your device</audio><</if>>
-<<replace "#frenchDecipher">><p>Décrypter le code</p>
-<p>Decipher the code</p><</replace>><</timed>>
+<<replace "#frenchDecipher">><strong>Décrypter le code • Decipher the code</strong><</replace>><</timed>>
 
-<div id="frenchDecipher">
-</div>
+
 <div id="page" class="letter">
 
 /* Letter  */
@@ -1756,7 +1756,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 	<br>Our troops will not be in <span id="CODE3" role="text" aria-label="4th code word 3.15.18.21.14.14.1">3.15.18.21.14.14.1^^4^^</span>. 
 </div>
-
+<div class="grid-outer-wrapper">
 <div class="grid-answer-wrapper">
 	/* Code grid  */
 	<div class="CodeGrid" role="text" aria-label="The code grid">
@@ -1787,7 +1787,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<div class="CodeGrid-item"><div class="lettergrid">Y</div><div class="number">25</div></div>
 			<div class="CodeGrid-item"><div class="lettergrid">Z</div><div class="number">26</div></div>
 	</div>
-	
+	<div id="frenchDecipher">
+</div>
+</div>	
 	/* Inpout boxes */
 	<div id="Answers" class="solutions-wrapper" role="text" aria-label="Four input boxes for the passwords">
 		<div class="solutions-item">^^1^^<<textbox "$password1"  "">> </div>
@@ -1961,10 +1963,11 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 </div>
 
 <div class="flex-container-col-cen">
-	<p>INPUT SFS CODE TO CONTINUE </p>
+	<p id="mount"></p>
 	<span role="input" class="" aria-label="Password Input"><<textbox "_password" "" autofocus>></span><br/><span role="button"  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	<br><span id="wrong"></span>
 </div >
+		<<timed 60s>> <<replace "#mount">>Input Code to Continue<</replace>><</timed>>
 <</append>>
 <</timed>>
 
@@ -2067,7 +2070,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 <img src="./assets/img/certificateteal.jpg" alt="A certificate reading MOTT Induction Passed, Eligible for Field Duty,Eligible for Historical, Communications Field Guide,Eligible for Signal Fire System Use,Novice Nudger Grad 1,Crumpet Access Granted" class="certificate">
 <span role="button" class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|FourtyFour-End]]>><</button>></span>
-
+</main>
 
 
 :: FourtyFour-End [nobr] {"position":"2093.0000000000005,1217.6666666666665","size":"100,100"}
@@ -2271,7 +2274,9 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 	<<include "footermission">>
 </div>
 <<timed 1s>>
-<<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav" autoplay>Audio is not supported on your device</audio><</if>><</append>><</timed>>
+<<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav"  autoplay  id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
+<<done>>
+<<set $vol to setup.changeVol(0.5)>><</done>><</timed>>
 
 <<timed 8s t8n>>
 <<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/24. Challenge 5 - French Message.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>>
@@ -2284,6 +2289,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 							<</timed>>
 <</replace>>
 <</timed>>
+
 
 :: IncomingMessageEn [nobr] {"position":"1943,350.33333333333337","size":"100,100"}
 /* IncomingMessage */ 
@@ -2306,7 +2312,9 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 	</main>
 	<<include "footermission">>
 </div>
-<<timed 0.2s>><<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav" autoplay>Audio is not supported on your device</audio><</if>><</append>><</timed>>
+<<timed 0.2s>><<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav" autoplay id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
+<<done>>
+<<set $vol to setup.changeVol(0.5)>><</done>><</timed>>
 
 <<silently>>
 <<timed 10s t8n>>
