@@ -1090,6 +1090,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 	
 	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Enter the codeword">
+	<label for="_password">Enter the codeword:</label>
 	<<textbox "_password" "" >><span class="button-wrapper" aria-label="Check the Codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "BAGUETTE">><<goto "TwentyNine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>><span aria-label="Click Button to check Answer">
 	</span></span></div>
 	<br><span id="wrong"></span>
