@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Supria Regular";
-  src: url("/assets/fonts/Supria-Sans-Web-Cond-Regular.woff2") format("woff2");
+  src: url("assets/fonts/Supria-Sans-Web-Cond-Regular.woff2") format("woff2");
 }
 
 :root {
@@ -217,19 +217,30 @@ img.logomott {
   align-items: center;
   width: fit-content;
   background-color: white;
-  border-radius: 50%;
-  padding: 1rem 0;
+  border-radius: 6px;
+  height: fit-content;
+  /* border-radius: 50%; */
+  /* padding: 1rem 0; */
 }
+
 .button-wrapper > button,
 .button-wrapper > a,
 .button-wrapper.circle > button,
 .button-wrapper.orange > button {
-  color: var(--orange);
+  color: black;
   background-color: transparent;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   border: none;
   text-transform: uppercase;
+}
+
+a.link-internal.macro-link:focus-visible,
+a.link-internal.link-image:focus-visible,
+.button-wrapper > button:focus-visible,
+.button-wrapper > a:focus-visible {
+  outline: solid var(--orange) 3px;
+  outline-offset: 5px;
 }
 
 #back.button-wrapper > a {
@@ -247,29 +258,24 @@ img.logomott {
   font-size: 2rem;
   margin-block-end: 2rem;
 }
+.button-wrapper.plain.inverse > button {
+  background-color: white;
+  color: black;
+}
 
 .button-wrapper.plain > button {
   color: white;
 }
 
-/* .button-wrapper > button,
-.button-wrapper > a {
-} */
-
-/* .button-wrapper.orange > button {
-  font-weight: 700;
-  font-size: 1.8rem;
-
-  text-transform: uppercase;
-  color: var(--orange);
-} */
-
 .hint-button > button {
-  background-color: var(--orange);
+  background-color: white;
   border: white 1px solid;
   border-radius: 4px;
-  color: white;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 900;
   margin-block-end: 1rem;
+  display: inline-block;
 }
 
 /* INTRO  */
@@ -286,14 +292,11 @@ img.logomott {
   align-items: center;
 }
 
-.button-wrapper.circle {
-  /* border: solid white 2px; */
-  background-color: white;
-  border-radius: 50%;
-  padding: 1rem 0;
+.inline-icon-wrap {
+  margin-right: 2rem;
 }
-.button-wrapper.circle > button {
-  color: var(--orange);
+.inline-icon-wrap > img {
+  max-width: 40px;
 }
 
 .intro-text > .flex-container-row > p.fit {
@@ -570,7 +573,7 @@ a.grid-item > .menu-item > img.option {
 }
 
 .title-wrapper > p > span {
-  color: var(--orange);
+  color: white;
   text-decoration: none;
 }
 
@@ -702,11 +705,11 @@ input.macro-textbox {
 }
 
 h3.orange {
-  color: var(--orange);
+  color: white;
 }
 
 h3.subtitle > span.orange {
-  color: var(--orange);
+  color: white;
 }
 
 .content-item.content > img.completed {
@@ -733,6 +736,7 @@ h3.subtitle > span.orange {
   align-items: center;
   justify-content: start;
   max-width: 30%;
+  min-width: 20%;
 }
 
 .fog-img-wrapper {
@@ -743,6 +747,10 @@ h3.subtitle > span.orange {
   font-size: 5rem;
   justify-self: flex-end;
   margin-bottom: 0;
+}
+
+.nohourglass > a > img {
+  display: none;
 }
 
 .game-content > span#image-text {
@@ -910,6 +918,15 @@ span.code.img {
   width: 25%;
   bottom: 0;
   right: 5rem;
+}
+
+p.nameSender {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+p.nameSender.scovell {
+  text-align: right;
 }
 
 #Scovell a,
@@ -1128,8 +1145,11 @@ footer.mission {
   z-index: 99999;
 }
 
-.content-item.content.text.mission > img.gif.signal {
-  max-width: 50%;
+.content-item.content.text.mission > .timer-wrapper.gif.signal {
+  width: 50%;
+}
+.content-item.content.text.mission > .timer-wrapper.gif.signal > a > img {
+  width: 100%;
 }
 
 .content-item.content.text.mission.message {

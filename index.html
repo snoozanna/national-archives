@@ -147,64 +147,99 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}</script><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot;&gt;
+}</script><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
-  	&lt;div class=&quot;audio-container&quot;&gt;
-	  &lt;poweron&gt;&lt;a data-passage=&quot;TutorialOne&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;/poweron&gt;
-	  &lt;br&gt;&lt;div&gt;Audio &lt;&lt;link &quot;On&quot;&gt;&gt;&lt;&lt;set $audioOn to true&gt;&gt;&lt;&lt;set $audioClick to true&gt;&gt;&lt;&lt;/link&gt;&gt;/&lt;&lt;link &quot;Off&quot;&gt;&gt;&lt;&lt;set $audioOn to false&gt;&gt;&lt;&lt;set $audioClick to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div &gt;
-	  &lt;/div&gt;
+
+	&lt;p&gt;&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot;&gt;&lt;/span&gt;This experience has the option of an audio soundtrack.  &lt;/p&gt;
+	&lt;p&gt;Would you prefer audio on or off? &lt;/p&gt;
+&lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
+	&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to turn audio on&quot;&gt;
+		&lt;&lt;button &quot;On&quot;&gt;&gt;
+			&lt;&lt;set $audioOn to true&gt;&gt;
+			&lt;&lt;set $audioClick to true&gt;&gt;
+			&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+				&lt;strong&gt; &lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot;&gt;&lt;/span&gt; Audio On&lt;/strong&gt;
+				&lt;br&gt;
+				&lt;p&gt;Press the power on button to continue&lt;/p&gt;
+				&lt;poweron&gt;&lt;a data-passage=&quot;TutorialOne&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;/poweron&gt;
+				&lt;br&gt;
+			&lt;br&gt;
+				&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to go back&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;goto &quot;Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+				&lt;/span&gt;
+	&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;/button&gt;&gt;
+	&lt;/span&gt;
+	&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to turn audio off&quot;&gt;
+	&lt;&lt;button &quot;Off&quot;&gt;&gt;
+		&lt;&lt;set $audioOn to false&gt;&gt;
+		&lt;&lt;set $audioClick to true&gt;&gt;
+&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+			&lt;strong&gt; Audio Off&lt;/strong&gt;
+			&lt;p&gt;Press the power on button to continue&lt;/p&gt;
+			&lt;poweron&gt;&lt;a data-passage=&quot;TutorialOne&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;/poweron&gt;
+			&lt;br&gt;
+			&lt;br&gt;
+			&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to go back&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;goto &quot;Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+			&lt;/span&gt;
+		&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+
+	 
+
   &lt;/div &gt;</tw-passagedata><tw-passagedata pid="2" name="footer" tags="nobr" position="225,100" size="100,100">&lt;footer&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="3" name="footermission" tags="nobr" position="350,100" size="100,100">&lt;footer class=&quot;mission&quot;&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="header" tags="nobr" position="475,100" size="100,100">&lt;header&gt;
-	&lt;div class=&quot;logo-wrapper&quot;&gt;&lt;img src=&quot;/assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt; &lt;/header&gt;</tw-passagedata><tw-passagedata pid="5" name="headertrain" tags="nobr" position="600,100" size="100,100">&lt;header&gt;
-		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;/assets/img/training-logo.png&quot; class=&quot;logo na&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot;&gt;&lt;/div&gt;&lt;/header&gt;</tw-passagedata><tw-passagedata pid="6" name="headermenu" tags="nobr" position="725,100" size="100,100">&lt;header&gt;
+	&lt;div class=&quot;logo-wrapper&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt; &lt;/header&gt;</tw-passagedata><tw-passagedata pid="5" name="headertrain" tags="nobr" position="600,100" size="100,100">&lt;header&gt;
+		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; class=&quot;logo na&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot;&gt;&lt;/div&gt;&lt;/header&gt;</tw-passagedata><tw-passagedata pid="6" name="headermenu" tags="nobr" position="725,100" size="100,100">&lt;header&gt;
 		&lt;div class=&quot;logo-wrapper&quot;&gt;
-		&lt;div class=&quot;logo-container&quot;&gt;&lt;img src=&quot;/assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;img src=&quot;/assets/img/mottlogo-w.png&quot; alt=&quot;The Ministry of Time Travel Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;/div&gt;
-		&lt;img src=&quot;/assets/img/training-logo.png&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot; class=&quot;logo na logo-item&quot;&gt;
+		&lt;div class=&quot;logo-container&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;img src=&quot;assets/img/mottlogo-w.png&quot; alt=&quot;The Ministry of Time Travel Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;/div&gt;
+		&lt;img src=&quot;assets/img/training-logo.png&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot; class=&quot;logo na logo-item&quot;&gt;
 		&lt;/div&gt;
 &lt;/header&gt;</tw-passagedata><tw-passagedata pid="7" name="headermenugrid" tags="nobr" position="850,100" size="100,100">&lt;header class=&quot;menu-grid&quot;&gt;
 		&lt;div class=&quot;logo-wrapper &quot;&gt;
-			&lt;div class=&quot;logo-container&quot;&gt;&lt;img src=&quot;/assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;img src=&quot;/assets/img/mottlogo-w.png&quot; alt=&quot;The Ministry of Time Travel Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;/div&gt;&lt;img src=&quot;/assets/img/training-logo.png&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot; class=&quot;logo na logo-item&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;logo-container&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;img src=&quot;assets/img/mottlogo-w.png&quot; alt=&quot;The Ministry of Time Travel Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;/div&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot; class=&quot;logo na logo-item&quot;&gt;&lt;/div&gt;
 &lt;/header&gt;</tw-passagedata><tw-passagedata pid="8" name="sidebarcode" tags="nobr" position="975,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 	&lt;div class=&quot;title-wrapper&quot;&gt;
-					&lt;img src=&quot;./assets/img/code-or.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot; orange&quot;&gt;
+					&lt;img src=&quot;assets/img/code-or.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;1. &lt;/span&gt;Code Breaking&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="sidebarfog" tags="nobr" position="1100,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 	&lt;div class=&quot;title-wrapper&quot;&gt;
-					&lt;img src=&quot;./assets/img/fog-or.png&quot; alt=&quot;Fog Clearing Button&quot; id=&quot;Fog Clearing&quot; class=&quot; orange&quot;&gt;
+					&lt;img src=&quot;assets/img/fog-or.png&quot; alt=&quot;Fog Clearing Button&quot; id=&quot;Fog Clearing&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;2. &lt;/span&gt;Fog Clearing&lt;/p&gt;
 		&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="sidebarfire" tags="nobr" position="1225,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 	&lt;div class=&quot;title-wrapper&quot;&gt;
-					&lt;img src=&quot;./assets/img/fire-or.png&quot; alt=&quot;Signal Fire System Button&quot; class=&quot; orange&quot;&gt;
+					&lt;img src=&quot;assets/img/fire-or.png&quot; alt=&quot;Signal Fire System Button&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;3. &lt;/span&gt;Signal Fire System&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="sidebartime" tags="nobr" position="100,225" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 &lt;div class=&quot;title-wrapper&quot;&gt;
-					&lt;img src=&quot;./assets/img/time-or.png&quot; alt=&quot;Time Nudging Button&quot; class=&quot; orange&quot;&gt;
+					&lt;img src=&quot;assets/img/time-or.png&quot; alt=&quot;Time Nudging Button&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;4. &lt;/span&gt;Time Nudging&lt;/p&gt;
 				&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="mentor" tags="nobr" position="225,225" size="100,100">&lt;div class=&quot;mentor-wrapper&quot;&gt;
 	&lt;p&gt;&lt;span&gt;Your Mentor:&lt;/span&gt; &lt;span&gt;Chief Timer&lt;/span&gt;
 	&lt;span&gt;Beatrix Vandenberg&lt;/span&gt;&lt;/p&gt;
-	&lt;img src=&quot;./assets/img/mentor-amy.png&quot; class=&quot;mentor&quot; alt=&quot;Chief Timer Beatrix Vanderberg&quot;&gt;
+	&lt;img src=&quot;assets/img/mentor-amy.png&quot; class=&quot;mentor&quot; alt=&quot;Chief Timer Beatrix Vanderberg&quot;&gt;
 	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="oldman" tags="nobr" position="350,225" size="100,100">&lt;div class=&quot;mentor-wrapper&quot;&gt;
 	&lt;span class=&quot;caption&quot;&gt;Duke of Wellington&lt;/span&gt;
-	&lt;img src=&quot;./assets/img/oldman.png&quot; class=&quot;mentor oldman&quot; alt=&quot;The Duke of Wellington&quot;&gt;
+	&lt;img src=&quot;assets/img/oldman.png&quot; class=&quot;mentor oldman&quot; alt=&quot;The Duke of Wellington&quot;&gt;
 	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="scovell" tags="nobr" position="475,225" size="100,100">&lt;div class=&quot;scovell-wrapper&quot;&gt;
 
-	&lt;img src=&quot;./assets/img/scovell.png&quot; class=&quot;scovell&quot; alt=&quot;The George Scovell&quot;&gt;
+	&lt;img src=&quot;assets/img/scovell.png&quot; class=&quot;scovell&quot; alt=&quot;The George Scovell&quot;&gt;
 		&lt;span class=&quot;caption&quot;&gt;George Scovell&lt;/span&gt;
 	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="napolean" tags="nobr" position="600,225" size="100,100">&lt;div class=&quot;mentor-wrapper napolean&quot;&gt;
 	&lt;span class=&quot;caption&quot;&gt;Napoleon Bonaparte&lt;/span&gt;
-	&lt;img src=&quot;./assets/img/napolean.png&quot; class=&quot;mentor oldman&quot; alt=&quot;Napoleon Bonaparte&quot;&gt;
+	&lt;img src=&quot;assets/img/napolean.png&quot; class=&quot;mentor oldman&quot; alt=&quot;Napoleon Bonaparte&quot;&gt;
 	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="joseph" tags="nobr" position="725,225" size="100,100">&lt;div class=&quot;scovell-wrapper joseph&quot;&gt;
 
-	&lt;img src=&quot;./assets/img/joseph.png&quot; class=&quot;scovell&quot; alt=&quot;Joseph Bonaparte &quot;&gt;
+	&lt;img src=&quot;assets/img/joseph.png&quot; class=&quot;scovell&quot; alt=&quot;Joseph Bonaparte &quot;&gt;
 		&lt;span class=&quot;caption&quot;&gt;Joseph Bonaparte &lt;/span&gt;
 	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="One" tags="nobr video" position="787.6666666666667,99.33333333333337" size="100,100">/* VIDEO  */
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;&lt;&lt;set $title to &quot;V1&quot;&gt;&gt;
-	&lt;div id=&quot;video&quot; class=&quot;video-wrapper&quot; role=&quot;video&quot; aria-label=&quot;MOTT Training 1 video&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/640377198?h=6aeee3d5c8&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen  title=&quot;MOTT Training 1&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+	&lt;div id=&quot;video&quot; class=&quot;video-wrapper&quot; role=&quot;video&quot; aria-label=&quot;MOTT Training 1 video&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/640377198?h=6aeee3d5c8&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&amp;amp;speed=1&amp;amp;controls=1&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen   title=&quot;MOTT Training 1&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 	&lt;/main&gt;
 		&lt;footer&gt;&lt;nav&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;Zero&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;
 &lt;/div&gt;
@@ -229,39 +264,39 @@ setup.changeVol = (num) => {
 		&lt;a data-passage=&quot;Three&quot; class=&quot;link-internal macro-link grid-item code&quot; tabindex=&quot;0&quot;&gt;
 		&lt;div class=&quot;menu-item &quot;&gt;
 		&lt;div class=&quot;title-wrapper grid&quot;&gt;
-				&lt;img src=&quot;./assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
-				&lt;p&gt;&lt;span&gt;1. &lt;/span&gt;Code Breaking&lt;/p&gt;
+				&lt;img src=&quot;assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
+				&lt;p&gt;1. Code Breaking&lt;/p&gt;
 			&lt;/div&gt;
-		&lt;img src=&quot;./assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
+		&lt;img src=&quot;assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
 		&lt;/div&gt;
 		&lt;/a&gt; 
 		
 		&lt;div class=&quot;menu-item grid-item fog&quot;&gt;
 		&lt;div class=&quot;title-wrapper grid&quot;&gt;
-				&lt;img src=&quot;./assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
-				&lt;p&gt;&lt;span&gt;2. &lt;/span&gt;Fog Clearing&lt;/p&gt;
+				&lt;img src=&quot;assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
+				&lt;p&gt;2. Fog Clearing&lt;/p&gt;
 			&lt;/div&gt;
-		&lt;img src=&quot;./assets/img/fog.png&quot; class=&quot;option&quot;&gt;
+		&lt;img src=&quot;assets/img/fog.png&quot; class=&quot;option&quot;&gt;
 		&lt;/div&gt; 
 		
 		&lt;div class=&quot;menu-item grid-item fire&quot;&gt;
-		&lt;img src=&quot;./assets/img/fire.png&quot; class=&quot;option&quot;&gt;
+		&lt;img src=&quot;assets/img/fire.png&quot; class=&quot;option&quot;&gt;
 		&lt;div class=&quot;title-wrapper grid&quot;&gt;
-			&lt;img src=&quot;./assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
-				&lt;p&gt;&lt;span&gt;3. &lt;/span&gt;Signal Fire System&lt;/p&gt;
+			&lt;img src=&quot;assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
+				&lt;p&gt;3. Signal Fire System&lt;/p&gt;
 			&lt;/div&gt;
 		&lt;/div&gt; 
 		
 		&lt;div class=&quot;menu-item grid-item time&quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-				&lt;img src=&quot;./assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
-				&lt;p&gt;&lt;span&gt;4. &lt;/span&gt;Time Nudging&lt;/p&gt;
+				&lt;img src=&quot;assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
+				&lt;p&gt;4. Time Nudging&lt;/p&gt;
 			&lt;/div&gt;
-			&lt;img class=&quot;option&quot; src=&quot;./assets/img/time.png&quot;&gt;
+			&lt;img class=&quot;option&quot; src=&quot;assets/img/time.png&quot;&gt;
 		&lt;/div&gt; 
-	&lt;img class=&quot; grid-item arrow1&quot; src=&quot;./assets/img/arrow-o.png&quot;&gt;
-		&lt;img class=&quot; grid-item arrow2&quot; src=&quot;./assets/img/arrow-y2.png&quot;&gt;
-			&lt;img class=&quot; grid-item arrow3&quot; src=&quot;./assets/img/arrow-y.png&quot;&gt;
+	&lt;img class=&quot; grid-item arrow1&quot; src=&quot;assets/img/arrow-o.png&quot;&gt;
+		&lt;img class=&quot; grid-item arrow2&quot; src=&quot;assets/img/arrow-y2.png&quot;&gt;
+			&lt;img class=&quot; grid-item arrow3&quot; src=&quot;assets/img/arrow-y.png&quot;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	
@@ -304,9 +339,9 @@ setup.changeVol = (num) => {
 	
 	
 	
-	&lt;h3 class=&quot;subtitle&quot;&gt;QUESTION 1:&lt;/h3&gt;
-	&lt;span id=&quot;countdown&quot;&gt;&lt;&lt;set $seconds to 60&gt;&gt;60 seconds remaining&lt;/span&gt;
-	&lt;div id=&quot;scrambled&quot; class=&quot;scrambled&quot;&gt;&lt;span&gt;RESECT&lt;/span&gt;&lt;/div&gt;
+	&lt;h3 class=&quot;subtitle&quot; &gt;QUESTION 1:&lt;/h3&gt;
+	&lt;span id=&quot;cdWrapper&quot;&gt;&lt;span id=&quot;countdown&quot;&gt;&lt;&lt;set $seconds to 60&gt;&gt;60&lt;/span&gt; seconds remaining&lt;/span&gt;
+	&lt;div id=&quot;scrambled&quot; class=&quot;scrambled&quot; tabindex=&quot;0&quot;&gt;&lt;span&gt;RESECT&lt;/span&gt;&lt;/div&gt;
 	
 	&lt;&lt;link &quot;Click for a hint&quot;&gt;&gt;
 	&lt;&lt;toggleclass &quot;#hint&quot; &quot;disappear&quot;&gt;&gt;
@@ -314,11 +349,13 @@ setup.changeVol = (num) => {
 &lt;&lt;/link&gt;&gt;
 &lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt;Hint: Shhhhh&lt;/p&gt;
 	&lt;h3 class=&quot;subtitle&quot;&gt;&lt;/h3&gt;
+	&lt;br&gt;
 	
+	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;
+	&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;SECRET&quot;&gt;&gt;&lt;&lt;goto &quot;Five&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;
 	
-	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Password Field&quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;SECRET&quot;&gt;&gt;&lt;&lt;goto &quot;Five&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to check Answer&quot;&gt;
-	&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+	&lt;/span&gt;&lt;/div&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 	
 	&lt;/div&gt;
@@ -329,19 +366,19 @@ setup.changeVol = (num) => {
 &lt;/div&gt;
 
 
-&lt;&lt;include &quot;mentor&quot;&gt;&gt;	&lt;&lt;include &quot;footer&quot;&gt;&gt;
+&lt;&lt;include &quot;mentor&quot;&gt;&gt;	
 &lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
 		&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 		&lt;&lt;if $seconds gt 0&gt;&gt;
-			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds seconds remaining&lt;&lt;/replace&gt;&gt;
+			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;else&gt;&gt;
-			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 style=&quot;color:var(--orange)&quot;&gt;Here&#39;s an extra hint: S?C??T&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
+			&lt;&lt;replace &quot;#cdWrapper&quot;&gt;&gt;&lt;h3&gt;Here&#39;s an extra hint: S?C??T&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 			&lt;&lt;stop&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Five" tags="nobr" position="546,494.99999999999994" size="100,100">&lt;div class=&quot;wrapper  menu codeword question answer1&quot;&gt;
-&lt;img src=&quot;./assets/img/bg-code-answer1.png&quot; class=&quot;disappear&quot; alt=&quot;Man looking
+&lt;img src=&quot;assets/img/bg-code-answer1.png&quot; class=&quot;disappear&quot; alt=&quot;Man looking
 over secret files&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question answer1&quot;&gt;
@@ -373,17 +410,18 @@ over secret files&quot;&gt;
 					&lt;p&gt;&lt;div id=&quot;text&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 	
 		&lt;h3 class=&quot;subtitle&quot;&gt;QUESTION 2:&lt;/h3&gt;
-		&lt;span id=&quot;countdown&quot;&gt;&lt;&lt;set $seconds to 60&gt;&gt;60 seconds remaining&lt;/span&gt;
+		&lt;span&gt;&lt;span id=&quot;countdown&quot;&gt;&lt;&lt;set $seconds to 60&gt;&gt;60&lt;/span&gt; seconds remaining&lt;/span&gt;
 	
-		&lt;div id=&quot;scrambled&quot; class=&quot;scrambled&quot;&gt;&lt;span&gt;PRUMTECS&lt;/span&gt;&lt;/div&gt;
+		&lt;div id=&quot;scrambled&quot; class=&quot;scrambled&quot; tabindex=&quot;0&quot;&gt;&lt;span&gt;PRUMTECS&lt;/span&gt;&lt;/div&gt;
 		&lt;&lt;link &quot;Click for a hint&quot;&gt;&gt;
 	&lt;&lt;toggleclass &quot;#hint&quot; &quot;disappear&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#audiomount&quot;&gt;&gt;&lt;audio src=&quot;assets/audio/Challenge 1 - HINT 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt; A tasty breakfast with holes in it - which I, The Chief Timer, love.&lt;/p&gt;
 
+&lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt; A tasty breakfast with holes in it - which I, The Chief Timer, love.&lt;/p&gt;
+&lt;br&gt;&lt;br&gt;
 		&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt;
-	&lt;span role=&quot;input&quot; aria-label=&quot;Password Input&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;/div&gt;&lt;/div&gt;
@@ -397,14 +435,14 @@ over secret files&quot;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
 		&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 		&lt;&lt;if $seconds gt 0&gt;&gt;
-			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds seconds remaining&lt;&lt;/replace&gt;&gt;
+			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds &lt;&lt;/replace&gt;&gt;
 		&lt;&lt;else&gt;&gt;
-			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 style=&quot;color:var(--orange)&quot;&gt;Here&#39;s an extra hint: CR??P??S&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
+			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3&gt;Here&#39;s an extra hint: CR??P??S&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 			&lt;&lt;stop&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Nine" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question answer3&quot;&gt;
-&lt;img src=&quot;./assets/img/bg-code-answer3.png&quot; class=&quot;disappear&quot; alt=&quot;Two circles: one shows a child shhing to illustrate keeping a secret,  and the second some crumpets&quot;&gt;
+&lt;img src=&quot;assets/img/bg-code-answer3.png&quot; class=&quot;disappear&quot; alt=&quot;Two circles: one shows a child shhing to illustrate keeping a secret,  and the second some crumpets&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question answer3&quot;&gt;
 	
@@ -437,7 +475,7 @@ over secret files&quot;&gt;
 			&lt;&lt;include &quot;sidebarcode&quot;&gt;&gt;
 			&lt;div class=&quot;content-item content text&quot;&gt;
 					&lt;&lt;timed 2s&gt;&gt;
-					&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot;&gt;
+					&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot;&gt;
 						&lt;p&gt;&lt;div id=&quot;text&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 						&lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
@@ -479,41 +517,41 @@ over secret files&quot;&gt;
 			
 			&lt;div class=&quot;menu-item grid-item code&quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;1. &lt;/span&gt;Code Breaking&lt;/p&gt;
+					&lt;img src=&quot;assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
+					&lt;p&gt;1. Code Breaking&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt;
 	
 		&lt;a data-passage=&quot;TwelveOne&quot; class=&quot;link-internal macro-link grid-item fog&quot; tabindex=&quot;0&quot;&gt;	
 			&lt;div class=&quot;menu-item &quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;2. &lt;/span&gt;Fog Clearing&lt;/p&gt;
+					&lt;img src=&quot;assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;2. Fog Clearing&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/fog.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fog.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt; 
 		&lt;/a&gt;
 			
 			&lt;div class=&quot;menu-item grid-item fire&quot;&gt;
-			&lt;img src=&quot;./assets/img/fire.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fire.png&quot; class=&quot;option&quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-				&lt;img src=&quot;./assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;3. &lt;/span&gt;Signal Fire System&lt;/p&gt;
+				&lt;img src=&quot;assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;3. Signal Fire System&lt;/p&gt;
 				&lt;/div&gt;
 			&lt;/div&gt; 
 			
 			&lt;div class=&quot;menu-item grid-item time&quot;&gt;
 				&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;4. &lt;/span&gt;Time Nudging&lt;/p&gt;
+					&lt;img src=&quot;assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
+					&lt;p&gt;4. Time Nudging&lt;/p&gt;
 				&lt;/div&gt;
-				&lt;img class=&quot;option&quot; src=&quot;./assets/img/time.png&quot;&gt;
+				&lt;img class=&quot;option&quot; src=&quot;assets/img/time.png&quot;&gt;
 			&lt;/div&gt; 
-		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;./assets/img/arrow-o.png&quot;&gt;
-			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;./assets/img/arrow-y2.png&quot;&gt;
-				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;./assets/img/arrow-y.png&quot;&gt;
-					&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completecode&quot; &gt;
+		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;assets/img/arrow-o.png&quot;&gt;
+			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;assets/img/arrow-y2.png&quot;&gt;
+				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;assets/img/arrow-y.png&quot;&gt;
+					&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completecode&quot; &gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -571,11 +609,12 @@ over secret files&quot;&gt;
 					&lt;/span&gt;&lt;/h3&gt;
 				&lt;div class=&quot;fog-content-wrapper&quot;&gt;	
 					&lt;div id=&quot;image&quot; class=&quot;fog-img-wrapper&quot;&gt;
-						&lt;img src=&quot;./assets/img/women2.jpeg&quot; id=&quot;img1&quot; alt=&quot;four women&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
+						&lt;img src=&quot;assets/img/women2.jpeg&quot; id=&quot;img1&quot; alt=&quot;four women&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 					&lt;/div&gt;
 					&lt;div class=&quot;timer &quot;&gt;
 						&lt;span id=&quot;countdown&quot; class=&quot;countdown&quot;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;/span&gt;
-						&lt;img src=&quot;./assets/img/timer.png&quot; id=&quot;timer&quot; alt=&quot;an hourglass timer&quot; class=&quot;logoRot&quot;&gt;
+						/* &lt;img src=&quot;assets/img/timer.png&quot; id=&quot;timer&quot; alt=&quot;an hourglass timer&quot; class=&quot;logoRot&quot;&gt; */
+						&lt;span class=&quot;hourglass-wrapper logoRot&quot; id=&quot;hourglass&quot; alt=&quot;an hourglass timer&quot;&gt;&lt;&lt;link [img[assets/img/timer.png]]&gt;&gt;&lt;&lt;addclass &quot;#hourglass&quot; &quot;nohourglass&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;
 					&lt;/div&gt;
 			&lt;/div&gt;
 			&lt;/div&gt;
@@ -585,7 +624,7 @@ over secret files&quot;&gt;
 	&lt;&lt;silently&gt;&gt;
 	&lt;&lt;timed 10s&gt;&gt;
 		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;X&lt;&lt;/replace&gt;&gt;
-		&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/parrots.jpeg&quot; id=&quot;img2&quot; alt=&quot;woman holding two parrots&quot; class=&quot;smaller&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;assets/img/parrots.jpeg&quot; id=&quot;img2&quot; alt=&quot;woman holding two parrots&quot; class=&quot;smaller&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;&lt;p&gt;How many parrots?&lt;/p&gt;
 			&lt;&lt;set $seconds to 10&gt;&gt;
 				&lt;&lt;silently&gt;&gt;
@@ -603,7 +642,7 @@ over secret files&quot;&gt;
 
 	&lt;&lt;timed 21s&gt;&gt;
 		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;X&lt;&lt;/replace&gt;&gt;
-		&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/chewinggum.jpeg&quot; id=&quot;img3&quot; alt=&quot;Packet of chewing gum for two a penny&quot;&gt;
+		&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;assets/img/chewinggum.jpeg&quot; id=&quot;img3&quot; alt=&quot;Packet of chewing gum for two a penny&quot;&gt;
 		&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/9. Challenge 2 - pic 3 v2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;&lt;p&gt;How many pieces of gum do you get for a penny?&lt;/p&gt;
 			&lt;&lt;set $seconds to 10&gt;&gt;
@@ -622,7 +661,7 @@ over secret files&quot;&gt;
 	
 	&lt;&lt;timed 32s&gt;&gt;
 	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;X&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/numberplate.jpeg&quot; id=&quot;img4&quot; alt=&quot;Car with the license plate YYX328T&quot; class=&quot;smaller&quot;&gt;
+	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;assets/img/numberplate.jpeg&quot; id=&quot;img4&quot; alt=&quot;Car with the license plate YYX328T&quot; class=&quot;smaller&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/10. Challenge 2 - pic 4 EDIT.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;&lt;p&gt;What are the numbers on the number plate?&lt;/p&gt;&lt;&lt;set $seconds to 10&gt;&gt;&lt;&lt;silently&gt;&gt;
 	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h3 class=&quot;timer&quot;&gt;$seconds&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
@@ -639,7 +678,7 @@ over secret files&quot;&gt;
 	
 	&lt;&lt;timed 43s&gt;&gt;
 	&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;./assets/img/moonlanding.jpeg&quot; id=&quot;img5&quot; alt=&quot;The telephone number on this telegram I 1622&quot; class=&quot;smaller&quot;&gt;
+	&lt;&lt;replace &quot;#image&quot;&gt;&gt;&lt;img src=&quot;assets/img/moonlanding.jpeg&quot; id=&quot;img5&quot; alt=&quot;The telephone number on this telegram I 1622&quot; class=&quot;smaller&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/11. Challenge 2 - pic 5.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;replace &quot;#image-text&quot;&gt;&gt;&lt;p&gt;What&#39;s the telephone number of this restricted Moon Landing call?&lt;/p&gt;&lt;&lt;set $seconds to 10&gt;&gt;
 		&lt;&lt;silently&gt;&gt;
@@ -664,10 +703,14 @@ over secret files&quot;&gt;
 	&lt;p&gt;Enter them below if so, or hit replay for another go. &lt;/p&gt;
 	
 	&lt;div id=&quot;answer&quot;&gt;
-		&lt;br&gt;&lt;br&gt; [[No - REPLAY|Thirteen]]
-		&lt;br&gt;Yes - Enter Codeword
-		&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Password Input&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot;&gt;&gt;&lt;/span&gt;
-		&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;if _password is &quot;4223281622&quot;&gt;&gt;&lt;&lt;set $next to &quot;Fifteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;FogComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Try Again&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	
+		&lt;br&gt;Enter codeword:
+		&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the numbers found in the images&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot;&gt;&gt;&lt;/span&gt;
+		&lt;br&gt;
+		&lt;span class=&quot;multiple-btn-wrapper&quot;&gt;
+			&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;if _password is &quot;4223281622&quot;&gt;&gt;&lt;&lt;set $next to &quot;Fifteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;FogComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Try Again&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+			&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto &quot;Thirteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+			&lt;/span&gt;
 		&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 	&lt;/div&gt;
 	
@@ -689,7 +732,7 @@ over secret files&quot;&gt;
 			&lt;&lt;include &quot;sidebarfog&quot;&gt;&gt;
 			&lt;div class=&quot;content-item content text&quot;&gt;
 					
-					&lt;&lt;timed 3s&gt;&gt;&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
+					&lt;&lt;timed 3s&gt;&gt;&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
 						&lt;p&gt;&lt;div id=&quot;text&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;/div&gt;
@@ -732,42 +775,42 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 			&lt;div class=&quot;menu-wrapper content-item content menu&quot;&gt;
 			&lt;div class=&quot;menu-item grid-item code&quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;1. &lt;/span&gt;Code Breaking&lt;/p&gt;
+					&lt;img src=&quot;assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
+					&lt;p&gt;1. Code Breaking&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt;
 	
 			&lt;div class=&quot;menu-item grid-item fog &quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;2. &lt;/span&gt;Fog Clearing&lt;/p&gt;
+					&lt;img src=&quot;assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;2. Fog Clearing&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/fog.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fog.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt; 
 	
 	
 	&lt;a data-passage=&quot;Seventeen&quot; class=&quot;link-internal macro-link grid-item fire&quot; tabindex=&quot;0&quot;&gt;	
 			&lt;div class=&quot;menu-item &quot;&gt;
-			&lt;img src=&quot;./assets/img/fire.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fire.png&quot; class=&quot;option&quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-				&lt;img src=&quot;./assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;3. &lt;/span&gt;Signal Fire System&lt;/p&gt;
+				&lt;img src=&quot;assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;3. Signal Fire System&lt;/p&gt;
 				&lt;/div&gt;
 			&lt;/div&gt; 
 		&lt;/a&gt;		
 			&lt;div class=&quot;menu-item grid-item time&quot;&gt;
 				&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;4. &lt;/span&gt;Time Nudging&lt;/p&gt;
+					&lt;img src=&quot;assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
+					&lt;p&gt;4. Time Nudging&lt;/p&gt;
 				&lt;/div&gt;
-				&lt;img class=&quot;option&quot; src=&quot;./assets/img/time.png&quot;&gt;
+				&lt;img class=&quot;option&quot; src=&quot;assets/img/time.png&quot;&gt;
 			&lt;/div&gt; 
-		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;./assets/img/arrow-o.png&quot;&gt;
-			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;./assets/img/arrow-y2.png&quot;&gt;
-				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;./assets/img/arrow-y.png&quot;&gt;
-				&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completecode&quot; &gt;
-					&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefog&quot; &gt;
+		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;assets/img/arrow-o.png&quot;&gt;
+			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;assets/img/arrow-y2.png&quot;&gt;
+				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;assets/img/arrow-y.png&quot;&gt;
+				&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completecode&quot; &gt;
+					&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefog&quot; &gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -827,20 +870,22 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;div class=&quot;content-item content text&quot;&gt;
 				
 					/* &lt;&lt;timed 40ms t8n&gt;&gt;&lt;div id=&quot;flour&quot;&gt;Flour&lt;/div&gt;&lt;&lt;/timed&gt;&gt; */
-					&lt;&lt;timed 40ms t8n&gt;&gt;&lt;span class=&quot;flour-wrapper intext&quot; &gt;&lt;img src=&quot;./assets/img/flour.png&quot; alt=&quot;spells flour backwards&quot; class=&quot;&quot;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
-					&lt;p id=&quot;text&quot;&gt;What is the word we found? &lt;/p&gt;
+					&lt;&lt;timed 40ms t8n&gt;&gt;&lt;span class=&quot;flour-wrapper intext&quot; &gt;&lt;img src=&quot;assets/img/flour.png&quot; alt=&quot;spells flour backwards&quot; class=&quot;&quot;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
+					&lt;p id=&quot;text&quot; tabindex=&quot;0&quot;&gt;What is the word we found? &lt;/p&gt;
 					&lt;p&gt;Type it in below if you can work it out.  &lt;/p&gt;
 	
-	&lt;div id=&quot;hint&quot;&gt;&lt;p&gt;If you need a hint hit&lt;/p&gt;
+	&lt;div id=&quot;hint&quot;&gt;&lt;p&gt;If you need a hint hit
 	
-	&lt;&lt;if $audioOn is true&gt;&gt;&lt;span onclick=&quot;document.getElementById(&#39;player&#39;).pause()&quot; role=&quot;button&quot; aria-label=&quot;Hint Button&quot; class=&quot;hint-button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;audio src=&quot;assets/audio/15. Challenge 3 - 4 V2.mp3&quot; autoplay&gt;&lt;/audio&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection&lt;/em&gt;&lt;/p&gt; &lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;
+	&lt;&lt;if $audioOn is true&gt;&gt;&lt;span onclick=&quot;document.getElementById(&#39;player&#39;).pause()&quot; role=&quot;button&quot; aria-label=&quot;Click here for a hint&quot; class=&quot;hint-button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;audio src=&quot;assets/audio/15. Challenge 3 - 4 V2.mp3&quot; autoplay&gt;&lt;/audio&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection&lt;/em&gt;&lt;/p&gt; &lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;
 	
-	&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Hint Button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection &lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/if&gt;&gt;
+	&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click here for a hint&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection &lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
+	&lt;&lt;/if&gt;&gt;
+	&lt;/p&gt;
 	&lt;/div&gt;
 	
-	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt; &lt;span role=&quot;input&quot; aria-label=&quot;Password Input&quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt; &lt;span role=&quot;input&quot; aria-label=&quot;Unscramble the letters and enter the word below&quot;&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 			&lt;/div&gt;
@@ -876,8 +921,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Zero" tags="nobr" position="630,112.3333333333333" size="100,100">&lt;&lt;set $title to &quot;dfsd&quot;&gt;&gt;
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;flex-container-col-cen&quot;&gt;
-		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;/assets/img/training-logo.png&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt;
-		&lt;img src=&quot;/assets/img/mott-logo.png&quot; id=&quot;MottLogo&quot; class=&quot;logomott&quot;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;
+		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt;
+		&lt;img src=&quot;assets/img/mott-logo.png&quot; id=&quot;MottLogo&quot; class=&quot;logomott&quot;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;
 		&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/1. Question.mp3&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 	&lt;div class=&quot;safeguard center&quot;&gt;
 		&lt;p&gt; Are you here to safeguard the sands of time?&lt;/p&gt;
@@ -895,7 +940,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;/div	&gt;</tw-passagedata><tw-passagedata pid="38" name="Question" tags="nobr" position="630,112.3333333333333" size="100,100">&lt;&lt;set $title to &quot;question&quot;&gt;&gt;
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;flex-container-col-cen&quot;&gt;
-		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;/assets/img/training-logo.png&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt;
 	
 
 		&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Welcome.mp3&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -994,45 +1039,45 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 			&lt;div class=&quot;menu-item grid-item code&quot;&gt;
 			&lt;div class=&quot;title-wrapper&quot;&gt;
-					&lt;img src=&quot;./assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;1. &lt;/span&gt;Code Breaking&lt;/p&gt;
+					&lt;img src=&quot;assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
+					&lt;p&gt;1. Code Breaking&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt;
 	
 	
 			&lt;div class=&quot;menu-item grid-item fog&quot;&gt;
 			&lt;div class=&quot;title-wrapper&quot;&gt;
-					&lt;img src=&quot;./assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;2. &lt;/span&gt;Fog Clearing&lt;/p&gt;
+					&lt;img src=&quot;assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;2. Fog Clearing&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/fog.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fog.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt; 
 	
 			
 			&lt;div class=&quot;menu-item grid-item fire&quot;&gt;
-			&lt;img src=&quot;./assets/img/fire.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fire.png&quot; class=&quot;option&quot;&gt;
 			&lt;div class=&quot;title-wrapper&quot;&gt;
-				&lt;img src=&quot;./assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;3. &lt;/span&gt;Signal Fire System&lt;/p&gt;
+				&lt;img src=&quot;assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;3. Signal Fire System&lt;/p&gt;
 				&lt;/div&gt;
 			&lt;/div&gt; 
 			
 				&lt;a data-passage=&quot;TwentyFour&quot; class=&quot;link-internal macro-link grid-item time&quot; tabindex=&quot;0&quot;&gt;	
 			&lt;div class=&quot;menu-item &quot;&gt;
 				&lt;div class=&quot;title-wrapper&quot;&gt;
-					&lt;img src=&quot;./assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;4. &lt;/span&gt;Time Nudging&lt;/p&gt;
+					&lt;img src=&quot;assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
+					&lt;p&gt;4. Time Nudging&lt;/p&gt;
 				&lt;/div&gt;
-				&lt;img class=&quot;option&quot; src=&quot;./assets/img/time.png&quot;&gt;
+				&lt;img class=&quot;option&quot; src=&quot;assets/img/time.png&quot;&gt;
 			&lt;/div&gt; 
 				&lt;/a&gt;
-		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;./assets/img/arrow-o.png&quot;&gt;
-			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;./assets/img/arrow-y2.png&quot;&gt;
-				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;./assets/img/arrow-y.png&quot;&gt;
-				&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completecode&quot; &gt;
-					&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefog&quot; &gt;
-						&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefire&quot; &gt;
+		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;assets/img/arrow-o.png&quot;&gt;
+			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;assets/img/arrow-y2.png&quot;&gt;
+				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;assets/img/arrow-y.png&quot;&gt;
+				&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completecode&quot; &gt;
+					&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefog&quot; &gt;
+						&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefire&quot; &gt;
 					
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -1061,7 +1106,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
 &lt;/div&gt;
 &lt;&lt;done&gt;&gt;
+&lt;&lt;if $audioOn is true&gt;&gt;
 &lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="TwentyFive" tags="nobr" position="1542.6666666666665,1097" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1072,7 +1119,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;p&gt;To make sure we get things right we play out the scenario 
 this allows us to interpret what is really going on and not just make rash decisions.&lt;/p&gt;
 
-&lt;span id=&quot;tensixsix&quot; class=&quot;intext&quot;&gt;&lt;img src=&quot;./assets/img/1066.png&quot; alt=&quot;image of William the Conqueror in 1066&quot;&gt;&lt;/span&gt;&lt;p&gt;We once nudged the wrong moment in 1066 and spent weeks trying to make sure William the Conqueror still became King.&lt;/p&gt; 
+&lt;span id=&quot;tensixsix&quot; class=&quot;intext&quot;&gt;&lt;img src=&quot;assets/img/1066.png&quot; alt=&quot;image of William the Conqueror in 1066&quot;&gt;&lt;/span&gt;&lt;p&gt;We once nudged the wrong moment in 1066 and spent weeks trying to make sure William the Conqueror still became King.&lt;/p&gt; 
 &lt;p&gt;Oh there was so much paperwork!&lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
 
@@ -1115,15 +1162,17 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 &lt;div class=&quot;content-wrapper&quot;&gt;
 		&lt;&lt;include &quot;sidebartime&quot;&gt;&gt;
-		&lt;div class=&quot;content-item content text&quot;&gt;
-				&lt;p&gt;To register you&#39;ll need to send the word &lt;strong&gt;IGNITE&lt;/strong&gt; to &lt;strong&gt;&lt;a href=&quot;tel:0748-078-6415&quot;&gt;0748-078-6415&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+		&lt;div class=&quot;content-item content text&quot; &gt;
+				&lt;p tabindex=&quot;0&quot;&gt;To register you&#39;ll need to send the word &lt;strong&gt;IGNITE&lt;/strong&gt; to &lt;strong&gt;&lt;a href=&quot;tel:0748-078-6415&quot;&gt;0748-078-6415&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;You&#39;ll receive the codeword to move on through the Signal Fire System.&lt;/p&gt;
 
 &lt;p&gt;And here is the Code of Conduct.&lt;/p&gt;
 
 
-&lt;div id=&quot;answer&quot;&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Password Input&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div id=&quot;answer&quot;&gt;
+Enter codeword:
+&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
 
 &lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 				
@@ -1192,7 +1241,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 			&lt;&lt;include &quot;sidebarfire&quot;&gt;&gt;
 			&lt;div class=&quot;content-item content text&quot;&gt;
 					
-					&lt;&lt;timed 3s&gt;&gt;&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
+					&lt;&lt;timed 3s&gt;&gt;&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
 						&lt;p&gt;&lt;div id=&quot;text&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;/div&gt;
@@ -1219,47 +1268,47 @@ but passing those will give you the power to nudge the past if your Time Mission
 			&lt;div class=&quot;menu-wrapper content-item content menu&quot;&gt;
 			&lt;div class=&quot;menu-item grid-item code&quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;1. &lt;/span&gt;Code Breaking&lt;/p&gt;
+					&lt;img src=&quot;assets/img/code-w.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot;imaglink active challenges&quot;&gt;
+					&lt;p&gt;1. Code Breaking&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/crumpo.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt;
 	
 			&lt;div class=&quot;menu-item grid-item fog &quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;2. &lt;/span&gt;Fog Clearing&lt;/p&gt;
+					&lt;img src=&quot;assets/img/fog-w.png&quot; alt=&quot;Fog Clearing Button&quot;  id=&quot;fogClearing&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;2. Fog Clearing&lt;/p&gt;
 				&lt;/div&gt;
-			&lt;img src=&quot;./assets/img/fog.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fog.png&quot; class=&quot;option&quot;&gt;
 			&lt;/div&gt; 
 	
 	
 	
 			&lt;div class=&quot;menu-item  grid-item fire&quot;&gt;
-			&lt;img src=&quot;./assets/img/fire.png&quot; class=&quot;option&quot;&gt;
+			&lt;img src=&quot;assets/img/fire.png&quot; class=&quot;option&quot;&gt;
 			&lt;div class=&quot;title-wrapper grid&quot;&gt;
-				&lt;img src=&quot;./assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
-					&lt;p&gt;&lt;span&gt;3. &lt;/span&gt;Signal Fire System&lt;/p&gt;
+				&lt;img src=&quot;assets/img/signal-w.png&quot; alt=&quot;Signal Fire System Button&quot; id=&quot;signalFireSystem&quot; class=&quot;inactive challenges&quot;&gt; 
+					&lt;p&gt;3. Signal Fire System&lt;/p&gt;
 				&lt;/div&gt;
 			&lt;/div&gt; 
 
 			&lt;div class=&quot;menu-item grid-item time&quot;&gt;
 				&lt;div class=&quot;title-wrapper grid&quot;&gt;
-					&lt;img src=&quot;./assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
-					&lt;p&gt;&lt;span&gt;4. &lt;/span&gt;Time Nudging&lt;/p&gt;
+					&lt;img src=&quot;assets/img/time-w.png&quot; alt=&quot;Nudging Challenge Button&quot; id=&quot;nudging&quot; class=&quot;inactive challenges&quot;&gt;
+					&lt;p&gt;4. Time Nudging&lt;/p&gt;
 				&lt;/div&gt;
-				&lt;img class=&quot;option&quot; src=&quot;./assets/img/time.png&quot;&gt;
+				&lt;img class=&quot;option&quot; src=&quot;assets/img/time.png&quot;&gt;
 			&lt;/div&gt; 
 /* BAGUETTE  */
-			 &lt;a data-passage=&quot;Thirty&quot; class=&quot;link-internal macro-link baguette &quot; tabindex=&quot;0&quot;&gt;&lt;img src=&quot;./assets/img/baguette.png&quot; id=&quot;baguette&quot; class=&quot;baguette pulse&quot; alt=&quot;Secret Mission Logo&quot; &gt;&lt;/a&gt;
+			 &lt;a data-passage=&quot;Thirty&quot; class=&quot;link-internal macro-link baguette &quot; tabindex=&quot;0&quot;&gt;&lt;img src=&quot;assets/img/baguette.png&quot; id=&quot;baguette&quot; class=&quot;baguette pulse&quot; alt=&quot;A pulsing Secret Mission icon&quot; &gt;&lt;/a&gt;
 
-		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;./assets/img/arrow-o.png&quot;&gt;
-			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;./assets/img/arrow-y2.png&quot;&gt;
-				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;./assets/img/arrow-y.png&quot;&gt;
-				&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot; complete completecode&quot; &gt;
-					&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefog&quot; &gt;
-					&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefire&quot; &gt;
-					&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot; complete completetime&quot; &gt;
+		&lt;img class=&quot; grid-item arrow1&quot; src=&quot;assets/img/arrow-o.png&quot;&gt;
+			&lt;img class=&quot; grid-item arrow2&quot; src=&quot;assets/img/arrow-y2.png&quot;&gt;
+				&lt;img class=&quot; grid-item arrow3&quot; src=&quot;assets/img/arrow-y.png&quot;&gt;
+				&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot; complete completecode&quot; &gt;
+					&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefog&quot; &gt;
+					&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;complete completefire&quot; &gt;
+					&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot; complete completetime&quot; &gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -1308,7 +1357,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				&lt;div class=&quot;title-wrapper mission&quot;&gt;
 			
 					&lt;p&gt;&lt;/p&gt;
-							&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
+							&lt;img src=&quot;assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
 				&lt;/div&gt;
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 			&lt;p&gt;Hello,&lt;/p&gt; 
@@ -1321,7 +1370,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 &lt;p&gt;Are you ready for the message from the Signal Fire System?&lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
-&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;YES, send it through Chief Timer&quot; &gt;&gt;
+&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain inverse&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;YES, send it through Chief Timer&quot; &gt;&gt;
 &lt;&lt;goto &quot;IncomingMessageFr&quot;&gt;&gt;
 &lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1360,7 +1409,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				&lt;div class=&quot;title-wrapper mission&quot;&gt;
 			
 					&lt;p&gt;&lt;/p&gt;
-							&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
+							&lt;img src=&quot;assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
 				&lt;/div&gt;
 				&lt;div id=&quot;alarm&quot;&gt;&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;&lt;p&gt;Wow.&lt;/p&gt;
@@ -1403,7 +1452,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 &lt;p&gt;Scovell was a great codebreaker. He would decipher lots of codes -  that means he would be able to understand them. &lt;/p&gt;
 
-&lt;span id=&quot;georgesig&quot; class=&quot;intext&quot;&gt;&lt;img src=&quot;./assets/img/siggeorge.png&quot; alt=&quot;George Scovell’s signature and example of coded letter.&quot;&gt;&lt;/span&gt;
+&lt;span id=&quot;georgesig&quot; class=&quot;intext&quot;&gt;&lt;img src=&quot;assets/img/siggeorge.png&quot; alt=&quot;George Scovell’s signature and example of coded letter.&quot;&gt;&lt;/span&gt;
 
 &lt;&lt;timed 5s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;
 &lt;span role=&quot;button&quot; class =&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyThreeTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
@@ -1620,8 +1669,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Conversation2" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION TWO FOURTY */
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission &quot;&gt;
-/* &lt;img src=&quot;./assets/img/scovell.png&quot; class=&quot;disappear&quot; alt=&quot;George Scovell&quot;&gt;
-&lt;img src=&quot;./assets/img/oldman.png&quot; class=&quot;disappear&quot; alt=&quot;The Duke of Wellington&quot;&gt; */
+/* &lt;img src=&quot;assets/img/scovell.png&quot; class=&quot;disappear&quot; alt=&quot;George Scovell&quot;&gt;
+&lt;img src=&quot;assets/img/oldman.png&quot; class=&quot;disappear&quot; alt=&quot;The Duke of Wellington&quot;&gt; */
 	&lt;main id=&quot;main&quot; class=&quot;conversation&quot;&gt;
 
 &lt;span id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/scovell welling convo no tadah.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/span&gt;
@@ -1643,7 +1692,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;append &quot;#text&quot;&gt;&gt;
 
 &lt;&lt;addclass &quot;#text&quot; &quot;chat&quot;&gt;&gt;&lt;br&gt;
-&lt;span class=&quot;SFS left last&quot; role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt;&lt;p&gt;Scovell, we don’t have much time.&lt;/p&gt; &lt;/span&gt;
+&lt;p class=&quot;nameSender&quot;&gt;WELLINGTON:&lt;/p&gt;
+&lt;span class=&quot;SFS left last&quot; role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt;&lt;p&gt; Scovell, we don’t have much time.&lt;/p&gt; &lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 11s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;
@@ -1656,10 +1706,12 @@ code yet?&lt;/p&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 16s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender scovell&quot;&gt;SCOVELL:&lt;/p&gt;
 &lt;span class=&quot;SFS right last&quot; role=&quot;text&quot; aria-label=&quot;Scovell&quot;&gt;&lt;p&gt;Yes... no... maybe.&lt;/p&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 19s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender&quot;&gt;WELLINGTON:&lt;/p&gt;
 &lt;span class=&quot;SFS left last&quot; role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt;&lt;p&gt;I don’t move on maybe, Scovell.&lt;/p&gt; &lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 22s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;
@@ -1667,6 +1719,7 @@ code yet?&lt;/p&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 25s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.right&quot; &quot;last&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender scovell&quot;&gt;SCOVELL:&lt;/p&gt;
 &lt;span class=&quot;SFS right last&quot; id=&quot;bottom1&quot;  role=&quot;text&quot; aria-label=&quot;Scovell&quot;&gt;&lt;p&gt;Sorry Sir –&lt;/p&gt;&lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
@@ -1675,15 +1728,18 @@ code yet?&lt;/p&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 30s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender&quot;&gt;WELLINGTON:&lt;/p&gt;
 &lt;span class=&quot;SFS left last&quot; id=&quot;bottom3&quot; role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt;&lt;p&gt;I have not yet had any intelligence upon which I can rely on the exact position of the enemy’s
 armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 40s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.right&quot; &quot;last&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender scovell&quot;&gt;SCOVELL:&lt;/p&gt;
 &lt;span class=&quot;SFS right last&quot; id=&quot;bottom4&quot; role=&quot;text&quot; aria-label=&quot;Scovell&quot;&gt;&lt;p&gt;I&#39;ve done it Sir. I&#39;ve broken the code.&lt;/p&gt;&lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom4&quot; false&gt;&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 43s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender&quot;&gt;WELLINGTON:&lt;/p&gt;
 &lt;span class=&quot;SFS left last&quot; id=&quot;bottom5&quot; role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt;&lt;p&gt;Tell me then.&lt;/p&gt;&lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom5&quot; false&gt;&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
@@ -1714,11 +1770,10 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#text&quot;&gt;&gt;
-&lt;p&gt;This is the moment. &lt;/p&gt;
-&lt;p&gt;We must Nudge now. &lt;/p&gt;
-&lt;p&gt;Before it is too late. &lt;/p&gt;
+&lt;p&gt;This is the moment. We must Nudge now. Before it is too late. &lt;/p&gt;
 
-&lt;p&gt;Send the word SCOVELL through the Signal Fire System – &lt;a href=&quot;tel:0748-078-6415&quot;&gt;0748-078-6415&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Send the word SCOVELL through the Signal Fire System – 
+&lt;br&gt;&lt;a href=&quot;tel:0748-078-6415&quot;&gt;0748-078-6415&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Remember the information you discovered.&lt;/p&gt;
 &lt;p&gt;Bonne chance - Good luck! &lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1739,10 +1794,12 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 &lt;div class=&quot;flex-container-col-cen&quot;&gt;
 	&lt;p id=&quot;mount&quot;&gt;&lt;/p&gt;
-	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Password Input&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span role=&quot;button&quot;  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	Enter codeword:
+	&lt;br&gt;
+	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span role=&quot;button&quot;  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 &lt;/div &gt;
-		&lt;&lt;timed 60s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;Input Code to Continue&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+		&lt;&lt;timed 60s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;Input Codeword to Continue&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
@@ -1754,10 +1811,10 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 &lt;div class=&quot;content-wrapper&quot; id=&quot;content&quot;&gt;
-	&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
+	&lt;img src=&quot;assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
 				&lt;div class=&quot;content-item content mission com&quot;&gt;
 			
-				&lt;&lt;timed 1s&gt;&gt;&lt;img src=&quot;./assets/img/completed-w.png&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
+				&lt;&lt;timed 1s&gt;&gt;&lt;img src=&quot;assets/img/completed-w.png&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
 				&lt;/div&gt;
 				/* &lt;div id=&quot;text&quot;&gt;&lt;/div&gt; */
 				&lt;/div&gt;
@@ -1826,7 +1883,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;p&gt;Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   &lt;/p&gt;
 &lt;/div &gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
-&lt;img src=&quot;./assets/img/certificateteal.jpg&quot; alt=&quot;A certificate reading MOTT Induction Passed, Eligible for Field Duty,Eligible for Historical, Communications Field Guide,Eligible for Signal Fire System Use,Novice Nudger Grad 1,Crumpet Access Granted&quot; class=&quot;certificate&quot;&gt;
+&lt;img src=&quot;assets/img/certificateteal.jpg&quot; alt=&quot;A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg&quot; class=&quot;certificate&quot;&gt;
 &lt;span role=&quot;button&quot; class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu codeword question&quot;&gt;
@@ -1906,6 +1963,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;&lt;silently&gt;&gt;
 
 &lt;&lt;timed 7.2s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;addclass &quot;#text&quot; &quot;chat&quot;&gt;&gt;
+&lt;p class=&quot;nameSender&quot;&gt;WELLINGTON:&lt;/p&gt;
 &lt;span class=&quot;SFS left last&quot;  role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt; &lt;p&gt;Scovell, we don’t have much time. &lt;/p&gt;
 &lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
@@ -1919,10 +1977,12 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 17s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender scovell&quot;&gt;SCOVELL:&lt;/p&gt;
 &lt;span class=&quot;SFS right last&quot; id=&quot;bottom2&quot;  role=&quot;text&quot; aria-label=&quot;Scovelle&quot;&gt;&lt;p&gt;Yes... no... maybe.&lt;/p&gt;&lt;/span&gt;
 &lt;&lt;ScrollTo &quot;bottom2&quot;&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 20s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;
+&lt;p class=&quot;nameSender&quot;&gt;WELLINGTON:&lt;/p&gt;
 &lt;span class=&quot;SFS left last&quot; id=&quot;bottom&quot; role=&quot;text&quot; aria-label=&quot;Wellington&quot;&gt;&lt;p&gt;I don’t move on maybe Scovell.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom&quot; false&gt;&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 23s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;
@@ -1930,6 +1990,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 26s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.right&quot; &quot;last&quot;&gt;&gt;&lt;br&gt;
+&lt;p class=&quot;nameSender scovell&quot;&gt;SCOVELL:&lt;/p&gt;
 &lt;span class=&quot;SFS right last&quot; id=&quot;bottom6&quot; role=&quot;text&quot; aria-label=&quot;Scovelle&quot;&gt;&lt;p&gt;Sorry Sir...&lt;/p&gt;&lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom6&quot; false&gt;&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
@@ -1938,6 +1999,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 34s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;&lt;removeclass &quot;.left&quot; &quot;last&quot;&gt;&gt;
+&lt;p class=&quot;nameSender&quot;&gt;WELLINGTON:&lt;/p&gt;
 &lt;span class=&quot;SFS left last&quot; id=&quot;bottom4&quot;&gt; &lt;p&gt;I have not yet had any intelligence upon which I can rely on the exact position of the enemy&#39;s armies.&lt;/p&gt;&lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom4&quot; false&gt;&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
@@ -1960,7 +2022,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 			&lt;div class=&quot;title-wrapper mission&quot;&gt;
 					
 					&lt;p&gt;&lt;/p&gt;
-					&lt;img src=&quot;./assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
+					&lt;img src=&quot;assets/img/baguette.png&quot; alt=&quot;Secret Mission Logo&quot; class=&quot; orange&quot;&gt;
 				&lt;/div&gt;
 				&lt;div id=&quot;text&quot;&gt;
 				
@@ -1995,7 +2057,17 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 					&lt;p&gt;&lt;/p&gt;
 				&lt;/div&gt;
 				&lt;div class=&quot;content-item content text mission message&quot;&gt;
-					&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif&quot; class=&quot;gif signal&quot; alt=&quot;Signal Fire system logo &quot;&gt;
+					/* &lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif&quot; class=&quot;gif signal&quot; alt=&quot;Signal Fire system logo &quot;&gt; */
+					&lt;span class=&quot;timer-wrapper gif signal&quot; id=&quot;warning&quot; alt=&quot;a lit match with signals pulsing out of it&quot;&gt;
+					&lt;&lt;link [img[https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif]]&gt;&gt;
+					&lt;&lt;replace &quot;#warning&quot;&gt;&gt;
+						&lt;&lt;link [img[assets/img/signalfirestop.png]]&gt;&gt;
+		
+					&lt;&lt;/link&gt;&gt;
+			
+					&lt;&lt;/replace&gt;&gt;
+					&lt;&lt;/link&gt;&gt;
+					&lt;/span&gt;
 					&lt;&lt;set _finish to true&gt;&gt;
 					&lt;div id=&quot;text&quot;&gt;&lt;/div &gt;
 				&lt;/div&gt;
@@ -2007,7 +2079,9 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;timed 1s&gt;&gt;
 &lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav&quot;  autoplay  id=&quot;bgAudio&quot;&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;
 &lt;&lt;done&gt;&gt;
-&lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;&lt;&lt;/done&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;if $audioOn is true&gt;&gt;
+&lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;/done&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 8s t8n&gt;&gt;
 &lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/24. Challenge 5 - French Message.mp3&quot; autoplay&gt;&lt;p&gt;Audio is not supported on your device&lt;/p&gt;&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;
@@ -2031,7 +2105,16 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 					&lt;p&gt;&lt;/p&gt;
 				&lt;/div&gt;
 				&lt;div class=&quot;content-item content text mission message&quot;&gt;
-					&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif&quot; class=&quot;gif signal&quot; alt=&quot;Signal Fire system logo &quot;&gt;
+						&lt;span class=&quot;timer-wrapper gif signal&quot; id=&quot;warning&quot; alt=&quot;a lit match with signals pulsing out of it&quot;&gt;
+					&lt;&lt;link [img[https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif]]&gt;&gt;
+					&lt;&lt;replace &quot;#warning&quot;&gt;&gt;
+						&lt;&lt;link [img[assets/img/signalfirestop.png]]&gt;&gt;
+		
+					&lt;&lt;/link&gt;&gt;
+			
+					&lt;&lt;/replace&gt;&gt;
+					&lt;&lt;/link&gt;&gt;
+					&lt;/span&gt;
 					&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;
 				&lt;/div&gt;
 		&lt;/div&gt;
@@ -2041,7 +2124,9 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;/div&gt;
 &lt;&lt;timed 0.2s&gt;&gt;&lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav&quot; autoplay id=&quot;bgAudio&quot;&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;
 &lt;&lt;done&gt;&gt;
-&lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;&lt;&lt;/done&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;if $audioOn is true&gt;&gt;
+&lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;/done&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 10s t8n&gt;&gt;
@@ -2085,7 +2170,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 3.wav&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 	
-	&lt;div class=&quot;mottlogo-wrapper&quot;&gt;&lt;img src=&quot;/assets/img/mott-logo.png&quot; id=&quot;LogoRot&quot; class=&quot;logomott logoRot&quot; alt=&quot;The Ministry of Time Travel Logo is spinning&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;mottlogo-wrapper&quot;&gt;&lt;img src=&quot;assets/img/mott-logo.png&quot; id=&quot;LogoRot&quot; class=&quot;logomott logoRot&quot; alt=&quot;The Ministry of Time Travel Logo is spinning&quot;&gt;&lt;/div&gt;
 
 
 	&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -2122,7 +2207,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
   &lt;p&gt;Once ready to enter, click the button below.&lt;/p&gt;
 
 
-&lt;div class=&quot;flex-container-row power&quot;&gt;&lt;poweron alt=&quot;Power On button&quot;&gt;&lt;a data-passage=&quot;TransPass&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;&lt;set $next to &quot;Zero&quot;&gt;&gt;&lt;/poweron&gt;&lt;/div&gt;
+&lt;div class=&quot;flex-container-row power&quot;&gt;&lt;poweron &gt;&lt;a data-passage=&quot;TransPass&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; aria-label=&quot;Click Power on button to begin experience&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;&lt;set $next to &quot;Zero&quot;&gt;&gt;&lt;/poweron&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
@@ -2210,7 +2295,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 			&lt;&lt;include &quot;sidebartime&quot;&gt;&gt;
 			&lt;div class=&quot;content-item content text&quot;&gt;
 					
-					&lt;&lt;timed 3s&gt;&gt;&lt;img src=&quot;./assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
+					&lt;&lt;timed 3s&gt;&gt;&lt;img src=&quot;assets/img/completed-b.png&quot; alt=&quot;completed stamp&quot; class=&quot;completed&quot; &gt;&lt;&lt;/timed&gt;&gt;
 						&lt;p&gt;&lt;div id=&quot;text&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 		&lt;/div&gt;
 		&lt;/div&gt;
@@ -2271,7 +2356,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 				&lt;p&gt;	The cipher we are looking for is The Great Paris Cipher, but it&#39;s gone all foggy.&lt;/p&gt;
 
 				&lt;span class=&quot;intext cipher&quot;&gt;
-					&lt;img src=&quot;./assets/img/cipher.png&quot; alt=&quot;The Great Paris Cypher&quot;&gt;
+					&lt;img src=&quot;assets/img/cipher.png&quot; alt=&quot;The Great Paris Cypher&quot;&gt;
 				&lt;/span&gt;
 					
 	

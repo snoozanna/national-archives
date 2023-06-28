@@ -79,12 +79,47 @@ setup.changeVol = (num) => {
 
 :: Start [nobr] {"position":"134,244.33333333333337","size":"100,100"}
 
-  <div class="wrapper audio">
+  <div class="wrapper audio" id="mount">
 	<div class="phone-warning"><p>MOTT is best experienced on a computer or tablet</p></div>
-  	<div class="audio-container">
-	  <poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a></poweron>
-	  <br><div>Audio <<link "On">><<set $audioOn to true>><<set $audioClick to true>><</link>>/<<link "Off">><<set $audioOn to false>><<set $audioClick to true>><</link>></div >
-	  </div>
+
+	<p><span class="inline-icon-wrap"><img src="assets/img/audio.png"></span>This experience has the option of an audio soundtrack.  </p>
+	<p>Would you prefer audio on or off? </p>
+<div class="multiple-btn-wrapper">
+	<span role="button" class="button-wrapper plain" aria-label="Click Button to turn audio on">
+		<<button "On">>
+			<<set $audioOn to true>>
+			<<set $audioClick to true>>
+			<<replace "#mount">>
+				<strong> <span class="inline-icon-wrap"><img src="assets/img/audio.png"></span> Audio On</strong>
+				<br>
+				<p>Press the power on button to continue</p>
+				<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a></poweron>
+				<br>
+			<br>
+				<span role="button" aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
+				</span>
+	<</replace>>
+		<</button>>
+	</span>
+	<span role="button" class="button-wrapper plain" aria-label="Click Button to turn audio off">
+	<<button "Off">>
+		<<set $audioOn to false>>
+		<<set $audioClick to true>>
+<<replace "#mount">>
+			<strong> Audio Off</strong>
+			<p>Press the power on button to continue</p>
+			<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a></poweron>
+			<br>
+			<br>
+			<span role="button" aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
+			</span>
+		<</replace>>
+	<</button>></span>
+</div>
+
+
+	 
+
   </div >
 
 
@@ -98,30 +133,30 @@ setup.changeVol = (num) => {
 
 :: header [nobr]
 <header>
-	<div class="logo-wrapper"><img src="/assets/img/na-logo.png" alt="The National Archives Logo" class="logo na"></div> </header>
+	<div class="logo-wrapper"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo na"></div> </header>
 
 :: headertrain [nobr]
 	<header>
-		<div class="logo-wrapper right"><img src="/assets/img/training-logo.png" class="logo na" alt="The Ministry of Time Travel Training 101 Logo"></div></header>
+		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na" alt="The Ministry of Time Travel Training 101 Logo"></div></header>
 
 :: headermenu [nobr]	
 <header>
 		<div class="logo-wrapper">
-		<div class="logo-container"><img src="/assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item"><img src="/assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item"></div>
-		<img src="/assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item">
+		<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item"></div>
+		<img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item">
 		</div>
 </header>
 
 :: headermenugrid [nobr]	
 <header class="menu-grid">
 		<div class="logo-wrapper ">
-			<div class="logo-container"><img src="/assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item"><img src="/assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item"></div><img src="/assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item"></div>
+			<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item"></div><img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item"></div>
 </header>
 
 :: sidebarcode [nobr]
 <div class="content-item sidebar">
 	<div class="title-wrapper">
-					<img src="./assets/img/code-or.png" alt="Codebreaking Button" id="Codebreaking" class=" orange">
+					<img src="assets/img/code-or.png" alt="Codebreaking Button" id="Codebreaking" class=" orange">
 					<p><span>1. </span>Code Breaking</p>
 	</div>
 </div>
@@ -129,7 +164,7 @@ setup.changeVol = (num) => {
 :: sidebarfog [nobr]
 <div class="content-item sidebar">
 	<div class="title-wrapper">
-					<img src="./assets/img/fog-or.png" alt="Fog Clearing Button" id="Fog Clearing" class=" orange">
+					<img src="assets/img/fog-or.png" alt="Fog Clearing Button" id="Fog Clearing" class=" orange">
 					<p><span>2. </span>Fog Clearing</p>
 		</div>
 </div>
@@ -137,7 +172,7 @@ setup.changeVol = (num) => {
 :: sidebarfire [nobr]
 <div class="content-item sidebar">
 	<div class="title-wrapper">
-					<img src="./assets/img/fire-or.png" alt="Signal Fire System Button" class=" orange">
+					<img src="assets/img/fire-or.png" alt="Signal Fire System Button" class=" orange">
 					<p><span>3. </span>Signal Fire System</p>
 	</div>
 </div>
@@ -145,7 +180,7 @@ setup.changeVol = (num) => {
 :: sidebartime [nobr]
 <div class="content-item sidebar">
 <div class="title-wrapper">
-					<img src="./assets/img/time-or.png" alt="Time Nudging Button" class=" orange">
+					<img src="assets/img/time-or.png" alt="Time Nudging Button" class=" orange">
 					<p><span>4. </span>Time Nudging</p>
 				</div>
 </div>
@@ -154,32 +189,32 @@ setup.changeVol = (num) => {
 	<div class="mentor-wrapper">
 	<p><span>Your Mentor:</span> <span>Chief Timer</span>
 	<span>Beatrix Vandenberg</span></p>
-	<img src="./assets/img/mentor-amy.png" class="mentor" alt="Chief Timer Beatrix Vanderberg">
+	<img src="assets/img/mentor-amy.png" class="mentor" alt="Chief Timer Beatrix Vanderberg">
 	</div>
 
 :: oldman  [nobr]
 	<div class="mentor-wrapper">
 	<span class="caption">Duke of Wellington</span>
-	<img src="./assets/img/oldman.png" class="mentor oldman" alt="The Duke of Wellington">
+	<img src="assets/img/oldman.png" class="mentor oldman" alt="The Duke of Wellington">
 	</div>
 
 :: scovell  [nobr]
 	<div class="scovell-wrapper">
 
-	<img src="./assets/img/scovell.png" class="scovell" alt="The George Scovell">
+	<img src="assets/img/scovell.png" class="scovell" alt="The George Scovell">
 		<span class="caption">George Scovell</span>
 	</div>
 
 :: napolean  [nobr]
 	<div class="mentor-wrapper napolean">
 	<span class="caption">Napoleon Bonaparte</span>
-	<img src="./assets/img/napolean.png" class="mentor oldman" alt="Napoleon Bonaparte">
+	<img src="assets/img/napolean.png" class="mentor oldman" alt="Napoleon Bonaparte">
 	</div>
 
 :: joseph  [nobr]
 	<div class="scovell-wrapper joseph">
 
-	<img src="./assets/img/joseph.png" class="scovell" alt="Joseph Bonaparte ">
+	<img src="assets/img/joseph.png" class="scovell" alt="Joseph Bonaparte ">
 		<span class="caption">Joseph Bonaparte </span>
 	</div>
 
@@ -189,7 +224,7 @@ setup.changeVol = (num) => {
 /* VIDEO  */
 <div class="wrapper">
 	<main id="main" class="video"><<set $title to "V1">>
-	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 1 video"><iframe src="https://player.vimeo.com/video/640377198?h=6aeee3d5c8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 1"></iframe></div>
+	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 1 video"><iframe src="https://player.vimeo.com/video/640377198?h=6aeee3d5c8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;speed=1&amp;controls=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen   title="MOTT Training 1"></iframe></div>
 	</main>
 		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "Zero">><</link>></div><div id="text"></div></nav></footer>
 </div>
@@ -221,39 +256,39 @@ setup.changeVol = (num) => {
 		<a data-passage="Three" class="link-internal macro-link grid-item code" tabindex="0">
 		<div class="menu-item ">
 		<div class="title-wrapper grid">
-				<img src="./assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
-				<p><span>1. </span>Code Breaking</p>
+				<img src="assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
+				<p>1. Code Breaking</p>
 			</div>
-		<img src="./assets/img/crumpo.png" class="option">
+		<img src="assets/img/crumpo.png" class="option">
 		</div>
 		</a> 
 		
 		<div class="menu-item grid-item fog">
 		<div class="title-wrapper grid">
-				<img src="./assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
-				<p><span>2. </span>Fog Clearing</p>
+				<img src="assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
+				<p>2. Fog Clearing</p>
 			</div>
-		<img src="./assets/img/fog.png" class="option">
+		<img src="assets/img/fog.png" class="option">
 		</div> 
 		
 		<div class="menu-item grid-item fire">
-		<img src="./assets/img/fire.png" class="option">
+		<img src="assets/img/fire.png" class="option">
 		<div class="title-wrapper grid">
-			<img src="./assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
-				<p><span>3. </span>Signal Fire System</p>
+			<img src="assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
+				<p>3. Signal Fire System</p>
 			</div>
 		</div> 
 		
 		<div class="menu-item grid-item time">
 			<div class="title-wrapper grid">
-				<img src="./assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
-				<p><span>4. </span>Time Nudging</p>
+				<img src="assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
+				<p>4. Time Nudging</p>
 			</div>
-			<img class="option" src="./assets/img/time.png">
+			<img class="option" src="assets/img/time.png">
 		</div> 
-	<img class=" grid-item arrow1" src="./assets/img/arrow-o.png">
-		<img class=" grid-item arrow2" src="./assets/img/arrow-y2.png">
-			<img class=" grid-item arrow3" src="./assets/img/arrow-y.png">
+	<img class=" grid-item arrow1" src="assets/img/arrow-o.png">
+		<img class=" grid-item arrow2" src="assets/img/arrow-y2.png">
+			<img class=" grid-item arrow3" src="assets/img/arrow-y.png">
 		</div>
 	</div>
 	
@@ -313,9 +348,9 @@ setup.changeVol = (num) => {
 	
 	
 	
-	<h3 class="subtitle">QUESTION 1:</h3>
-	<span id="countdown"><<set $seconds to 60>>60 seconds remaining</span>
-	<div id="scrambled" class="scrambled"><span>RESECT</span></div>
+	<h3 class="subtitle" >QUESTION 1:</h3>
+	<span id="cdWrapper"><span id="countdown"><<set $seconds to 60>>60</span> seconds remaining</span>
+	<div id="scrambled" class="scrambled" tabindex="0"><span>RESECT</span></div>
 	
 	<<link "Click for a hint">>
 	<<toggleclass "#hint" "disappear">>
@@ -323,11 +358,13 @@ setup.changeVol = (num) => {
 <</link>>
 <p id="hint" class="disappear">Hint: Shhhhh</p>
 	<h3 class="subtitle"></h3>
+	<br>
 	
+	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Rearrange the letters and enter the word here ">
+	<<textbox "_password" "" autofocus>>
+	<span role="button" class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "SECRET">><<goto "Five">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>>
 	
-	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Password Field">
-	<<textbox "_password" "" autofocus>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "SECRET">><<goto "Five">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>><span role="button" aria-label="Click Button to check Answer">
-	</span></span></div>
+	</span></div>
 	<br><span id="wrong"></span>
 	
 	</div>
@@ -338,14 +375,14 @@ setup.changeVol = (num) => {
 </div>
 
 
-<<include "mentor">>	<<include "footer">>
+<<include "mentor">>	
 <<silently>>
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
 		<<if $seconds gt 0>>
-			<<replace "#countdown">>$seconds seconds remaining<</replace>>
+			<<replace "#countdown">>$seconds<</replace>>
 		<<else>>
-			<<replace "#countdown">><h3 style="color:var(--orange)">Here's an extra hint: S?C??T</h3><</replace>>
+			<<replace "#cdWrapper">><h3>Here's an extra hint: S?C??T</h3><</replace>>
 			<<stop>>
 		<</if>>
 	<</repeat>>
@@ -355,7 +392,7 @@ setup.changeVol = (num) => {
 :: Five [nobr] {"position":"546,494.99999999999994","size":"100,100"}
 
 <div class="wrapper  menu codeword question answer1">
-<img src="./assets/img/bg-code-answer1.png" class="disappear" alt="Man looking
+<img src="assets/img/bg-code-answer1.png" class="disappear" alt="Man looking
 over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer1">
@@ -395,17 +432,18 @@ over secret files">
 					<p><div id="text"> </div></p>
 	
 		<h3 class="subtitle">QUESTION 2:</h3>
-		<span id="countdown"><<set $seconds to 60>>60 seconds remaining</span>
+		<span><span id="countdown"><<set $seconds to 60>>60</span> seconds remaining</span>
 	
-		<div id="scrambled" class="scrambled"><span>PRUMTECS</span></div>
+		<div id="scrambled" class="scrambled" tabindex="0"><span>PRUMTECS</span></div>
 		<<link "Click for a hint">>
 	<<toggleclass "#hint" "disappear">>
 		<<replace "#audiomount">><audio src="assets/audio/Challenge 1 - HINT 2.mp3" autoplay>Audio is not supported on your device</audio><</replace>>
 <</link>>
-<p id="hint" class="disappear"> A tasty breakfast with holes in it - which I, The Chief Timer, love.</p>
 
+<p id="hint" class="disappear"> A tasty breakfast with holes in it - which I, The Chief Timer, love.</p>
+<br><br>
 		<div id="answer" style="text-transform: uppercase;">
-	<span role="input" aria-label="Password Input"><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CRUMPETS">><<goto "Nine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	<span role="input" aria-label="Rearrange the letters and enter the word here "><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "CRUMPETS">><<goto "Nine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	
 	<br><span id="wrong"></span></div>
 	</div></div>
@@ -419,9 +457,9 @@ over secret files">
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
 		<<if $seconds gt 0>>
-			<<replace "#countdown">>$seconds seconds remaining<</replace>>
+			<<replace "#countdown">>$seconds <</replace>>
 		<<else>>
-			<<replace "#countdown">><h3 style="color:var(--orange)">Here's an extra hint: CR??P??S</h3><</replace>>
+			<<replace "#countdown">><h3>Here's an extra hint: CR??P??S</h3><</replace>>
 			<<stop>>
 		<</if>>
 	<</repeat>>
@@ -430,7 +468,7 @@ over secret files">
 
 :: Nine [nobr] {"position":"1148,497.3333333333333","size":"100,100"}
 <div class="wrapper menu codeword question answer3">
-<img src="./assets/img/bg-code-answer3.png" class="disappear" alt="Two circles: one shows a child shhing to illustrate keeping a secret,  and the second some crumpets">
+<img src="assets/img/bg-code-answer3.png" class="disappear" alt="Two circles: one shows a child shhing to illustrate keeping a secret,  and the second some crumpets">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer3">
 	
@@ -470,7 +508,7 @@ over secret files">
 			<<include "sidebarcode">>
 			<div class="content-item content text">
 					<<timed 2s>>
-					<img src="./assets/img/completed-b.png" alt="completed stamp" class="completed">
+					<img src="assets/img/completed-b.png" alt="completed stamp" class="completed">
 						<p><div id="text"> </div></p>
 						<</timed>>
 		</div>
@@ -523,41 +561,41 @@ over secret files">
 			
 			<div class="menu-item grid-item code">
 			<div class="title-wrapper grid">
-					<img src="./assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
-					<p><span>1. </span>Code Breaking</p>
+					<img src="assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
+					<p>1. Code Breaking</p>
 				</div>
-			<img src="./assets/img/crumpo.png" class="option">
+			<img src="assets/img/crumpo.png" class="option">
 			</div>
 	
 		<a data-passage="TwelveOne" class="link-internal macro-link grid-item fog" tabindex="0">	
 			<div class="menu-item ">
 			<div class="title-wrapper grid">
-					<img src="./assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
-					<p><span>2. </span>Fog Clearing</p>
+					<img src="assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
+					<p>2. Fog Clearing</p>
 				</div>
-			<img src="./assets/img/fog.png" class="option">
+			<img src="assets/img/fog.png" class="option">
 			</div> 
 		</a>
 			
 			<div class="menu-item grid-item fire">
-			<img src="./assets/img/fire.png" class="option">
+			<img src="assets/img/fire.png" class="option">
 			<div class="title-wrapper grid">
-				<img src="./assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
-					<p><span>3. </span>Signal Fire System</p>
+				<img src="assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
+					<p>3. Signal Fire System</p>
 				</div>
 			</div> 
 			
 			<div class="menu-item grid-item time">
 				<div class="title-wrapper grid">
-					<img src="./assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
-					<p><span>4. </span>Time Nudging</p>
+					<img src="assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
+					<p>4. Time Nudging</p>
 				</div>
-				<img class="option" src="./assets/img/time.png">
+				<img class="option" src="assets/img/time.png">
 			</div> 
-		<img class=" grid-item arrow1" src="./assets/img/arrow-o.png">
-			<img class=" grid-item arrow2" src="./assets/img/arrow-y2.png">
-				<img class=" grid-item arrow3" src="./assets/img/arrow-y.png">
-					<img src="./assets/img/completed-b.png" alt="completed stamp" class="completecode" >
+		<img class=" grid-item arrow1" src="assets/img/arrow-o.png">
+			<img class=" grid-item arrow2" src="assets/img/arrow-y2.png">
+				<img class=" grid-item arrow3" src="assets/img/arrow-y.png">
+					<img src="assets/img/completed-b.png" alt="completed stamp" class="completecode" >
 			</div>
 		</div>
 		<<include "mentor">>
@@ -631,11 +669,12 @@ over secret files">
 					</span></h3>
 				<div class="fog-content-wrapper">	
 					<div id="image" class="fog-img-wrapper">
-						<img src="./assets/img/women2.jpeg" id="img1" alt="four women"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+						<img src="assets/img/women2.jpeg" id="img1" alt="four women"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 					</div>
 					<div class="timer ">
 						<span id="countdown" class="countdown"><h3 class="timer">$seconds</h3></span>
-						<img src="./assets/img/timer.png" id="timer" alt="an hourglass timer" class="logoRot">
+						/* <img src="assets/img/timer.png" id="timer" alt="an hourglass timer" class="logoRot"> */
+						<span class="hourglass-wrapper logoRot" id="hourglass" alt="an hourglass timer"><<link [img[assets/img/timer.png]]>><<addclass "#hourglass" "nohourglass">><</link>></span>
 					</div>
 			</div>
 			</div>
@@ -645,7 +684,7 @@ over secret files">
 	<<silently>>
 	<<timed 10s>>
 		<<replace "#countdown">>X<</replace>>
-		<<replace "#image">><img src="./assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+		<<replace "#image">><img src="assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 		<<replace "#image-text">><p>How many parrots?</p>
 			<<set $seconds to 10>>
 				<<silently>>
@@ -663,7 +702,7 @@ over secret files">
 
 	<<timed 21s>>
 		<<replace "#countdown">>X<</replace>>
-		<<replace "#image">><img src="./assets/img/chewinggum.jpeg" id="img3" alt="Packet of chewing gum for two a penny">
+		<<replace "#image">><img src="assets/img/chewinggum.jpeg" id="img3" alt="Packet of chewing gum for two a penny">
 		<<if $audioOn is true>><audio src="assets/audio/9. Challenge 2 - pic 3 v2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 		<<replace "#image-text">><p>How many pieces of gum do you get for a penny?</p>
 			<<set $seconds to 10>>
@@ -682,7 +721,7 @@ over secret files">
 	
 	<<timed 32s>>
 	<<replace "#countdown">>X<</replace>>
-	<<replace "#image">><img src="./assets/img/numberplate.jpeg" id="img4" alt="Car with the license plate YYX328T" class="smaller">
+	<<replace "#image">><img src="assets/img/numberplate.jpeg" id="img4" alt="Car with the license plate YYX328T" class="smaller">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/10. Challenge 2 - pic 4 EDIT.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 	<<replace "#image-text">><p>What are the numbers on the number plate?</p><<set $seconds to 10>><<silently>>
 	<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
@@ -699,7 +738,7 @@ over secret files">
 	
 	<<timed 43s>>
 	<<replace "#countdown">><</replace>>
-	<<replace "#image">><img src="./assets/img/moonlanding.jpeg" id="img5" alt="The telephone number on this telegram I 1622" class="smaller">
+	<<replace "#image">><img src="assets/img/moonlanding.jpeg" id="img5" alt="The telephone number on this telegram I 1622" class="smaller">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/11. Challenge 2 - pic 5.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 	<<replace "#image-text">><p>What's the telephone number of this restricted Moon Landing call?</p><<set $seconds to 10>>
 		<<silently>>
@@ -724,10 +763,14 @@ over secret files">
 	<p>Enter them below if so, or hit replay for another go. </p>
 	
 	<div id="answer">
-		<br><br> [[No - REPLAY|Thirteen]]
-		<br>Yes - Enter Codeword
-		<br><span role="input" aria-label="Password Input"><<textbox "_password" "">></span>
-		<span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Next">><<if _password is "4223281622">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	
+		<br>Enter codeword:
+		<br><span role="input" aria-label="Enter the numbers found in the images"><<textbox "_password" "">></span>
+		<br>
+		<span class="multiple-btn-wrapper">
+			<span role="button" class="button-wrapper" aria-label="Click Button to check your answer"><<button "Check">><<if _password is "4223281622">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+			<span role="button" class="button-wrapper" aria-label="Click Button to replay"><<button "Replay">><<goto "Thirteen">><</button>></span>
+			</span>
 		<span id="wrong"></span>
 	</div>
 	
@@ -753,7 +796,7 @@ over secret files">
 			<<include "sidebarfog">>
 			<div class="content-item content text">
 					
-					<<timed 3s>><img src="./assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
+					<<timed 3s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
 						<p><div id="text"> </div></p>
 		</div>
 		</div>
@@ -810,42 +853,42 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 			<div class="menu-wrapper content-item content menu">
 			<div class="menu-item grid-item code">
 			<div class="title-wrapper grid">
-					<img src="./assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
-					<p><span>1. </span>Code Breaking</p>
+					<img src="assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
+					<p>1. Code Breaking</p>
 				</div>
-			<img src="./assets/img/crumpo.png" class="option">
+			<img src="assets/img/crumpo.png" class="option">
 			</div>
 	
 			<div class="menu-item grid-item fog ">
 			<div class="title-wrapper grid">
-					<img src="./assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
-					<p><span>2. </span>Fog Clearing</p>
+					<img src="assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
+					<p>2. Fog Clearing</p>
 				</div>
-			<img src="./assets/img/fog.png" class="option">
+			<img src="assets/img/fog.png" class="option">
 			</div> 
 	
 	
 	<a data-passage="Seventeen" class="link-internal macro-link grid-item fire" tabindex="0">	
 			<div class="menu-item ">
-			<img src="./assets/img/fire.png" class="option">
+			<img src="assets/img/fire.png" class="option">
 			<div class="title-wrapper grid">
-				<img src="./assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
-					<p><span>3. </span>Signal Fire System</p>
+				<img src="assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
+					<p>3. Signal Fire System</p>
 				</div>
 			</div> 
 		</a>		
 			<div class="menu-item grid-item time">
 				<div class="title-wrapper grid">
-					<img src="./assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
-					<p><span>4. </span>Time Nudging</p>
+					<img src="assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
+					<p>4. Time Nudging</p>
 				</div>
-				<img class="option" src="./assets/img/time.png">
+				<img class="option" src="assets/img/time.png">
 			</div> 
-		<img class=" grid-item arrow1" src="./assets/img/arrow-o.png">
-			<img class=" grid-item arrow2" src="./assets/img/arrow-y2.png">
-				<img class=" grid-item arrow3" src="./assets/img/arrow-y.png">
-				<img src="./assets/img/completed-b.png" alt="completed stamp" class="complete completecode" >
-					<img src="./assets/img/completed-b.png" alt="completed stamp" class="complete completefog" >
+		<img class=" grid-item arrow1" src="assets/img/arrow-o.png">
+			<img class=" grid-item arrow2" src="assets/img/arrow-y2.png">
+				<img class=" grid-item arrow3" src="assets/img/arrow-y.png">
+				<img src="assets/img/completed-b.png" alt="completed stamp" class="complete completecode" >
+					<img src="assets/img/completed-b.png" alt="completed stamp" class="complete completefog" >
 			</div>
 		</div>
 		<<include "mentor">>
@@ -924,20 +967,22 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<div class="content-item content text">
 				
 					/* <<timed 40ms t8n>><div id="flour">Flour</div><</timed>> */
-					<<timed 40ms t8n>><span class="flour-wrapper intext" ><img src="./assets/img/flour.png" alt="spells flour backwards" class=""></span><</timed>>
-					<p id="text">What is the word we found? </p>
+					<<timed 40ms t8n>><span class="flour-wrapper intext" ><img src="assets/img/flour.png" alt="spells flour backwards" class=""></span><</timed>>
+					<p id="text" tabindex="0">What is the word we found? </p>
 					<p>Type it in below if you can work it out.  </p>
 	
-	<div id="hint"><p>If you need a hint hit</p>
+	<div id="hint"><p>If you need a hint hit
 	
-	<<if $audioOn is true>><span onclick="document.getElementById('player').pause()" role="button" aria-label="Hint Button" class="hint-button"><<button "HERE">><<replace "#hint">><audio src="assets/audio/15. Challenge 3 - 4 V2.mp3" autoplay></audio><p><em>You'll discover the truth through its reflection</em></p> <p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>></span><<else>>
+	<<if $audioOn is true>><span onclick="document.getElementById('player').pause()" role="button" aria-label="Click here for a hint" class="hint-button"><<button "HERE">><<replace "#hint">><audio src="assets/audio/15. Challenge 3 - 4 V2.mp3" autoplay></audio><p><em>You'll discover the truth through its reflection</em></p> <p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>></span><<else>>
 	
-	<span role="button" class="button-wrapper plain" aria-label="Hint Button"><<button "HERE">><<replace "#hint">><p><em>You'll discover the truth through its reflection </em></p><p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>></span><</if>>
+	<span role="button" class="button-wrapper plain" aria-label="Click here for a hint"><<button "HERE">><<replace "#hint">><p><em>You'll discover the truth through its reflection </em></p><p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>></span>
 	
+	<</if>>
+	</p>
 	</div>
 	
-	<div id="answer" style="text-transform: uppercase;"> <span role="input" aria-label="Password Input">
-	<<textbox "_password" "" autofocus>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></span>
+	<div id="answer" style="text-transform: uppercase;"> <span role="input" aria-label="Unscramble the letters and enter the word below">
+	<<textbox "_password" "" autofocus>><span role="button" class="button-wrapper" aria-label="Click Button to go Check your answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></span>
 	
 	<br><span id="wrong"></span></div>
 			</div>
@@ -985,8 +1030,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<set $title to "dfsd">>
 <div class="wrapper">
 	<main id="main" class="flex-container-col-cen">
-		<div class="logo-wrapper right"><img src="/assets/img/training-logo.png" class="logo na"></div>
-		<img src="/assets/img/mott-logo.png" id="MottLogo" class="logomott"><<set $next to "One">>
+		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na"></div>
+		<img src="assets/img/mott-logo.png" id="MottLogo" class="logomott"><<set $next to "One">>
 		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/1. Question.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 	<div class="safeguard center">
 		<p> Are you here to safeguard the sands of time?</p>
@@ -1007,7 +1052,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<set $title to "question">>
 <div class="wrapper">
 	<main id="main" class="flex-container-col-cen">
-		<div class="logo-wrapper right"><img src="/assets/img/training-logo.png" class="logo na"></div>
+		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na"></div>
 	
 
 		<<if $audioOn is true>><audio src="assets/audio/Welcome.mp3" autoplay>Audio not supported in your browser</audio><</if>>
@@ -1122,45 +1167,45 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 			<div class="menu-item grid-item code">
 			<div class="title-wrapper">
-					<img src="./assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
-					<p><span>1. </span>Code Breaking</p>
+					<img src="assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
+					<p>1. Code Breaking</p>
 				</div>
-			<img src="./assets/img/crumpo.png" class="option">
+			<img src="assets/img/crumpo.png" class="option">
 			</div>
 	
 	
 			<div class="menu-item grid-item fog">
 			<div class="title-wrapper">
-					<img src="./assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
-					<p><span>2. </span>Fog Clearing</p>
+					<img src="assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
+					<p>2. Fog Clearing</p>
 				</div>
-			<img src="./assets/img/fog.png" class="option">
+			<img src="assets/img/fog.png" class="option">
 			</div> 
 	
 			
 			<div class="menu-item grid-item fire">
-			<img src="./assets/img/fire.png" class="option">
+			<img src="assets/img/fire.png" class="option">
 			<div class="title-wrapper">
-				<img src="./assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
-					<p><span>3. </span>Signal Fire System</p>
+				<img src="assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
+					<p>3. Signal Fire System</p>
 				</div>
 			</div> 
 			
 				<a data-passage="TwentyFour" class="link-internal macro-link grid-item time" tabindex="0">	
 			<div class="menu-item ">
 				<div class="title-wrapper">
-					<img src="./assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
-					<p><span>4. </span>Time Nudging</p>
+					<img src="assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
+					<p>4. Time Nudging</p>
 				</div>
-				<img class="option" src="./assets/img/time.png">
+				<img class="option" src="assets/img/time.png">
 			</div> 
 				</a>
-		<img class=" grid-item arrow1" src="./assets/img/arrow-o.png">
-			<img class=" grid-item arrow2" src="./assets/img/arrow-y2.png">
-				<img class=" grid-item arrow3" src="./assets/img/arrow-y.png">
-				<img src="./assets/img/completed-b.png" alt="completed stamp" class="complete completecode" >
-					<img src="./assets/img/completed-b.png" alt="completed stamp" class="complete completefog" >
-						<img src="./assets/img/completed-b.png" alt="completed stamp" class="complete completefire" >
+		<img class=" grid-item arrow1" src="assets/img/arrow-o.png">
+			<img class=" grid-item arrow2" src="assets/img/arrow-y2.png">
+				<img class=" grid-item arrow3" src="assets/img/arrow-y.png">
+				<img src="assets/img/completed-b.png" alt="completed stamp" class="complete completecode" >
+					<img src="assets/img/completed-b.png" alt="completed stamp" class="complete completefog" >
+						<img src="assets/img/completed-b.png" alt="completed stamp" class="complete completefire" >
 					
 			</div>
 		</div>
@@ -1194,7 +1239,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<include "footer">>
 </div>
 <<done>>
+<<if $audioOn is true>>
 <<set $vol to setup.changeVol(0.5)>>
+<</if>>
 <</done>>
 
 
@@ -1209,7 +1256,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <p>To make sure we get things right we play out the scenario 
 this allows us to interpret what is really going on and not just make rash decisions.</p>
 
-<span id="tensixsix" class="intext"><img src="./assets/img/1066.png" alt="image of William the Conqueror in 1066"></span><p>We once nudged the wrong moment in 1066 and spent weeks trying to make sure William the Conqueror still became King.</p> 
+<span id="tensixsix" class="intext"><img src="assets/img/1066.png" alt="image of William the Conqueror in 1066"></span><p>We once nudged the wrong moment in 1066 and spent weeks trying to make sure William the Conqueror still became King.</p> 
 <p>Oh there was so much paperwork!</p>
 <<timed 5s t8n>>
 
@@ -1265,15 +1312,17 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <div class="content-wrapper">
 		<<include "sidebartime">>
-		<div class="content-item content text">
-				<p>To register you'll need to send the word <strong>IGNITE</strong> to <strong><a href="tel:0748-078-6415">0748-078-6415</a></strong>.</p>
+		<div class="content-item content text" >
+				<p tabindex="0">To register you'll need to send the word <strong>IGNITE</strong> to <strong><a href="tel:0748-078-6415">0748-078-6415</a></strong>.</p>
 
 <p>You'll receive the codeword to move on through the Signal Fire System.</p>
 
 <p>And here is the Code of Conduct.</p>
 
 
-<div id="answer"><span role="input" aria-label="Password Input"><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></div>
+<div id="answer">
+Enter codeword:
+<br><span role="input" aria-label="Enter the code word that you have received by text message"><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></div>
 
 <br><span id="wrong"></span>
 				
@@ -1359,7 +1408,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<<include "sidebarfire">>
 			<div class="content-item content text">
 					
-					<<timed 3s>><img src="./assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
+					<<timed 3s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
 						<p><div id="text"> </div></p>
 		</div>
 		</div>
@@ -1391,47 +1440,47 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<div class="menu-wrapper content-item content menu">
 			<div class="menu-item grid-item code">
 			<div class="title-wrapper grid">
-					<img src="./assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
-					<p><span>1. </span>Code Breaking</p>
+					<img src="assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
+					<p>1. Code Breaking</p>
 				</div>
-			<img src="./assets/img/crumpo.png" class="option">
+			<img src="assets/img/crumpo.png" class="option">
 			</div>
 	
 			<div class="menu-item grid-item fog ">
 			<div class="title-wrapper grid">
-					<img src="./assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
-					<p><span>2. </span>Fog Clearing</p>
+					<img src="assets/img/fog-w.png" alt="Fog Clearing Button"  id="fogClearing" class="inactive challenges"> 
+					<p>2. Fog Clearing</p>
 				</div>
-			<img src="./assets/img/fog.png" class="option">
+			<img src="assets/img/fog.png" class="option">
 			</div> 
 	
 	
 	
 			<div class="menu-item  grid-item fire">
-			<img src="./assets/img/fire.png" class="option">
+			<img src="assets/img/fire.png" class="option">
 			<div class="title-wrapper grid">
-				<img src="./assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
-					<p><span>3. </span>Signal Fire System</p>
+				<img src="assets/img/signal-w.png" alt="Signal Fire System Button" id="signalFireSystem" class="inactive challenges"> 
+					<p>3. Signal Fire System</p>
 				</div>
 			</div> 
 
 			<div class="menu-item grid-item time">
 				<div class="title-wrapper grid">
-					<img src="./assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
-					<p><span>4. </span>Time Nudging</p>
+					<img src="assets/img/time-w.png" alt="Nudging Challenge Button" id="nudging" class="inactive challenges">
+					<p>4. Time Nudging</p>
 				</div>
-				<img class="option" src="./assets/img/time.png">
+				<img class="option" src="assets/img/time.png">
 			</div> 
 /* BAGUETTE  */
-			 <a data-passage="Thirty" class="link-internal macro-link baguette " tabindex="0"><img src="./assets/img/baguette.png" id="baguette" class="baguette pulse" alt="Secret Mission Logo" ></a>
+			 <a data-passage="Thirty" class="link-internal macro-link baguette " tabindex="0"><img src="assets/img/baguette.png" id="baguette" class="baguette pulse" alt="A pulsing Secret Mission icon" ></a>
 
-		<img class=" grid-item arrow1" src="./assets/img/arrow-o.png">
-			<img class=" grid-item arrow2" src="./assets/img/arrow-y2.png">
-				<img class=" grid-item arrow3" src="./assets/img/arrow-y.png">
-				<img src="./assets/img/completed-b.png" alt="completed stamp" class=" complete completecode" >
-					<img src="./assets/img/completed-b.png" alt="completed stamp" class="complete completefog" >
-					<img src="./assets/img/completed-b.png" alt="completed stamp" class="complete completefire" >
-					<img src="./assets/img/completed-b.png" alt="completed stamp" class=" complete completetime" >
+		<img class=" grid-item arrow1" src="assets/img/arrow-o.png">
+			<img class=" grid-item arrow2" src="assets/img/arrow-y2.png">
+				<img class=" grid-item arrow3" src="assets/img/arrow-y.png">
+				<img src="assets/img/completed-b.png" alt="completed stamp" class=" complete completecode" >
+					<img src="assets/img/completed-b.png" alt="completed stamp" class="complete completefog" >
+					<img src="assets/img/completed-b.png" alt="completed stamp" class="complete completefire" >
+					<img src="assets/img/completed-b.png" alt="completed stamp" class=" complete completetime" >
 			</div>
 		</div>
 		<<include "mentor">>
@@ -1494,7 +1543,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				<div class="title-wrapper mission">
 			
 					<p></p>
-							<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
+							<img src="assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
 				</div>
 				<div id="alarm"></div>
 			<p>Hello,</p> 
@@ -1507,7 +1556,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <p>Are you ready for the message from the Signal Fire System?</p>
 <<timed 5s t8n>>
-<br><span role="button" class="button-wrapper plain" aria-label="Click Button to go Next"><<button "YES, send it through Chief Timer" >>
+<br><span role="button" class="button-wrapper plain inverse" aria-label="Click Button to go Next"><<button "YES, send it through Chief Timer" >>
 <<goto "IncomingMessageFr">>
 <</button>></span><</timed>>
 
@@ -1550,7 +1599,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 				<div class="title-wrapper mission">
 			
 					<p></p>
-							<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
+							<img src="assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
 				</div>
 				<div id="alarm"></div>
 				<div id="text"><p>Wow.</p>
@@ -1597,7 +1646,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <p>Scovell was a great codebreaker. He would decipher lots of codes -  that means he would be able to understand them. </p>
 
-<span id="georgesig" class="intext"><img src="./assets/img/siggeorge.png" alt="George Scovell’s signature and example of coded letter."></span>
+<span id="georgesig" class="intext"><img src="assets/img/siggeorge.png" alt="George Scovell’s signature and example of coded letter."></span>
 
 <<timed 5s t8n>><<append "#text">>
 <span role="button" class ="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtyThreeTwo]]>><</button>></span>
@@ -1838,8 +1887,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 /* CONVERSATION TWO FOURTY */
 <<addclass "body" "black">>
 <div class="wrapper menu mission ">
-/* <img src="./assets/img/scovell.png" class="disappear" alt="George Scovell">
-<img src="./assets/img/oldman.png" class="disappear" alt="The Duke of Wellington"> */
+/* <img src="assets/img/scovell.png" class="disappear" alt="George Scovell">
+<img src="assets/img/oldman.png" class="disappear" alt="The Duke of Wellington"> */
 	<main id="main" class="conversation">
 
 <span id="audio"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/scovell welling convo no tadah.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
@@ -1861,7 +1910,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 <<append "#text">>
 
 <<addclass "#text" "chat">><br>
-<span class="SFS left last" role="text" aria-label="Wellington"><p>Scovell, we don’t have much time.</p> </span>
+<p class="nameSender">WELLINGTON:</p>
+<span class="SFS left last" role="text" aria-label="Wellington"><p> Scovell, we don’t have much time.</p> </span>
 <</append>> <</timed>>
 
 <<timed 11s t8n>><<append "#text">><br><<removeclass ".left" "last">>
@@ -1874,10 +1924,12 @@ code yet?</p></span>
 <</append>> <</timed>>
 
 <<timed 16s t8n>><<append "#text">><br>
+<p class="nameSender scovell">SCOVELL:</p>
 <span class="SFS right last" role="text" aria-label="Scovell"><p>Yes... no... maybe.</p></span>
 <</append>> <</timed>>
 
 <<timed 19s t8n>><<append "#text">><<removeclass ".left" "last">><br>
+<p class="nameSender">WELLINGTON:</p>
 <span class="SFS left last" role="text" aria-label="Wellington"><p>I don’t move on maybe, Scovell.</p> </span><</append>> <</timed>>
 
 <<timed 22s t8n>><<append "#text">><<removeclass ".left" "last">>
@@ -1885,6 +1937,7 @@ code yet?</p></span>
 <</append>> <</timed>>
 
 <<timed 25s t8n>><<append "#text">><<removeclass ".right" "last">><br>
+<p class="nameSender scovell">SCOVELL:</p>
 <span class="SFS right last" id="bottom1"  role="text" aria-label="Scovell"><p>Sorry Sir –</p></span><<ScrollTo "bottom1" false>>
 <</append>> <</timed>>
 
@@ -1893,15 +1946,18 @@ code yet?</p></span>
 <</append>> <</timed>>
 
 <<timed 30s t8n>><<append "#text">><<removeclass ".left" "last">><br>
+<p class="nameSender">WELLINGTON:</p>
 <span class="SFS left last" id="bottom3" role="text" aria-label="Wellington"><p>I have not yet had any intelligence upon which I can rely on the exact position of the enemy’s
 armies.</p> </span><<ScrollTo "bottom3" false>>
 <</append>> <</timed>>
 
 <<timed 40s t8n>><<append "#text">><<removeclass ".right" "last">><br>
+<p class="nameSender scovell">SCOVELL:</p>
 <span class="SFS right last" id="bottom4" role="text" aria-label="Scovell"><p>I've done it Sir. I've broken the code.</p></span><<ScrollTo "bottom4" false>>
 <</append>> <</timed>>
 
 <<timed 43s t8n>><<append "#text">><<removeclass ".left" "last">><br>
+<p class="nameSender">WELLINGTON:</p>
 <span class="SFS left last" id="bottom5" role="text" aria-label="Wellington"><p>Tell me then.</p></span><<ScrollTo "bottom5" false>>
 <</append>> <</timed>>
 
@@ -1939,11 +1995,10 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 <<silently>>
 <<timed 0.1s>><<replace "#text">>
-<p>This is the moment. </p>
-<p>We must Nudge now. </p>
-<p>Before it is too late. </p>
+<p>This is the moment. We must Nudge now. Before it is too late. </p>
 
-<p>Send the word SCOVELL through the Signal Fire System – <a href="tel:0748-078-6415">0748-078-6415</a>.</p>
+<p>Send the word SCOVELL through the Signal Fire System – 
+<br><a href="tel:0748-078-6415">0748-078-6415</a>.</p>
 <p>Remember the information you discovered.</p>
 <p>Bonne chance - Good luck! </p>
 <</replace>><</timed>>
@@ -1964,10 +2019,12 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 <div class="flex-container-col-cen">
 	<p id="mount"></p>
-	<span role="input" class="" aria-label="Password Input"><<textbox "_password" "" autofocus>></span><br/><span role="button"  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	Enter codeword:
+	<br>
+	<span role="input" class="" aria-label="Enter the code word that you have received by text message"><<textbox "_password" "" autofocus>></span><br/><span role="button"  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	<br><span id="wrong"></span>
 </div >
-		<<timed 60s>> <<replace "#mount">>Input Code to Continue<</replace>><</timed>>
+		<<timed 60s>> <<replace "#mount">>Input Codeword to Continue<</replace>><</timed>>
 <</append>>
 <</timed>>
 
@@ -1983,10 +2040,10 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	<<include "headermenu">>
 	<main id="main" class="menu">
 <div class="content-wrapper" id="content">
-	<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
+	<img src="assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
 				<div class="content-item content mission com">
 			
-				<<timed 1s>><img src="./assets/img/completed-w.png" class="completed" ><</timed>>
+				<<timed 1s>><img src="assets/img/completed-w.png" class="completed" ><</timed>>
 				</div>
 				/* <div id="text"></div> */
 				</div>
@@ -2068,7 +2125,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	<p>Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   </p>
 </div >
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
-<img src="./assets/img/certificateteal.jpg" alt="A certificate reading MOTT Induction Passed, Eligible for Field Duty,Eligible for Historical, Communications Field Guide,Eligible for Signal Fire System Use,Novice Nudger Grad 1,Crumpet Access Granted" class="certificate">
+<img src="assets/img/certificateteal.jpg" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate">
 <span role="button" class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|FourtyFour-End]]>><</button>></span>
 </main>
 
@@ -2164,6 +2221,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 <<silently>>
 
 <<timed 7.2s t8n>><<append "#text">><<addclass "#text" "chat">>
+<p class="nameSender">WELLINGTON:</p>
 <span class="SFS left last"  role="text" aria-label="Wellington"> <p>Scovell, we don’t have much time. </p>
 </span><</append>> <</timed>>
 
@@ -2177,10 +2235,12 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <</append>> <</timed>>
 
 <<timed 17s t8n>><<append "#text">><br>
+<p class="nameSender scovell">SCOVELL:</p>
 <span class="SFS right last" id="bottom2"  role="text" aria-label="Scovelle"><p>Yes... no... maybe.</p></span>
 <<ScrollTo "bottom2">><</append>> <</timed>>
 
 <<timed 20s t8n>><<append "#text">><br><<removeclass ".left" "last">>
+<p class="nameSender">WELLINGTON:</p>
 <span class="SFS left last" id="bottom" role="text" aria-label="Wellington"><p>I don’t move on maybe Scovell.</p> </span><<ScrollTo "bottom" false>><</append>> <</timed>>
 
 <<timed 23s t8n>><<append "#text">><<removeclass ".left" "last">>
@@ -2188,6 +2248,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <</append>> <</timed>>
 
 <<timed 26s t8n>><<append "#text">><<removeclass ".right" "last">><br>
+<p class="nameSender scovell">SCOVELL:</p>
 <span class="SFS right last" id="bottom6" role="text" aria-label="Scovelle"><p>Sorry Sir...</p></span><<ScrollTo "bottom6" false>>
 <</append>> <</timed>>
 
@@ -2196,6 +2257,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <</append>> <</timed>>
 
 <<timed 34s t8n>><<append "#text">><<removeclass ".left" "last">>
+<p class="nameSender">WELLINGTON:</p>
 <span class="SFS left last" id="bottom4"> <p>I have not yet had any intelligence upon which I can rely on the exact position of the enemy's armies.</p></span><<ScrollTo "bottom4" false>>
 <</append>> <</timed>>
 
@@ -2223,7 +2285,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 			<div class="title-wrapper mission">
 					
 					<p></p>
-					<img src="./assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
+					<img src="assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
 				</div>
 				<div id="text">
 				
@@ -2264,7 +2326,17 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 					<p></p>
 				</div>
 				<div class="content-item content text mission message">
-					<img src="https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif" class="gif signal" alt="Signal Fire system logo ">
+					/* <img src="https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif" class="gif signal" alt="Signal Fire system logo "> */
+					<span class="timer-wrapper gif signal" id="warning" alt="a lit match with signals pulsing out of it">
+					<<link [img[https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif]]>>
+					<<replace "#warning">>
+						<<link [img[assets/img/signalfirestop.png]]>>
+		
+					<</link>>
+			
+					<</replace>>
+					<</link>>
+					</span>
 					<<set _finish to true>>
 					<div id="text"></div >
 				</div>
@@ -2276,7 +2348,9 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <<timed 1s>>
 <<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav"  autoplay  id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
 <<done>>
-<<set $vol to setup.changeVol(0.5)>><</done>><</timed>>
+<<if $audioOn is true>>
+<<set $vol to setup.changeVol(0.5)>>
+<</if>><</done>><</timed>>
 
 <<timed 8s t8n>>
 <<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/24. Challenge 5 - French Message.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>>
@@ -2304,7 +2378,16 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 					<p></p>
 				</div>
 				<div class="content-item content text mission message">
-					<img src="https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif" class="gif signal" alt="Signal Fire system logo ">
+						<span class="timer-wrapper gif signal" id="warning" alt="a lit match with signals pulsing out of it">
+					<<link [img[https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif]]>>
+					<<replace "#warning">>
+						<<link [img[assets/img/signalfirestop.png]]>>
+		
+					<</link>>
+			
+					<</replace>>
+					<</link>>
+					</span>
 					<div id="text"></div>
 				</div>
 		</div>
@@ -2314,7 +2397,9 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 </div>
 <<timed 0.2s>><<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav" autoplay id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
 <<done>>
-<<set $vol to setup.changeVol(0.5)>><</done>><</timed>>
+<<if $audioOn is true>>
+<<set $vol to setup.changeVol(0.5)>>
+<</if>><</done>><</timed>>
 
 <<silently>>
 <<timed 10s t8n>>
@@ -2366,7 +2451,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 	
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 3.wav" autoplay>Audio not supported in your browser</audio><</if>>
 	
-	<div class="mottlogo-wrapper"><img src="/assets/img/mott-logo.png" id="LogoRot" class="logomott logoRot" alt="The Ministry of Time Travel Logo is spinning"></div>
+	<div class="mottlogo-wrapper"><img src="assets/img/mott-logo.png" id="LogoRot" class="logomott logoRot" alt="The Ministry of Time Travel Logo is spinning"></div>
 
 
 	<<timed 8s>><<goto $next>><</timed>>
@@ -2411,7 +2496,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
   <p>Once ready to enter, click the button below.</p>
 
 
-<div class="flex-container-row power"><poweron alt="Power On button"><a data-passage="TransPass" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a><<set $next to "Zero">></poweron></div>
+<div class="flex-container-row power"><poweron ><a data-passage="TransPass" class="link-internal link-image" role="link" tabindex="0" aria-label="Click Power on button to begin experience" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a><<set $next to "Zero">></poweron></div>
 </div>
 </main>
 <<include "footer">>
@@ -2510,7 +2595,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 			<<include "sidebartime">>
 			<div class="content-item content text">
 					
-					<<timed 3s>><img src="./assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
+					<<timed 3s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
 						<p><div id="text"> </div></p>
 		</div>
 		</div>
@@ -2582,7 +2667,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 				<p>	The cipher we are looking for is The Great Paris Cipher, but it's gone all foggy.</p>
 
 				<span class="intext cipher">
-					<img src="./assets/img/cipher.png" alt="The Great Paris Cypher">
+					<img src="assets/img/cipher.png" alt="The Great Paris Cypher">
 				</span>
 					
 	
