@@ -86,7 +86,7 @@ setup.changeVol = (num) => {
 	<p>Would you prefer audio on or off? </p>
 <div class="multiple-btn-wrapper">
 	<span role="button" type="button" class="button-wrapper plain" aria-label="Click Button to turn audio on">
-		<<button "On">>
+		<<link "On">>
 			<<set $audioOn to true>>
 			<<set $audioClick to true>>
 			<<replace "#mount">>
@@ -99,7 +99,7 @@ setup.changeVol = (num) => {
 				<span role="button" aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
 				</span>
 	<</replace>>
-		<</button>>
+		<</link>>
 	</span>
 	<span role="button" class="button-wrapper plain" aria-label="Click Button to turn audio off">
 	<<button "Off">>
