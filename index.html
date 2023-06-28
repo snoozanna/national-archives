@@ -242,7 +242,7 @@ setup.changeVol = (num) => {
 		&lt;footer&gt;&lt;nav&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;Zero&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;
-&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Two]]&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Two" tags="nobr logo" position="931.3333333333334,103.66666666666664" size="100,100">/* MENU  */
+&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Two]]&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Two" tags="nobr logo" position="931.3333333333334,103.66666666666664" size="100,100">/* MENU  */
 &lt;&lt;set $title to &quot;343&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Challenge 1.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
@@ -318,7 +318,7 @@ setup.changeVol = (num) => {
 
 &lt;p&gt;(We&#39;re not just going to reveal it to &lt;em&gt;anyone&lt;/em&gt;)&lt;/p&gt;
 
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Begin|Four]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Begin|Four]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 	&lt;/div&gt;
 	&lt;/div&gt;
 
@@ -351,7 +351,7 @@ setup.changeVol = (num) => {
 	Rearrange the letters and enter the word here:
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;
 	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;
-	&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;SECRET&quot;&gt;&gt;&lt;&lt;goto &quot;Five&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;
+	&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;SECRET&quot;&gt;&gt;&lt;&lt;goto &quot;Five&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;
 	
 	&lt;/span&gt;&lt;/div&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
@@ -393,7 +393,7 @@ over secret files&quot;&gt;
 &lt;p&gt;Yes, the MOTT is a secret organisation. &lt;/p&gt;
 &lt;p&gt;Not even the government know about the MOTT. The PM doesn&#39;t know a thing. The National Archives staff do, so The National Archives staff have higher clearance! The MOTT is the hidden core - and protected by everyone.&lt;/p&gt; 
 &lt;p&gt;You now are part of that.&lt;/p&gt; 
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Eight]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Eight]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;/main&gt;
@@ -422,7 +422,7 @@ over secret files&quot;&gt;
 &lt;br&gt;&lt;br&gt;
 Rearrange the letters and enter the word here:
 		&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt;
-	&lt;span role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;/div&gt;&lt;/div&gt;
@@ -459,7 +459,7 @@ Rearrange the letters and enter the word here:
 						&lt;p&gt;This is the favourite food of most members of the Ministry of Time Travel.&lt;/p&gt; 
 &lt;p&gt;If you see someone eating a crumpet, they quite possibly are linked to the MOTT!&lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
-&lt;br&gt;&lt;div class=&quot;border upper&quot;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;CodeComplete&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;set $next to &quot;Ten&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div &gt;&lt;&lt;/timed&gt;&gt;
+&lt;br&gt;&lt;div class=&quot;border upper&quot;&gt;&lt;span class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;CodeComplete&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;set $next to &quot;Ten&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div &gt;&lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 		&lt;/div&gt;
 	
@@ -498,7 +498,7 @@ Rearrange the letters and enter the word here:
 	&lt;/footer&gt;
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;Eleven&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;Eleven&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Eleven" tags="nobr logo" position="541,862" size="100,100">/* MENU  */
 &lt;&lt;set $title to &quot;3333&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
@@ -577,7 +577,7 @@ Rearrange the letters and enter the word here:
 
 &lt;p&gt;Interpreting clears the fog.&lt;/p&gt;
 
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwelveTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwelveTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	
@@ -709,8 +709,8 @@ Rearrange the letters and enter the word here:
 		&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the numbers found in the images&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot;&gt;&gt;&lt;/span&gt;
 		&lt;br&gt;
 		&lt;span class=&quot;multiple-btn-wrapper&quot;&gt;
-			&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;if _password is &quot;4223281622&quot;&gt;&gt;&lt;&lt;set $next to &quot;Fifteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;FogComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Try Again&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-			&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto &quot;Thirteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+			&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;if _password is &quot;4223281622&quot;&gt;&gt;&lt;&lt;set $next to &quot;Fifteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;FogComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Try Again&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+			&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto &quot;Thirteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 			&lt;/span&gt;
 		&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 	&lt;/div&gt;
@@ -759,7 +759,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
 
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;Sixteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;Sixteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Sixteen" tags="nobr logo" position="788,1319.6666666666667" size="100,100">/* MENU */
 &lt;&lt;set $title to &quot;sfsd&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Challenge 3.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -852,7 +852,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;p&gt;Fortunately, there were some examples in The National Archives so we could break it.&lt;/p&gt;
 &lt;p&gt;Let&#39;s see if you can work out how to find how to get into the document. We&#39;ll show you the word up close.&lt;/p&gt;
 
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Nineteen]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Nineteen]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	
@@ -879,14 +879,14 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;span onclick=&quot;document.getElementById(&#39;player&#39;).pause()&quot; role=&quot;button&quot; aria-label=&quot;Click here for a hint&quot; class=&quot;hint-button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;audio src=&quot;assets/audio/15. Challenge 3 - 4 V2.mp3&quot; autoplay&gt;&lt;/audio&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection&lt;/em&gt;&lt;/p&gt; &lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;
 	
-	&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click here for a hint&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection &lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span class=&quot;button-wrapper plain&quot; aria-label=&quot;Click here for a hint&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection &lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;&lt;/if&gt;&gt;
 	&lt;/p&gt;
 	&lt;/div&gt;
 	
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt; &lt;span role=&quot;input&quot; aria-label=&quot;Unscramble the letters and enter the word below&quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 			&lt;/div&gt;
@@ -913,7 +913,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 &lt;p&gt;Here is what we found inside the note you opened. &lt;/p&gt;
 
-&lt;br&gt; &lt;span role=&quot;button&quot; aria-label=&quot;Click Button to go Next&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;button [[Next|TwentyOneOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;br&gt; &lt;span aria-label=&quot;Click Button to go Next&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;button [[Next|TwentyOneOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 			&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -929,9 +929,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;p&gt; Are you here to safeguard the sands of time?&lt;/p&gt;
 
 		&lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
-			&lt;span role=&quot;button&quot;  class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to go Next&quot;&gt;
+			&lt;span  class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to go Next&quot;&gt;
 			&lt;&lt;button &quot;Yes&quot;&gt;&gt;&lt;&lt;goto &quot;Question&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-			&lt;span role=&quot;button&quot; class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to Quit&quot;&gt;&lt;a href=&quot;https://www.nationalarchives.gov.uk/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;No&lt;/a&gt;
+			&lt;span class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to Quit&quot;&gt;&lt;a href=&quot;https://www.nationalarchives.gov.uk/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;No&lt;/a&gt;
 			/* [[No|https://www.nationalarchives.gov.uk/]] */&lt;/span&gt;
 		&lt;/div &gt;
 	&lt;/div&gt;
@@ -950,9 +950,9 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;p&gt; Have you taken MOTT training before?&lt;/p&gt;
 
 		&lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
-			&lt;span role=&quot;button&quot;  class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to choose Yes&quot;&gt;
+			&lt;span  class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to choose Yes&quot;&gt;
 			&lt;&lt;button &quot;Yes&quot;&gt;&gt;&lt;&lt;goto &quot;UnlockFinal&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-			&lt;span role=&quot;button&quot; class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to begin training&quot;&gt;&lt;&lt;button &quot;No&quot;&gt;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;goto &quot;TransPass&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+			&lt;span class=&quot;button-wrapper sand&quot; aria-label=&quot;Click Button to begin training&quot;&gt;&lt;&lt;button &quot;No&quot;&gt;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;goto &quot;TransPass&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 		&lt;/div &gt;
 	&lt;/div&gt;
 	
@@ -974,14 +974,14 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 	
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Enter the codeword&quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;BAGUETTE&quot;&gt;&gt;&lt;&lt;goto &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to check Answer&quot;&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;BAGUETTE&quot;&gt;&gt;&lt;&lt;goto &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span aria-label=&quot;Click Button to check Answer&quot;&gt;
 	&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 
 
 	&lt;div class=&quot;unlock begin&quot;&gt;
 		&lt;p&gt;Otherwise let’s get you started.&lt;/p&gt;
-			&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to begin training&quot;&gt;&lt;&lt;button &quot;Begin Training&quot;&gt;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;goto &quot;TransPass&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+			&lt;span class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to begin training&quot;&gt;&lt;&lt;button &quot;Begin Training&quot;&gt;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;goto &quot;TransPass&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;/div&gt;
 	&lt;/div&gt;
 		&lt;/div&gt;
@@ -1016,7 +1016,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 							&lt;span id=&quot;line10&quot; class=&quot;medieval&quot; aria-hidden=&quot;true&quot;&gt;c r u m p e t &amp;emsp; m a k i n g&lt;/span&gt;&lt;span style=&quot;width: 0px; opacity: 0; position: absolute; top: 0px;&quot;&gt;crumpet making&lt;/span&gt;
 							&lt;span id=&quot;line11&quot; class=&quot;medieval&quot;&gt;no crumpets will be made&lt;/span&gt;&lt;/div&gt;
 							
-							&lt;&lt;timed 25s t8n&gt;&gt;&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentyOneTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
+							&lt;&lt;timed 25s t8n&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentyOneTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 			&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -1099,7 +1099,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;p&gt;Nudging the past is very dangerous. So, we must be sure we are nudging the right moment in history to keep things how they should be in the present.&lt;/p&gt; 
 &lt;p&gt;We have over 11 million records at The National Archives that we can investigate to give us a good idea on what happens, but there are always gaps, gaps that we must fill to make sure we are taking the right action.&lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentyFive]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentyFive]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;	
@@ -1124,7 +1124,7 @@ this allows us to interpret what is really going on and not just make rash decis
 &lt;p&gt;Oh there was so much paperwork!&lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
 
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentySix]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentySix]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -1147,7 +1147,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;p&gt;The MOTT Code Of Conduct will help you.&lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
 
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentySevenOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentySevenOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
  &lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -1173,7 +1173,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 &lt;div id=&quot;answer&quot;&gt;
 Enter codeword:
-&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
 
 &lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 				
@@ -1205,7 +1205,7 @@ Enter codeword:
 &lt;span class=&quot;CoCTitle&quot;&gt;&lt;h2&gt;Time&lt;/h2&gt; Time is Tricky. Don&#39;t worry if not everything makes sense, we receive messages from a faraway future through a time machine, not everything makes sense.&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-		/* &lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[&quot;I&#39;ve read it&quot;|TwentySevenTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; */
+		/* &lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[&quot;I&#39;ve read it&quot;|TwentySevenTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; */
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -1221,7 +1221,7 @@ Enter codeword:
 	&lt;footer&gt;&lt;nav&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;TwentySevenTwo&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;
 	&lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to go Next&quot; class=&quot;button-wrapper&quot;&gt; &lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span aria-label=&quot;Click Button to go Next&quot; class=&quot;button-wrapper&quot;&gt; &lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="TwentyTwo" tags="nobr video" position="1545.3333333333335,1548.6666666666667" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;&lt;&lt;set $title to &quot;V4&quot;&gt;&gt;
 &lt;div id=&quot;video&quot; class=&quot;video-wrapper&quot; role=&quot;video&quot; aria-label=&quot;MOTT Training 4 video&quot;&gt;
@@ -1231,7 +1231,7 @@ Enter codeword:
 &lt;footer&gt;&lt;nav&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;TwentyOneTwo&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;
 
 &lt;&lt;silently&gt;&gt;
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;TwentyThree&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;TwentyThree&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="FireComplete" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu fire&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu  &quot;&gt;
@@ -1333,7 +1333,7 @@ Enter codeword:
 
 &lt;&lt;timed 5s t8n&gt;&gt;
 
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;
 &lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;ThirtyOne&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
  &lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
@@ -1371,7 +1371,7 @@ Enter codeword:
 
 &lt;p&gt;Are you ready for the message from the Signal Fire System?&lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
-&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain inverse&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;YES, send it through Chief Timer&quot; &gt;&gt;
+&lt;br&gt;&lt;span class=&quot;button-wrapper plain inverse&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;YES, send it through Chief Timer&quot; &gt;&gt;
 &lt;&lt;goto &quot;IncomingMessageFr&quot;&gt;&gt;
 &lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1456,7 +1456,7 @@ Enter codeword:
 &lt;span id=&quot;georgesig&quot; class=&quot;intext&quot;&gt;&lt;img src=&quot;assets/img/siggeorge.png&quot; alt=&quot;George Scovell’s signature and example of coded letter.&quot;&gt;&lt;/span&gt;
 
 &lt;&lt;timed 5s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;
-&lt;span role=&quot;button&quot; class =&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyThreeTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class =&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyThreeTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -1496,7 +1496,7 @@ Enter codeword:
 &lt;p&gt;If Scovell doesn’t break the code then the British would never know where to launch their attacks, they would never find The Great Paris Cipher, would lose the battle and it seems, we would all end up speaking French.&lt;/p&gt;
 
 &lt;&lt;timed 5s&gt;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtySix]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;&lt;/div&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtySix]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;&lt;include &quot;oldman&quot;&gt;&gt;
@@ -1524,7 +1524,7 @@ Enter codeword:
 	
 	&lt;p&gt;We need to get to work!&lt;/p&gt;
 	&lt;&lt;timed 5s t8n&gt;&gt;
-	&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtySevenOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtySevenOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	 &lt;&lt;/timed&gt;&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -1557,7 +1557,7 @@ Enter codeword:
 &lt;p&gt;Please help!&lt;/p&gt;
 	
 	&lt;&lt;timed 5s t8n&gt;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;ThirtyEight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;ThirtyEight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	 &lt;&lt;/timed&gt;&gt;
 	 &lt;&lt;/timed&gt;&gt;
 				&lt;/div &gt;
@@ -1638,7 +1638,7 @@ Enter codeword:
 &lt;/div &gt;
 
 &lt;div class=&quot;check-wrapper &quot;&gt;
-	&lt;span role=&quot;button&quot; aria-label=&quot;Check the Password&quot; class=&quot;button-wrapper cipher-check&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;
+	&lt;span aria-label=&quot;Check the Password&quot; class=&quot;button-wrapper cipher-check&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;
 	
 	&lt;&lt;set _password1 to $password1.toUpperCase()&gt;&gt;&lt;&lt;if _password1 is &quot;MURCIA&quot;&gt;&gt;&lt;&lt;set $correct1 to 1&gt;&gt;&lt;&lt;replace &quot;#wrong1&quot;&gt;&gt;First is Correct, &lt;&lt;/replace&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong1&quot;&gt;&gt;First is Wrong, &lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong1&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;
 	
@@ -1746,7 +1746,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 
 
 &lt;&lt;timed 46s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="FourtyOne" tags="nobr mission" position="2083.666666666666,1723.3333333333335" size="100,100">&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/35. Challenge 5 - 12 V2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -1797,7 +1797,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;p id=&quot;mount&quot;&gt;&lt;/p&gt;
 	Enter codeword:
 	&lt;br&gt;
-	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span role=&quot;button&quot;  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 &lt;/div &gt;
 		&lt;&lt;timed 60s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;Input Codeword to Continue&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1850,7 +1850,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 				&lt;p&gt;A nudge in a direction.&lt;/p&gt;
 				&lt;p&gt;I think it is time for the final video. &lt;/p&gt;
 
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;FourtyThree&quot;&gt;&gt;&lt;&lt;set $next to &quot;Sixteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;FourtyThree&quot;&gt;&gt;&lt;&lt;set $next to &quot;Sixteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;/div&gt;
@@ -1872,7 +1872,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 		&lt;footer&gt;&lt;nav&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;Zero&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;FourtyFour-Cert&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;FourtyFour-Cert&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="FourtyFour-Cert" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/new challenge complete.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 	&lt;&lt;timed 3s&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/sign off.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1885,7 +1885,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;/div &gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;img src=&quot;assets/img/certificateteal.jpg&quot; alt=&quot;A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg&quot; class=&quot;certificate&quot;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu codeword question&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
@@ -2005,7 +2005,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 40s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt; /*&lt;&lt;addclass &quot;.code&quot; &quot;disappear&quot;&gt;&gt;*/
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyFive]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyFive]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="ThirtyNine" tags="nobr mission" position="1875,2150" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
@@ -2039,7 +2039,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 &lt;p&gt;Let’s play out where we need to nudge. &lt;/p&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Conversation2]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Conversation2]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -2091,7 +2091,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 							&lt;span lang=&quot;fr&quot;&gt;&lt;p&gt;Aide George Scovell.&lt;/p&gt;&lt;/span&gt;
 							&lt;span lang=&quot;fr&quot;&gt;&lt;p&gt;Et Baguette. Baguette. Baguette.&lt;/p&gt;&lt;/span&gt;
 							&lt;&lt;timed 5s t8n&gt;&gt;
-								&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+								&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 							&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="IncomingMessageEn" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
@@ -2157,7 +2157,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	
 	 &lt;p&gt;Fortunately, we broke the code, and, well, I&#39;ll explain what we do if something is changed in the past.&lt;/p&gt;
 	
-	&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;FireComplete&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyTwo&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
+	&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;FireComplete&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyTwo&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 			&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -2208,7 +2208,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
   &lt;p&gt;Once ready to enter, click the button below.&lt;/p&gt;
 
 
-&lt;div class=&quot;flex-container-row power&quot;&gt;&lt;poweron &gt;&lt;a data-passage=&quot;TransPass&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; aria-label=&quot;Click Power on button to begin experience&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;&lt;set $next to &quot;Zero&quot;&gt;&gt;&lt;/poweron&gt;&lt;/div&gt;
+&lt;div class=&quot;flex-container-row power&quot;&gt;&lt;poweron &gt;&lt;a data-passage=&quot;TransPass&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; aria-label=&quot;Click this power on icon to begin experience&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;&lt;set $next to &quot;Zero&quot;&gt;&gt;&lt;/poweron&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
@@ -2230,7 +2230,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;p&gt;When you are ready, click begin.&lt;/p&gt; 
 &lt;p class=&quot;disappear&quot;&gt;If you are using a screen reader, check the alt text on the images for some help.&lt;/p&gt;
 
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Begin|Thirteen]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Begin|Thirteen]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -2250,7 +2250,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;p&gt;You&#39;ll recieve the codeword to move on through the Signal Fire System.&lt;/p&gt;
 
 
-&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 
 &lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 				&lt;br&gt;&lt;div id=&quot;code&quot;&gt;
@@ -2279,7 +2279,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;span class=&quot;CoCTitle&quot;&gt;&lt;h2&gt;Time&lt;/h2&gt; Time is Tricky. Don&#39;t worry if not everything makes sense, we recieve messages from a faraway future through a time machine, not everything makes sense.&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-		&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentySevenTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+		&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|TwentySevenTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
@@ -2326,7 +2326,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 					&lt;p&gt;Well, on the 22nd of December, Wellington, who was the British General, was waiting for Scovell. &lt;/p&gt;
 					&lt;p&gt;Scovell had received an important set of French letters that had been intercepted. In it was the key to the battles ahead.&lt;/p&gt;
 					&lt;&lt;timed 5s&gt;&gt;
-					&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyFour]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+					&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyFour]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 					&lt;&lt;/timed&gt;&gt;
 &lt;/div&gt;
 		&lt;/div&gt;
@@ -2363,7 +2363,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	
 
 &lt;&lt;timed 5s t8n&gt;&gt;&lt;br&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyThreeThree]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyThreeThree]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -2398,7 +2398,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;p&gt;However, it can’t decode codes, so we really need you to get your thinking cap on.&lt;/p&gt;
 
 &lt;&lt;timed 5s t8n&gt;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtySevenThree]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtySevenThree]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
  &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -2427,7 +2427,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;p&gt; See, it&#39;s already starting to happen.&lt;/p&gt;
 
 &lt;&lt;timed 5s t8n&gt;&gt;
-&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;ThirtyEight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;ThirtyEight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
  &lt;&lt;/timed&gt;&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
