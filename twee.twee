@@ -86,7 +86,7 @@ setup.changeVol = (num) => {
 	<p>Would you prefer audio on or off? </p>
 <div class="multiple-btn-wrapper">
 	<span class="button-wrapper plain" aria-label="Click Button to turn audio on">
-		<<link "On">>
+		<<button "On">>
 			<<set $audioOn to true>>
 			<<set $audioClick to true>>
 			<<replace "#mount">>
@@ -96,10 +96,10 @@ setup.changeVol = (num) => {
 				<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a></poweron>
 				<br>
 			<br>
-				<span role="button" aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
+				<span aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
 				</span>
 	<</replace>>
-		<</link>>
+		<</button>>
 	</span>
 	<span role="button" class="button-wrapper plain" aria-label="Click Button to turn audio off">
 	<<button "Off">>
