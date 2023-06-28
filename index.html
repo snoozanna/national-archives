@@ -147,10 +147,10 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}</script><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
+}</script><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
 
-	&lt;p&gt;&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot;&gt;&lt;/span&gt;This experience has the option of an audio soundtrack.  &lt;/p&gt;
+	&lt;p&gt;&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot; alt=&quot;volume icon&quot;&gt;&lt;/span&gt;This experience has the option of an audio soundtrack.  &lt;/p&gt;
 	&lt;p&gt;Would you prefer audio on or off? &lt;/p&gt;
 &lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
 	&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to turn audio on&quot;&gt;
@@ -320,7 +320,7 @@ setup.changeVol = (num) => {
 
 &lt;p&gt;(We&#39;re not just going to reveal it to &lt;em&gt;anyone&lt;/em&gt;)&lt;/p&gt;
 
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Bustton to go Next&quot;&gt;&lt;&lt;button [[Begin|Four]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Begin|Four]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/timed&gt;&gt;
 	&lt;/div&gt;
 	&lt;/div&gt;
 
@@ -350,9 +350,9 @@ setup.changeVol = (num) => {
 &lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt;Hint: Shhhhh&lt;/p&gt;
 	&lt;h3 class=&quot;subtitle&quot;&gt;&lt;/h3&gt;
 	&lt;br&gt;
-	
+	Rearrange the letters and enter the word here:
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;
 	&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;SECRET&quot;&gt;&gt;&lt;&lt;goto &quot;Five&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;
 	
 	&lt;/span&gt;&lt;/div&gt;
@@ -367,6 +367,7 @@ setup.changeVol = (num) => {
 
 
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;	
+&lt;&lt;timed 3s&gt;&gt;
 &lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
 		&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
@@ -377,7 +378,8 @@ setup.changeVol = (num) => {
 			&lt;&lt;stop&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Five" tags="nobr" position="546,494.99999999999994" size="100,100">&lt;div class=&quot;wrapper  menu codeword question answer1&quot;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Five" tags="nobr" position="546,494.99999999999994" size="100,100">&lt;div class=&quot;wrapper  menu codeword question answer1&quot;&gt;
 &lt;img src=&quot;assets/img/bg-code-answer1.png&quot; class=&quot;disappear&quot; alt=&quot;Man looking
 over secret files&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
@@ -420,8 +422,9 @@ over secret files&quot;&gt;
 
 &lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt; A tasty breakfast with holes in it - which I, The Chief Timer, love.&lt;/p&gt;
 &lt;br&gt;&lt;br&gt;
+Rearrange the letters and enter the word here:
 		&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt;
-	&lt;span role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;/div&gt;&lt;/div&gt;
@@ -885,7 +888,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;/div&gt;
 	
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt; &lt;span role=&quot;input&quot; aria-label=&quot;Unscramble the letters and enter the word below&quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 			&lt;/div&gt;
@@ -972,8 +975,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;p&gt;To unlock the final mission, enter the secret codeword below. &lt;/p&gt;
 
 	
-	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Password Field&quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;BAGUETTE&quot;&gt;&gt;&lt;&lt;goto &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to check Answer&quot;&gt;
+	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Enter the codeword&quot;&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;BAGUETTE&quot;&gt;&gt;&lt;&lt;goto &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to check Answer&quot;&gt;
 	&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 
@@ -1172,7 +1175,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 &lt;div id=&quot;answer&quot;&gt;
 Enter codeword:
-&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
 
 &lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 				
@@ -1796,7 +1799,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;p id=&quot;mount&quot;&gt;&lt;/p&gt;
 	Enter codeword:
 	&lt;br&gt;
-	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span role=&quot;button&quot;  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span role=&quot;button&quot;  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 &lt;/div &gt;
 		&lt;&lt;timed 60s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;Input Codeword to Continue&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -2249,7 +2252,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;p&gt;You&#39;ll recieve the codeword to move on through the Signal Fire System.&lt;/p&gt;
 
 
-&lt;span role=&quot;input&quot; aria-label=&quot;Password Input&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; autofocus&gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 
 &lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 				&lt;br&gt;&lt;div id=&quot;code&quot;&gt;

@@ -82,7 +82,7 @@ setup.changeVol = (num) => {
   <div class="wrapper audio" id="mount">
 	<div class="phone-warning"><p>MOTT is best experienced on a computer or tablet</p></div>
 
-	<p><span class="inline-icon-wrap"><img src="assets/img/audio.png"></span>This experience has the option of an audio soundtrack.  </p>
+	<p><span class="inline-icon-wrap"><img src="assets/img/audio.png" alt="volume icon"></span>This experience has the option of an audio soundtrack.  </p>
 	<p>Would you prefer audio on or off? </p>
 <div class="multiple-btn-wrapper">
 	<span role="button" class="button-wrapper plain" aria-label="Click Button to turn audio on">
@@ -317,7 +317,7 @@ setup.changeVol = (num) => {
 
 <p>(We're not just going to reveal it to <em>anyone</em>)</p>
 
-<<timed 5s t8n>><span role="button" class="button-wrapper" aria-label="Click Bustton to go Next"><<button [[Begin|Four]]>><</button>></span><</timed>>
+<<timed 5s t8n>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button [[Begin|Four]]>><</button>></span><</timed>>
 	</div>
 	</div>
 
@@ -359,9 +359,9 @@ setup.changeVol = (num) => {
 <p id="hint" class="disappear">Hint: Shhhhh</p>
 	<h3 class="subtitle"></h3>
 	<br>
-	
+	Rearrange the letters and enter the word here:
 	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Rearrange the letters and enter the word here ">
-	<<textbox "_password" "" autofocus>>
+	<<textbox "_password" "" >>
 	<span role="button" class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "SECRET">><<goto "Five">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>>
 	
 	</span></div>
@@ -376,6 +376,7 @@ setup.changeVol = (num) => {
 
 
 <<include "mentor">>	
+<<timed 3s>>
 <<silently>>
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
@@ -387,6 +388,7 @@ setup.changeVol = (num) => {
 		<</if>>
 	<</repeat>>
 <</silently>>
+<</timed>>
 
 
 :: Five [nobr] {"position":"546,494.99999999999994","size":"100,100"}
@@ -442,8 +444,9 @@ over secret files">
 
 <p id="hint" class="disappear"> A tasty breakfast with holes in it - which I, The Chief Timer, love.</p>
 <br><br>
+Rearrange the letters and enter the word here:
 		<div id="answer" style="text-transform: uppercase;">
-	<span role="input" aria-label="Rearrange the letters and enter the word here "><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "CRUMPETS">><<goto "Nine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	<span role="input" aria-label="Rearrange the letters and enter the word here "><<textbox "_password" "" >></span><span role="button" class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "CRUMPETS">><<goto "Nine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	
 	<br><span id="wrong"></span></div>
 	</div></div>
@@ -982,7 +985,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	</div>
 	
 	<div id="answer" style="text-transform: uppercase;"> <span role="input" aria-label="Unscramble the letters and enter the word below">
-	<<textbox "_password" "" autofocus>><span role="button" class="button-wrapper" aria-label="Click Button to go Check your answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></span>
+	<<textbox "_password" "" >><span role="button" class="button-wrapper" aria-label="Click Button to go Check your answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></span>
 	
 	<br><span id="wrong"></span></div>
 			</div>
@@ -1088,8 +1091,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	<p>To unlock the final mission, enter the secret codeword below. </p>
 
 	
-	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Password Field">
-	<<textbox "_password" "" autofocus>><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "BAGUETTE">><<goto "TwentyNine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>><span role="button" aria-label="Click Button to check Answer">
+	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Enter the codeword">
+	<<textbox "_password" "" >><span role="button" class="button-wrapper" aria-label="Check the Codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "BAGUETTE">><<goto "TwentyNine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>><span role="button" aria-label="Click Button to check Answer">
 	</span></span></div>
 	<br><span id="wrong"></span>
 
@@ -1322,7 +1325,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <div id="answer">
 Enter codeword:
-<br><span role="input" aria-label="Enter the code word that you have received by text message"><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></div>
+<br><span role="input" aria-label="Enter the code word that you have received by text message"><<textbox "_password" "" >></span><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></div>
 
 <br><span id="wrong"></span>
 				
@@ -2021,7 +2024,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	<p id="mount"></p>
 	Enter codeword:
 	<br>
-	<span role="input" class="" aria-label="Enter the code word that you have received by text message"><<textbox "_password" "" autofocus>></span><br/><span role="button"  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	<span role="input" class="" aria-label="Enter the code word that you have received by text message"><<textbox "_password" "" >></span><br/><span role="button"  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	<br><span id="wrong"></span>
 </div >
 		<<timed 60s>> <<replace "#mount">>Input Codeword to Continue<</replace>><</timed>>
@@ -2546,7 +2549,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <p>You'll recieve the codeword to move on through the Signal Fire System.</p>
 
 
-<span role="input" aria-label="Password Input"><<textbox "_password" "" autofocus>></span><span role="button" class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+<span role="input" aria-label="Enter the code word that you have received by text message"><<textbox "_password" "" >></span><span role="button" class="button-wrapper" aria-label="Check the Codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 
 <br><span id="wrong"></span>
 				<br><div id="code">
