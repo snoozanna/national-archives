@@ -108,7 +108,7 @@ setup.changeVol = (num) => {
 <<replace "#mount">>
 			<strong> Audio Off</strong>
 			<p>Press the power on button to continue</p>
-			<a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" aria-label="Click to continue" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a>
+			<a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" aria-label="Click to continue" alt="Power on button icon" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a>
 	
 			<br>
 			<br>
