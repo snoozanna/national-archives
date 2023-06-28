@@ -1,5 +1,5 @@
 :: StoryTitle
-MOTT Chapter 2
+Ministry of Time Travel - National Archives
 
 
 :: StoryData
@@ -100,7 +100,7 @@ setup.changeVol = (num) => {
 				</span>
 	<</replace>>
 		<</button>>
-	</span>
+	</div>
 	<span role="button" class="button-wrapper plain" aria-label="Click Button to turn audio off">
 	<<button "Off">>
 		<<set $audioOn to false>>
