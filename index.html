@@ -147,13 +147,13 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}</script><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
+}</script><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
 
 	&lt;p&gt;&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot; alt=&quot;volume icon&quot;&gt;&lt;/span&gt;This experience has the option of an audio soundtrack.  &lt;/p&gt;
 	&lt;p&gt;Would you prefer audio on or off? &lt;/p&gt;
 &lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
-	&lt;div class=&quot;button-wrapper plain&quot; alt=&quot;Click Button to turn audio on&quot; aria-label=&quot;Click Button to turn audio on&quot;&gt;
+	&lt;span aria-label=&quot;Click Button to turn audio on&quot; class=&quot;button-wrapper plain&quot;&gt;
 		&lt;&lt;button &quot;On&quot;&gt;&gt;
 			&lt;&lt;set $audioOn to true&gt;&gt;
 			&lt;&lt;set $audioClick to true&gt;&gt;
@@ -164,12 +164,12 @@ setup.changeVol = (num) => {
 				&lt;poweron&gt;&lt;a data-passage=&quot;TutorialOne&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;/poweron&gt;
 				&lt;br&gt;
 			&lt;br&gt;
-				&lt;span aria-label=&quot;Click Button to go back&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;goto &quot;Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-				&lt;/span&gt;
+				&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;goto &quot;Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+				
 	&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;/button&gt;&gt;
-	&lt;/div&gt;
-	&lt;span role=&quot;button&quot; class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to turn audio off&quot;&gt;
+	&lt;/span&gt;
+	&lt;span class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to turn audio off&quot;&gt;
 	&lt;&lt;button &quot;Off&quot;&gt;&gt;
 		&lt;&lt;set $audioOn to false&gt;&gt;
 		&lt;&lt;set $audioClick to true&gt;&gt;
@@ -179,14 +179,11 @@ setup.changeVol = (num) => {
 			&lt;poweron&gt;&lt;a data-passage=&quot;TutorialOne&quot; class=&quot;link-internal link-image&quot; role=&quot;link&quot; tabindex=&quot;0&quot; &gt;&lt;img src=&quot;https://remote.co.com/MoTT/AgentTraining/Images/onicon.png&quot; alt=&quot;Power On button&quot;&gt;&lt;/a&gt;&lt;/poweron&gt;
 			&lt;br&gt;
 			&lt;br&gt;
-			&lt;span role=&quot;button&quot; aria-label=&quot;Click Button to go back&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;goto &quot;Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+			&lt;span aria-label=&quot;Click Button to go back&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;goto &quot;Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 			&lt;/span&gt;
 		&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;/div&gt;
-
-
-	 
 
   &lt;/div &gt;</tw-passagedata><tw-passagedata pid="2" name="footer" tags="nobr" position="225,100" size="100,100">&lt;footer&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="3" name="footermission" tags="nobr" position="350,100" size="100,100">&lt;footer class=&quot;mission&quot;&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="header" tags="nobr" position="475,100" size="100,100">&lt;header&gt;
 	&lt;div class=&quot;logo-wrapper&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt; &lt;/header&gt;</tw-passagedata><tw-passagedata pid="5" name="headertrain" tags="nobr" position="600,100" size="100,100">&lt;header&gt;
@@ -2192,7 +2189,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	  &lt;p&gt;This experience requires you to tap through on your computer. You just need to look for the circle to click on. &lt;/p&gt;
 	  
 	  &lt;div class=&quot;flex-container-row&quot;&gt;&lt;p class=&quot;fit&quot;&gt;Try it now.&lt;/p&gt;
-		&lt;br/&gt;&lt;span role=&quot;button&quot; class=&quot;button-wrapper circle&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[&quot;Next&quot;|TutorialTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;br/&gt;&lt;span class=&quot;button-wrapper circle&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[&quot;Next&quot;|TutorialTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;holding&quot;&gt;&lt;/div&gt;
 	&lt;/main&gt;

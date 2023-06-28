@@ -85,7 +85,7 @@ setup.changeVol = (num) => {
 	<p><span class="inline-icon-wrap"><img src="assets/img/audio.png" alt="volume icon"></span>This experience has the option of an audio soundtrack.  </p>
 	<p>Would you prefer audio on or off? </p>
 <div class="multiple-btn-wrapper">
-	<div class="button-wrapper plain" alt="Click Button to turn audio on" aria-label="Click Button to turn audio on">
+	<span aria-label="Click Button to turn audio on" class="button-wrapper plain">
 		<<button "On">>
 			<<set $audioOn to true>>
 			<<set $audioClick to true>>
@@ -96,12 +96,12 @@ setup.changeVol = (num) => {
 				<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a></poweron>
 				<br>
 			<br>
-				<span aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
-				</span>
+				<<link "Back">><<goto "Start">><</link>>
+				
 	<</replace>>
 		<</button>>
-	</div>
-	<span role="button" class="button-wrapper plain" aria-label="Click Button to turn audio off">
+	</span>
+	<span class="button-wrapper plain" aria-label="Click Button to turn audio off">
 	<<button "Off">>
 		<<set $audioOn to false>>
 		<<set $audioClick to true>>
@@ -111,14 +111,11 @@ setup.changeVol = (num) => {
 			<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a></poweron>
 			<br>
 			<br>
-			<span role="button" aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
+			<span aria-label="Click Button to go back"><<link "Back">><<goto "Start">><</link>>
 			</span>
 		<</replace>>
 	<</button>></span>
 </div>
-
-
-	 
 
   </div >
 
@@ -2477,7 +2474,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 	  <p>This experience requires you to tap through on your computer. You just need to look for the circle to click on. </p>
 	  
 	  <div class="flex-container-row"><p class="fit">Try it now.</p>
-		<br/><span role="button" class="button-wrapper circle" aria-label="Click Button to go Next"><<button [["Next"|TutorialTwo]]>><</button>></span></div>
+		<br/><span class="button-wrapper circle" aria-label="Click Button to go Next"><<button [["Next"|TutorialTwo]]>><</button>></span></div>
 	</div>
 	<div class="holding"></div>
 	</main>
