@@ -85,7 +85,7 @@ setup.changeVol = (num) => {
 	<p><span class="inline-icon-wrap"><img src="assets/img/audio.png" alt="volume icon"></span>This experience has the option of an audio soundtrack.  </p>
 	<p>Would you prefer audio on or off? </p>
 <div class="multiple-btn-wrapper">
-	<span role="button" type="button" class="button-wrapper plain" aria-label="Click Button to turn audio on">
+	<span class="button-wrapper plain" aria-label="Click Button to turn audio on">
 		<<link "On">>
 			<<set $audioOn to true>>
 			<<set $audioClick to true>>
