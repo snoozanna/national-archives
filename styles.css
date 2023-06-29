@@ -1352,6 +1352,17 @@ passage-thirtyeight > div#main {
   display: flex;
   flex-direction: column;
   max-width: 30rem;
+  margin-block-end: 1rem;
+}
+
+.answers-wrapper > .answers-item > label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.answers-wrapper > .answers-item > label > .status {
+  color: goldenrod;
 }
 
 /* paper effect */
@@ -1486,6 +1497,7 @@ table.cyphertable {
   width: fit-content;
   padding: 1rem;
   color: black;
+  font-family: "IM Fell English", serif;
 }
 
 table.cyphertable > caption > h3 {
@@ -1518,6 +1530,11 @@ table.cyphertable > tbody > tr > td > span.tableletter {
 table.cyphertable > tbody > tr > td > span.number {
   background-color: rgba(184, 135, 11, 0.822);
   color: black;
+}
+
+.napoleon-letter {
+  font-size: 1.8rem;
+  font-family: "IM Fell English", serif;
 }
 
 /* CERTIFICATE  */

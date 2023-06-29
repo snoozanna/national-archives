@@ -1903,42 +1903,42 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<div aria-label="The letter to Napoleon Bonaparte" class="napoleon-letter">
 			From Joseph Bonaparte to Emperor Napoléon Bonaparte,
 			<br>
-			Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  aria-labelledby="Code One 13.21.18.3.9.1"><span class="sr-only">Code One</span>13.21.18.3.9.1<span aria-hidden="true">^^1^^</span></span>.
+			Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  aria-labelledby="Code One 13.21.18.3.9.1"><span class="sr-only">Code One: </span>13.21.18.3.9.1<span aria-hidden="true">^^1^^</span></span>.
 
-			<br>We will have 100,000 troops along the lines of the <span id="CODE2"  aria-labelledby="Code Two 4.21.5.18.15" ><span class="sr-only">Code Two</span>4.21.5.18.15<span aria-hidden="true">^^2^^</span></span> and&nbsp;<span id="CODE3"  aria-label="Code Three 20.1.7.21.19"><span class="sr-only">Code Three</span>20.1.7.21.19<span aria-hidden="true">^^3^^</span></span> Rivers.
-			<br>Our troops will not be in <span id="CODE4" aria-label="Code Four 3.15.18.21.14.14.1"><span class="sr-only">Code Four</span>3.15.18.21.14.14.1<span aria-hidden="true">^^4^^</span></span>. 
+			<br>We will have 100,000 troops along the lines of the <span id="CODE2"  aria-labelledby="Code Two 4.21.5.18.15" ><span class="sr-only">Code Two: </span>4.21.5.18.15<span aria-hidden="true">^^2^^</span></span> and&nbsp;<span id="CODE3"  aria-label="Code Three 20.1.7.21.19"><span class="sr-only">Code Three: </span>20.1.7.21.19<span aria-hidden="true">^^3^^</span></span> Rivers.
+			<br>Our troops will not be in <span id="CODE4" aria-label="Code Four 3.15.18.21.14.14.1"><span class="sr-only">Code Four: </span>3.15.18.21.14.14.1<span aria-hidden="true">^^4^^</span></span>. 
 </div>
 
 		</div>
 	</div>
 		<div id="Answers" class="answers-wrapper" role="text" aria-label="Four input boxes for the passwords">
 		<div class="answers-item">
-			<label for="_password1" >Code One:</label>
+			<label for="_password1" >Code One: <span id="wrong1" class="status"> </span> </label>
 			<<textbox "$password1"  "">> 
 			</div>
 		<div class="answers-item">
-			<label for="_password2" >Code Two:</label>
+			<label for="_password2" >Code Two: <span id="wrong2" class="status"> </span> </label>
 			<<textbox "$password2" "">> 
 		</div>
 		<div class="answers-item">
-		<label for="_password22" >Code Three:</label>
+		<label for="_password22" >Code Three: <span id="wrong22" class="status"> </span></label>
 		<<textbox "$password22" "">>
 		</div >
 		<div class="answers-item">	
-		<label for="_password3" >Code Four:</label>
+		<label for="_password3" >Code Four: <span id="wrong3" class="status"> </span></label>
 		<<textbox "$password3" "">>
 		</div>
 		<br>
 		<div class="check-wrapper ">
 	<span aria-label="Check the Password" class="button-wrapper cipher-check"><<button "Check">>
 	
-	<<set _password1 to $password1.toUpperCase()>><<if _password1 is "MURCIA">><<set $correct1 to 1>><<replace "#wrong1">>First is Correct, <</replace>><<else>><<replace "#wrong1">>First is Wrong, <<timed 5s>><<replace "#wrong1">><</replace>><</timed>><</replace>><</if>>
+	<<set _password1 to $password1.toUpperCase()>><<if _password1 is "MURCIA">><<set $correct1 to 1>><<replace "#wrong1">>Correct <</replace>><<else>><<replace "#wrong1">>Wrong <<timed 5s>><<replace "#wrong1">><</replace>><</timed>><</replace>><</if>>
 	
-	<<set _password2 to $password2.toUpperCase()>><<if _password2 is "DUERO">><<set $correct2 to 1>><<replace "#wrong2">>Second is Correct, <</replace>><<else>><<replace "#wrong2">>Second is Wrong,<<timed 5s>><<replace "#wrong2">><</replace>><</timed>><</replace>><</if>>
+	<<set _password2 to $password2.toUpperCase()>><<if _password2 is "DUERO">><<set $correct2 to 1>><<replace "#wrong2">>Correct <</replace>><<else>><<replace "#wrong2">>Wrong<<timed 5s>><<replace "#wrong2">><</replace>><</timed>><</replace>><</if>>
 	
-	<<set _password22 to $password22.toUpperCase()>><<if _password22 is "TAGUS">><<set $correct22 to 1>><<replace "#wrong22">>Third is Correct, <</replace>><<else>><<replace "#wrong22">>Third is Wrong, <<timed 5s>><<replace "#wrong22">><</replace>><</timed>><</replace>><</if>>
+	<<set _password22 to $password22.toUpperCase()>><<if _password22 is "TAGUS">><<set $correct22 to 1>><<replace "#wrong22">>Correct, <</replace>><<else>><<replace "#wrong22">>Wrong <<timed 5s>><<replace "#wrong22">><</replace>><</timed>><</replace>><</if>>
 	
-	<<set _password3 to $password3.toUpperCase()>><<if _password3 is "CORUNNA">><<set $correct3 to 1>><<replace "#wrong3">>Fourth is Correct<</replace>><<else>><<replace "#wrong3">>Fourth is Wrong<<timed 5s>><<replace "#wrong3">><</replace>><</timed>><</replace>><</if>>
+	<<set _password3 to $password3.toUpperCase()>><<if _password3 is "CORUNNA">><<set $correct3 to 1>><<replace "#wrong3">>Correct<</replace>><<else>><<replace "#wrong3">>Wrong<<timed 5s>><<replace "#wrong3">><</replace>><</timed>><</replace>><</if>>
 	
 	<<set $answer to $correct1 + $correct2 + $correct22 + $correct3>><<if $answer is 4>><<replace "#Correct">><h3>You did it!</h3><</replace>>
 	<<timed 3s>><<goto "ThirtyNine">><</timed>><</if>>
@@ -1948,7 +1948,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	/* Feedback */
 	<div class="" id="feedback"> 
 		<div id="Correct" class="solutions">
-		<span id="wrong1"> </span> <span id="wrong2"> </span> <span id="wrong22"> </span> <span id="wrong3"> </span></div>
+		</div>
 	
 	</div>
 </div >
@@ -2046,7 +2046,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <div class="check-wrapper ">
 	<span aria-label="Check the Password" class="button-wrapper cipher-check"><<button "Check">>
 	
-	<<set _password1 to $password1.toUpperCase()>><<if _password1 is "MURCIA">><<set $correct1 to 1>><<replace "#wrong1">>First is Correct, <</replace>><<else>><<replace "#wrong1">>First is Wrong, <<timed 5s>><<replace "#wrong1">><</replace>><</timed>><</replace>><</if>>
+	<<set _password1 to $password1.toUpperCase()>><<if _password1 is "MURCIA">><<set $correct1 to 1>><<replace "#wrong1">>Correct, <</replace>><<else>><<replace "#wrong1">>Wrong, <<timed 5s>><<replace "#wrong1">><</replace>><</timed>><</replace>><</if>>
 	
 	<<set _password2 to $password2.toUpperCase()>><<if _password2 is "DUERO">><<set $correct2 to 1>><<replace "#wrong2">>Second is Correct, <</replace>><<else>><<replace "#wrong2">>Second is Wrong,<<timed 5s>><<replace "#wrong2">><</replace>><</timed>><</replace>><</if>>
 	
