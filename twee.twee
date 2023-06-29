@@ -1845,8 +1845,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 	</div>
 		<div id="Answers" class="answers-wrapper" role="text" aria-label="Four input boxes for the passwords">
 		<div class="answers-item">
-			<label for="_password1" aria-label="Enter Code One here:">Code One: <span id="wrong1" class="status"> </span> </label>
+			<label for="_password1" aria-label="Enter Code One here:">Code One: <span id="wrong1" class="status"> </span> 
 			<<textbox "$password1"  "Enter Code One">> 
+			</label>
 			</div>
 		<div class="answers-item">
 			<label for="_password2" >Code Two: <span id="wrong2" class="status"> </span> </label>
