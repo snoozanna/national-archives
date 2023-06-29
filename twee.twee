@@ -1836,7 +1836,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	<div class="cipher-wrapper">
 		<div class="cipherpaper" alt="an old looking piece of paper containing a code to break">
 			<table id="cyphertable" class="cyphertable " align="center" >
-				<caption><h3>Décrypter le code • Decipher the code</h3></caption>
+				<caption><h3><span lang="fr">Décrypter le code</span> • <span lang="en">Decipher the code</span></h3></caption>
 					<thead>
 									<tr>
 											<th aria-label="A-F"></th>
@@ -1900,13 +1900,13 @@ but passing those will give you the power to nudge the past if your Time Mission
 					</tr>
 				</tbody>
 			</table>
-			<div role="text" aria-label="The letter to Napoleon Bonaparte" class="napoleon-letter">
+			<div aria-label="The letter to Napoleon Bonaparte" class="napoleon-letter">
 			From Joseph Bonaparte to Emperor Napoléon Bonaparte,
 			<br>
-			Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  role="text" aria-label="1st code word  13.21.18.3.9.1">13.21.18.3.9.1^^1^^</span>.
+			Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  aria-label="Code One">13.21.18.3.9.1<span aria-hidden="true">^^1^^</span></span>.
 
-			<br>We will have 100,000 troops along the lines of the <span id="CODE2" role="text" aria-label="2nd code word 4.21.5.18.15 and 3rd code word 20.1.7.21.19" >4.21.5.18.15&nbsp;^^2^^and&nbsp;20.1.7.21.19^^3^^</span> Rivers.
-			<br>Our troops will not be in <span id="CODE3" role="text" aria-label="4th code word 3.15.18.21.14.14.1">3.15.18.21.14.14.1^^4^^</span>. 
+			<br>We will have 100,000 troops along the lines of the <span id="CODE2"  aria-label="Code Two" >4.21.5.18.15&nbsp;^^2^^</span> and&nbsp;<span id="CODE3"  aria-label="Code Two">20.1.7.21.19^^3^^</span> Rivers.
+			<br>Our troops will not be in <span id="CODE4"  aria-label="Code Four">3.15.18.21.14.14.1^^4^^</span>. 
 </div>
 
 		</div>
