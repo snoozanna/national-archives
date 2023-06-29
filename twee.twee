@@ -1903,10 +1903,10 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<div aria-label="The letter to Napoleon Bonaparte" class="napoleon-letter">
 			From Joseph Bonaparte to Emperor Napoléon Bonaparte,
 			<br>
-			Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  aria-label="Code One">13.21.18.3.9.1<span aria-hidden="true">^^1^^</span></span>.
+			Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  aria-labelledby="Code One">13.21.18.3.9.1<span aria-hidden="true">^^1^^</span></span>.
 
-			<br>We will have 100,000 troops along the lines of the <span id="CODE2"  aria-label="Code Two" >4.21.5.18.15&nbsp;^^2^^</span> and&nbsp;<span id="CODE3"  aria-label="Code Two">20.1.7.21.19^^3^^</span> Rivers.
-			<br>Our troops will not be in <span id="CODE4"  aria-label="Code Four">3.15.18.21.14.14.1^^4^^</span>. 
+			<br>We will have 100,000 troops along the lines of the <span id="CODE2"  aria-labelledby="Code Two" >4.21.5.18.15<span aria-hidden="true">^^2^^</span></span> and&nbsp;<span id="CODE3"  aria-label="Code Two">20.1.7.21.19<span aria-hidden="true">^^3^^</span></span> Rivers.
+			<br>Our troops will not be in <span id="CODE4"  aria-label="Code Four">3.15.18.21.14.14.1<span aria-hidden="true">^^4^^</span></span>. 
 </div>
 
 		</div>
