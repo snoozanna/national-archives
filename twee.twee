@@ -1872,7 +1872,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	
 	<<set _password3 to $password3.toUpperCase()>><<if _password3 is "CORUNNA">><<set $correct3 to 1>><<replace "#wrong3">>Correct<</replace>><<else>><<replace "#wrong3">>Wrong<<timed 5s>><<replace "#wrong3">><</replace>><</timed>><</replace>><</if>>
 	
-	<<set $answer to $correct1 + $correct2 + $correct22 + $correct3>><<if $answer is 4>><<replace "#Correct">><h3>You did it!</h3><</replace>>
+	<<set $answer to $correct1 + $correct2 + $correct22 + $correct3>><<if $answer is 4>><<replace "#Answers">><h3>You did it!</h3><</replace>>
 	<<timed 3s>><<goto "ThirtyNine">><</timed>><</if>>
 	
 	

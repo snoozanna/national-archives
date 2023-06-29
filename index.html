@@ -1659,7 +1659,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	
 	&lt;&lt;set _password3 to $password3.toUpperCase()&gt;&gt;&lt;&lt;if _password3 is &quot;CORUNNA&quot;&gt;&gt;&lt;&lt;set $correct3 to 1&gt;&gt;&lt;&lt;replace &quot;#wrong3&quot;&gt;&gt;Correct&lt;&lt;/replace&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong3&quot;&gt;&gt;Wrong&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong3&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;
 	
-	&lt;&lt;set $answer to $correct1 + $correct2 + $correct22 + $correct3&gt;&gt;&lt;&lt;if $answer is 4&gt;&gt;&lt;&lt;replace &quot;#Correct&quot;&gt;&gt;&lt;h3&gt;You did it!&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;set $answer to $correct1 + $correct2 + $correct22 + $correct3&gt;&gt;&lt;&lt;if $answer is 4&gt;&gt;&lt;&lt;replace &quot;#Answers&quot;&gt;&gt;&lt;h3&gt;You did it!&lt;/h3&gt;&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;timed 3s&gt;&gt;&lt;&lt;goto &quot;ThirtyNine&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;
 	
 	
