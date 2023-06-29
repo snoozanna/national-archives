@@ -1804,8 +1804,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 				<h3><span lang="fr">Décrypter le code</span> • <span lang="en">Decipher the code</span></h3>
 					
 				<div class="table">	
-					<p class="table-item"><span class="tableletter">A</span><span class="number">1</span></p>
-					<p class="table-item"><span class="tableletter">B</span><span class="number">2</span></p>
+					<p class="table-item"><span class="tableletter">A</span><span class="sr-only">=</span><span class="number">1</span><span class="sr-only">,</span></p>
+					<p class="table-item"><span class="tableletter">B</span><span class="sr-only">=</span><span class="number">2</span><span class="sr-only">,</span></p>
 					<p class="table-item"><span class="tableletter">C</span><span class="number">3</span></p>
 					<p class="table-item"><span class="tableletter">D</span><span class="number">4</span></p>
 					<p class="table-item"><span class="tableletter">E</span><span class="number">5</span></p>
