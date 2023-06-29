@@ -76,41 +76,6 @@ setup.changeVol = (num) => {
 	bgAudio.volume = num
 }
 
-setup.createCypherTable = () => {
-	var letterToNumber = {};
-
-    // Loop through the alphabet and populate the letterToNumber object
-    for (var i = 65; i <= 90; i++) {
-      var letter = String.fromCharCode(i);
-      var number = i - 64; // A=1, B=2, C=3, ...
-
-      letterToNumber[letter] = number;
-    }
-
-    let table = document.getElementById('cyphertable');
-    let tbody = table.getElementsByTagName('tbody')[0];
-
-    for (let letter in letterToNumber) {
-      if (letterToNumber.hasOwnProperty(letter)) {
-        let number = letterToNumber[letter];
-
-        let row = document.createElement('tr');
-
-        let letterCell = document.createElement('td');
-        let letterText = document.createTextNode(letter);
-        letterCell.appendChild(letterText);
-        row.appendChild(letterCell);
-
-        let numberCell = document.createElement('td');
-        let numberText = document.createTextNode(number);
-        numberCell.appendChild(numberText);
-        row.appendChild(numberCell);
-
-        tbody.appendChild(row);
-      }
-    }
-
-}
 
 
 :: Start [nobr] {"position":"134,244.33333333333337","size":"100,100"}
@@ -1835,71 +1800,38 @@ but passing those will give you the power to nudge the past if your Time Mission
 <div class="wrapper mission cipher">
 	<div class="cipher-wrapper">
 		<div class="cipherpaper" alt="an old looking piece of paper containing a code to break">
-			<table id="cyphertable" class="cyphertable " align="center" >
-				<caption><h3><span lang="fr">Décrypter le code</span> • <span lang="en">Decipher the code</span></h3></caption>
-					<thead>
-									<tr>
-											<th aria-label="A-F"></th>
-											<th aria-label="G-L"></th>
-											<th aria-label="M-R"></th>
-											<th aria-label="S-X"></th>
-											<th aria-label="Y-Z"></th>
-			
-									</tr>
-							</thead>
-				<tbody>
-					<tr>
-						<td>
-							<span class="tableletter">A</span>
-							<span class="number">1</span>
-						</td>
-						<td>
-							<span class="tableletter">G</span>
-							<span class="number">7</span>
-						</td>
-						<td>
-							<span class="tableletter">M</span>
-							<span class="number">13</span>
-						</td>
-						<td><span class="tableletter">S</span><span class="number">19</span></td>
-						<td><span class="tableletter">Y</span><span class="number">25</span></td>
-					</tr>
-					<tr>
-						<td><span class="tableletter">B</span><span class="number">2</span></td>
-						<td><span class="tableletter">H</span><span class="number">8</span></td>
-						<td><span class="tableletter">N</span><span class="number">14</span></td>
-						<td><span class="tableletter">T</span><span class="number">20</span></td>
-						<td><span class="tableletter">Z</span><span class="number">26</span></td>
-					</tr>
-					<tr>
-						<td><span class="tableletter">C</span><span class="number">3</span></td>
-						<td><span class="tableletter">I</span><span class="number">9</span></td>
-						<td><span class="tableletter">O</span><span class="number">15</span></td>
-						<td><span class="tableletter">U</span><span class="number">21</span></td>
-			
-					</tr>
-					<tr>
-						<td><span class="tableletter">D</span><span class="number">4</span></td>
-						<td><span class="tableletter">J</span><span class="number">10</span></td>
-						<td><span class="tableletter">P</span><span class="number">16</span></td>
-						<td><span class="tableletter">V</span><span class="number">22</span></td>
-			
-					</tr>
-					<tr>
-						<td><span class="tableletter">E</span><span class="number">5</span></td>
-						<td><span class="tableletter">K</span><span class="number">11</span></td>
-						<td><span class="tableletter">Q</span><span class="number">17</span></td>
-						<td><span class="tableletter">W</span><span class="number">23</span></td>
-			
-					</tr>
-					<tr>
-						<td><span class="tableletter">F</span><span class="number">6</span></td>
-						<td><span class="tableletter">L</span><span class="number">12</span></td>
-						<td><span class="tableletter">R</span><span class="number">18</span></td>
-						<td><span class="tableletter">X</span><span class="number">24</span></td>
-					</tr>
-				</tbody>
-			</table>
+			<div id="cyphertable" class="cyphertable ">
+				<h3><span lang="fr">Décrypter le code</span> • <span lang="en">Decipher the code</span></h3>
+					
+				<div class="table">	
+					<div class="table-item"><span class="tableletter">A</span><span class="number">1</span></div>
+					<div class="table-item"><span class="tableletter">B</span><span class="number">2</span></div>
+					<div class="table-item"><span class="tableletter">C</span><span class="number">3</span></div>
+					<div class="table-item"><span class="tableletter">D</span><span class="number">4</span></div>
+					<div class="table-item"><span class="tableletter">E</span><span class="number">5</span></div>
+					<div class="table-item"><span class="tableletter">F</span><span class="number">6</span></div>
+					<div class="table-item"><span class="tableletter">G</span><span class="number">7</span></div>
+					<div class="table-item"><span class="tableletter">H</span><span class="number">8</span></div>
+					<div class="table-item"><span class="tableletter">I</span><span class="number">9</span></div>
+					<div class="table-item"><span class="tableletter">J</span><span class="number">10</span></div>
+					<div class="table-item"><span class="tableletter">K</span><span class="number">11</span></div>
+					<div class="table-item"><span class="tableletter">L</span><span class="number">12</span></div>
+					<div class="table-item"><span class="tableletter">M</span><span class="number">13</span></div>
+					<div class="table-item"><span class="tableletter">N</span><span class="number">14</span></div>
+					<div class="table-item"><span class="tableletter">O</span><span class="number">15</span></div>
+					<div class="table-item"><span class="tableletter">P</span><span class="number">16</span></div>
+					<div class="table-item"><span class="tableletter">Q</span><span class="number">17</span></div>
+					<div class="table-item"><span class="tableletter">R</span><span class="number">18</span></div>
+					<div class="table-item"><span class="tableletter">S</span><span class="number">19</span></div>
+					<div class="table-item"><span class="tableletter">T</span><span class="number">20</span></div>
+					<div class="table-item"><span class="tableletter">U</span><span class="number">21</span></div>
+					<div class="table-item"><span class="tableletter">V</span><span class="number">22</span></div>
+					<div class="table-item"><span class="tableletter">W</span><span class="number">23</span></div>
+					<div class="table-item"><span class="tableletter">X</span><span class="number">24</span></div>
+					<div class="table-item"><span class="tableletter">Y</span><span class="number">25</span></div>
+					<div class="table-item"><span class="tableletter">Z</span><span class="number">26</span></div>
+			</div>
+			</div>
 			<div aria-label="The letter to Napoleon Bonaparte" class="napoleon-letter">
 			From Joseph Bonaparte to Emperor Napoléon Bonaparte,
 			<br>
@@ -1907,8 +1839,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 			<br>We will have 100,000 troops along the lines of the <span id="CODE2"  aria-labelledby="Code Two 4.21.5.18.15" ><span class="sr-only">Code Two: </span>4.21.5.18.15<span aria-hidden="true">^^2^^</span></span> and&nbsp;<span id="CODE3"  aria-label="Code Three 20.1.7.21.19"><span class="sr-only">Code Three: </span>20.1.7.21.19<span aria-hidden="true">^^3^^</span></span> Rivers.
 			<br>Our troops will not be in <span id="CODE4" aria-label="Code Four 3.15.18.21.14.14.1"><span class="sr-only">Code Four: </span>3.15.18.21.14.14.1<span aria-hidden="true">^^4^^</span></span>. 
-</div>
 
+</div >
 		</div>
 	</div>
 		<div id="Answers" class="answers-wrapper" role="text" aria-label="Four input boxes for the passwords">
@@ -1945,13 +1877,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 	
 	
 	<</button>></span>
-	/* Feedback */
-	<div class="" id="feedback"> 
-		<div id="Correct" class="solutions">
-		</div>
-	
-	</div>
-</div >
+
+
 	</div>
 
 

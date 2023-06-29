@@ -147,42 +147,6 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}
-
-setup.createCypherTable = () => {
-	var letterToNumber = {};
-
-    // Loop through the alphabet and populate the letterToNumber object
-    for (var i = 65; i <= 90; i++) {
-      var letter = String.fromCharCode(i);
-      var number = i - 64; // A=1, B=2, C=3, ...
-
-      letterToNumber[letter] = number;
-    }
-
-    let table = document.getElementById('cyphertable');
-    let tbody = table.getElementsByTagName('tbody')[0];
-
-    for (let letter in letterToNumber) {
-      if (letterToNumber.hasOwnProperty(letter)) {
-        let number = letterToNumber[letter];
-
-        let row = document.createElement('tr');
-
-        let letterCell = document.createElement('td');
-        let letterText = document.createTextNode(letter);
-        letterCell.appendChild(letterText);
-        row.appendChild(letterCell);
-
-        let numberCell = document.createElement('td');
-        let numberText = document.createTextNode(number);
-        numberCell.appendChild(numberText);
-        row.appendChild(numberCell);
-
-        tbody.appendChild(row);
-      }
-    }
-
 }</script><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
 
@@ -1623,71 +1587,38 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;div class=&quot;wrapper mission cipher&quot;&gt;
 	&lt;div class=&quot;cipher-wrapper&quot;&gt;
 		&lt;div class=&quot;cipherpaper&quot; alt=&quot;an old looking piece of paper containing a code to break&quot;&gt;
-			&lt;table id=&quot;cyphertable&quot; class=&quot;cyphertable &quot; align=&quot;center&quot; &gt;
-				&lt;caption&gt;&lt;h3&gt;&lt;span lang=&quot;fr&quot;&gt;Décrypter le code&lt;/span&gt; • &lt;span lang=&quot;en&quot;&gt;Decipher the code&lt;/span&gt;&lt;/h3&gt;&lt;/caption&gt;
-					&lt;thead&gt;
-									&lt;tr&gt;
-											&lt;th aria-label=&quot;A-F&quot;&gt;&lt;/th&gt;
-											&lt;th aria-label=&quot;G-L&quot;&gt;&lt;/th&gt;
-											&lt;th aria-label=&quot;M-R&quot;&gt;&lt;/th&gt;
-											&lt;th aria-label=&quot;S-X&quot;&gt;&lt;/th&gt;
-											&lt;th aria-label=&quot;Y-Z&quot;&gt;&lt;/th&gt;
-			
-									&lt;/tr&gt;
-							&lt;/thead&gt;
-				&lt;tbody&gt;
-					&lt;tr&gt;
-						&lt;td&gt;
-							&lt;span class=&quot;tableletter&quot;&gt;A&lt;/span&gt;
-							&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;
-						&lt;/td&gt;
-						&lt;td&gt;
-							&lt;span class=&quot;tableletter&quot;&gt;G&lt;/span&gt;
-							&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;
-						&lt;/td&gt;
-						&lt;td&gt;
-							&lt;span class=&quot;tableletter&quot;&gt;M&lt;/span&gt;
-							&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;
-						&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;19&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;25&lt;/span&gt;&lt;/td&gt;
-					&lt;/tr&gt;
-					&lt;tr&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;Z&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;&lt;/td&gt;
-					&lt;/tr&gt;
-					&lt;tr&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;&lt;/td&gt;
-			
-					&lt;/tr&gt;
-					&lt;tr&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;J&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;&lt;/td&gt;
-			
-					&lt;/tr&gt;
-					&lt;tr&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;&lt;/td&gt;
-			
-					&lt;/tr&gt;
-					&lt;tr&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;&lt;/td&gt;
-						&lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;24&lt;/span&gt;&lt;/td&gt;
-					&lt;/tr&gt;
-				&lt;/tbody&gt;
-			&lt;/table&gt;
+			&lt;div id=&quot;cyphertable&quot; class=&quot;cyphertable &quot;&gt;
+				&lt;h3&gt;&lt;span lang=&quot;fr&quot;&gt;Décrypter le code&lt;/span&gt; • &lt;span lang=&quot;en&quot;&gt;Decipher the code&lt;/span&gt;&lt;/h3&gt;
+					
+				&lt;div class=&quot;table&quot;&gt;	
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;J&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;M&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;19&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;24&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;25&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;table-item&quot;&gt;&lt;span class=&quot;tableletter&quot;&gt;Z&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;/div&gt;
 			&lt;div aria-label=&quot;The letter to Napoleon Bonaparte&quot; class=&quot;napoleon-letter&quot;&gt;
 			From Joseph Bonaparte to Emperor Napoléon Bonaparte,
 			&lt;br&gt;
@@ -1695,8 +1626,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 			&lt;br&gt;We will have 100,000 troops along the lines of the &lt;span id=&quot;CODE2&quot;  aria-labelledby=&quot;Code Two 4.21.5.18.15&quot; &gt;&lt;span class=&quot;sr-only&quot;&gt;Code Two: &lt;/span&gt;4.21.5.18.15&lt;span aria-hidden=&quot;true&quot;&gt;^^2^^&lt;/span&gt;&lt;/span&gt; and&amp;nbsp;&lt;span id=&quot;CODE3&quot;  aria-label=&quot;Code Three 20.1.7.21.19&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;Code Three: &lt;/span&gt;20.1.7.21.19&lt;span aria-hidden=&quot;true&quot;&gt;^^3^^&lt;/span&gt;&lt;/span&gt; Rivers.
 			&lt;br&gt;Our troops will not be in &lt;span id=&quot;CODE4&quot; aria-label=&quot;Code Four 3.15.18.21.14.14.1&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;Code Four: &lt;/span&gt;3.15.18.21.14.14.1&lt;span aria-hidden=&quot;true&quot;&gt;^^4^^&lt;/span&gt;&lt;/span&gt;. 
-&lt;/div&gt;
 
+&lt;/div &gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 		&lt;div id=&quot;Answers&quot; class=&quot;answers-wrapper&quot; role=&quot;text&quot; aria-label=&quot;Four input boxes for the passwords&quot;&gt;
@@ -1733,13 +1664,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 	
 	
 	&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-	/* Feedback */
-	&lt;div class=&quot;&quot; id=&quot;feedback&quot;&gt; 
-		&lt;div id=&quot;Correct&quot; class=&quot;solutions&quot;&gt;
-		&lt;/div&gt;
-	
-	&lt;/div&gt;
-&lt;/div &gt;
+
+
 	&lt;/div&gt;
 
 
