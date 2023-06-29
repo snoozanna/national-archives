@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
+	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="57" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
 
 @import url("generics.css");
 @import url("styles.css");s
@@ -147,7 +147,43 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}</script><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
+}
+
+setup.createCypherTable = () => {
+	var letterToNumber = {};
+
+    // Loop through the alphabet and populate the letterToNumber object
+    for (var i = 65; i <= 90; i++) {
+      var letter = String.fromCharCode(i);
+      var number = i - 64; // A=1, B=2, C=3, ...
+
+      letterToNumber[letter] = number;
+    }
+
+    let table = document.getElementById('cyphertable');
+    let tbody = table.getElementsByTagName('tbody')[0];
+
+    for (let letter in letterToNumber) {
+      if (letterToNumber.hasOwnProperty(letter)) {
+        let number = letterToNumber[letter];
+
+        let row = document.createElement('tr');
+
+        let letterCell = document.createElement('td');
+        let letterText = document.createTextNode(letter);
+        letterCell.appendChild(letterText);
+        row.appendChild(letterCell);
+
+        let numberCell = document.createElement('td');
+        let numberText = document.createTextNode(number);
+        numberCell.appendChild(numberText);
+        row.appendChild(numberCell);
+
+        tbody.appendChild(row);
+      }
+    }
+
+}</script><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
 
 	&lt;p&gt;&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot; alt=&quot;volume icon&quot;&gt;&lt;/span&gt;This experience has the option of an audio soundtrack.  &lt;/p&gt;
@@ -348,8 +384,9 @@ setup.changeVol = (num) => {
 &lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt;Hint: Shhhhh&lt;/p&gt;
 	&lt;h3 class=&quot;subtitle&quot;&gt;&lt;/h3&gt;
 	&lt;br&gt;
-	Rearrange the letters and enter the word here:
-	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;
+	
+	
+	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;	&lt;label for=&quot;_password&quot; &gt;Rearrange the letters and enter the word here:&lt;/label&gt;
 	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;
 	&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;SECRET&quot;&gt;&gt;&lt;&lt;goto &quot;Five&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;
 	
@@ -420,9 +457,10 @@ over secret files&quot;&gt;
 
 &lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt; A tasty breakfast with holes in it - which I, The Chief Timer, love.&lt;/p&gt;
 &lt;br&gt;&lt;br&gt;
-Rearrange the letters and enter the word here:
+
 		&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt;
-	&lt;span role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+		&lt;label for=&quot;_password&quot; &gt;Rearrange the letters and enter the word here:&lt;/label&gt;
+&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;/div&gt;&lt;/div&gt;
@@ -705,14 +743,16 @@ Rearrange the letters and enter the word here:
 	
 	&lt;div id=&quot;answer&quot;&gt;
 	
-		&lt;br&gt;Enter codeword:
-		&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the numbers found in the images&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot;&gt;&gt;&lt;/span&gt;
 		&lt;br&gt;
+		&lt;label for=&quot;_password&quot; &gt;Enter the numbers found in the images:&lt;/label&gt;
+		&lt;&lt;textbox &quot;_password&quot; &quot;&quot;&gt;&gt;
+		&lt;br&gt;
+				&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 		&lt;span class=&quot;multiple-btn-wrapper&quot;&gt;
 			&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;if _password is &quot;4223281622&quot;&gt;&gt;&lt;&lt;set $next to &quot;Fifteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;FogComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Try Again&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 			&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto &quot;Thirteen&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 			&lt;/span&gt;
-		&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
+
 	&lt;/div&gt;
 	
 	&lt;&lt;/replace&gt;&gt;
@@ -875,18 +915,27 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 					&lt;p id=&quot;text&quot; tabindex=&quot;0&quot;&gt;What is the word we found? &lt;/p&gt;
 					&lt;p&gt;Type it in below if you can work it out.  &lt;/p&gt;
 	
-	&lt;div id=&quot;hint&quot;&gt;&lt;p&gt;If you need a hint hit
+	&lt;div id=&quot;hint&quot; &gt;&lt;p&gt;Need a 	
+	&lt;&lt;if $audioOn is true&gt;&gt;
 	
-	&lt;&lt;if $audioOn is true&gt;&gt;&lt;span onclick=&quot;document.getElementById(&#39;player&#39;).pause()&quot; role=&quot;button&quot; aria-label=&quot;Click here for a hint&quot; class=&quot;hint-button&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;audio src=&quot;assets/audio/15. Challenge 3 - 4 V2.mp3&quot; autoplay&gt;&lt;/audio&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection&lt;/em&gt;&lt;/p&gt; &lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;
-	
-	&lt;span class=&quot;button-wrapper plain&quot; aria-label=&quot;Click here for a hint&quot;&gt;&lt;&lt;button &quot;HERE&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection &lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-	
+	&lt;span onclick=&quot;document.getElementById(&#39;player&#39;).pause()&quot; aria-label=&quot;Click here for a hint&quot; class=&quot;button-wrapper  inline&quot;&gt;
+	&lt;&lt;button &quot;Hint?&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;
+			&lt;audio src=&quot;assets/audio/15. Challenge 3 - 4 V2.mp3&quot; autoplay&gt;&lt;/audio&gt;
+			&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection&lt;/em&gt;&lt;/p&gt; 
+			&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;span class=&quot;button-wrapper  inline&quot; aria-label=&quot;Click here for a hint&quot;&gt;
+		&lt;&lt;button &quot;Hint?&quot;&gt;&gt;&lt;&lt;replace &quot;#hint&quot;&gt;&gt;&lt;p&gt;&lt;em&gt;You&#39;ll discover the truth through its reflection &lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;(a mirror or a selfie may help)&lt;/em&gt;&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;
+	&lt;/span&gt;
 	&lt;&lt;/if&gt;&gt;
+
 	&lt;/p&gt;
 	&lt;/div&gt;
 	
-	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt; &lt;span role=&quot;input&quot; aria-label=&quot;Unscramble the letters and enter the word below&quot;&gt;
-	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt; 
+	&lt;label for=&quot;_password&quot; &gt;Unscramble the letters and enter the word below&lt;/label&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 			&lt;/div&gt;
@@ -974,7 +1023,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 	
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Enter the codeword&quot;&gt;
-	&lt;label for=&quot;_password&quot;&gt;Enter the codeword:&lt;/label&gt;
+	&lt;label for=&quot;_password&quot; &gt;Enter the codeword:&lt;/label&gt;
 	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;BAGUETTE&quot;&gt;&gt;&lt;&lt;goto &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span aria-label=&quot;Click Button to check Answer&quot;&gt;
 	&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
@@ -982,7 +1031,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 	&lt;div class=&quot;unlock begin&quot;&gt;
 		&lt;p&gt;Otherwise let’s get you started.&lt;/p&gt;
-			&lt;span class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to begin training&quot;&gt;&lt;&lt;button &quot;Begin Training&quot;&gt;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;goto &quot;TransPass&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+			&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to begin training&quot;&gt;&lt;&lt;button &quot;Begin Training&quot;&gt;&gt;&lt;&lt;set $next to &quot;One&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;goto &quot;TransPass&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;/div&gt;
 	&lt;/div&gt;
 		&lt;/div&gt;
@@ -1173,10 +1222,12 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 
 &lt;div id=&quot;answer&quot;&gt;
-Enter codeword:
-&lt;br&gt;&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
+	&lt;label for=&quot;_password&quot; &gt;Enter the codeword that you have received by text message:&lt;/label&gt;
+&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;
+&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
 
-&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
+&lt;br&gt;
 				
 &lt;br&gt;
 
@@ -1568,7 +1619,78 @@ Enter codeword:
 &lt;&lt;include &quot;joseph&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="ThirtyEight" tags="nobr mission cypher" position="1825,1925" size="100,100">/* CYPHER  */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="Cypher" tags="nobr mission cypher" position="850,725" size="100,100">&lt;&lt;set $title to &quot;Cy&quot;&gt;&gt;
+&lt;div class=&quot;wrapper menu mission&quot;&gt;
+ &lt;table id=&quot;cyphertable&quot; class=&quot;cyphertable&quot; align=&quot;center&quot; &gt;
+&lt;caption&gt;Decypher the code&lt;/caption&gt;
+		&lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th aria-label=&quot;A-F&quot;&gt;&lt;/th&gt;
+                &lt;th aria-label=&quot;G-L&quot;&gt;&lt;/th&gt;
+								&lt;th aria-label=&quot;M-R&quot;&gt;&lt;/th&gt;
+                &lt;th aria-label=&quot;S-X&quot;&gt;&lt;/th&gt;
+								&lt;th aria-label=&quot;Y-Z&quot;&gt;&lt;/th&gt;
+
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;span class=&quot;tableletter&quot;&gt;A&lt;/span&gt;
+        &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;span class=&quot;tableletter&quot;&gt;G&lt;/span&gt;
+        &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;span class=&quot;tableletter&quot;&gt;M&lt;/span&gt;
+        &lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;19&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;25&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;Z&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;&lt;/td&gt;
+
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;J&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;&lt;/td&gt;
+
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;&lt;/td&gt;
+
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;span class=&quot;tableletter&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;24&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;&lt;done&gt;&gt;
+/* &lt;&lt;set $table to setup.createCypherTable()&gt;&gt; */
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="ThirtyEight" tags="nobr mission cypher" position="1825,1925" size="100,100">/* CYPHER  */
 &lt;&lt;set $title to &quot;Cy&quot;&gt;&gt;
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
@@ -1580,18 +1702,15 @@ Enter codeword:
 &lt;&lt;replace &quot;#frenchDecipher&quot;&gt;&gt;&lt;strong&gt;Décrypter le code • Decipher the code&lt;/strong&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
-&lt;div id=&quot;page&quot; class=&quot;letter&quot;&gt;
-
+&lt;div id=&quot;page&quot; class=&quot;&quot;&gt;
 /* Letter  */
-&lt;div role=&quot;text&quot; aria-label=&quot;The letter to Napoleon Bonaparte&quot; class=&quot;napoleon-letter&quot;&gt;
-	From Joseph Bonaparte to Emperor Napoléon Bonaparte,
-	&lt;br&gt;
-	Brother, I hope the Army of the South will not delay in gathering in &lt;span id=&quot;CODE1&quot;  role=&quot;text&quot; aria-label=&quot;1st code word  13.21.18.3.9.1&quot;&gt;13.21.18.3.9.1^^1^^&lt;/span&gt;.
+		&lt;div role=&quot;text&quot; aria-label=&quot;The letter to Napoleon Bonaparte&quot; class=&quot;napoleon-letter&quot;&gt;
+			From Joseph Bonaparte to Emperor Napoléon Bonaparte,
+			&lt;br&gt;
+			Brother, I hope the Army of the South will not delay in gathering in &lt;span id=&quot;CODE1&quot;  role=&quot;text&quot; aria-label=&quot;1st code word  13.21.18.3.9.1&quot;&gt;13.21.18.3.9.1^^1^^&lt;/span&gt;.
 
-	&lt;br&gt;We will have 100,000 troops along the lines of the &lt;span id=&quot;CODE2&quot; role=&quot;text&quot; aria-label=&quot;2nd code word 4.21.5.18.15 and 3rd code word 20.1.7.21.19&quot; &gt;4.21.5.18.15&amp;nbsp;^^2^^and&amp;nbsp;20.1.7.21.19^^3^^&lt;/span&gt; Rivers.
-
-
-	&lt;br&gt;Our troops will not be in &lt;span id=&quot;CODE3&quot; role=&quot;text&quot; aria-label=&quot;4th code word 3.15.18.21.14.14.1&quot;&gt;3.15.18.21.14.14.1^^4^^&lt;/span&gt;. 
+			&lt;br&gt;We will have 100,000 troops along the lines of the &lt;span id=&quot;CODE2&quot; role=&quot;text&quot; aria-label=&quot;2nd code word 4.21.5.18.15 and 3rd code word 20.1.7.21.19&quot; &gt;4.21.5.18.15&amp;nbsp;^^2^^and&amp;nbsp;20.1.7.21.19^^3^^&lt;/span&gt; Rivers.
+			&lt;br&gt;Our troops will not be in &lt;span id=&quot;CODE3&quot; role=&quot;text&quot; aria-label=&quot;4th code word 3.15.18.21.14.14.1&quot;&gt;3.15.18.21.14.14.1^^4^^&lt;/span&gt;. 
 &lt;/div&gt;
 &lt;div class=&quot;grid-outer-wrapper&quot;&gt;
 &lt;div class=&quot;grid-answer-wrapper&quot;&gt;
@@ -1627,16 +1746,28 @@ Enter codeword:
 	&lt;div id=&quot;frenchDecipher&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;	
-	/* Inpout boxes */
-	&lt;div id=&quot;Answers&quot; class=&quot;solutions-wrapper&quot; role=&quot;text&quot; aria-label=&quot;Four input boxes for the passwords&quot;&gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^1^^&lt;&lt;textbox &quot;$password1&quot;  &quot;&quot;&gt;&gt; &lt;/div&gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^2^^&lt;&lt;textbox &quot;$password2&quot; &quot;&quot;&gt;&gt; &lt;/div&gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^3^^&lt;&lt;textbox &quot;$password22&quot; &quot;&quot;&gt;&gt;&lt;/div &gt;
-		&lt;div class=&quot;solutions-item&quot;&gt;^^4^^&lt;&lt;textbox &quot;$password3&quot; &quot;&quot;&gt;&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	
+	/* Input boxes */
 	&lt;/div&gt;
 &lt;/div &gt;
+
+	&lt;div id=&quot;Answers&quot; class=&quot;solutions-wrapper&quot; role=&quot;text&quot; aria-label=&quot;Four input boxes for the passwords&quot;&gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;
+			&lt;label for=&quot;_password1&quot; &gt;Code One:&lt;/label&gt;
+			&lt;&lt;textbox &quot;$password1&quot;  &quot;&quot;&gt;&gt; 
+			&lt;/div&gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;
+			&lt;label for=&quot;_password2&quot; &gt;Code Two:&lt;/label&gt;
+			&lt;&lt;textbox &quot;$password2&quot; &quot;&quot;&gt;&gt; 
+		&lt;/div&gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;
+		&lt;label for=&quot;_password22&quot; &gt;Code Three:&lt;/label&gt;
+		&lt;&lt;textbox &quot;$password22&quot; &quot;&quot;&gt;&gt;
+		&lt;/div &gt;
+		&lt;div class=&quot;solutions-item&quot;&gt;
+		&lt;label for=&quot;_password3&quot; &gt;Code Four:&lt;/label&gt;
+		&lt;&lt;textbox &quot;$password3&quot; &quot;&quot;&gt;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
 
 &lt;div class=&quot;check-wrapper &quot;&gt;
 	&lt;span aria-label=&quot;Check the Password&quot; class=&quot;button-wrapper cipher-check&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;
@@ -1668,7 +1799,7 @@ Enter codeword:
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footermission&quot; &gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Conversation2" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION TWO FOURTY */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Conversation2" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION TWO FOURTY */
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission &quot;&gt;
 /* &lt;img src=&quot;assets/img/scovell.png&quot; class=&quot;disappear&quot; alt=&quot;George Scovell&quot;&gt;
@@ -1750,7 +1881,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 &lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="FourtyOne" tags="nobr mission" position="2083.666666666666,1723.3333333333335" size="100,100">&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/35. Challenge 5 - 12 V2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="FourtyOne" tags="nobr mission" position="2083.666666666666,1723.3333333333335" size="100,100">&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/35. Challenge 5 - 12 V2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot; id=&quot;wrapper&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
@@ -1796,9 +1927,9 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 &lt;div class=&quot;flex-container-col-cen&quot;&gt;
 	&lt;p id=&quot;mount&quot;&gt;&lt;/p&gt;
-	Enter codeword:
+&lt;label for=&quot;_password&quot; &gt;Enter the code word that you have received by text message&lt;/label&gt;
 	&lt;br&gt;
-	&lt;span role=&quot;input&quot; class=&quot;&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;br/&gt;&lt;span  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;br/&gt;&lt;span  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 &lt;/div &gt;
 		&lt;&lt;timed 60s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;Input Codeword to Continue&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1806,7 +1937,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;&lt;/timed&gt;&gt;
 
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="FourtyTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="FourtyTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class=&quot;wrapper menu mission&quot; id=&quot;wrapper&quot;&gt;
@@ -1829,7 +1960,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 &lt;&lt;timed 8s t8n&gt;&gt;&lt;&lt;goto &quot;FourtyTwoTwo&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="FourtyTwoTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/37. Well done v2.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="FourtyTwoTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/37. Well done v2.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class=&quot;wrapper menu codeword question&quot; id=&quot;wrapper&quot;&gt;
@@ -1865,7 +1996,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;replace &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/37. Well done.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="FourtyThree" tags="nobr video" position="2100,1400" size="100,100">/* VIDEO  */
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="FourtyThree" tags="nobr video" position="2100,1400" size="100,100">/* VIDEO  */
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;&lt;&lt;set $title to &quot;V6&quot;&gt;&gt;
 	&lt;div id=&quot;video&quot; role=&quot;video&quot; class=&quot;video-wrapper&quot;  aria-label=&quot;MOTT Training 6 video&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/640381678?h=9ce4d85b97&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen title=&quot;MOTT Training 6&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -1874,7 +2005,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;FourtyFour-Cert&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="FourtyFour-Cert" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-Cert" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/new challenge complete.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 	&lt;&lt;timed 3s&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/sign off.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;div class=&quot;wrapper menu certificate&quot;&gt;
@@ -1887,7 +2018,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;img src=&quot;assets/img/certificateteal.jpg&quot; alt=&quot;A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg&quot; class=&quot;certificate&quot;&gt;
 &lt;span class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="65" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu codeword question&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1917,7 +2048,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;	
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="ThirtyFour" tags="nobr mission" position="1788,1025" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="ThirtyFour" tags="nobr mission" position="1788,1025" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1943,7 +2074,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
 
-&lt;&lt;timed 20s t8n&gt;&gt;&lt;&lt;goto &quot;Conversation&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Conversation" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION */
+&lt;&lt;timed 20s t8n&gt;&gt;&lt;&lt;goto &quot;Conversation&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Conversation" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION */
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission &quot;&gt;
 
@@ -2009,7 +2140,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyFive]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="ThirtyNine" tags="nobr mission" position="1875,2150" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="ThirtyNine" tags="nobr mission" position="1875,2150" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2047,7 +2178,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;oldman&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="IncomingMessageFr" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="IncomingMessageFr" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
 
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
@@ -2095,7 +2226,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 								&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 							&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="IncomingMessageEn" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="IncomingMessageEn" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
 
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
@@ -2145,7 +2276,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 &lt;&lt;timed 25s t8n&gt;&gt;&lt;&lt;goto &quot;ThirtyThreeOne&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="TwentyOneTwo" tags="nobr" position="1543.3333333333333,1713" size="100,100">&lt;div class=&quot;wrapper menu fire&quot;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="TwentyOneTwo" tags="nobr" position="1543.3333333333333,1713" size="100,100">&lt;div class=&quot;wrapper menu fire&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/18. Challenge 3 - 6.mp3&quot; autoplay&gt; Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt; 
@@ -2164,7 +2295,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div &gt;</tw-passagedata><tw-passagedata pid="71" name="TransPass" tags="nobr" position="1257.6666666666667,107.66666666666666" size="200,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div &gt;</tw-passagedata><tw-passagedata pid="72" name="TransPass" tags="nobr" position="1257.6666666666667,107.66666666666666" size="200,100">&lt;div class=&quot;wrapper&quot;&gt;
 &lt;&lt;include &quot;headertrain&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; flex-container-col-cen&quot;&gt;
 	&lt;&lt;set $title to &quot;transition&quot;&gt;&gt;
@@ -2180,7 +2311,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 	&lt;/main&gt;
 	&lt;footer&gt;&lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="TutorialOne" tags="nobr tutorial" position="318.66666666666674,174.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="TutorialOne" tags="nobr tutorial" position="318.66666666666674,174.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
 	&lt;&lt;include &quot;header&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;flex-container-col&quot;&gt;&lt;&lt;set $title to 1&gt;&gt;
 	&lt;&lt;if $audioClick isnot true&gt;&gt;&lt;&lt;set $audioOn to true&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2196,7 +2327,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	&lt;div class=&quot;holding&quot;&gt;&lt;/div&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="TutorialTwo" tags="nobr tutorial" position="484.33333333333337,121.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="TutorialTwo" tags="nobr tutorial" position="484.33333333333337,121.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
 	&lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;main id=&quot;main&quot; class=&quot;cogs flex-container-col&quot;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Dinah NA intro 2.mp3&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -2213,7 +2344,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="TwelveTwo" tags="nobr" position="761.3333333333334,988.3333333333335" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="TwelveTwo" tags="nobr" position="761.3333333333334,988.3333333333335" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 	
@@ -2238,7 +2369,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 	&lt;/main&gt;
 			&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="TwentySevenTwo" tags="nobr" position="1534.6666666666667,659.6666666666669" size="100,100">/* REDUNDANT  */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="TwentySevenTwo" tags="nobr" position="1534.6666666666667,659.6666666666669" size="100,100">/* REDUNDANT  */
 &lt;div class=&quot;wrapper menu&quot;&gt;&lt;&lt;set $title to &quot;cc&quot;&gt;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 &lt;main id=&quot;main&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/code of conduct strings.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/21b. Challenge 4 - 4.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -2251,7 +2382,8 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;p&gt;You&#39;ll recieve the codeword to move on through the Signal Fire System.&lt;/p&gt;
 
 
-&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span role=&quot;input&quot; aria-label=&quot;Enter the code word that you have received by text message&quot;&gt;
+&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;/span&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 
 &lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 				&lt;br&gt;&lt;div id=&quot;code&quot;&gt;
@@ -2287,7 +2419,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="TimeComplete" tags="nobr" position="1148,457.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu &quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="TimeComplete" tags="nobr" position="1148,457.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu &quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu time &quot;&gt;
 	
@@ -2307,7 +2439,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;/div&gt;	
 
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="ThirtyThreeThree" tags="nobr mission" position="1775,875" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="ThirtyThreeThree" tags="nobr mission" position="1775,875" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2336,7 +2468,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;scovell&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="ThirtyThreeTwo" tags="nobr mission" position="1775,750" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="ThirtyThreeTwo" tags="nobr mission" position="1775,750" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2377,7 +2509,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="ThirtySevenTwo" tags="nobr mission" position="1800,1650" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 4&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="ThirtySevenTwo" tags="nobr mission" position="1800,1650" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 4&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2406,7 +2538,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;napolean&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="ThirtySevenThree" tags="nobr mission" position="1811.3333333333335,1769.1666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="ThirtySevenThree" tags="nobr mission" position="1811.3333333333335,1769.1666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2435,7 +2567,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;napolean&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="StoryDisplayTitle" tags="nobr" position="1259.1666666666672,1.6666666666666667" size="200,100">&lt;&lt;if $title is 1&gt;&gt;Tutorial
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="StoryDisplayTitle" tags="nobr" position="1259.1666666666672,1.6666666666666667" size="200,100">&lt;&lt;if $title is 1&gt;&gt;Tutorial
 &lt;&lt;elseif $title is &quot;question&quot;&gt;&gt;Question
 &lt;&lt;elseif $title is 2&gt;&gt;Codebreaking
 &lt;&lt;elseif $title is &quot;V1&quot;&gt;&gt;MOTT Video 1
@@ -2453,7 +2585,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;elseif $title is &quot;end&quot;&gt;&gt;Goodbye
 &lt;&lt;elseif $title is &quot;transition&quot;&gt;&gt;NEXT PART LOADING
 &lt;&lt;else&gt;&gt;MOTT
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="PassageDone" tags="" position="205.83333333333326,18.33333333333337" size="100,100">&lt;&lt;run $(&#39;html&#39;).attr(&#39;lang&#39;, &#39;en&#39;) &gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="PassageDone" tags="" position="205.83333333333326,18.33333333333337" size="100,100">&lt;&lt;run $(&#39;html&#39;).attr(&#39;lang&#39;, &#39;en&#39;) &gt;&gt;
 &lt;&lt;run $(&#39;#wrong&#39;).attr(&#39;role&#39;, &#39;alert&#39;)&gt;&gt;
 &lt;&lt;run $(&#39;#wrong&#39;).attr(&#39;aria-live&#39;,&#39;assertive&#39;)&gt;&gt;
 &lt;&lt;run $(&#39;#wrong1&#39;).attr(&#39;role&#39;, &#39;alert&#39;)&gt;&gt;

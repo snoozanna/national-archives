@@ -267,6 +267,11 @@ a.link-internal.link-image:focus-visible,
   color: white;
 }
 
+.button-wrapper.inline {
+  display: inline;
+  padding: 2px;
+}
+
 .hint-button > button {
   background-color: white;
   border: white 1px solid;
@@ -693,9 +698,19 @@ img.person.two {
   right: 0%;
 }
 
+#answer {
+  display: flex;
+  flex-direction: column;
+}
+
+#answer > label {
+  text-transform: initial;
+}
+
 #answer > span[role="input"] > input,
 #answer > input {
   margin-block-end: 2rem;
+  max-width: 18rem;
 }
 
 input.macro-textbox {
@@ -1318,6 +1333,39 @@ passage-thirtyeight > div#main {
     align-items: center;
     gap: 3rem;
   }
+}
+
+/* NEW CIPHER */
+table.cyphertable {
+  /* table-layout: fixed; */
+  /* width: 100%; */
+  border-collapse: collapse;
+  /* border: 3px solid purple; */
+  width: fit-content;
+}
+
+table.cyphertable > tbody > tr > td {
+  border: solid 1px white;
+  text-align: center;
+  padding: 3px;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+  width: 100px;
+}
+
+table.cyphertable > tbody > tr > td > span {
+  padding: 1rem;
+  width: 50%;
+}
+
+table.cyphertable > tbody > tr > td > span.tableletter {
+  background-color: #e6e0d7;
+}
+
+table.cyphertable > tbody > tr > td > span.number {
+  background-color: salmon;
 }
 
 /* CERTIFICATE  */
