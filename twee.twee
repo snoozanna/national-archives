@@ -1845,21 +1845,22 @@ but passing those will give you the power to nudge the past if your Time Mission
 	</div>
 		<div id="Answers" class="answers-wrapper" aria-label="Four input boxes for the passwords"	>
 		<div class="answers-item" aria-label="Enter Code One here:">
-			<label for="textbox-password1" role="label" aria-label="Enter Code One here:" tabindex="0">Code One: <span id="wrong1" class="status" > </span> 	</label>
+			<label for="textbox-password1"  tabindex="0"><h4 aria-label="Enter Code One here:" role="label" >Code One:</h4> <span id="wrong1" class="status" > </span> 	</label>
 			<<textbox "$password1"  "">> 
 			</div>
-		<div class="answers-item">
-			<h4  aria-label="Enter Code Two here:" tabindex="0" role="label" for="textbox-password2">Code Two: <span id="wrong2" class="status"> </span> </h4>
-			<<textbox "$password2" "">> 
-		</div>
-		<div class="answers-item">
-		<label for="_password22" aria-label="Enter Code Three here:" tabindex="0">Code Three: <span id="wrong22" class="status"> </span></label>
-		<<textbox "$_password22" "">>
-		</div >
-		<div class="answers-item">	
-		<label for="_password3" aria-label="Enter Code Four here:" tabindex="0">Code Four: <span id="wrong3" class="status"> </span></label>
-		<<textbox "$_password3" "">>
-		</div>
+			<div class="answers-item" aria-label="Enter Code Two here:">
+			<label for="textbox-password2"  tabindex="0"><h4 aria-label="Enter Code One here:" role="label" >Code Two:</h4> <span id="wrong1" class="status" > </span> 	</label>
+			<<textbox "$password2"  "">> 
+			</div>
+				<div class="answers-item" aria-label="Enter Code Three here:">
+			<label for="textbox-password22"  tabindex="0"><h4 aria-label="Enter Code One here:" role="label" >Code Three:</h4> <span id="wrong1" class="status" > </span> 	</label>
+			<<textbox "$password22"  "">> 
+			</div>
+				<div class="answers-item" aria-label="Enter Code Four here:">
+			<label for="textbox-password3"  tabindex="0"><h4 aria-label="Enter Code Four here:" role="label" >Code One:</h4> <span id="wrong1" class="status" > </span> 	</label>
+			<<textbox "$password3"  "">> 
+			</div>
+		
 		<br>
 		<div class="check-wrapper ">
 	<span aria-label="Check the Password" class="button-wrapper cipher-check"><<button "Check">>
@@ -1881,14 +1882,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 	</div>
 
-	/* <div id="Answers" class="answers-wrapper" aria-label="Four input boxes for the passwords"> */
-  <div class="answers-item" aria-label="Enter Code One here:" role="input">
-    <label for="_password1">Code One:
-      <span id="wrong1" class="status" role="alert" aria-live="assertive"></span>
-    </label>
-    <input id="textbox-password1" name="textbox-password1" type="text" inputmode="text" tabindex="0" class="macro-textbox">
-  </div>
-/* </div> */
+	
 
 
 

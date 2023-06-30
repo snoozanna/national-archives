@@ -1361,6 +1361,9 @@ passage-thirtyeight > div#main {
   display: flex;
   justify-content: space-between;
 }
+.answers-wrapper > .answers-item > label > h4 {
+  margin-bottom: 0;
+}
 
 .answers-wrapper > .answers-item > label > .status {
   color: goldenrod;
