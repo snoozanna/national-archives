@@ -7,7 +7,7 @@ Ministry of Time Travel - National Archives
 	"ifid": "53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "Cypher",
+	"start": "TwentySix",
 	"tag-colors": {
 		"code-of-conduct": "blue",
 		"cypher": "gray",
@@ -1843,7 +1843,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 </div >
 		</div>
 	</div>
-		<div id="Answers" class="answers-wrapper" role="text" aria-label="Four input boxes for the passwords">
+		<div id="Answers" class="answers-wrapper" aria-label="Four input boxes for the passwords">
 		<div class="answers-item">
 			<label for="_password1" aria-label="Enter Code One here:" tabindex="0">Code One: <span id="wrong1" class="status" > </span> 	</label>
 			<<textbox "$password1"  "">> 
@@ -2239,13 +2239,29 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	<<timed 3s>><<if $audioOn is true>><audio src="assets/audio/sign off.mp3" autoplay>Audio is not supported on your device</audio><</if>><</timed>>
 <div class="wrapper menu certificate">
 	<main id="main" class="menu certificate">
-<div class="text-wrapper">
-	<p>Well done on completing your Agent Training 101!</p> 
-	<p>Take a picture or screen shot of your certification below.</p> 
-	<p>Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   </p>
-</div >
+		<div class="text-wrapper">
+			<p>Well done on completing your Agent Training 101!</p> 
+			<p>Take a picture or screen shot of your certification below.</p> 
+			<p>Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   </p>
+		</div >
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
-<img src="assets/img/certificateteal.jpg" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate">
+<div class="certificate-wrapper">
+	<img src="assets/img/certificateteal.png" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate"/>
+	<div class="certificate-text">
+		<p>
+			<span class="inline-icon-wrap"><img src="assets/img/tick.png" alt="tick icon"></span>
+			Eligible for Field Duty
+		</p>
+		 <p>
+		 	<span class="inline-icon-wrap"><img src="assets/img/tick.png" alt="tick icon"></span>
+			Novice Nudger Grade 1
+		</p>
+		<p>
+			<span class="inline-icon-wrap"><img src="assets/img/tick.png" alt="tick icon"></span>
+			Signal Fire System access granted
+		</p>
+</div>
+</div>
 <span class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|FourtyFour-End]]>><</button>></span>
 </main>
 

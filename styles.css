@@ -644,7 +644,7 @@ a.grid-item > .menu-item > img.option {
   /* display: flex; */
   justify-content: flex-start;
   align-items: center;
-  max-width: 60%;
+  max-width: 70%;
 }
 
 /* CODEWORDS */
@@ -1068,7 +1068,7 @@ p.nameSender.scovell {
   grid-column: 1/3;
   text-align: justify;
   font-size: 0.9em;
-  line-height: 1.4em;
+  /* line-height: 1.4em; */
 }
 .CoCTitle h2 {
   display: inline;
@@ -1567,7 +1567,23 @@ passage-thirtyeight > div#main {
   gap: 2rem;
 }
 
-.menu.certificate > img.certificate {
+.menu.certificate > .certificate-wrapper {
+  position: relative;
+}
+
+.menu.certificate > .certificate-wrapper > .certificate-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  max-width: 70%;
+}
+
+.menu.certificate > .certificate-wrapper > .certificate-text > p {
+  font-size: 1.2em;
+}
+
+.menu.certificate > .certificate-wrapper {
+  /* width: 800px; */
   max-width: 50%;
   margin: auto;
 }

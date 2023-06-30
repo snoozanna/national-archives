@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="57" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
+	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="44" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
 
 @import url("generics.css");
 @import url("styles.css");s
@@ -1630,7 +1630,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;/div &gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-		&lt;div id=&quot;Answers&quot; class=&quot;answers-wrapper&quot; role=&quot;text&quot; aria-label=&quot;Four input boxes for the passwords&quot;&gt;
+		&lt;div id=&quot;Answers&quot; class=&quot;answers-wrapper&quot; aria-label=&quot;Four input boxes for the passwords&quot;&gt;
 		&lt;div class=&quot;answers-item&quot;&gt;
 			&lt;label for=&quot;_password1&quot; aria-label=&quot;Enter Code One here:&quot; tabindex=&quot;0&quot;&gt;Code One: &lt;span id=&quot;wrong1&quot; class=&quot;status&quot; &gt; &lt;/span&gt; 	&lt;/label&gt;
 			&lt;&lt;textbox &quot;$password1&quot;  &quot;&quot;&gt;&gt; 
@@ -1994,13 +1994,29 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	&lt;&lt;timed 3s&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/sign off.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;div class=&quot;wrapper menu certificate&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu certificate&quot;&gt;
-&lt;div class=&quot;text-wrapper&quot;&gt;
-	&lt;p&gt;Well done on completing your Agent Training 101!&lt;/p&gt; 
-	&lt;p&gt;Take a picture or screen shot of your certification below.&lt;/p&gt; 
-	&lt;p&gt;Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   &lt;/p&gt;
-&lt;/div &gt;
+		&lt;div class=&quot;text-wrapper&quot;&gt;
+			&lt;p&gt;Well done on completing your Agent Training 101!&lt;/p&gt; 
+			&lt;p&gt;Take a picture or screen shot of your certification below.&lt;/p&gt; 
+			&lt;p&gt;Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   &lt;/p&gt;
+		&lt;/div &gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
-&lt;img src=&quot;assets/img/certificateteal.jpg&quot; alt=&quot;A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg&quot; class=&quot;certificate&quot;&gt;
+&lt;div class=&quot;certificate-wrapper&quot;&gt;
+	&lt;img src=&quot;assets/img/certificateteal.png&quot; alt=&quot;A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg&quot; class=&quot;certificate&quot;/&gt;
+	&lt;div class=&quot;certificate-text&quot;&gt;
+		&lt;p&gt;
+			&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/tick.png&quot; alt=&quot;tick icon&quot;&gt;&lt;/span&gt;
+			Eligible for Field Duty
+		&lt;/p&gt;
+		 &lt;p&gt;
+		 	&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/tick.png&quot; alt=&quot;tick icon&quot;&gt;&lt;/span&gt;
+			Novice Nudger Grade 1
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/tick.png&quot; alt=&quot;tick icon&quot;&gt;&lt;/span&gt;
+			Signal Fire System access granted
+		&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;span class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="65" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu codeword question&quot;&gt;
