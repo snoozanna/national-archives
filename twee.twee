@@ -7,7 +7,7 @@ Ministry of Time Travel - National Archives
 	"ifid": "53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "Cypher",
+	"start": "",
 	"tag-colors": {
 		"code-of-conduct": "blue",
 		"cypher": "gray",
@@ -360,7 +360,7 @@ setup.changeVol = (num) => {
 	<br>
 	
 	
-	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Rearrange the letters and enter the word here ">	<label for="_password" >Rearrange the letters and enter the word here:</label>
+	<div id="answer" style="text-transform: uppercase;" >	<label for="textbox-password" tabindex="0"><span aria-label="Rearrange the letters and enter the word here " role="label" >Rearrange the letters and enter the word here:</span></label>
 	<<textbox "_password" "" >>
 	<span class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "SECRET">><<goto "Five">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>>
 	
@@ -445,8 +445,8 @@ over secret files">
 <p id="hint" class="disappear"> A tasty breakfast with holes in it - which I, The Chief Timer, love.</p>
 <br><br>
 
-		<div id="answer" style="text-transform: uppercase;">
-		<label for="_password" >Rearrange the letters and enter the word here:</label>
+		<div id="answer" style="text-transform: uppercase;" tabindex="0">
+		<label for="textbox-password" ><span aria-label=">Rearrange the letters and enter the word here:" role="label">Rearrange the letters and enter the word here:</span></label>
 <<textbox "_password" "" >><span class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "CRUMPETS">><<goto "Nine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	
 	<br><span id="wrong"></span></div>
@@ -769,7 +769,7 @@ over secret files">
 	<div id="answer">
 	
 		<br>
-		<label for="_password" >Enter the numbers found in the images:</label>
+		<label for="textbox-password" tabindex="0"><span aria-label="Enter the numbers found in the images:" role="label">Enter the numbers found in the images:</span></label>
 		<<textbox "_password" "">>
 		<br>
 				<span id="wrong"></span>
@@ -996,7 +996,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	</div>
 	
 	<div id="answer" style="text-transform: uppercase;"> 
-	<label for="_password" >Unscramble the letters and enter the word below</label>
+	<label for="textbox-password"tabindex="0" ><span aria-label="Unscramble the letters and enter the word below" role="label">Unscramble the letters and enter the word below</span></label>
 	<<textbox "_password" "" >><span class="button-wrapper" aria-label="Click Button to go Check your answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	
 	<br><span id="wrong"></span></div>
@@ -1104,7 +1104,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 	
 	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Enter the codeword">
-	<label for="_password" >Enter the codeword:</label>
+	<label for="textbox-password" tabindex="0" ><span aria-label="Enter the codeword:" role="label" >Enter the codeword:</span></label>
 	<<textbox "_password" "" >><span class="button-wrapper" aria-label="Check the Codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "BAGUETTE">><<goto "TwentyNine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>><span aria-label="Click Button to check Answer">
 	</span></span></div>
 	<br><span id="wrong"></span>
@@ -1337,7 +1337,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 
 <div id="answer">
-	<label for="_password" >Enter the codeword that you have received by text message:</label>
+	<label for="textbox-password" tabindex="0"><span aria-label="Enter the codeword that you have received by text message:" role="label">Enter the codeword that you have received by text message:</span></label>
 <<textbox "_password" "" >>
 <span id="wrong"></span>
 <span class="button-wrapper" aria-label="Click Button to go Check codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></div>
@@ -1782,7 +1782,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <p>Please help!</p>
 	
 	<<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "ThirtyEight">><</button>></span>
+<span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "Cypher">><</button>></span>
 	 <</timed>>
 	 <</timed>>
 				</div >
@@ -1895,7 +1895,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 
 :: ThirtyEight [nobr mission cypher] {"position":"1825,1925","size":"100,100"}
-/* CYPHER  */
+/* OLD CYPHER  */
 <<set $title to "Cy">>
 <<addclass "body" "black">>
 <div class="wrapper menu mission">
@@ -2143,7 +2143,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 <div class="flex-container-col-cen">
 	<p id="mount"></p>
-<label for="_password" >Enter the code word that you have received by text message</label>
+<label for="textbox-password" tabindex="0"><span aria-label="Enter the code word that you have received by text message" role="label">Enter the code word that you have received by text message</span></label>
 	<br>
 	<<textbox "_password" "" >><br/><span  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	<br><span id="wrong"></span>

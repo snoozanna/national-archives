@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="57" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
+	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
 
 @import url("generics.css");
 @import url("styles.css");s
@@ -147,7 +147,7 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}</script><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
+}</script><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
 
 	&lt;p&gt;&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot; alt=&quot;volume icon&quot;&gt;&lt;/span&gt;This experience has the option of an audio soundtrack.  &lt;/p&gt;
@@ -350,7 +350,7 @@ setup.changeVol = (num) => {
 	&lt;br&gt;
 	
 	
-	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Rearrange the letters and enter the word here &quot;&gt;	&lt;label for=&quot;_password&quot; &gt;Rearrange the letters and enter the word here:&lt;/label&gt;
+	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; &gt;	&lt;label for=&quot;textbox-password&quot; tabindex=&quot;0&quot;&gt;&lt;span aria-label=&quot;Rearrange the letters and enter the word here &quot; role=&quot;label&quot; &gt;Rearrange the letters and enter the word here:&lt;/span&gt;&lt;/label&gt;
 	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;
 	&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;SECRET&quot;&gt;&gt;&lt;&lt;goto &quot;Five&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;
 	
@@ -422,8 +422,8 @@ over secret files&quot;&gt;
 &lt;p id=&quot;hint&quot; class=&quot;disappear&quot;&gt; A tasty breakfast with holes in it - which I, The Chief Timer, love.&lt;/p&gt;
 &lt;br&gt;&lt;br&gt;
 
-		&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt;
-		&lt;label for=&quot;_password&quot; &gt;Rearrange the letters and enter the word here:&lt;/label&gt;
+		&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; tabindex=&quot;0&quot;&gt;
+		&lt;label for=&quot;textbox-password&quot; &gt;&lt;span aria-label=&quot;&gt;Rearrange the letters and enter the word here:&quot; role=&quot;label&quot;&gt;Rearrange the letters and enter the word here:&lt;/span&gt;&lt;/label&gt;
 &lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to check answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CRUMPETS&quot;&gt;&gt;&lt;&lt;goto &quot;Nine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
@@ -708,7 +708,7 @@ over secret files&quot;&gt;
 	&lt;div id=&quot;answer&quot;&gt;
 	
 		&lt;br&gt;
-		&lt;label for=&quot;_password&quot; &gt;Enter the numbers found in the images:&lt;/label&gt;
+		&lt;label for=&quot;textbox-password&quot; tabindex=&quot;0&quot;&gt;&lt;span aria-label=&quot;Enter the numbers found in the images:&quot; role=&quot;label&quot;&gt;Enter the numbers found in the images:&lt;/span&gt;&lt;/label&gt;
 		&lt;&lt;textbox &quot;_password&quot; &quot;&quot;&gt;&gt;
 		&lt;br&gt;
 				&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
@@ -898,7 +898,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;/div&gt;
 	
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot;&gt; 
-	&lt;label for=&quot;_password&quot; &gt;Unscramble the letters and enter the word below&lt;/label&gt;
+	&lt;label for=&quot;textbox-password&quot;tabindex=&quot;0&quot; &gt;&lt;span aria-label=&quot;Unscramble the letters and enter the word below&quot; role=&quot;label&quot;&gt;Unscramble the letters and enter the word below&lt;/span&gt;&lt;/label&gt;
 	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check your answer&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;FLOUR&quot;&gt;&gt;&lt;&lt;goto &quot;Twenty&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;&lt;/div&gt;
@@ -987,7 +987,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 
 	
 	&lt;div id=&quot;answer&quot; style=&quot;text-transform: uppercase;&quot; role=&quot;input&quot; aria-label=&quot;Enter the codeword&quot;&gt;
-	&lt;label for=&quot;_password&quot; &gt;Enter the codeword:&lt;/label&gt;
+	&lt;label for=&quot;textbox-password&quot; tabindex=&quot;0&quot; &gt;&lt;span aria-label=&quot;Enter the codeword:&quot; role=&quot;label&quot; &gt;Enter the codeword:&lt;/span&gt;&lt;/label&gt;
 	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Check the Codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;BAGUETTE&quot;&gt;&gt;&lt;&lt;goto &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span aria-label=&quot;Click Button to check Answer&quot;&gt;
 	&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
@@ -1186,7 +1186,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 
 &lt;div id=&quot;answer&quot;&gt;
-	&lt;label for=&quot;_password&quot; &gt;Enter the codeword that you have received by text message:&lt;/label&gt;
+	&lt;label for=&quot;textbox-password&quot; tabindex=&quot;0&quot;&gt;&lt;span aria-label=&quot;Enter the codeword that you have received by text message:&quot; role=&quot;label&quot;&gt;Enter the codeword that you have received by text message:&lt;/span&gt;&lt;/label&gt;
 &lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;
 &lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Check codeword&quot;&gt;&lt;&lt;button &quot;Check&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;TADAH&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyEight&quot;&gt;&gt;&lt;&lt;set $iconOnly to true&gt;&gt;&lt;&lt;goto &quot;TimeComplete&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong codeword&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
@@ -1573,7 +1573,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;p&gt;Please help!&lt;/p&gt;
 	
 	&lt;&lt;timed 5s t8n&gt;&gt;
-&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;ThirtyEight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;Cypher&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	 &lt;&lt;/timed&gt;&gt;
 	 &lt;&lt;/timed&gt;&gt;
 				&lt;/div &gt;
@@ -1678,7 +1678,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 &lt;&lt;done&gt;&gt;
 /* &lt;&lt;set $table to setup.createCypherTable()&gt;&gt; */
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="ThirtyEight" tags="nobr mission cypher" position="1825,1925" size="100,100">/* CYPHER  */
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="ThirtyEight" tags="nobr mission cypher" position="1825,1925" size="100,100">/* OLD CYPHER  */
 &lt;&lt;set $title to &quot;Cy&quot;&gt;&gt;
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
@@ -1915,7 +1915,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 
 &lt;div class=&quot;flex-container-col-cen&quot;&gt;
 	&lt;p id=&quot;mount&quot;&gt;&lt;/p&gt;
-&lt;label for=&quot;_password&quot; &gt;Enter the code word that you have received by text message&lt;/label&gt;
+&lt;label for=&quot;textbox-password&quot; tabindex=&quot;0&quot;&gt;&lt;span aria-label=&quot;Enter the code word that you have received by text message&quot; role=&quot;label&quot;&gt;Enter the code word that you have received by text message&lt;/span&gt;&lt;/label&gt;
 	&lt;br&gt;
 	&lt;&lt;textbox &quot;_password&quot; &quot;&quot; &gt;&gt;&lt;br/&gt;&lt;span  class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $answer to _password.toUpperCase()&gt;&gt;&lt;&lt;if $answer is &quot;CIPHER&quot;&gt;&gt;&lt;&lt;goto &quot;FourtyTwo&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Wrong&lt;&lt;timed 2.5s&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;br&gt;&lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
