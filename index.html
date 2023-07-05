@@ -147,13 +147,26 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}</script><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
+}</script><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
+	&lt;span aria-label=&quot;Click Button to begin&quot; class=&quot;button-wrapper&quot;&gt;
+		&lt;&lt;button &quot;Begin&quot;&gt;&gt;
+			&lt;&lt;goto &quot;audioChoice&quot;&gt;&gt;
+		&lt;&lt;/button&gt;&gt;
+	&lt;/span&gt;
+
+	
+&lt;/div&gt;
+
+  &lt;/div &gt;</tw-passagedata><tw-passagedata pid="2" name="audioChoice" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
+	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
+&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/assets/audio/Audioon_off.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;
 
 	&lt;p&gt;&lt;span class=&quot;inline-icon-wrap&quot;&gt;&lt;img src=&quot;assets/img/audio.png&quot; alt=&quot;volume icon&quot;&gt;&lt;/span&gt;This experience has the option of an audio soundtrack.  &lt;/p&gt;
-	&lt;p&gt;Would you prefer audio on or off? &lt;/p&gt;
+	&lt;p&gt;Would you like audio on or off? &lt;/p&gt;
 &lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
-	&lt;span aria-label=&quot;Click Button to turn audio on&quot; class=&quot;button-wrapper plain&quot;&gt;
+	&lt;span aria-label=&quot;Click Button to turn audio on&quot; class=&quot;button-wrapper &quot;&gt;
 		&lt;&lt;button &quot;On&quot;&gt;&gt;
 			&lt;&lt;set $audioOn to true&gt;&gt;
 			&lt;&lt;set $audioClick to true&gt;&gt;
@@ -169,7 +182,7 @@ setup.changeVol = (num) => {
 	&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;/button&gt;&gt;
 	&lt;/span&gt;
-	&lt;span class=&quot;button-wrapper plain&quot; aria-label=&quot;Click Button to turn audio off&quot;&gt;
+	&lt;span class=&quot;button-wrapper &quot; aria-label=&quot;Click Button to turn audio off&quot;&gt;
 	&lt;&lt;button &quot;Off&quot;&gt;&gt;
 		&lt;&lt;set $audioOn to false&gt;&gt;
 		&lt;&lt;set $audioClick to true&gt;&gt;
@@ -186,55 +199,55 @@ setup.changeVol = (num) => {
 	&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;/div&gt;
 
-  &lt;/div &gt;</tw-passagedata><tw-passagedata pid="2" name="footer" tags="nobr" position="225,100" size="100,100">&lt;footer&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="3" name="footermission" tags="nobr" position="350,100" size="100,100">&lt;footer class=&quot;mission&quot;&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="header" tags="nobr" position="475,100" size="100,100">&lt;header&gt;
-	&lt;div class=&quot;logo-wrapper&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt; &lt;/header&gt;</tw-passagedata><tw-passagedata pid="5" name="headertrain" tags="nobr" position="600,100" size="100,100">&lt;header&gt;
-		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; class=&quot;logo na&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot;&gt;&lt;/div&gt;&lt;/header&gt;</tw-passagedata><tw-passagedata pid="6" name="headermenu" tags="nobr" position="725,100" size="100,100">&lt;header&gt;
+  &lt;/div &gt;</tw-passagedata><tw-passagedata pid="3" name="footer" tags="nobr" position="350,100" size="100,100">&lt;footer&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="footermission" tags="nobr" position="475,100" size="100,100">&lt;footer class=&quot;mission&quot;&gt;&lt;nav class=&quot;right&quot;&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;back&gt;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="header" tags="nobr" position="600,100" size="100,100">&lt;header&gt;
+	&lt;div class=&quot;logo-wrapper&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt; &lt;/header&gt;</tw-passagedata><tw-passagedata pid="6" name="headertrain" tags="nobr" position="725,100" size="100,100">&lt;header&gt;
+		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; class=&quot;logo na&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot;&gt;&lt;/div&gt;&lt;/header&gt;</tw-passagedata><tw-passagedata pid="7" name="headermenu" tags="nobr" position="850,100" size="100,100">&lt;header&gt;
 		&lt;div class=&quot;logo-wrapper&quot;&gt;
 		&lt;div class=&quot;logo-container&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;img src=&quot;assets/img/mottlogo-w.png&quot; alt=&quot;The Ministry of Time Travel Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;/div&gt;
 		&lt;img src=&quot;assets/img/training-logo.png&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot; class=&quot;logo na logo-item&quot;&gt;
 		&lt;/div&gt;
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="7" name="headermenugrid" tags="nobr" position="850,100" size="100,100">&lt;header class=&quot;menu-grid&quot;&gt;
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="8" name="headermenugrid" tags="nobr" position="975,100" size="100,100">&lt;header class=&quot;menu-grid&quot;&gt;
 		&lt;div class=&quot;logo-wrapper &quot;&gt;
 			&lt;div class=&quot;logo-container&quot;&gt;&lt;img src=&quot;assets/img/na-logo.png&quot; alt=&quot;The National Archives Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;img src=&quot;assets/img/mottlogo-w.png&quot; alt=&quot;The Ministry of Time Travel Logo&quot; class=&quot;logo mott logo-item&quot;&gt;&lt;/div&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; alt=&quot;The Ministry of Time Travel Training 101 Logo&quot; class=&quot;logo na logo-item&quot;&gt;&lt;/div&gt;
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="8" name="sidebarcode" tags="nobr" position="975,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="9" name="sidebarcode" tags="nobr" position="1100,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 	&lt;div class=&quot;title-wrapper&quot;&gt;
 					&lt;img src=&quot;assets/img/code-or.png&quot; alt=&quot;Codebreaking Button&quot; id=&quot;Codebreaking&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;1. &lt;/span&gt;Code Breaking&lt;/p&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="sidebarfog" tags="nobr" position="1100,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="sidebarfog" tags="nobr" position="1225,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 	&lt;div class=&quot;title-wrapper&quot;&gt;
 					&lt;img src=&quot;assets/img/fog-or.png&quot; alt=&quot;Fog Clearing Button&quot; id=&quot;Fog Clearing&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;2. &lt;/span&gt;Fog Clearing&lt;/p&gt;
 		&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="sidebarfire" tags="nobr" position="1225,100" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="sidebarfire" tags="nobr" position="100,225" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 	&lt;div class=&quot;title-wrapper&quot;&gt;
 					&lt;img src=&quot;assets/img/fire-or.png&quot; alt=&quot;Signal Fire System Button&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;3. &lt;/span&gt;Signal Fire System&lt;/p&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="sidebartime" tags="nobr" position="100,225" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="sidebartime" tags="nobr" position="225,225" size="100,100">&lt;div class=&quot;content-item sidebar&quot;&gt;
 &lt;div class=&quot;title-wrapper&quot;&gt;
 					&lt;img src=&quot;assets/img/time-or.png&quot; alt=&quot;Time Nudging Button&quot; class=&quot; orange&quot;&gt;
 					&lt;p&gt;&lt;span&gt;4. &lt;/span&gt;Time Nudging&lt;/p&gt;
 				&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="mentor" tags="nobr" position="225,225" size="100,100">&lt;div class=&quot;mentor-wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="mentor" tags="nobr" position="350,225" size="100,100">&lt;div class=&quot;mentor-wrapper&quot;&gt;
 	&lt;p&gt;&lt;span&gt;Your Mentor:&lt;/span&gt; &lt;span&gt;Chief Timer&lt;/span&gt;
 	&lt;span&gt;Beatrix Vandenberg&lt;/span&gt;&lt;/p&gt;
 	&lt;img src=&quot;assets/img/mentor-amy.png&quot; class=&quot;mentor&quot; alt=&quot;Chief Timer Beatrix Vanderberg&quot;&gt;
-	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="oldman" tags="nobr" position="350,225" size="100,100">&lt;div class=&quot;mentor-wrapper&quot;&gt;
+	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="oldman" tags="nobr" position="475,225" size="100,100">&lt;div class=&quot;mentor-wrapper&quot;&gt;
 	&lt;span class=&quot;caption&quot;&gt;Duke of Wellington&lt;/span&gt;
 	&lt;img src=&quot;assets/img/oldman.png&quot; class=&quot;mentor oldman&quot; alt=&quot;The Duke of Wellington&quot;&gt;
-	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="scovell" tags="nobr" position="475,225" size="100,100">&lt;div class=&quot;scovell-wrapper&quot;&gt;
+	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="scovell" tags="nobr" position="600,225" size="100,100">&lt;div class=&quot;scovell-wrapper&quot;&gt;
 
 	&lt;img src=&quot;assets/img/scovell.png&quot; class=&quot;scovell&quot; alt=&quot;The George Scovell&quot;&gt;
 		&lt;span class=&quot;caption&quot;&gt;George Scovell&lt;/span&gt;
-	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="napolean" tags="nobr" position="600,225" size="100,100">&lt;div class=&quot;mentor-wrapper napolean&quot;&gt;
+	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="napolean" tags="nobr" position="725,225" size="100,100">&lt;div class=&quot;mentor-wrapper napolean&quot;&gt;
 	&lt;span class=&quot;caption&quot;&gt;Napoleon Bonaparte&lt;/span&gt;
 	&lt;img src=&quot;assets/img/napolean.png&quot; class=&quot;mentor oldman&quot; alt=&quot;Napoleon Bonaparte&quot;&gt;
-	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="joseph" tags="nobr" position="725,225" size="100,100">&lt;div class=&quot;scovell-wrapper joseph&quot;&gt;
+	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="joseph" tags="nobr" position="850,225" size="100,100">&lt;div class=&quot;scovell-wrapper joseph&quot;&gt;
 
 	&lt;img src=&quot;assets/img/joseph.png&quot; class=&quot;scovell&quot; alt=&quot;Joseph Bonaparte &quot;&gt;
 		&lt;span class=&quot;caption&quot;&gt;Joseph Bonaparte &lt;/span&gt;
-	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="One" tags="nobr video" position="787.6666666666667,99.33333333333337" size="100,100">/* VIDEO  */
+	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="One" tags="nobr video" position="787.6666666666667,99.33333333333337" size="100,100">/* VIDEO  */
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;&lt;&lt;set $title to &quot;V1&quot;&gt;&gt;
 	&lt;div id=&quot;video&quot; class=&quot;video-wrapper&quot; role=&quot;video&quot; aria-label=&quot;MOTT Training 1 video&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/640377198?h=6aeee3d5c8&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&amp;amp;speed=1&amp;amp;controls=1&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen   title=&quot;MOTT Training 1&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -242,7 +255,7 @@ setup.changeVol = (num) => {
 		&lt;footer&gt;&lt;nav&gt;&lt;div id=&quot;back&quot; class=&quot;button-wrapper&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;Zero&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;text&quot;&gt;&lt;/div&gt;&lt;/nav&gt;&lt;/footer&gt;
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;&lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;
-&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Two]]&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Two" tags="nobr logo" position="931.3333333333334,103.66666666666664" size="100,100">/* MENU  */
+&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Two]]&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Two" tags="nobr logo" position="931.3333333333334,103.66666666666664" size="100,100">/* MENU  */
 &lt;&lt;set $title to &quot;343&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Challenge 1.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
@@ -301,7 +314,7 @@ setup.changeVol = (num) => {
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Three" tags="nobr" position="797.3333333333334,300.33333333333326" size="100,100">&lt;&lt;set $challenge to 1&gt;&gt;&lt;&lt;set $title to 2&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Three" tags="nobr" position="797.3333333333334,300.33333333333326" size="100,100">&lt;&lt;set $challenge to 1&gt;&gt;&lt;&lt;set $title to 2&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -325,7 +338,7 @@ setup.changeVol = (num) => {
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Four" tags="nobr" position="397.66666666666663,496.3333333333332" size="100,100">&lt;div class=&quot;wrapper menu codeword question&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Four" tags="nobr" position="397.66666666666663,496.3333333333332" size="100,100">&lt;div class=&quot;wrapper menu codeword question&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question&quot;&gt;
 		&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -378,7 +391,7 @@ setup.changeVol = (num) => {
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Five" tags="nobr" position="546,494.99999999999994" size="100,100">&lt;div class=&quot;wrapper  menu codeword question answer1&quot;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Five" tags="nobr" position="546,494.99999999999994" size="100,100">&lt;div class=&quot;wrapper  menu codeword question answer1&quot;&gt;
 &lt;img src=&quot;assets/img/bg-code-answer1.png&quot; class=&quot;disappear&quot; alt=&quot;Man looking
 over secret files&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
@@ -399,7 +412,7 @@ over secret files&quot;&gt;
 	&lt;/div&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Eight" tags="nobr" position="998.9999999999999,495.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Eight" tags="nobr" position="998.9999999999999,495.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question &quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 		&lt;div id=&quot;audiomount&quot;&gt;&lt;/div&gt;
@@ -444,7 +457,7 @@ over secret files&quot;&gt;
 			&lt;&lt;stop&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Nine" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question answer3&quot;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Nine" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question answer3&quot;&gt;
 &lt;img src=&quot;assets/img/bg-code-answer3.png&quot; class=&quot;disappear&quot; alt=&quot;Two circles: one shows a child shhing to illustrate keeping a secret,  and the second some crumpets&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question answer3&quot;&gt;
@@ -468,7 +481,7 @@ over secret files&quot;&gt;
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 		&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="CodeComplete" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question answer3&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="CodeComplete" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question answer3&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question answer3&quot;&gt;
 	
@@ -488,7 +501,7 @@ over secret files&quot;&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
 &lt;/div&gt;
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Ten" tags="nobr video" position="778.3333333333334,732.3333333333333" size="100,100">/* VIDEO  */
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Ten" tags="nobr video" position="778.3333333333334,732.3333333333333" size="100,100">/* VIDEO  */
 &lt;div class=&quot;wrapper&quot;&gt;
 
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;
@@ -501,7 +514,7 @@ over secret files&quot;&gt;
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;Eleven&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Eleven" tags="nobr logo" position="541,862" size="100,100">/* MENU  */
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Eleven" tags="nobr logo" position="541,862" size="100,100">/* MENU  */
 &lt;&lt;set $title to &quot;3333&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenugrid&quot;&gt;&gt;
@@ -562,7 +575,7 @@ over secret files&quot;&gt;
 	&lt;footer&gt;	&lt;nav class=&quot;right&quot;&gt;		
 		&lt;div id=&quot;back&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;Ten&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
 	&lt;/nav&gt;&lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="TwelveOne" tags="nobr" position="625.6666666666666,973.6666666666667" size="100,100">&lt;&lt;set $challenge to 2&gt;&gt;&lt;&lt;set $title to 3&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="TwelveOne" tags="nobr" position="625.6666666666666,973.6666666666667" size="100,100">&lt;&lt;set $challenge to 2&gt;&gt;&lt;&lt;set $title to 3&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -587,7 +600,7 @@ over secret files&quot;&gt;
 
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Thirteen" tags="nobr" position="925,950" size="100,100">&lt;&lt;set $seconds to 10&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Thirteen" tags="nobr" position="925,950" size="100,100">&lt;&lt;set $seconds to 10&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenugrid&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -727,7 +740,7 @@ over secret files&quot;&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 		&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="FogComplete" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="FogComplete" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu codeword question&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question &quot;&gt;
 	
@@ -746,7 +759,7 @@ over secret files&quot;&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
 &lt;/div&gt;	
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Fourteen" tags="nobr" position="995,1066" size="100,100">&lt;div id=&quot;main&quot;&gt;
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Fourteen" tags="nobr" position="995,1066" size="100,100">&lt;div id=&quot;main&quot;&gt;
 &lt;&lt;textbox &quot;_password&quot; &quot;&quot;&gt;&gt;
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;if _password is &quot;52216691622&quot;&gt;&gt;&lt;&lt;goto [[Fifteen]]&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#wrong&quot;&gt;&gt;Try Again&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;span id=&quot;wrong&quot;&gt;&lt;/span&gt;
@@ -754,7 +767,7 @@ over secret files&quot;&gt;
 
 
 
-STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passagedata pid="31" name="Fifteen" tags="nobr video" position="789.6666666666666,1177.6666666666667" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passagedata pid="32" name="Fifteen" tags="nobr video" position="789.6666666666666,1177.6666666666667" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav&quot; autoplay&gt;&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $title to &quot;V3&quot;&gt;&gt;
 	&lt;div id=&quot;video&quot; class=&quot;video-wrapper&quot; role=&quot;video&quot; aria-label=&quot;MOTT Training 3 video&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/640379390?h=40c553c519&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen title=&quot;MOTT Training 3&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -764,7 +777,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;&lt;silently&gt;&gt;
 
 &lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;Sixteen&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Sixteen" tags="nobr logo" position="788,1319.6666666666667" size="100,100">/* MENU */
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Sixteen" tags="nobr logo" position="788,1319.6666666666667" size="100,100">/* MENU */
 &lt;&lt;set $title to &quot;sfsd&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Challenge 3.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
@@ -821,7 +834,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="Seventeen" tags="nobr" position="778,1447.3333333333335" size="100,100">&lt;&lt;set $challenge to 3&gt;&gt;&lt;&lt;set $title to 4&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="Seventeen" tags="nobr" position="778,1447.3333333333335" size="100,100">&lt;&lt;set $challenge to 3&gt;&gt;&lt;&lt;set $title to 4&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -840,7 +853,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;	
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="Eighteen" tags="nobr" position="750.6666666666667,1617.0000000000002" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Eighteen" tags="nobr" position="750.6666666666667,1617.0000000000002" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 
@@ -863,7 +876,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Nineteen" tags="nobr" position="742.9999999999999,1811.3333333333335" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Nineteen" tags="nobr" position="742.9999999999999,1811.3333333333335" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 	
@@ -907,7 +920,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Twenty" tags="nobr" position="1202.6666666666667,1873.666666666667" size="100,100">&lt;div class=&quot;wrapper menu fire answer1&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Twenty" tags="nobr" position="1202.6666666666667,1873.666666666667" size="100,100">&lt;div class=&quot;wrapper menu fire answer1&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/16. Challenge 3 - 5 V2.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -932,7 +945,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Zero" tags="nobr" position="630,112.3333333333333" size="100,100">&lt;&lt;set $title to &quot;dfsd&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="Zero" tags="nobr" position="630,112.3333333333333" size="100,100">&lt;&lt;set $title to &quot;dfsd&quot;&gt;&gt;
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;flex-container-col-cen&quot;&gt;
 		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt;
@@ -951,7 +964,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	
 	&lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div	&gt;</tw-passagedata><tw-passagedata pid="38" name="Question" tags="nobr" position="630,112.3333333333333" size="100,100">&lt;&lt;set $title to &quot;question&quot;&gt;&gt;
+&lt;/div	&gt;</tw-passagedata><tw-passagedata pid="39" name="Question" tags="nobr" position="630,112.3333333333333" size="100,100">&lt;&lt;set $title to &quot;question&quot;&gt;&gt;
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;flex-container-col-cen&quot;&gt;
 		&lt;div class=&quot;logo-wrapper right&quot;&gt;&lt;img src=&quot;assets/img/training-logo.png&quot; class=&quot;logo na&quot;&gt;&lt;/div&gt;
@@ -971,7 +984,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	
 	&lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div	&gt;</tw-passagedata><tw-passagedata pid="39" name="UnlockFinal" tags="nobr" position="397.66666666666663,496.3333333333332" size="100,100">&lt;div class=&quot;wrapper menu  &quot;&gt;
+&lt;/div	&gt;</tw-passagedata><tw-passagedata pid="40" name="UnlockFinal" tags="nobr" position="397.66666666666663,496.3333333333332" size="100,100">&lt;div class=&quot;wrapper menu  &quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu codeword question&quot;&gt;
 		&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Welcome answer yes.mp3&quot; autoplay &gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -1003,7 +1016,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;/main&gt;
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="TwentyOneOne" tags="nobr" position="1529.6666666666665,1957.3333333333337" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="TwentyOneOne" tags="nobr" position="1529.6666666666665,1957.3333333333337" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/17. Challenge 3 - Medieval message.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt; 
 
@@ -1038,7 +1051,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="TwentyThree" tags="nobr logo" position="1546.3333333333333,1387.3333333333335" size="100,100">/* MENU  */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="TwentyThree" tags="nobr logo" position="1546.3333333333333,1387.3333333333335" size="100,100">/* MENU  */
 &lt;&lt;set $title to 33333&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenugrid&quot;&gt;&gt;
@@ -1102,7 +1115,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 	&lt;footer&gt;	&lt;nav class=&quot;right&quot;&gt;		
 		&lt;div id=&quot;back&quot;&gt;&lt;&lt;link &quot;Back&quot; &quot;TwentyTwo&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
 	&lt;/nav&gt;&lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="TwentyFour" tags="nobr" position="1539.6666666666665,1262.3333333333335" size="100,100">&lt;&lt;set $challenge to 4&gt;&gt;&lt;&lt;set $title to 5&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="TwentyFour" tags="nobr" position="1539.6666666666665,1262.3333333333335" size="100,100">&lt;&lt;set $challenge to 4&gt;&gt;&lt;&lt;set $title to 5&gt;&gt;
 &lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 2.wav&quot;   autoplay id=&quot;bgAudio&quot;&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -1125,7 +1138,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 &lt;&lt;if $audioOn is true&gt;&gt;
 &lt;&lt;set $vol to setup.changeVol(0.5)&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="TwentyFive" tags="nobr" position="1542.6666666666665,1097" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="TwentyFive" tags="nobr" position="1542.6666666666665,1097" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/20. Challenge 4 - 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -1147,7 +1160,7 @@ this allows us to interpret what is really going on and not just make rash decis
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="TwentySix" tags="nobr" position="1543.3333333333333,946" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="TwentySix" tags="nobr" position="1543.3333333333333,946" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/21. Challenge 4 - 3 edit V3 .mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -1170,7 +1183,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="TwentySevenOne" tags="nobr code-of-conduct" position="1534.6666666666667,819.6666666666666" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;&lt;&lt;set $title to &quot;cc&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="TwentySevenOne" tags="nobr code-of-conduct" position="1534.6666666666667,819.6666666666666" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;&lt;&lt;set $title to &quot;cc&quot;&gt;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 &lt;main id=&quot;main&quot;&gt;
 &lt;&lt;timed 22s&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/code of conduct re-edit 23_11.mp3&quot; autoplay &gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1229,7 +1242,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="TwentyEight" tags="nobr video" position="1538,497.9999999999999" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="TwentyEight" tags="nobr video" position="1538,497.9999999999999" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $title to &quot;V5&quot;&gt;&gt;
 &lt;div id=&quot;video&quot; class=&quot;video-wrapper&quot; role=&quot;video&quot; aria-label=&quot;MOTT Training 5 video&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/640381100?h=cad3056aaf&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen  title=&quot;MOTT Training 5&quot;&gt;&lt;/iframe&gt;
@@ -1239,7 +1252,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	&lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span aria-label=&quot;Click Button to go Next&quot; class=&quot;button-wrapper&quot;&gt; &lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;TwentyNine&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="TwentyTwo" tags="nobr video" position="1545.3333333333335,1548.6666666666667" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="TwentyTwo" tags="nobr video" position="1545.3333333333335,1548.6666666666667" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;&lt;&lt;set $title to &quot;V4&quot;&gt;&gt;
 &lt;div id=&quot;video&quot; class=&quot;video-wrapper&quot; role=&quot;video&quot; aria-label=&quot;MOTT Training 4 video&quot;&gt;
 	&lt;iframe src=&quot;https://player.vimeo.com/video/640380360?h=f4e91c039a&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen  title=&quot;MOTT Training 4&quot;&gt;&lt;/iframe&gt;
@@ -1249,7 +1262,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;TwentyThree&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="FireComplete" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu fire&quot;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="FireComplete" tags="nobr" position="1148,497.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu fire&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu  &quot;&gt;
 	
@@ -1268,7 +1281,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
 &lt;/div&gt;	
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="TwentyNine" tags="nobr logo" position="1555.3333333333335,352.3333333333333" size="100,100">/* MENU BAGUETTE  */
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="TwentyNine" tags="nobr logo" position="1555.3333333333335,352.3333333333333" size="100,100">/* MENU BAGUETTE  */
 
 &lt;&lt;set $title to &quot;sdf&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav&quot; autoplay loop&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/Secret Mission.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -1332,7 +1345,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 		&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="Thirty" tags="nobr" position="1553.6666666666665,214.00000000000003" size="100,100">/* MISSION */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Thirty" tags="nobr" position="1553.6666666666665,214.00000000000003" size="100,100">/* MISSION */
 &lt;div class=&quot;wrapper menu &quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1358,7 +1371,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="ThirtyOne" tags="nobr mission" position="1770.6666666666667,337.3333333333334" size="100,100">/* MISSION */ &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="ThirtyOne" tags="nobr mission" position="1770.6666666666667,337.3333333333334" size="100,100">/* MISSION */ &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
@@ -1410,7 +1423,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;append &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/23b. Challenge 5 - 2.mp3&quot; autoplay&gt;&lt;p&gt;Audio is not supported on your device&lt;/p&gt;&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="ThirtyTwo" tags="nobr mission" position="1783.6666666666667,503.3333333333333" size="100,100">/* MISSION */ &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="ThirtyTwo" tags="nobr mission" position="1783.6666666666667,503.3333333333333" size="100,100">/* MISSION */ &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1448,7 +1461,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;timed 10s&gt;&gt;
 &lt;&lt;goto &quot;IncomingMessageEn&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="ThirtyThreeOne" tags="nobr mission" position="1785,618.6666666666666" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="ThirtyThreeOne" tags="nobr mission" position="1785,618.6666666666666" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1492,7 +1505,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="ThirtyFive" tags="nobr mission" position="1794.6666666666667,1186.6666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="ThirtyFive" tags="nobr mission" position="1794.6666666666667,1186.6666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1519,7 +1532,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;include &quot;oldman&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="ThirtySix" tags="nobr mission" position="1799,1343.6666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="ThirtySix" tags="nobr mission" position="1799,1343.6666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1549,7 +1562,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;include &quot;oldman&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="ThirtySevenOne" tags="nobr mission" position="1792.3333333333333,1488" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="ThirtySevenOne" tags="nobr mission" position="1792.3333333333333,1488" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot; id=&quot;wrapper&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1584,7 +1597,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;&lt;include &quot;joseph&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="Cypher" tags="nobr mission cypher" position="850,725" size="100,100">&lt;&lt;set $title to &quot;Cy&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Cypher" tags="nobr mission cypher" position="975,725" size="100,100">&lt;&lt;set $title to &quot;Cy&quot;&gt;&gt;
 &lt;div class=&quot;wrapper mission cipher&quot;&gt;
 	&lt;div class=&quot;cipher-wrapper&quot;&gt;
 		&lt;div class=&quot;cipherpaper&quot; alt=&quot;an old looking piece of paper containing a code to break&quot;&gt;
@@ -1668,7 +1681,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	&lt;/div&gt;
 
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Conversation2" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION TWO FOURTY */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Conversation2" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION TWO FOURTY */
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission &quot;&gt;
 /* &lt;img src=&quot;assets/img/scovell.png&quot; class=&quot;disappear&quot; alt=&quot;George Scovell&quot;&gt;
@@ -1750,7 +1763,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 &lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyOne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="FourtyOne" tags="nobr mission" position="2083.666666666666,1723.3333333333335" size="100,100">&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/35. Challenge 5 - 12 V2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="FourtyOne" tags="nobr mission" position="2083.666666666666,1723.3333333333335" size="100,100">&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/35. Challenge 5 - 12 V2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot; id=&quot;wrapper&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
@@ -1802,7 +1815,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 &lt;&lt;/timed&gt;&gt;
 
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="FourtyTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="FourtyTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class=&quot;wrapper menu mission&quot; id=&quot;wrapper&quot;&gt;
@@ -1825,7 +1838,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 
 &lt;&lt;timed 8s t8n&gt;&gt;&lt;&lt;goto &quot;FourtyTwoTwo&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="FourtyTwoTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/37. Well done v2.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="FourtyTwoTwo" tags="nobr" position="2075,1550" size="100,100">&lt;div id=&quot;audio&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/37. Well done v2.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class=&quot;wrapper menu codeword question&quot; id=&quot;wrapper&quot;&gt;
@@ -1861,7 +1874,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;replace &quot;#audio&quot;&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/37. Well done.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="FourtyThree" tags="nobr video" position="2100,1400" size="100,100">/* VIDEO  */
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="FourtyThree" tags="nobr video" position="2100,1400" size="100,100">/* VIDEO  */
 &lt;div class=&quot;wrapper&quot;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;video&quot;&gt;&lt;&lt;set $title to &quot;V6&quot;&gt;&gt;
 	&lt;div id=&quot;video&quot; role=&quot;video&quot; class=&quot;video-wrapper&quot;  aria-label=&quot;MOTT Training 6 video&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/640381678?h=9ce4d85b97&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen title=&quot;MOTT Training 6&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -1870,7 +1883,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 &lt;/div&gt;
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;timed 10s t8n&gt;&gt;&lt;&lt;append &quot;#text&quot;&gt;&gt;&lt;br&gt;&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $next to &quot;FourtyFour-Cert&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="FourtyFour-Cert" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-Cert" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/new challenge complete.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 	&lt;&lt;timed 3s&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;assets/audio/sign off.mp3&quot; autoplay&gt;Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;div class=&quot;wrapper menu certificate&quot;&gt;
@@ -1899,7 +1912,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 &lt;/div&gt; */
 &lt;/div&gt;
 &lt;span class=&quot;button-wrapper orange&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|FourtyFour-End]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="64" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="65" name="FourtyFour-End" tags="nobr" position="2093.0000000000005,1217.6666666666665" size="100,100">&lt;&lt;set $title to &quot;end&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu codeword question&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1929,7 +1942,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;	
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="ThirtyFour" tags="nobr mission" position="1788,1025" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="ThirtyFour" tags="nobr mission" position="1788,1025" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -1955,7 +1968,7 @@ armies.&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom3&quot; false&gt;&gt
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
 &lt;/div&gt;
 
-&lt;&lt;timed 20s t8n&gt;&gt;&lt;&lt;goto &quot;Conversation&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Conversation" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION */
+&lt;&lt;timed 20s t8n&gt;&gt;&lt;&lt;goto &quot;Conversation&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Conversation" tags="nobr mission" position="1788,1028" size="100,100">/* CONVERSATION */
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission &quot;&gt;
 
@@ -2021,7 +2034,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyFive]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 &lt;&lt;/append&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="ThirtyNine" tags="nobr mission" position="1875,2150" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="ThirtyNine" tags="nobr mission" position="1875,2150" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2059,7 +2072,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;oldman&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="IncomingMessageFr" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="IncomingMessageFr" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
 
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
@@ -2107,7 +2120,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 								&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|ThirtyTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 							&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="IncomingMessageEn" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="IncomingMessageEn" tags="nobr" position="1943,350.33333333333337" size="100,100">/* IncomingMessage */ 
 &lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 6&gt;&gt;
 
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
@@ -2157,7 +2170,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 &lt;&lt;timed 25s t8n&gt;&gt;&lt;&lt;goto &quot;ThirtyThreeOne&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="TwentyOneTwo" tags="nobr" position="1543.3333333333333,1713" size="100,100">&lt;div class=&quot;wrapper menu fire&quot;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="TwentyOneTwo" tags="nobr" position="1543.3333333333333,1713" size="100,100">&lt;div class=&quot;wrapper menu fire&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/18. Challenge 3 - 6.mp3&quot; autoplay&gt; Audio is not supported on your device&lt;/audio&gt;&lt;&lt;/if&gt;&gt; 
@@ -2176,7 +2189,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	&lt;&lt;include &quot;mentor&quot;&gt;&gt;
 	&lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div &gt;</tw-passagedata><tw-passagedata pid="71" name="TransPass" tags="nobr" position="1257.6666666666667,107.66666666666666" size="200,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div &gt;</tw-passagedata><tw-passagedata pid="72" name="TransPass" tags="nobr" position="1257.6666666666667,107.66666666666666" size="200,100">&lt;div class=&quot;wrapper&quot;&gt;
 &lt;&lt;include &quot;headertrain&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; flex-container-col-cen&quot;&gt;
 	&lt;&lt;set $title to &quot;transition&quot;&gt;&gt;
@@ -2192,15 +2205,15 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 	&lt;/main&gt;
 	&lt;footer&gt;&lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="TutorialOne" tags="nobr tutorial" position="318.66666666666674,174.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="TutorialOne" tags="nobr tutorial" position="318.66666666666674,174.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
 	&lt;&lt;include &quot;header&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;flex-container-col&quot;&gt;&lt;&lt;set $title to 1&gt;&gt;
 	&lt;&lt;if $audioClick isnot true&gt;&gt;&lt;&lt;set $audioOn to true&gt;&gt;&lt;&lt;/if&gt;&gt;
-	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Dinah NA intro 1.mp3&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/assets/audio/Welcome1.mp3&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
 
 	&lt;div class=&quot;intro-text&quot;&gt;
 	  &lt;p&gt;Welcome to The National Archives.&lt;/p&gt;
-	  &lt;p&gt;This experience requires you to tap through on your computer. You just need to look for the circle to click on. &lt;/p&gt;
+	  &lt;p&gt;This experience requires you to tap through on your computer. You just need to click a button to move on. &lt;/p&gt;
 	  
 	  &lt;div class=&quot;flex-container-row&quot;&gt;&lt;p class=&quot;fit&quot;&gt;Try it now.&lt;/p&gt;
 		&lt;br/&gt;&lt;span class=&quot;button-wrapper circle&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[&quot;Next&quot;|TutorialTwo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;&lt;/div&gt;
@@ -2208,7 +2221,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 	&lt;div class=&quot;holding&quot;&gt;&lt;/div&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="TutorialTwo" tags="nobr tutorial" position="484.33333333333337,121.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="TutorialTwo" tags="nobr tutorial" position="484.33333333333337,121.33333333333334" size="100,100">&lt;div class=&quot;wrapper cogs&quot;&gt;
 	&lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;main id=&quot;main&quot; class=&quot;cogs flex-container-col&quot;&gt;
 &lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/Dinah NA intro 2.mp3&quot; autoplay&gt;Audio not supported in your browser&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -2225,7 +2238,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="TwelveTwo" tags="nobr" position="761.3333333333334,988.3333333333335" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="TwelveTwo" tags="nobr" position="761.3333333333334,988.3333333333335" size="100,100">&lt;div class=&quot;wrapper menu&quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
 	
@@ -2250,7 +2263,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 	&lt;/main&gt;
 			&lt;&lt;include &quot;footer&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="TwentySevenTwo" tags="nobr" position="1534.6666666666667,659.6666666666669" size="100,100">/* REDUNDANT  */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="TwentySevenTwo" tags="nobr" position="1534.6666666666667,659.6666666666669" size="100,100">/* REDUNDANT  */
 &lt;div class=&quot;wrapper menu&quot;&gt;&lt;&lt;set $title to &quot;cc&quot;&gt;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 &lt;main id=&quot;main&quot;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/code of conduct strings.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $audioOn is true&gt;&gt;&lt;audio src=&quot;https://remote.co.com/MoTT/AgentTraining/Sounds/21b. Challenge 4 - 4.mp3&quot; autoplay&gt;Sound plays&lt;/audio&gt;&lt;&lt;/if&gt;&gt;
@@ -2300,7 +2313,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="TimeComplete" tags="nobr" position="1148,457.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu &quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="TimeComplete" tags="nobr" position="1148,457.3333333333333" size="100,100">&lt;div class=&quot;wrapper menu &quot;&gt;
 &lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot; menu time &quot;&gt;
 	
@@ -2320,7 +2333,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;/div&gt;	
 
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="ThirtyThreeThree" tags="nobr mission" position="1775,875" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="ThirtyThreeThree" tags="nobr mission" position="1775,875" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2349,7 +2362,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;scovell&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="ThirtyThreeTwo" tags="nobr mission" position="1775,750" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="ThirtyThreeTwo" tags="nobr mission" position="1775,750" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2390,7 +2403,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 
 
 
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="ThirtySevenTwo" tags="nobr mission" position="1800,1650" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 4&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="ThirtySevenTwo" tags="nobr mission" position="1800,1650" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;&lt;&lt;set $title to 4&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2419,7 +2432,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;napolean&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="ThirtySevenThree" tags="nobr mission" position="1811.3333333333335,1769.1666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="ThirtySevenThree" tags="nobr mission" position="1811.3333333333335,1769.1666666666667" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;black&quot;&gt;&gt;
 &lt;div class=&quot;wrapper menu mission&quot;&gt;
 	&lt;&lt;include &quot;headermenu&quot;&gt;&gt;
 	&lt;main id=&quot;main&quot; class=&quot;menu&quot;&gt;
@@ -2448,7 +2461,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;include &quot;napolean&quot;&gt;&gt;
 	&lt;/main&gt;
 	&lt;&lt;include &quot;footermission&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="StoryDisplayTitle" tags="nobr" position="1259.1666666666672,1.6666666666666667" size="200,100">&lt;&lt;if $title is 1&gt;&gt;Tutorial
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="StoryDisplayTitle" tags="nobr" position="1259.1666666666672,1.6666666666666667" size="200,100">&lt;&lt;if $title is 1&gt;&gt;Tutorial
 &lt;&lt;elseif $title is &quot;question&quot;&gt;&gt;Question
 &lt;&lt;elseif $title is 2&gt;&gt;Codebreaking
 &lt;&lt;elseif $title is &quot;V1&quot;&gt;&gt;MOTT Video 1
@@ -2466,7 +2479,7 @@ code yet?&lt;/p&gt; &lt;/span&gt;&lt;&lt;ScrollTo &quot;bottom1&quot; false&gt;&
 &lt;&lt;elseif $title is &quot;end&quot;&gt;&gt;Goodbye
 &lt;&lt;elseif $title is &quot;transition&quot;&gt;&gt;NEXT PART LOADING
 &lt;&lt;else&gt;&gt;MOTT
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="PassageDone" tags="" position="205.83333333333326,18.33333333333337" size="100,100">&lt;&lt;run $(&#39;html&#39;).attr(&#39;lang&#39;, &#39;en&#39;) &gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="PassageDone" tags="" position="205.83333333333326,18.33333333333337" size="100,100">&lt;&lt;run $(&#39;html&#39;).attr(&#39;lang&#39;, &#39;en&#39;) &gt;&gt;
 &lt;&lt;run $(&#39;#wrong&#39;).attr(&#39;role&#39;, &#39;alert&#39;)&gt;&gt;
 &lt;&lt;run $(&#39;#wrong&#39;).attr(&#39;aria-live&#39;,&#39;assertive&#39;)&gt;&gt;
 &lt;&lt;run $(&#39;#wrong1&#39;).attr(&#39;role&#39;, &#39;alert&#39;)&gt;&gt;
