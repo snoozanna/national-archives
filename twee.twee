@@ -360,7 +360,7 @@ setup.changeVol = (num) => {
 	<br>
 	
 	
-	<div id="answer" style="text-transform: uppercase;" >	<label for="textbox-password" tabindex="0"><span aria-label="Rearrange the letters and enter the word here " role="label" >Rearrange the letters and enter the word here:</span></label>
+	<div id="answer" style="text-transform: uppercase;" >	<label for="textbox--password" tabindex="0"><span aria-label="Rearrange the letters and enter the word here " role="label" >Rearrange the letters and enter the word here:</span></label>
 	<<textbox "_password" "" >>
 	<span class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "SECRET">><<goto "Five">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>>
 	
@@ -446,7 +446,7 @@ over secret files">
 <br><br>
 
 		<div id="answer" style="text-transform: uppercase;" tabindex="0">
-		<label for="textbox-password" ><span aria-label=">Rearrange the letters and enter the word here:" role="label">Rearrange the letters and enter the word here:</span></label>
+		<label for="textbox--password" ><span aria-label=">Rearrange the letters and enter the word here:" role="label">Rearrange the letters and enter the word here:</span></label>
 <<textbox "_password" "" >><span class="button-wrapper" aria-label="Click Button to check answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "CRUMPETS">><<goto "Nine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	
 	<br><span id="wrong"></span></div>
@@ -769,7 +769,7 @@ over secret files">
 	<div id="answer">
 	
 		<br>
-		<label for="textbox-password" tabindex="0"><span aria-label="Enter the numbers found in the images:" role="label">Enter the numbers found in the images:</span></label>
+		<label for="textbox--password" tabindex="0"><span aria-label="Enter the numbers found in the images:" role="label">Enter the numbers found in the images:</span></label>
 		<<textbox "_password" "">>
 		<br>
 				<span id="wrong"></span>
@@ -996,7 +996,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	</div>
 	
 	<div id="answer" style="text-transform: uppercase;"> 
-	<label for="textbox-password"tabindex="0" ><span aria-label="Unscramble the letters and enter the word below" role="label">Unscramble the letters and enter the word below</span></label>
+	<label for="textbox--password" tabindex="0" ><span aria-label="Unscramble the letters and enter the word below" role="label">Unscramble the letters and enter the word below</span></label>
 	<<textbox "_password" "" >><span class="button-wrapper" aria-label="Click Button to go Check your answer"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "FLOUR">><<goto "Twenty">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	
 	<br><span id="wrong"></span></div>
@@ -1104,7 +1104,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 	
 	<div id="answer" style="text-transform: uppercase;" role="input" aria-label="Enter the codeword">
-	<label for="textbox-password" tabindex="0" ><span aria-label="Enter the codeword:" role="label" >Enter the codeword:</span></label>
+	<label for="textbox--password" tabindex="0" ><span aria-label="Enter the codeword:" role="label" >Enter the codeword:</span></label>
 	<<textbox "_password" "" >><span class="button-wrapper" aria-label="Check the Codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "BAGUETTE">><<goto "TwentyNine">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>><span aria-label="Click Button to check Answer">
 	</span></span></div>
 	<br><span id="wrong"></span>
@@ -1132,29 +1132,30 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 	<div class="content-wrapper">
 		<<include "sidebarfire">>
-		<div class="content-item content text">
-				
-							<div class="letter">
-							<span id="line1" class="medieval">Appointment</span>
-							
-							<span id="line2" class="medieval">of the </span>
-							<span id="line3" class="medieval">Time Agent Disrupters Against History</span>
-							
-							<span id="line5" class="medieval">to the </span>
-							<span id="line6" class="medieval">King’s Flour Distribution Centre</span>
-							
-							<span id="line7" class="medieval">to limit the distribution of
-							flour for crumpet related activities. </span>
-							
-							
-							<span id="line8" class="medieval">All flour will 
-							no longer be used </span>
-							<span id="line9" class="medieval">for </span>
-							<span id="line10" class="medieval" aria-hidden="true">c r u m p e t &emsp; m a k i n g</span><span style="width: 0px; opacity: 0; position: absolute; top: 0px;">crumpet making</span>
-							<span id="line11" class="medieval">no crumpets will be made</span></div>
-							
-							<<timed 25s t8n>><br><span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentyOneTwo]]>><</button>></span><</timed>>
-			</div>
+		<div class="content-item content letter">
+				<div class="cipher-wrapper ">
+								<div class="cipherpaper">
+								<span id="line1" class="medieval">Appointment</span>
+								
+								<span id="line2" class="medieval">of the </span>
+								<span id="line3" class="medieval">Time Agent Disrupters Against History</span>
+								
+								<span id="line5" class="medieval">to the </span>
+								<span id="line6" class="medieval">King’s Flour Distribution Centre</span>
+								
+								<span id="line7" class="medieval">to limit the distribution of
+								flour for crumpet related activities. </span>
+								
+								
+								<span id="line8" class="medieval">All flour will 
+								no longer be used </span>
+								<span id="line9" class="medieval">for </span>
+								<span id="line10" class="medieval" aria-hidden="true">c r u m p e t &emsp; m a k i n g</span><span style="width: 0px; opacity: 0; position: absolute; top: 0px;">crumpet making</span>
+								<span id="line11" class="medieval">no crumpets will be made</span></div>
+								
+								<<timed 25s t8n>><br><span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentyOneTwo]]>><</button>></span><</timed>>
+				</div>
+				</div >
 	</div>
 	<<include "mentor">>
 	</main>
@@ -1337,7 +1338,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 
 <div id="answer">
-	<label for="textbox-password" tabindex="0"><span aria-label="Enter the codeword that you have received by text message:" role="label">Enter the codeword that you have received by text message:</span></label>
+	<label for="textbox--password" tabindex="0"><span aria-label="Enter the codeword that you have received by text message:" role="label">Enter the codeword that you have received by text message:</span></label>
 <<textbox "_password" "" >>
 <span id="wrong"></span>
 <span class="button-wrapper" aria-label="Click Button to go Check codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span></div>
@@ -1849,15 +1850,15 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<<textbox "$password1"  "">> 
 			</div>
 			<div class="answers-item" >
-			<label for="textbox-password2"  tabindex="0"><span aria-label="Enter Code Two here:" role="label" >Code Two:</span> <span id="wrong1" class="status" > </span> 	</label>
+			<label for="textbox-password2"  tabindex="0"><span aria-label="Enter Code Two here:" role="label" >Code Two:</span> <span id="wrong2" class="status" > </span> 	</label>
 			<<textbox "$password2"  "">> 
 			</div>
 				<div class="answers-item" >
-			<label for="textbox-password22"  tabindex="0"><span aria-label="Enter Code Three here:" role="label" >Code Three:</span> <span id="wrong1" class="status" > </span> 	</label>
+			<label for="textbox-password22"  tabindex="0"><span aria-label="Enter Code Three here:" role="label" >Code Three:</span> <span id="wrong22" class="status" > </span> 	</label>
 			<<textbox "$password22"  "">> 
 			</div>
 				<div class="answers-item" >
-			<label for="textbox-password3"  tabindex="0"><span aria-label="Enter Code Four here:" role="label" >Code One:</span> <span id="wrong1" class="status" > </span> 	</label>
+			<label for="textbox-password3"  tabindex="0"><span aria-label="Enter Code Four here:" role="label" >Code One:</span> <span id="wrong3" class="status" > </span> 	</label>
 			<<textbox "$password3"  "">> 
 			</div>
 		
@@ -1869,142 +1870,19 @@ but passing those will give you the power to nudge the past if your Time Mission
 	
 	<<set _password2 to $password2.toUpperCase()>><<if _password2 is "DUERO">><<set $correct2 to 1>><<replace "#wrong2">>Correct <</replace>><<else>><<replace "#wrong2">>Wrong<<timed 5s>><<replace "#wrong2">><</replace>><</timed>><</replace>><</if>>
 	
-	<<set _password22 to $password22.toUpperCase()>><<if _password22 is "TAGUS">><<set $correct22 to 1>><<replace "#wrong22">>Correct, <</replace>><<else>><<replace "#wrong22">>Wrong <<timed 5s>><<replace "#wrong22">><</replace>><</timed>><</replace>><</if>>
+	<<set _password22 to $password22.toUpperCase()>><<if _password22 is "TAGUS">><<set $correct22 to 1>><<replace "#wrong22">>Correct <</replace>><<else>><<replace "#wrong22">>Wrong <<timed 5s>><<replace "#wrong22">><</replace>><</timed>><</replace>><</if>>
 	
 	<<set _password3 to $password3.toUpperCase()>><<if _password3 is "CORUNNA">><<set $correct3 to 1>><<replace "#wrong3">>Correct<</replace>><<else>><<replace "#wrong3">>Wrong<<timed 5s>><<replace "#wrong3">><</replace>><</timed>><</replace>><</if>>
 	
 	<<set $answer to $correct1 + $correct2 + $correct22 + $correct3>><<if $answer is 4>><<replace "#Answers">><h3>You did it!</h3><</replace>>
 	<<timed 3s>><<goto "ThirtyNine">><</timed>><</if>>
 	
-	
 	<</button>></span>
-
-
 	</div>
-
-	
-
-
 
 
 </div>
 
-<<done>>
-/* <<set $table to setup.createCypherTable()>> */
-<</done>>
-
-
-:: ThirtyEight [nobr mission cypher] {"position":"1825,1925","size":"100,100"}
-/* OLD CYPHER  */
-<<set $title to "Cy">>
-<<addclass "body" "black">>
-<div class="wrapper menu mission">
-	<main id="main" class="menu">
-
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/33b. Challenge 5 - French Letter.mp3" autoplay>Audio is not supported on your device</audio><</if>>
-
-<<timed 32s >><<if $audioOn is true>><audio src="assets/audio/DECIPHER THE CODE.mp3" autoplay>Audio is not supported on your device</audio><</if>>
-<<replace "#frenchDecipher">><strong>Décrypter le code • Decipher the code</strong><</replace>><</timed>>
-
-
-<div id="page" class="">
-/* Letter  */
-		<div role="text" aria-label="The letter to Napoleon Bonaparte" class="napoleon-letter">
-			From Joseph Bonaparte to Emperor Napoléon Bonaparte,
-			<br>
-			Brother, I hope the Army of the South will not delay in gathering in <span id="CODE1"  role="text" aria-label="1st code word  13.21.18.3.9.1">13.21.18.3.9.1^^1^^</span>.
-
-			<br>We will have 100,000 troops along the lines of the <span id="CODE2" role="text" aria-label="2nd code word 4.21.5.18.15 and 3rd code word 20.1.7.21.19" >4.21.5.18.15&nbsp;^^2^^and&nbsp;20.1.7.21.19^^3^^</span> Rivers.
-			<br>Our troops will not be in <span id="CODE3" role="text" aria-label="4th code word 3.15.18.21.14.14.1">3.15.18.21.14.14.1^^4^^</span>. 
-</div>
-<div class="grid-outer-wrapper">
-<div class="grid-answer-wrapper">
-	/* Code grid  */
-	<div class="CodeGrid" role="text" aria-label="The code grid">
-			<div class="CodeGrid-item"><div class="lettergrid">A</div><div class="number">1</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">B</div><div class="number">2</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">C</div><div class="number">3</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">D</div><div class="number">4</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">E</div><div class="number">5</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">F</div><div class="number">6</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">G</div><div class="number">7</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">H</div><div class="number">8</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">I</div><div class="number">9</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">J</div><div class="number">10</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">K</div><div class="number">11</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">L</div><div class="number">12</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">M</div><div class="number">13</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">N</div><div class="number">14</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">O</div><div class="number">15</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">P</div><div class="number">16</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">Q</div><div class="number">17</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">R</div><div class="number">18</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">S</div><div class="number">19</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">T</div><div class="number">20</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">U</div><div class="number">21</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">V</div><div class="number">22</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">W</div><div class="number">23</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">X</div><div class="number">24</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">Y</div><div class="number">25</div></div>
-			<div class="CodeGrid-item"><div class="lettergrid">Z</div><div class="number">26</div></div>
-	</div>
-	<div id="frenchDecipher">
-</div>
-</div>	
-	/* Input boxes */
-	</div>
-</div >
-
-	<div id="Answers" class="solutions-wrapper" role="text" aria-label="Four input boxes for the passwords">
-		<div class="solutions-item">
-			<label for="_password1" >Code One:</label>
-			<<textbox "$password1"  "">> 
-			</div>
-		<div class="solutions-item">
-			<label for="_password2" >Code Two:</label>
-			<<textbox "$password2" "">> 
-		</div>
-		<div class="solutions-item">
-		<label for="_password22" >Code Three:</label>
-		<<textbox "$password22" "">>
-		</div >
-		<div class="solutions-item">
-		<label for="_password3" >Code Four:</label>
-		<<textbox "$password3" "">>
-		</div>
-	</div>
-
-<div class="check-wrapper ">
-	<span aria-label="Check the Password" class="button-wrapper cipher-check"><<button "Check">>
-	
-	<<set _password1 to $password1.toUpperCase()>><<if _password1 is "MURCIA">><<set $correct1 to 1>><<replace "#wrong1">>Correct, <</replace>><<else>><<replace "#wrong1">>Wrong, <<timed 5s>><<replace "#wrong1">><</replace>><</timed>><</replace>><</if>>
-	
-	<<set _password2 to $password2.toUpperCase()>><<if _password2 is "DUERO">><<set $correct2 to 1>><<replace "#wrong2">>Second is Correct, <</replace>><<else>><<replace "#wrong2">>Second is Wrong,<<timed 5s>><<replace "#wrong2">><</replace>><</timed>><</replace>><</if>>
-	
-	<<set _password22 to $password22.toUpperCase()>><<if _password22 is "TAGUS">><<set $correct22 to 1>><<replace "#wrong22">>Third is Correct, <</replace>><<else>><<replace "#wrong22">>Third is Wrong, <<timed 5s>><<replace "#wrong22">><</replace>><</timed>><</replace>><</if>>
-	
-	<<set _password3 to $password3.toUpperCase()>><<if _password3 is "CORUNNA">><<set $correct3 to 1>><<replace "#wrong3">>Fourth is Correct<</replace>><<else>><<replace "#wrong3">>Fourth is Wrong<<timed 5s>><<replace "#wrong3">><</replace>><</timed>><</replace>><</if>>
-	
-	<<set $answer to $correct1 + $correct2 + $correct22 + $correct3>><<if $answer is 4>><<replace "#Correct">><h3>You did it!</h3><</replace>>
-	<<timed 3s>><<goto "ThirtyNine">><</timed>><</if>>
-	
-	
-	<</button>></span>
-	/* Feedback */
-	<div class="" id="feedback"> 
-		<div id="Correct" class="solutions">
-		<span id="wrong1"> </span> <span id="wrong2"> </span> <span id="wrong22"> </span> <span id="wrong3"> </span></div>
-	
-	</div>
-</div >
-
-
-
-
-
-</main>
-<<include "footermission" >>
-</div>
 
 
 :: Conversation2 [nobr mission] {"position":"1788,1028","size":"100,100"}
@@ -2033,16 +1911,16 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <<append "#text">>
 
-<<addclass "#text" "chat">><br>
+<<addclass "#text" "chat">>
 <p class="nameSender">WELLINGTON:</p>
 <span class="SFS left last" role="text" aria-label="Wellington"><p> Scovell, we don’t have much time.</p> </span>
 <</append>> <</timed>>
 
-<<timed 11s t8n>><<append "#text">><br><<removeclass ".left" "last">>
+<<timed 11s t8n>><<append "#text">><<removeclass ".left" "last">>
 <span class="SFS left last"><p>I must move our troops.</p> </span>
 <</append>> <</timed>>
 
-<<timed 13s t8n>><<append "#text">><br><<removeclass ".left" "last">>
+<<timed 13s t8n>><<append "#text">><<removeclass ".left" "last">>
 <span class="SFS left last"><p>Have you broken the French
 code yet?</p></span>
 <</append>> <</timed>>
@@ -2130,20 +2008,16 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 <<timed 22s t8n>>
 <<append "#text">>
-<div class="letter joenap"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/33. Challenge 5 - French Letter with words.mp3" autoplay>Audio is not supported on your device</audio><</if>>From Joseph Bonaparte to Emperor Napoléon Bonaparte,<br>
-
-Brother, I hope the Army of the South will not delay in gathering in Murcia.
-
-<br>We will have 100,000 troops along the lines of the Duero and Tagus Rivers.
-
-
-<br>Our troops will not be in Corunna. 
-
+<div class="cipher-wrapper">
+	<div class="cipherpaper joenap napoleon-letter" aria-label="The letter to Napoleon Bonaparte"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/33. Challenge 5 - French Letter with words.mp3" autoplay>Audio is not supported on your device</audio><</if>>From Joseph Bonaparte to Emperor Napoléon Bonaparte,<br>
+	Brother, I hope the Army of the South will not delay in gathering in Murcia.
+	<br>We will have 100,000 troops along the lines of the Duero and Tagus Rivers.
+	<br>Our troops will not be in Corunna. 
+	</div>
 </div>
-
 <div class="flex-container-col-cen">
 	<p id="mount"></p>
-<label for="textbox-password" tabindex="0"><span aria-label="Enter the code word that you have received by text message" role="label">Enter the code word that you have received by text message</span></label>
+<label for="textbox--password" tabindex="0"><span aria-label="Enter the code word that you have received by text message" role="label">Enter the code word that you have received by text message</span></label>
 	<br>
 	<<textbox "_password" "" >><br/><span  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	<br><span id="wrong"></span>
@@ -2250,8 +2124,8 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 		</div >
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 <div class="certificate-wrapper">
-	<img src="assets/img/certificateteal.png" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate"/>
-	<div class="certificate-text">
+	<img src="assets/img/certificateteal.jpg" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate"/>
+	/* <div class="certificate-text">
 		<p>
 			<span class="inline-icon-wrap"><img src="assets/img/tick.png" alt="tick icon"></span>
 			Eligible for Field Duty
@@ -2264,7 +2138,7 @@ Brother, I hope the Army of the South will not delay in gathering in Murcia.
 			<span class="inline-icon-wrap"><img src="assets/img/tick.png" alt="tick icon"></span>
 			Signal Fire System access granted
 		</p>
-</div>
+</div> */
 </div>
 <span class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|FourtyFour-End]]>><</button>></span>
 </main>

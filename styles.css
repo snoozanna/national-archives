@@ -52,15 +52,15 @@ a:hover {
   content: "";
 }
 
-div#back > a.macro-back {
-  /* border: white solid 1px; */
+div#back > a {
+  border: white solid 1px;
   padding: 1rem;
-  /* border-radius: 5px; */
+  border-radius: 5px;
 }
 
-div#back > a.macro-back:hover {
-  /* background-color: white; */
-  color: var(--blue);
+div#back > a:hover {
+  background-color: white;
+  color: black;
 }
 
 /* DISSOLVE TRANSITION  */
@@ -810,7 +810,7 @@ img.smaller {
   background-position: right;
 }
 
-/* LETTER STUFF*/
+/* LETTER STUFF
 .letter {
   font-family: "IM Fell English", serif;
   background-image: url("https://remote.co.com/MoTT/AgentTraining/Images/letterbackground2.png");
@@ -825,17 +825,35 @@ img.smaller {
   background-size: 100% 100%;
   text-transform: none;
   letter-spacing: 0;
+} */
+
+/* Flour letter  */
+.content-wrapper > .content-item.content.letter {
+  max-width: 100%;
 }
 
-.letter .smallcaps {
+.content-wrapper
+  > .content-item.content.letter
+  > .cipher-wrapper
+  > .cipherpaper {
+  max-width: 100%;
+}
+
+.letter > .cipher-wrapper > .cipherpaper .smallcaps {
   font-family: "IM Fell English SC", serif;
+}
+
+.cipher-wrapper > .cipherpaper.joenap.napoleon-letter {
+  font-family: "IM Fell English", serif;
+  max-width: 100%;
 }
 
 .medieval {
   clear: both;
   display: block;
-  line-height: 1.4em;
+  /* line-height: 1.4em; */
   letter-spacing: 0;
+  font-family: "IM Fell English SC", serif;
 }
 
 #line1 {
@@ -1222,89 +1240,6 @@ span.intext.cipher {
   background-position: 105% center;
 }
 
-/*Code Grid*/
-
-/* .CodeGrid {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-flow: wrap;
-  max-width: 52rem;
-  text-align: center;
-  font-size: 2rem;
-  gap: 1rem;
-  margin-block-end: 2rem;
-  margin-inline-end: 2rem;
-}
-
-.CodeGrid-item {
-  border: 1px solid black;
-  padding: 5px;
-  width: 3rem;
-}
-
-#page {
-  display: flex;
-  flex-direction: column;
-}
-
-passage-thirtyeight > div#main {
-  grid-area: 1/2/3/2;
-}
-
-.solutions-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.solutions-item {
-  display: flex;
-  flex-direction: row;
-  margin-block-end: 1rem;
-}
-
-.solutions-item > input.macro-textbox {
-  letter-spacing: 0.4rem;
-  min-width: inherit;
-}
-
-.grid-outer-wrapper {
-  display: flex; */
-/* } */
-/* 
-.grid-answer-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.napoleon-letter {
-  padding: 2rem;
-  margin-block-end: 2rem;
-}
-
-.baguette-complete-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-
-
-.check-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-#feedback > .solutions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-} */
-
 @media screen and (max-width: 900px) {
   span.intext.cipher {
     bottom: 20%;
@@ -1370,6 +1305,7 @@ passage-thirtyeight > div#main {
 }
 
 /* paper effect */
+
 .cipherpaper {
   grid-area: cipherpaper;
   background: #e0c798; /* Old browsers */
