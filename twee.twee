@@ -1062,7 +1062,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<set $title to "dfsd">>
 <div class="wrapper">
 	<main id="main" class="flex-container-col-cen">
-		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na"></div>
+		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na" aria-hidden="true"></div>
 		<img src="assets/img/mott-logo.png" id="MottLogo" class="logomott"><<set $next to "One">>
 		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/1. Question.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 	<div class="safeguard center">
@@ -1084,7 +1084,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<set $title to "question">>
 <div class="wrapper">
 	<main id="main" class="flex-container-col-cen">
-		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na"></div>
+		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na" aria-hidden="true"></div>
 	
 
 		<<if $audioOn is true>><audio src="assets/audio/Welcome.mp3" autoplay>Audio not supported in your browser</audio><</if>>

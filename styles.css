@@ -239,7 +239,7 @@ a.link-internal.macro-link:focus-visible,
 a.link-internal.link-image:focus-visible,
 .button-wrapper > button:focus-visible,
 .button-wrapper > a:focus-visible {
-  outline: solid var(--orange) 3px;
+  outline: solid white 3px;
   outline-offset: 5px;
 }
 
