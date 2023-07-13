@@ -7,7 +7,7 @@ Ministry of Time Travel - National Archives
 	"ifid": "53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "ThirtySix",
+	"start": "",
 	"tag-colors": {
 		"code-of-conduct": "blue",
 		"cypher": "gray",
@@ -149,24 +149,24 @@ setup.changeVol = (num) => {
 
 :: header [nobr]
 <header>
-	<div class="logo-wrapper"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo na"></div> </header>
+	<div class="logo-wrapper"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo na" aria-hidden="true"></div> </header>
 
 :: headertrain [nobr]
 	<header>
-		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na" alt="The Ministry of Time Travel Training 101 Logo"></div></header>
+		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na" alt="The Ministry of Time Travel Training 101 Logo" aria-hidden="true"></div></header>
 
 :: headermenu [nobr]	
 <header>
 		<div class="logo-wrapper">
-		<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item"></div>
-		<img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item">
+		<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item" aria-hidden="true"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item" aria-hidden="true"></div>
+		<img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item" aria-hidden="true">
 		</div>
 </header>
 
 :: headermenugrid [nobr]	
 <header class="menu-grid">
 		<div class="logo-wrapper ">
-			<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item"></div><img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item"></div>
+			<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item" aria-hidden="true"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item" aria-hidden="true"></div><img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item" aria-hidden="true"></div>
 </header>
 
 :: sidebarcode [nobr]
@@ -1794,9 +1794,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 		<p>We have part of the code to decipher the letter –a letter from Joseph Bonaparte to his brother Napoleon Bonaparte. I’m going to need you to break the rest of the letter. If you can do that, then we can work out where the French are going to be and then hopefully the British can get the Great Paris Cipher.</p>
 
 	 <p>There isn’t much time. Not all the letter is in the code – just the key words. Break the code, stop TADAH. </p>
-<p>If we do that maybe, we’ll not end up speaking français... I mean French. See, it's already starting to happen.</p>
+<p>If we do that maybe, we’ll not end up speaking <span lang="fr">français</span>... I mean French. See, it's already starting to happen.</p>
 
-<p>Aidez-moi, s'il vous plait</p>
+<p lang="fr">Aidez-moi, s'il vous plait</p>
 <p>Please help!</p>
 	
 	<<timed 5s t8n>>
@@ -2024,7 +2024,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 <p>Send the word SCOVELL through the Signal Fire System – 
 <br><a href="tel:0748-078-6415">0748-078-6415</a>.</p>
 <p>Remember the information you discovered.</p>
-<p>Bonne chance - Good luck! </p>
+<p><span lang="fr">Bonne chance</span> - Good luck! </p>
 <</replace>><</timed>>
 
 
@@ -2780,12 +2780,17 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 				<p>There isn’t much time.</p>
 <p>Not all the letter is in the code – just the key words.</p>
 <p>Break the code, stop TADAH. </p>
-<p>If we do that maybe, we’ll not end up speaking français</p>
+<p>If we do that maybe, we’ll not end up speaking <span lang="fr">français</span></p>
 <p>I mean French.</p>
 <p> See, it's already starting to happen.</p>
 
 <<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "ThirtyEight">><</button>></span>
+<span class="button-wrapper" aria-label="Click Button to go Next">
+	<<button "Next" "TransPass">>
+		<<set $iconOnly to false>>
+		<<set $next to "ThirtyEight">>
+	<</button>>
+	</span>
  <</timed>></div>
 		</div>
 	</div>
