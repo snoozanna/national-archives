@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
+	<!-- UUID://53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2// --><tw-storydata name="Ministry of Time Travel - National Archives" startnode="56" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
 
 @import url("generics.css");
 @import url("styles.css");s
@@ -147,7 +147,7 @@ Macro.add('ScrollTo', {
 setup.changeVol = (num) => {
 	const bgAudio = document.getElementById("bgAudio");
 	bgAudio.volume = num
-}</script><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
+}</script><tw-tag name="code-of-conduct" color="blue"></tw-tag><tw-tag name="cypher" color="gray"></tw-tag><tw-tag name="logo" color="purple"></tw-tag><tw-tag name="mission" color="yellow"></tw-tag><tw-tag name="nobr" color="red"></tw-tag><tw-tag name="video" color="green"></tw-tag><tw-passagedata pid="1" name="Start" tags="nobr" position="134,244.33333333333337" size="100,100">&lt;div class=&quot;wrapper audio&quot; id=&quot;mount&quot;&gt;
 	&lt;div class=&quot;phone-warning&quot;&gt;&lt;p&gt;MOTT is best experienced on a computer or tablet&lt;/p&gt;&lt;/div&gt;
 &lt;div class=&quot;multiple-btn-wrapper&quot;&gt;
 	&lt;span aria-label=&quot;Click Button to begin&quot; class=&quot;button-wrapper&quot;&gt;
@@ -847,7 +847,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN</tw-passagedata><tw-passaged
 			&lt;p&gt;Welcome to the Signal Fire System challenge.&lt;/p&gt; 
 &lt;p&gt;Sometimes we receive mysterious messages from the Signal Fire System that make little sense until we investigate.&lt;/p&gt;
 
-&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper&quot; role=&quot;button&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Eighteen]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;&lt;span class=&quot;button-wrapper&quot;  aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button [[Next|Eighteen]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;&lt;include &quot;mentor&quot;&gt;&gt;	
@@ -1587,7 +1587,12 @@ but passing those will give you the power to nudge the past if your Time Mission
 &lt;p&gt;Please help!&lt;/p&gt;
 	
 	&lt;&lt;timed 5s t8n&gt;&gt;
-&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;&lt;&lt;set $iconOnly to false&gt;&gt;&lt;&lt;set $next to &quot;Cypher&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrapper&quot; aria-label=&quot;Click Button to go Next&quot;&gt;
+	&lt;&lt;button &quot;Next&quot; &quot;TransPass&quot;&gt;&gt;
+		&lt;&lt;set $iconOnly to false&gt;&gt;
+		&lt;&lt;set $next to &quot;Cypher&quot;&gt;&gt;
+	&lt;&lt;/button&gt;&gt;
+&lt;/span&gt;
 	 &lt;&lt;/timed&gt;&gt;
 	 &lt;&lt;/timed&gt;&gt;
 				&lt;/div &gt;

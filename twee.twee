@@ -7,7 +7,7 @@ Ministry of Time Travel - National Archives
 	"ifid": "53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "",
+	"start": "ThirtySix",
 	"tag-colors": {
 		"code-of-conduct": "blue",
 		"cypher": "gray",
@@ -935,7 +935,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 			<p>Welcome to the Signal Fire System challenge.</p> 
 <p>Sometimes we receive mysterious messages from the Signal Fire System that make little sense until we investigate.</p>
 
-<<timed 5s t8n>><span class="button-wrapper" role="button" aria-label="Click Button to go Next"><<button [[Next|Eighteen]]>><</button>></span> <</timed>>
+<<timed 5s t8n>><span class="button-wrapper"  aria-label="Click Button to go Next"><<button [[Next|Eighteen]]>><</button>></span> <</timed>>
 		</div>
 	</div>
 <<include "mentor">>	
@@ -1800,7 +1800,12 @@ but passing those will give you the power to nudge the past if your Time Mission
 <p>Please help!</p>
 	
 	<<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "Cypher">><</button>></span>
+<span class="button-wrapper" aria-label="Click Button to go Next">
+	<<button "Next" "TransPass">>
+		<<set $iconOnly to false>>
+		<<set $next to "Cypher">>
+	<</button>>
+</span>
 	 <</timed>>
 	 <</timed>>
 				</div >
