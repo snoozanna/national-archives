@@ -7,7 +7,7 @@ Ministry of Time Travel - National Archives
 	"ifid": "53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "",
+	"start": "Thirteen",
 	"tag-colors": {
 		"code-of-conduct": "blue",
 		"cypher": "gray",
@@ -31,17 +31,7 @@ Ministry of Time Travel - National Archives
 :: Story JavaScript [script]
 UIBar.destroy();
 
-/* <<ScrollTo>> macro: Scrolls the window to the given element ID.
-			Waits for element to exist.
-			Accepts parameters for scrollIntoView().  See:
-https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
 
-Usage:
-	Scroll element into view aligned to the top of the window:
-		<<ScrollTo "ElementID">>
-	Scroll element into view aligned to the bottom of the window:
-		<<ScrollTo "ElementID" false>>
-*/
 Macro.add('ScrollTo', {
 	skipArgs : false,
 	handler  : function () {
@@ -244,8 +234,8 @@ setup.changeVol = (num) => {
 	</main>
 		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "Zero">><</link>></div><div id="text"></div></nav></footer>
 </div>
-<<silently>><<timed 10s t8n>><<append "#text">>
-<br><span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|Two]]>><<set $iconOnly to false>><</button>></span><</append>> <</timed>><</silently>>
+<<silently>><<timed 0.1s t8n>><<append "#text">>
+<br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|Two]]>><<set $iconOnly to false>><</button>></span><</append>> <</timed>><</silently>>
 
 
 
@@ -333,7 +323,7 @@ setup.changeVol = (num) => {
 
 <p>(We're not just going to reveal it to <em>anyone</em>)</p>
 
-<<timed 5s t8n>><span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Begin|Four]]>><</button>></span><</timed>>
+<<timed 0.1s t8n>><span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Begin|Four]]>><</button>></span><</timed>>
 	</div>
 	</div>
 
@@ -426,7 +416,7 @@ over secret files">
 <p>Yes, the MOTT is a secret organisation. </p>
 <p>Not even the government know about the MOTT. The PM doesn't know a thing. The National Archives staff do, so The National Archives staff have higher clearance! The MOTT is the hidden core - and protected by everyone.</p> 
 <p>You now are part of that.</p> 
-<<timed 5s t8n>><span class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|Eight]]>><</button>></span> <</timed>>
+<<timed 0.1s t8n>><span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button [[Next|Eight]]>><</button>></span> <</timed>>
 		</div>
 	</div>
 	</main>
@@ -504,8 +494,8 @@ over secret files">
 			<div id="scrambled" class="scrambled"><span>CRUMPETS</span></div>
 						<p>This is the favourite food of most members of the Ministry of Time Travel.</p> 
 <p>If you see someone eating a crumpet, they quite possibly are linked to the MOTT!</p>
-<<timed 5s t8n>>
-<br><div class="border upper"><span class="button-wrapper orange" aria-label="Click Button to go Next"><<button "Next" "CodeComplete">><<set $iconOnly to true>><<set $next to "Ten">><</button>></span></div ><</timed>>
+<<timed 0.1s t8n>>
+<br><div class="border upper"><span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button "Next" "CodeComplete">><<set $iconOnly to true>><<set $next to "Ten">><</button>></span></div ><</timed>>
 		</div>
 		</div>
 	
@@ -528,18 +518,22 @@ over secret files">
 		<div class="content-wrapper">
 			<<include "sidebarcode">>
 			<div class="content-item content text">
-					<<timed 2s>>
+					<<timed 0.1s>>
 					<img src="assets/img/completed-b.png" alt="completed stamp" class="completed">
 						<p><div id="text"> </div></p>
 						<</timed>>
+						<<timed 0.1s t8n>>
+<br><div class="border upper"><span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button "Next" >><<goto $next>><</button>></span></div ><</timed>>
 		</div>
+		
 </div>
+
 		<<include "mentor">>
 	</main>
 	<<include "footer">>
 </div>
 
-<<timed 8s>><<goto $next>><</timed>>
+/* <<timed 8s>><<goto $next>><</timed>> */
 
 
 :: Ten [nobr video] {"position":"778.3333333333334,732.3333333333333","size":"100,100"}
@@ -555,7 +549,7 @@ over secret files">
 	</footer>
 </div>
 <<silently>>
-<<timed 10s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "Eleven">><</button>></span><</append>> <</timed>>
+<<timed 0.1s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "Eleven">><</button>></span><</append>> <</timed>>
 <</silently>>
 
 
@@ -650,7 +644,7 @@ over secret files">
 
 <p>Interpreting clears the fog.</p>
 
-<<timed 5s t8n>><span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwelveTwo]]>><</button>></span><</timed>>
+<<timed 0.1s t8n>><span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|TwelveTwo]]>><</button>></span><</timed>>
 		</div>
 	</div>
 	
@@ -819,8 +813,10 @@ over secret files">
 			<<include "sidebarfog">>
 			<div class="content-item content text">
 					
-					<<timed 3s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
+					<<timed 0.1s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
 						<p><div id="text"> </div></p>
+						<<timed 0.1s t8n>>
+<br><div class="border upper"><span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button "Next" >><<goto $next>><</button>></span></div ><</timed>>
 		</div>
 		</div>
 		<<include "mentor">>
@@ -828,7 +824,6 @@ over secret files">
 <<include "footer">>
 </div>	
 
-<<timed 8s>><<goto $next>><</timed>>
 
 
 
@@ -856,7 +851,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 </div>
 <<silently>>
 
-<<timed 10s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $next to "Sixteen">><<set $iconOnly to false>><</button>></span><</append>> <</timed>>
+<<timed 0.1s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "TransPass">><<set $next to "Sixteen">><<set $iconOnly to false>><</button>></span><</append>> <</timed>>
 <</silently>>
 
 :: Sixteen [nobr logo] {"position":"788,1319.6666666666667","size":"100,100"}
@@ -935,7 +930,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 			<p>Welcome to the Signal Fire System challenge.</p> 
 <p>Sometimes we receive mysterious messages from the Signal Fire System that make little sense until we investigate.</p>
 
-<<timed 5s t8n>><span class="button-wrapper"  aria-label="Click Button to go Next"><<button [[Next|Eighteen]]>><</button>></span> <</timed>>
+<<timed 0.1s t8n>><span class="button-wrapper"  aria-label="Click a button or link to move on"><<button [[Next|Eighteen]]>><</button>></span> <</timed>>
 		</div>
 	</div>
 <<include "mentor">>	
@@ -965,7 +960,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <p>Fortunately, there were some examples in The National Archives so we could break it.</p>
 <p>Let's see if you can work out how to find how to get into the document. We'll show you the word up close.</p>
 
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|Nineteen]]>><</button>></span>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|Nineteen]]>><</button>></span>
 		</div>
 	</div>
 	
@@ -1000,12 +995,12 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	<span onclick="document.getElementById('player').pause()" aria-label="Click here for a hint" class="button-wrapper  inline">
 	<<button "Hint?">><<replace "#hint">>
 			<audio src="assets/audio/15. Challenge 3 - 4 V2.mp3" autoplay></audio>
-			<p><em>You'll discover the truth through its reflection</em></p> 
+			<p><em>You'll discover the truth <br/>through its reflection</em></p> 
 			<p><em>(a mirror or a selfie may help)</em></p><</replace>>
 	<</button>></span>
 	<<else>>
 	<span class="button-wrapper  inline" aria-label="Click here for a hint">
-		<<button "Hint?">><<replace "#hint">><p><em>You'll discover the truth through its reflection </em></p><p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>>
+		<<button "Hint?">><<replace "#hint">><p><em>You'll discover the truth<br/> through its reflection </em></p><p><em>(a mirror or a selfie may help)</em></p><</replace>><</button>>
 	</span>
 	<</if>>
 
@@ -1047,7 +1042,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 <p>Here is what we found inside the note you opened. </p>
 
-<br> <span aria-label="Click Button to go Next" class="button-wrapper"><<button [[Next|TwentyOneOne]]>><</button>></span>
+<br> <span aria-label="Click a button or link to move on" class="button-wrapper"><<button [[Next|TwentyOneOne]]>><</button>></span>
 			</div>
 	</div>
 	<<include "mentor">>
@@ -1069,7 +1064,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 		<p> Are you here to safeguard the sands of time?</p>
 
 		<div class="multiple-btn-wrapper">
-			<span  class="button-wrapper sand" aria-label="Click Button to go Next">
+			<span  class="button-wrapper sand" aria-label="Click a button or link to move on">
 			<<button "Yes">><<goto "Question">><<set $iconOnly to false>><</button>></span>
 			<span class="button-wrapper sand" aria-label="Click Button to Quit"><a href="https://www.nationalarchives.gov.uk/" target="_blank" rel="noreferrer">No</a>
 			/* [[No|https://www.nationalarchives.gov.uk/]] */</span>
@@ -1170,7 +1165,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 								<span id="line10" class="medieval" aria-hidden="true">c r u m p e t &emsp; m a k i n g</span><span style="width: 0px; opacity: 0; position: absolute; top: 0px;">crumpet making</span>
 								<span id="line11" class="medieval">no crumpets will be made</span></div>
 								
-								<<timed 25s t8n>><br><span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentyOneTwo]]>><</button>></span><</timed>>
+								<<timed 0.1s t8n>><br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|TwentyOneTwo]]>><</button>></span><</timed>>
 				</div>
 				</div >
 	</div>
@@ -1264,8 +1259,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <p>Welcome to the Nudging Challenge.</p>
 <p>Nudging the past is very dangerous. So, we must be sure we are nudging the right moment in history to keep things how they should be in the present.</p> 
 <p>We have over 11 million records at The National Archives that we can investigate to give us a good idea on what happens, but there are always gaps, gaps that we must fill to make sure we are taking the right action.</p>
-<<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentyFive]]>><</button>></span> <</timed>>
+<<timed 0.1s t8n>>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|TwentyFive]]>><</button>></span> <</timed>>
 		</div>
 	</div>
 		<<include "mentor">>	
@@ -1292,9 +1287,9 @@ this allows us to interpret what is really going on and not just make rash decis
 
 <span id="tensixsix" class="intext"><img src="assets/img/1066.png" alt="image of William the Conqueror in 1066"></span><p>We once nudged the wrong moment in 1066 and spent weeks trying to make sure William the Conqueror still became King.</p> 
 <p>Oh there was so much paperwork!</p>
-<<timed 5s t8n>>
+<<timed 0.1s t8n>>
 
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentySix]]>><</button>></span>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|TwentySix]]>><</button>></span>
 <</timed>>
 		</div>
 	</div>
@@ -1324,9 +1319,9 @@ I can do this by connecting your phone up to the Signal Fire System.</p>
 <p>There'll be some security questions you'll need to complete
 but passing those will give you the power to nudge the past if your Time Mission requires it.</p>
 <p>The MOTT Code Of Conduct will help you.</p>
-<<timed 5s t8n>>
+<<timed 0.1s t8n>>
 
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentySevenOne]]>><</button>></span>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|TwentySevenOne]]>><</button>></span>
  <</timed>>
 		</div>
 	</div>
@@ -1390,7 +1385,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <span class="CoCTitle"><h2>Time</h2> Time is Tricky. Don't worry if not everything makes sense, we receive messages from a faraway future through a time machine, not everything makes sense.</span>
 </div>
 </div>
-		/* <span class="button-wrapper" aria-label="Click Button to go Next"><<button [["I've read it"|TwentySevenTwo]]>><</button>></span> */
+
 		</div>
 	</div>
 <<include "mentor">>
@@ -1409,10 +1404,10 @@ but passing those will give you the power to nudge the past if your Time Mission
 <div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 5 video"><iframe src="https://player.vimeo.com/video/640381100?h=cad3056aaf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 5"></iframe>
 </div>
 </main>
-	<footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwentySevenTwo">><</link>></div><div id="text"></div></nav></footer>
+	<footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwentySevenOne">><</link>></div><div id="text"></div></nav></footer>
 	</div>
 <<silently>>
-<<timed 10s t8n>><<append "#text">><br><span aria-label="Click Button to go Next" class="button-wrapper"> <<button "Next" "TransPass">><<set $next to "TwentyNine">><<set $iconOnly to false>><</button>></span><</append>> <</timed>>
+<<timed 0.1s t8n>><<append "#text">><br><span aria-label="Click a button or link to move on" class="button-wrapper"> <<button "Next" "TransPass">><<set $next to "TwentyNine">><<set $iconOnly to false>><</button>></span><</append>> <</timed>>
 <</silently>>
 
 
@@ -1429,7 +1424,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwentyOneTwo">><</link>></div><div id="text"></div></nav></footer>
 
 <<silently>>
-<<timed 10s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "TwentyThree">><</button>></span><</append>> <</timed>>
+<<timed 0.1s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "TwentyThree">><</button>></span><</append>> <</timed>>
 <</silently>>
 
 
@@ -1444,8 +1439,10 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<<include "sidebarfire">>
 			<div class="content-item content text">
 					
-					<<timed 3s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
+					<<timed 0.1s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
 						<p><div id="text"> </div></p>
+						<<timed 0.1s t8n>>
+<br><div class="border upper"><span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button "Next" >><<goto $next>><</button>></span></div ><</timed>>
 		</div>
 		</div>
 		<<include "mentor">>
@@ -1543,9 +1540,9 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<p>I told you you'd need to use it sooner rather than later! Are you ready to load a tutorial mission? It will pull on the skills you have learnt from the other challenges.</p>
 			<p>If you need to complete this later - remember the codeword BAGUETTE to finish your training at a later time. It's the Secret Codeword. </p>
 
-<<timed 5s t8n>>
+<<timed 0.1s t8n>>
 
-<span class="button-wrapper" aria-label="Click Button to go Next">
+<span class="button-wrapper" aria-label="Click a button or link to move on">
 <<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "ThirtyOne">><</button>></span>
  <</timed>>
 		</div>
@@ -1591,8 +1588,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 <p>You have been selected for this mission as you have the skills we need as a Time Agent. You’ll need all the skills from your training.</p>
 
 <p>Are you ready for the message from the Signal Fire System?</p>
-<<timed 5s t8n>>
-<br><span class="button-wrapper plain inverse" aria-label="Click Button to go Next"><<button "YES, send it through Chief Timer" >>
+<<timed 0.1s t8n>>
+<br><span class="button-wrapper plain inverse" aria-label="Click a button or link to move on"><<button "YES, send it through Chief Timer" >>
 <<goto "IncomingMessageFr">>
 <</button>></span><</timed>>
 
@@ -1643,6 +1640,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 <p>That was all in French.</p>
 
 <p>Let's translate it for you.</p>
+<<timed 0.1s t8n>>	<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|IncomingMessageEn]]>><</button>></span>
+							<</timed>>
 </div>
 		</div>
 	</div>
@@ -1650,13 +1649,6 @@ but passing those will give you the power to nudge the past if your Time Mission
 	</main>
 	<<include "footermission">>
 </div>
-
-
-<<silently>>
-<<timed 10s>>
-<<goto "IncomingMessageEn">>
-<</timed>>
-<</silently>>
 
 
 :: ThirtyThreeOne [nobr mission] {"position":"1785,618.6666666666666","size":"100,100"}
@@ -1684,8 +1676,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <span id="georgesig" class="intext"><img src="assets/img/siggeorge.png" alt="George Scovell’s signature and example of coded letter."></span>
 
-<<timed 5s t8n>><<append "#text">>
-<span class ="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtyThreeTwo]]>><</button>></span>
+<<timed 0.1s t8n>><<append "#text">>
+<span class ="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtyThreeTwo]]>><</button>></span>
 <</append>> <</timed>></div>
 		</div>
 	</div>
@@ -1728,8 +1720,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 <p>This must be what they nudged. They are distracting Scovell so he can’t solve the code.</p>
 <p>If Scovell doesn’t break the code then the British would never know where to launch their attacks, they would never find The Great Paris Cipher, would lose the battle and it seems, we would all end up speaking French.</p>
 
-<<timed 5s>>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtySix]]>><</button>></span><</timed>></div>
+<<timed 0.1s>>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtySix]]>><</button>></span><</timed>></div>
 		</div>
 	</div>
 <<include "oldman">>
@@ -1761,8 +1753,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 	<p>That's what the signal fire system message meant. TADAH have done this just to annoy me as they know it will cause havoc and that I love crumpets and that I need them to do the job!</p>
 	
 	<p>We need to get to work!</p>
-	<<timed 5s t8n>>
-	<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtySevenOne]]>><</button>></span>
+	<<timed 0.1s t8n>>
+	<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtySevenOne]]>><</button>></span>
 	 <</timed>>
 			</div>
 		</div>
@@ -1799,8 +1791,8 @@ but passing those will give you the power to nudge the past if your Time Mission
 <p lang="fr">Aidez-moi, s'il vous plait</p>
 <p>Please help!</p>
 	
-	<<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next">
+	<<timed 0.1s t8n>>
+<span class="button-wrapper" aria-label="Click a button or link to move on">
 	<<button "Next" "TransPass">>
 		<<set $iconOnly to false>>
 		<<set $next to "Cypher">>
@@ -1943,8 +1935,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <</append>> <</timed>>
 
 <<timed 13s t8n>><<append "#text">><<removeclass ".left" "last">>
-<span class="SFS left last"><p>Have you broken the French
-code yet?</p></span>
+<span class="SFS left last"><p>Have you broken the French code yet?</p></span>
 <</append>> <</timed>>
 
 <<timed 16s t8n>><<append "#text">><br>
@@ -1987,7 +1978,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 
 <<timed 46s t8n>><<append "#text">><br>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|FourtyOne]]>><</button>></span>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|FourtyOne]]>><</button>></span>
 <</append>> <</timed>>
 
 <</silently>>
@@ -2041,7 +2032,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<p id="mount"></p>
 <label for="textbox--password" tabindex="0"><span aria-label="Enter the code word that you have received by text message" role="label">Enter the code word that you have received by text message</span></label>
 	<br>
-	<<textbox "_password" "" >><br/><span  class="button-wrapper" aria-label="Click Button to go Next"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+	<<textbox "_password" "" >><br/><span  class="button-wrapper" aria-label="Click a button or link to move on"><<button "Enter">><<set $answer to _password.toUpperCase()>><<if $answer is "CIPHER">><<goto "FourtyTwo">><<else>><<replace "#wrong">>Wrong<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
 	<br><span id="wrong"></span>
 </div >
 		<<timed 60s>> <<replace "#mount">>Input Codeword to Continue<</replace>><</timed>>
@@ -2061,22 +2052,24 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<main id="main" class="menu">
 <div class="content-wrapper" id="content">
 	<img src="assets/img/baguette.png" alt="Secret Mission Logo" class=" orange">
-				<div class="content-item content mission com">
-			
-				<<timed 1s>><img src="assets/img/completed-w.png" class="completed" ><</timed>>
-				</div>
-				/* <div id="text"></div> */
-				</div>
+	<div class="content-item content mission com">
+		<<timed 0.1s>><img src="assets/img/completed-w.png" class="completed" ><</timed>>
+			<<timed 0.1s t8n>>
+<br><div class="border upper"><span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button "Next" >><<goto "FourtyTwoTwo">><</button>></span></div ><</timed>>
+	</div>
+
+</div>
+				
 /* <<include "oldman">> */
 	</main>
 
 </div>
 
-<<silently>>
+/* <<silently>>
 
 <<timed 8s t8n>><<goto "FourtyTwoTwo">>
 <</timed>>
-<</silently>>
+<</silently>> */
 
 
 :: FourtyTwoTwo [nobr] {"position":"2075,1550","size":"100,100"}
@@ -2102,7 +2095,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 				<p>A nudge in a direction.</p>
 				<p>I think it is time for the final video. </p>
 
-<<timed 5s t8n>><span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "FourtyThree">><<set $next to "Sixteen">><</button>></span>
+<<timed 0.1s t8n>><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "FourtyThree">><<set $next to "Sixteen">><</button>></span>
 <</timed>></div>
 	</div>
 	</div>
@@ -2130,7 +2123,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "Zero">><</link>></div><div id="text"></div></nav></footer>
 </div>
 <<silently>>
-<<timed 10s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "TransPass">><<set $next to "FourtyFour-Cert">><</button>></span><</append>> <</timed>>
+<<timed 0.1s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "TransPass">><<set $next to "FourtyFour-Cert">><</button>></span><</append>> <</timed>>
 <</silently>>
 
 :: FourtyFour-Cert [nobr] {"position":"2093.0000000000005,1217.6666666666665","size":"100,100"}
@@ -2146,8 +2139,8 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 		</div >
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 <div class="certificate-wrapper">
-	<img src="assets/img/certificateteal.jpg" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate"/>
-	/* <div class="certificate-text">
+	<img src="assets/img/certificateteal.png" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate"/>
+	<div class="certificate-text">
 		<p>
 			<span class="inline-icon-wrap"><img src="assets/img/tick.png" alt="tick icon"></span>
 			Eligible for Field Duty
@@ -2160,9 +2153,9 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 			<span class="inline-icon-wrap"><img src="assets/img/tick.png" alt="tick icon"></span>
 			Signal Fire System access granted
 		</p>
-</div> */
 </div>
-<span class="button-wrapper orange" aria-label="Click Button to go Next"><<button [[Next|FourtyFour-End]]>><</button>></span>
+</div>
+<span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button [[Next|FourtyFour-End]]>><</button>></span>
 </main>
 
 
@@ -2183,9 +2176,9 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 				<div id="text">
 				<p>Thank you for taking your training. </p>
 
-<p>You’ll receive information on future missions by keeping an eye out on The National Archives website or sign up for news <a aria-label="Button" href="https://www.nationalarchives.gov.uk/contact-us/email-updates/" target="_blank" style="text-decoration:underline">HERE</a></p>
+<p>You’ll receive information on future missions by keeping an eye out on The National Archives website or <a aria-label="Button" href="https://www.nationalarchives.gov.uk/contact-us/email-updates/" target="_blank" style="text-decoration:underline">sign up</a> for news. </p>
 
-<p>And if you’d be happy to tell us how you found the Training please click <a aria-label="Button" href="https://www.smartsurvey.co.uk/s/OKRCPD/" target="_blank" style="text-decoration:underline">HERE</a>, we’re always striving to improve the training here at the MOTT.</p>
+<p>And if you’d be happy to tell us how you found the Training please <a aria-label="Button" href="https://www.smartsurvey.co.uk/s/OKRCPD/" target="_blank" style="text-decoration:underline">get in touch</a>.  We’re always striving to improve the training here at the MOTT.</p>
 
 <p>Well done Agent. </p>
 <p>You’re ready to safeguard the sands of time! </p>
@@ -2220,6 +2213,9 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 				<div id="text"><p>Scovell was very clever so I’m unsure why he wouldn’t be able to break the code...</p>
 
 <p>I’m going to punch the Signal Fire System into the 22nd of December 1812. We’ll be able to hear fragments of a conversation between Scovell and Wellington.</p>
+	<<timed 0.1s>>
+					<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|Conversation]]>><</button>></span>
+					<</timed>>
 </div>
 		</div>
 	</div>
@@ -2229,7 +2225,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<include "footermission">>
 </div>
 
-<<timed 20s t8n>><<goto "Conversation">> <</timed>>
+
 
 
 
@@ -2266,8 +2262,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 </span> <</append>> <</timed>>
 
 <<timed 14s t8n>><<append "#text">><<removeclass ".left" "last">>
-<span class="SFS left last" id="bottom1"> <p>Have you broken the French
-code yet?</p> </span><<ScrollTo "bottom1" false>>
+<span class="SFS left last" id="bottom1"> <p>Have you broken the French code yet?</p> </span><<ScrollTo "bottom1" false>>
 <</append>> <</timed>>
 
 <<timed 17s t8n>><<append "#text">><br>
@@ -2298,7 +2293,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <</append>> <</timed>>
 
 <<timed 40s t8n>><<append "#text">><br> /*<<addclass ".code" "disappear">>*/
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtyFive]]>><</button>></span>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtyFive]]>><</button>></span>
 <</append>> <</timed>>
 
 <</silently>>
@@ -2336,8 +2331,8 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <p>Otherwise, who knows what will happen.</p>
 
 <p>Let’s play out where we need to nudge. </p>
-<<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|Conversation2]]>><</button>></span>
+<<timed 0.1s t8n>>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|Conversation2]]>><</button>></span>
 <</timed>></div>
 		</div>
 	</div>
@@ -2365,14 +2360,18 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 					/* <img src="https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif" class="gif signal" alt="Signal Fire system logo "> */
 					<span class="timer-wrapper gif signal" id="warning" alt="a lit match with signals pulsing out of it">
 					<<link [img[https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif]]>>
-					<<replace "#warning">>
-						<<link [img[assets/img/signalfirestop.png]]>>
-		
-					<</link>>
-			
-					<</replace>>
+						<<replace "#warning">>
+							<<link [img[assets/img/signalfirestop.png]]>>
+						<</link>>
+						<</replace>>
 					<</link>>
 					</span>
+					<<timed 6s>>
+						<<replace "#warning">>
+							<<link [img[assets/img/signalfirestop.png]]>>
+						<</link>>
+						<</replace>>
+					<</timed>>
 					<<set _finish to true>>
 					<div id="text"></div >
 				</div>
@@ -2394,8 +2393,8 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 			<span lang="fr"><p>Bonjour, quelque chose a changé avec Napoléon.</p></span>
 							<span lang="fr"><p>Aide George Scovell.</p></span>
 							<span lang="fr"><p>Et Baguette. Baguette. Baguette.</p></span>
-							<<timed 5s t8n>>
-								<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtyTwo]]>><</button>></span>
+							<<timed 0.1s t8n>>
+								<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtyTwo]]>><</button>></span>
 							<</timed>>
 <</replace>>
 <</timed>>
@@ -2445,13 +2444,12 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 	<<replace "#text">>
 	<p>Hello, something has changed with Napoleon.</p>
 <p>Help George Scovell.</p>
-<p>And Baguette. Baguette. Baguette.</p><</replace>>
+<p>And Baguette. Baguette. Baguette.</p>
+	<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtyThreeOne]]>><</button>></span><</replace>>
 	<</timed>>
 
 
 
-<<timed 25s t8n>><<goto "ThirtyThreeOne">>
-<</timed>>
 <</silently>>
 
 
@@ -2469,7 +2467,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 	
 	 <p>Fortunately, we broke the code, and, well, I'll explain what we do if something is changed in the past.</p>
 	
-	<<timed 5s t8n>><span class="button-wrapper" aria-label="Click Button to go Next"><<button "Next" "FireComplete">><<set $next to "TwentyTwo">><<set $iconOnly to true>><</button>></span><</timed>>
+	<<timed 0.1s t8n>><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "FireComplete">><<set $next to "TwentyTwo">><<set $iconOnly to true>><</button>></span><</timed>>
 			</div>
 	</div>
 	<<include "mentor">>
@@ -2507,10 +2505,10 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 
 	<div class="intro-text">
 	  <p>Welcome to The National Archives.</p>
-	  <p>This experience requires you to tap through on your computer. You just need to click a button to move on. </p>
+	  <p>This experience requires you to tap through on your computer. You just need to click a button or link to move on. </p>
 	  
 	  <div class="flex-container-row"><p class="fit">Try it now.</p>
-		<br/><span class="button-wrapper circle" aria-label="Click Button to go Next"><<button [["Next"|TutorialTwo]]>><</button>></span></div>
+		<br/><span class="button-wrapper circle" aria-label="Click a button or link to move on"><<button [["Next"|TutorialTwo]]>><</button>></span></div>
 	</div>
 	<div class="holding"></div>
 	</main>
@@ -2557,7 +2555,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <p>When you are ready, click begin.</p> 
 <p class="disappear">If you are using a screen reader, check the alt text on the images for some help.</p>
 
-<<timed 5s t8n>><span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Begin|Thirteen]]>><</button>></span> <</timed>>
+<<timed 0.1s t8n>><span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Begin|Thirteen]]>><</button>></span> <</timed>>
 		</div>
 	</div>
 	<<include "mentor">>
@@ -2568,58 +2566,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 
 
 
-:: TwentySevenTwo [nobr] {"position":"1534.6666666666667,659.6666666666669","size":"100,100"}
-/* REDUNDANT  */
-<div class="wrapper menu"><<set $title to "cc">>
-<<include "headermenu">>
-<main id="main"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/code of conduct strings.mp3" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/21b. Challenge 4 - 4.mp3" autoplay>Sound plays</audio><</if>>
-<div class="content-wrapper">
-		<<include "sidebartime">>
-		<div class="content-item content text">
-				
-				<p>To register you'll need to send the word <strong>IGNITE</strong> to <strong><a href="tel:0748-078-6415">0748-078-6415</a></strong>.</p>
 
-<p>You'll recieve the codeword to move on through the Signal Fire System.</p>
-
-
-<span role="input" aria-label="Enter the code word that you have received by text message">
-<<textbox "_password" "" >></span><span class="button-wrapper" aria-label="Check the Codeword"><<button "Check">><<set $answer to _password.toUpperCase()>><<if $answer is "TADAH">><<set $next to "TwentyEight">><<set $iconOnly to true>><<goto "TimeComplete">><<else>><<replace "#wrong">>Wrong codeword<<timed 5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
-
-<br><span id="wrong"></span>
-				<br><div id="code">
-<div id="CoC">
-<span class="Header"><img src="https://remote.co.com/MoTT/AgentTraining/Images/mottlogowords.png">
-<h1>code of conduct</h1></span>
-
-<span class="CoCTitle"><h2>clean</h2> a clean desk is a clean mind, and saves on cleaning costs.</span>
-
-<span class="CoCTitle"><h2>smile</h2> Always offer the national archives & ministry staff a smile. It goes a long way.</span>
-
-<span class="CoCTitle"><h2>shhhh</h2>Keep the ministry secret at all costs. Try not to talk about it in your sleep.</span>
-
-<span class="CoCTitle"><h2>Consequences</h2> Butterfly Effect. Butterfly Effect. Butterfly Effect. Butterfly Effect. Don't forget the Butterfly Effect.</span>
-
-<span class="CoCTitle"><h2>Mechanics</h2> Remember the Signal Fire System is complicated. If you encounter problems, call the Mechanics. Don't pretend you can fix it with sticky tape.</span>
-
-<span class="CoCTitle"><h2>Nudge</h2> Don't Nudge time Unless you absolutely must. Careless Nudges lead to more Nudges and create <u>a lot</u> of paperwork.</span>
-
-<span class="CoCTitle"><h2>Stay Alert</h2> Is that woman over there really reading her newspaper? Enemy agents have eyes and ears everywhere.</span>
-
-<span class="CoCTitle"><h2>Tadah</h2> If you encounter tadah, ring the level 5 alarm.</span>
-
-<span class="CoCTitle"><h2>Crumpet</h2> No Crumpets near the Signal Fire System. </span>
-
-<span class="CoCTitle"><h2>Time</h2> Time is Tricky. Don't worry if not everything makes sense, we recieve messages from a faraway future through a time machine, not everything makes sense.</span>
-</div>
-</div>
-		<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|TwentySevenTwo]]>><</button>></span>
-		</div>
-	</div>
-<<include "mentor">>
-</main>
-<<include "footer">>
-
-</div>
 
 :: TimeComplete [nobr] {"position":"1148,457.3333333333333","size":"100,100"}
 <div class="wrapper menu ">
@@ -2632,8 +2579,10 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 			<<include "sidebartime">>
 			<div class="content-item content text">
 					
-					<<timed 3s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
+					<<timed 0.1s>><img src="assets/img/completed-b.png" alt="completed stamp" class="completed" ><</timed>>
 						<p><div id="text"> </div></p>
+						<<timed 0.1s t8n>>
+<br><div class="border upper"><span class="button-wrapper orange" aria-label="Click a button or link to move on"><<button "Next" >><<goto $next>><</button>></span></div ><</timed>>
 		</div>
 		</div>
 		<<include "mentor">>
@@ -2642,7 +2591,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 </div>	
 
 
-<<timed 8s>><<goto $next>><</timed>>
+/* <<timed 8s>><<goto $next>><</timed>> */
 
 
 
@@ -2667,8 +2616,8 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 					<p>So, what do we know? </p>
 					<p>Well, on the 22nd of December, Wellington, who was the British General, was waiting for Scovell. </p>
 					<p>Scovell had received an important set of French letters that had been intercepted. In it was the key to the battles ahead.</p>
-					<<timed 5s>>
-					<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtyFour]]>><</button>></span>
+					<<timed 0.1s>>
+					<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtyFour]]>><</button>></span>
 					<</timed>>
 </div>
 		</div>
@@ -2709,8 +2658,8 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 					
 	
 
-<<timed 5s t8n>><br>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtyThreeThree]]>><</button>></span>
+<<timed 0.1s t8n>><br>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtyThreeThree]]>><</button>></span>
 <</timed>></div>
 		</div>
 	</div>
@@ -2749,8 +2698,8 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 
 <p>However, it can’t decode codes, so we really need you to get your thinking cap on.</p>
 
-<<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next"><<button [[Next|ThirtySevenThree]]>><</button>></span>
+<<timed 0.1s t8n>>
+<span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|ThirtySevenThree]]>><</button>></span>
  <</timed>></div>
 		</div>
 	</div>
@@ -2785,7 +2734,7 @@ code yet?</p> </span><<ScrollTo "bottom1" false>>
 <p> See, it's already starting to happen.</p>
 
 <<timed 5s t8n>>
-<span class="button-wrapper" aria-label="Click Button to go Next">
+<span class="button-wrapper" aria-label="Click a button or link to move on">
 	<<button "Next" "TransPass">>
 		<<set $iconOnly to false>>
 		<<set $next to "ThirtyEight">>

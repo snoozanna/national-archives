@@ -741,6 +741,10 @@ h3.subtitle > span.orange {
   max-width: 100%;
 }
 
+.content-wrapper > .content-item.content.mission.com {
+  flex-direction: column;
+}
+
 .fog-content-wrapper {
   display: flex;
 }
