@@ -66,9 +66,38 @@ setup.changeVol = (num) => {
 	bgAudio.volume = num
 }
 
+<!-- Google tag (gtag.js) -->
+setup.JSLoaded = false;
+ var lockID = LoadScreen.lock();  // Lock loading screen
+ importScripts("https://www.googletagmanager.com/gtag/js?id=G-XW1K3NN556")
+     .then(function() {
+         setup.JSLoaded = true;
+         window.dataLayer = window.dataLayer || [];
+         window.gtag = function (){ dataLayer.push(arguments); };
+         gtag('js', new Date());
+         gtag('config', 'G-XW1K3NN556');
+         LoadScreen.unlock(lockID);  // Unlock loading screen
+     }).catch(function(error) {
+         alert("Error: Could not load 'gtag.js'.");
+     }
+ );
+
+
+ $(document).on('click', 'a', function (ev) {
+ // Get the destination of the clicked link var passage 
+ var passage = $(this).attr('data-passage');
+ // Send the message to google analytics
+ gtag('event', 'Navigation', {
+     event_label    : passage,
+     event_category : 'GuestClick'
+ });
+
+ });
+
 
 
 :: Start [nobr] {"position":"134,244.33333333333337","size":"100,100"}
+
 
   <div class="wrapper audio" id="mount">
 	<div class="phone-warning"><p>MOTT is best experienced on a computer or tablet</p></div>
