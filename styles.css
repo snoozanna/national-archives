@@ -86,12 +86,18 @@ body[data-tags~="t8n-dissolve"] .transition-out {
   .audio-container {
     display: none !important;
   }
+  main {
+    display: none !important;
+  }
   .phone-warning {
     display: initial;
     text-align: center;
   }
   .phone-warning > p {
     text-align: center;
+  }
+  .multiple-btn-wrapper {
+    display: none !important;
   }
 }
 
@@ -174,6 +180,9 @@ nav.right {
 
 .logo-wrapper > .logo-container {
   width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 img.logo.mott {
@@ -247,6 +256,11 @@ a.link-internal.link-image:focus-visible,
   padding: 0.4em;
   line-height: 1;
 }
+
+.button-wrapper.restart > button {
+  font-size: 1.8rem;
+}
+
 /* plain buttons */
 
 .button-wrapper.plain {
@@ -425,7 +439,7 @@ header.menu-grid > .logo-wrapper > img.logo.na {
 
 .wrapper.menu > header > .logo-wrapper {
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .wrapper.main.menu > header > .logo-wrapper > .logo-item {
@@ -453,10 +467,12 @@ header.menu-grid > .logo-wrapper > img.logo.na {
     "g h i";
   justify-content: center;
   align-items: center;
-  max-height: 60vh;
+  max-height: 80vh;
   max-width: 100%;
   width: 100%;
   gap: 1rem;
+  margin-bottom: 4rem;
+  margin-top: -6rem;
 }
 
 .grid-item.code {

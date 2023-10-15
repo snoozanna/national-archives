@@ -177,7 +177,15 @@ setup.JSLoaded = false;
 :: headermenu [nobr]	
 <header>
 		<div class="logo-wrapper">
-		<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item" aria-hidden="true"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item" aria-hidden="true"></div>
+		<div class="logo-container">
+			<div class="inner-logo-container">
+				<img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item" aria-hidden="true">
+				<img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item" aria-hidden="true">
+			</div>
+			<span class="button-wrapper  restart" aria-label="Click a button to Restart Mission">
+			<<button "Restart Mission">><<goto "Start">><</button>>
+			</span>
+			</div>
 		<img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item" aria-hidden="true">
 		</div>
 </header>
@@ -185,7 +193,15 @@ setup.JSLoaded = false;
 :: headermenugrid [nobr]	
 <header class="menu-grid">
 		<div class="logo-wrapper ">
-			<div class="logo-container"><img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item" aria-hidden="true"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item" aria-hidden="true"></div><img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item" aria-hidden="true"></div>
+			<div class="logo-container">
+			<div class="inner-logo-container">
+			<img src="assets/img/na-logo.png" alt="The National Archives Logo" class="logo mott logo-item" aria-hidden="true"><img src="assets/img/mottlogo-w.png" alt="The Ministry of Time Travel Logo" class="logo mott logo-item" aria-hidden="true">
+			</div>
+			<span class="button-wrapper  restart" aria-label="Click a button to Restart Mission">
+			<<button "Restart Mission">><<goto "Start">><</button>>
+			</span>
+			</div>
+			<img src="assets/img/training-logo.png" alt="The Ministry of Time Travel Training 101 Logo" class="logo na logo-item" aria-hidden="true"></div>
 </header>
 
 :: sidebarcode [nobr]
@@ -2211,7 +2227,9 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 <p>Well done Agent. </p>
 <p>You’re ready to safeguard the sands of time! </p>
-
+	<span class="button-wrapper  restart" aria-label="Click a button to Restart Mission">
+			<<button "Restart Mission">><<goto "Start">><</button>>
+			</span>
 
 </div>
 		</div>
