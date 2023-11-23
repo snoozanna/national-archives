@@ -66,16 +66,16 @@ setup.changeVol = (num) => {
 	bgAudio.volume = num
 }
 
-<!-- Google tag (gtag.js) -->
+/* Google Tag */
 setup.JSLoaded = false;
  var lockID = LoadScreen.lock();  // Lock loading screen
- importScripts("https://www.googletagmanager.com/gtag/js?id=G-XW1K3NN556")
+ importScripts("https://www.googletagmanager.com/gtag/js?id=G-Q3K5KM37WG")
      .then(function() {
          setup.JSLoaded = true;
          window.dataLayer = window.dataLayer || [];
          window.gtag = function (){ dataLayer.push(arguments); };
          gtag('js', new Date());
-         gtag('config', 'G-XW1K3NN556');
+         gtag('config', 'G-Q3K5KM37WG');
          LoadScreen.unlock(lockID);  // Unlock loading screen
      }).catch(function(error) {
          alert("Error: Could not load 'gtag.js'.");
