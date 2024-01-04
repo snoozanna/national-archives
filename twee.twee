@@ -7,7 +7,7 @@ Ministry of Time Travel - National Archives
 	"ifid": "53B0E3E1-4287-42CA-8CB5-CE8FC230CEE2",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "",
+	"start": "TwelveTwo",
 	"tag-colors": {
 		"code-of-conduct": "blue",
 		"cypher": "gray",
@@ -762,9 +762,9 @@ over secret files">
 
 	<<timed 21s>>
 		<<replace "#countdown">>X<</replace>>
-		<<replace "#image">><img src="assets/img/chewinggum.jpeg" id="img3" alt="Packet of chewing gum for two a penny">
-		<<if $audioOn is true>><audio src="assets/audio/9. Challenge 2 - pic 3 v2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
-		<<replace "#image-text">><p>How many pieces of gum do you get for a penny?</p>
+		<<replace "#image">><img src="assets/img/cats.jpg" id="img3" alt="Six cats are sat at the table. Three of them are ginger.">
+		<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+		<<replace "#image-text">><p>How many ginger cats?</p>
 			<<set $seconds to 10>>
 			<<silently>>
 				<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
@@ -781,9 +781,9 @@ over secret files">
 	
 	<<timed 32s>>
 	<<replace "#countdown">>X<</replace>>
-	<<replace "#image">><img src="assets/img/numberplate.jpeg" id="img4" alt="Car with the license plate YYX328T" class="smaller">
+	<<replace "#image">><img src="assets/img/children.jpg" id="img4" alt="A teacher is reading an alphabet book to five young children" class="smaller">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/10. Challenge 2 - pic 4 EDIT.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
-	<<replace "#image-text">><p>What are the numbers on the number plate?</p><<set $seconds to 10>><<silently>>
+	<<replace "#image-text">><p>How many children? </p><<set $seconds to 10>><<silently>>
 	<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 		<<repeat 1s>>
 			<<set $seconds to $seconds - 1>>
@@ -798,9 +798,9 @@ over secret files">
 	
 	<<timed 43s>>
 	<<replace "#countdown">><</replace>>
-	<<replace "#image">><img src="assets/img/moonlanding.jpeg" id="img5" alt="The telephone number on this telegram I 1622" class="smaller">
+	<<replace "#image">><img src="assets/img/chocolate.jpeg" id="img5" alt="Two women and a child are in a field. Behind them are four cows." class="smaller">
 	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/11. Challenge 2 - pic 5.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
-	<<replace "#image-text">><p>What's the telephone number of this restricted Moon Landing call?</p><<set $seconds to 10>>
+	<<replace "#image-text">><p>How many cows?</p><<set $seconds to 10>>
 		<<silently>>
 		<<repeat 1s>>
 			<<set $seconds to $seconds - 1>>
@@ -830,8 +830,8 @@ over secret files">
 		<br>
 				<span id="wrong"></span>
 		<span class="multiple-btn-wrapper">
-			<span class="button-wrapper" aria-label="Click Button to check your answer"><<button "Check">><<if _password is "4223281622">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
-			<span class="button-wrapper" aria-label="Click Button to replay"><<button "Replay">><<goto "Thirteen">><</button>></span>
+			<span class="button-wrapper" aria-label="Click Button to check your answer"><<button "Check">><<if _password is "42454">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+			<span class="button-wrapper" aria-label="Click Button to replay"><<button "Replay">><<goto "ThirteenNoTimer">><</button>></span>
 			</span>
 
 	</div>
@@ -846,6 +846,112 @@ over secret files">
 		<<include "footer">>
 </div>
 
+:: ThirteenNoTimer [nobr] {"position":"925,950","size":"100,100"}
+<div class="wrapper menu">
+<<include "headermenugrid">>
+	<main id="main" class="menu">
+	
+	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+	
+	<div class="content-wrapper">
+		<<include "sidebarfog">>
+		<div class="content-item content game"> 
+			<div id="gameContent" class="game-content">
+			</div>
+		</div>
+	</div>
+
+	<<include "mentor">>
+	</main>
+		<<include "footer">>
+</div>
+
+<<timed 0.1s>>
+	<<replace "#gameContent">><<include "ThirteenNoTimer1">><</replace>>
+<</timed>>
+
+:: ThirteenNoTimer1 [nobr]
+<h3 class="subtitle"> <span id="image-text"><p>How many women are in the picture? </p></span></h3>
+	<div class="fog-content-wrapper">	
+		<div id="image" class="fog-img-wrapper"><img src="assets/img/women2.jpeg" id="img1" alt="four women">
+					<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio>
+					<</if>></div>
+		<div class="button-wrapper" id="button-wrapper">
+			<<button "Next">>
+				<<replace "#gameContent">><<include "ThirteenNoTimer2">><</replace>>
+			<</button>>
+		</div>
+	</div>
+
+
+:: ThirteenNoTimer2 [nobr]
+<h3 class="subtitle"> <span id="image-text"><p>How many parrots?</p></span></h3>
+	<div class="fog-content-wrapper">	
+		<div id="image" class="fog-img-wrapper">
+			<img src="assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller">
+			<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
+		<div class="button-wrapper" >
+		<<button "Next">>
+				<<replace "#gameContent">><<include "ThirteenNoTimer3">><</replace>>
+			<</button>>
+		</div>
+	</div>
+
+:: ThirteenNoTimer3 [nobr]
+<h3 class="subtitle"> <span id="image-text"><p>How many ginger cats?</p></span></h3>
+	<div class="fog-content-wrapper">	
+		<div id="image" class="fog-img-wrapper"><img src="assets/img/cats.jpg" id="img3" alt="Six cats are sat at the table. Three of them are ginger.">
+							<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>></div>
+	<div class="button-wrapper" >
+		<<button "Next">>
+				<<replace "#gameContent">><<include "ThirteenNoTimer4">><</replace>>
+			<</button>>
+		</div>
+	</div>
+
+:: ThirteenNoTimer4 [nobr]
+<h3 class="subtitle"> <span id="image-text"><p>How many children? </p></span></h3>
+	<div class="fog-content-wrapper">	
+		<div id="image" class="fog-img-wrapper"><img src="assets/img/children.jpg" id="img4" alt="A teacher is reading an alphabet book to five young children" class="smaller">
+	<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>></div>
+	<div class="button-wrapper" >
+		<<button "Next">>
+				<<replace "#gameContent">><<include "ThirteenNoTimer5">><</replace>>
+			<</button>>
+		</div>
+	</div>
+
+:: ThirteenNoTimer5 [nobr]
+<h3 class="subtitle"> <span id="image-text"><p>How many cows?</p></span></h3>
+	<div class="fog-content-wrapper">	
+		<div id="image" class="fog-img-wrapper"><img src="assets/img/chocolate.jpeg" id="img5" alt="Two women and a child are in a field. Behind them are four cows." class="smaller">
+	<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>></div>
+	<div class="button-wrapper" >
+		<<button "Next">>
+				<<replace "#gameContent">><<include "ThirteenNoTimer6">><</replace>>
+			<</button>>
+		</div>
+	</div>
+
+:: ThirteenNoTimer6 [nobr]
+
+	<<if $audioOn is true>><audio src="assets/audio/Challenge 2 - enter numbers_replay.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+	<p>Did you get the numbers?</p>
+	<p>Enter them below if so, or hit replay for another go. </p>
+	
+	<div id="answer">
+	
+		<br>
+		<label for="textbox--password" tabindex="0"><span aria-label="Enter the numbers found in the images:" role="label">Enter the numbers found in the images:</span></label>
+		<<textbox "_password" "">>
+		<br>
+				<span id="wrong"></span>
+		<span class="multiple-btn-wrapper">
+			<span class="button-wrapper" aria-label="Click Button to check your answer"><<button "Check">><<if _password is "42454">><<set $next to "Fifteen">><<set $iconOnly to true>><<goto "FogComplete">><<else>><<replace "#wrong">>Try Again<<timed 2.5s>><<replace "#wrong">><</replace>><</timed>><</replace>><</if>><</button>></span>
+			<span class="button-wrapper" aria-label="Click Button to replay"><<button "Replay">><<goto "ThirteenNoTimer">><</button>></span>
+			</span>
+
+	</div>
 
 :: FogComplete [nobr] {"position":"1148,497.3333333333333","size":"100,100"}
 <div class="wrapper menu codeword question">
@@ -1409,25 +1515,25 @@ but passing those will give you the power to nudge the past if your Time Mission
 <span class="Header"><img src="https://remote.co.com/MoTT/AgentTraining/Images/mottlogowords.png">
 <h1>Code of Conduct</h1></span>
 
-<span class="CoCTitle"><h2>clean</h2>A clean desk is a clean mind, and saves on cleaning costs.</span>
+<p class="CoCTitle"><span>clean</span>A clean desk is a clean mind, and saves on cleaning costs.</p>
 
-<span class="CoCTitle"><h2>smile</h2> Always offer the national archives & ministry staff a smile. It goes a long way.</span>
+<p class="CoCTitle"><span>smile</span> Always offer the national archives & ministry staff a smile. It goes a long way.</p>
 
-<span class="CoCTitle"><h2>shhhh</h2>Keep the ministry secret at all costs. Try not to talk about it in your sleep.</span>
+<p class="CoCTitle"><span>shhhh</span>Keep the ministry secret at all costs. Try not to talk about it in your sleep.</p>
 
-<span class="CoCTitle"><h2>Consequences</h2> Butterfly Effect. Butterfly Effect. Butterfly Effect. Butterfly Effect. Don't forget the Butterfly Effect.</span>
+<p class="CoCTitle"><span>Consequences</span> Butterfly Effect. Butterfly Effect. Butterfly Effect. Butterfly Effect. Don't forget the Butterfly Effect.</p>
 
-<span class="CoCTitle"><h2>Mechanics</h2> Remember the Signal Fire System is complicated. If you encounter problems, call the Mechanics. Don't pretend you can fix it with sticky tape.</span>
+<p class="CoCTitle"><span>Mechanics</span> Remember the Signal Fire System is complicated. If you encounter problems, call the Mechanics. Don't pretend you can fix it with sticky tape.</p>
 
-<span class="CoCTitle"><h2>Nudge</h2> Don't Nudge time Unless you absolutely must. Careless Nudges lead to more Nudges and create <u>a lot</u> of paperwork.</span>
+<p class="CoCTitle"><span>Nudge</span> Don't Nudge time Unless you absolutely must. Careless Nudges lead to more Nudges and create <u>a lot</u> of paperwork.</p>
 
-<span class="CoCTitle"><h2>Stay Alert</h2> Is that woman over there really reading her newspaper? Enemy agents have eyes and ears everywhere.</span>
+<p class="CoCTitle"><span>Stay Alert</span> Is that woman over there really reading her newspaper? Enemy agents have eyes and ears everywhere.</p>
 
-<span class="CoCTitle"><h2>Tadah</h2> If you encounter tadah, ring the level 5 alarm.</span>
+<p class="CoCTitle"><span>Tadah</span> If you encounter tadah, ring the level 5 alarm.</p>
 
-<span class="CoCTitle"><h2>Crumpet</h2> No Crumpets near the Signal Fire System. </span>
+<p class="CoCTitle"><span>Crumpet</span> No Crumpets near the Signal Fire System. </p>
 
-<span class="CoCTitle"><h2>Time</h2> Time is Tricky. Don't worry if not everything makes sense, we receive messages from a faraway future through a time machine, not everything makes sense.</span>
+<p class="CoCTitle"><span>Time</span> Time is Tricky. Don't worry if not everything makes sense, we receive messages from a faraway future through a time machine, not everything makes sense.</p>
 </div>
 </div>
 

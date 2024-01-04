@@ -763,6 +763,7 @@ h3.subtitle > span.orange {
 
 .fog-content-wrapper {
   display: flex;
+  gap: 2rem;
 }
 
 .fog-content-wrapper > .timer {
@@ -1108,7 +1109,7 @@ p.nameSender.scovell {
   font-size: 0.9em;
   /* line-height: 1.4em; */
 }
-.CoCTitle h2 {
+.CoCTitle span {
   display: inline;
   text-decoration: underline;
   text-transform: uppercase;
@@ -1116,6 +1117,7 @@ p.nameSender.scovell {
   text-align: left;
   padding: 0px 0.5em 0px 0px;
   line-height: 1.5em;
+  font-weight: 900;
 }
 
 .Header h1 {
