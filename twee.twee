@@ -24,7 +24,7 @@ Ministry of Time Travel - National Archives
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
 
 @import url("generics.css");
-@import url("styles.css");s
+@import url("styles.css");
 /* @import url("ogstyles.css"); */
 
 
@@ -88,7 +88,7 @@ setup.changeVol = (num) => {
 
   <div class="wrapper audio" id="mount">
 	<div class="phone-warning"><p>MOTT is best experienced on a computer or tablet</p></div>
-<audio src="https://remote.co.com/MoTT/AgentTraining/assets/audio/Audioon_off.mp3" autoplay>Audio is not supported on your device</audio>
+<audio src="assets/audio/Audioon_off.mp3" autoplay>Audio is not supported on your device</audio>
 
 	<p><span class="inline-icon-wrap"><img src="assets/img/audio.png" alt="volume icon"></span>This experience has the option of an audio soundtrack.  </p>
 	<p>Would you like audio on or off? </p>
@@ -101,7 +101,7 @@ setup.changeVol = (num) => {
 				<strong> <span class="inline-icon-wrap"><img src="assets/img/audio.png"></span> Audio On</strong>
 				<br>
 				<p>Press the power on button to continue</p>
-				<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a></poweron>
+				<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="assets/img/onicon.png" alt="Power On button"></a></poweron>
 				<br>
 			<br>
 				<<link "Back">><<goto "Start">><</link>>
@@ -116,7 +116,7 @@ setup.changeVol = (num) => {
 <<replace "#mount">>
 			<strong> Audio Off</strong>
 			<p>Press the power on button to continue</p>
-			<a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" aria-label="Click this power on icon to continue" alt="Power on button icon" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a>
+			<a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" aria-label="Click this power on icon to continue" alt="Power on button icon" ><img src="assets/img/onicon.png" alt="Power On button"></a>
 	
 			<br>
 			<br>
@@ -243,7 +243,7 @@ setup.changeVol = (num) => {
 
 :: Two [nobr logo] {"position":"931.3333333333334,103.66666666666664","size":"100,100"}
 /* MENU  */
-<<set $title to "343">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+<<set $title to "343">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 <<if $audioOn is true>><audio src="assets/audio/Challenge 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 <div class="wrapper menu">
 <<include "headermenugrid">>
@@ -310,7 +310,7 @@ setup.changeVol = (num) => {
 <div class="wrapper menu">
 	<<include "headermenu">>
 	<main id="main" class="menu">
-	<p>/*<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 2.wav" autoplay>Sound plays</audio><</if>>*/<<if $audioOn is true>><audio src="assets/audio/2. Challenge 1 - Keyword 1 V2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
+	<p>/*<<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 2.wav" autoplay>Sound plays</audio><</if>>*/<<if $audioOn is true>><audio src="assets/audio/2. Challenge 1 - Keyword 1 V2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
 	
 	<div class="content-wrapper">
 		<<include "sidebarcode">>
@@ -345,7 +345,7 @@ setup.changeVol = (num) => {
 <div class="wrapper menu codeword question">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question">
-		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 		<div id="audiomount"></div>
 
 	<div class="content-wrapper">
@@ -405,7 +405,7 @@ setup.changeVol = (num) => {
 over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer1">
-	<p><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/3. Challenge 1 - Keyword 2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
+	<p><<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="assets/sounds/3. Challenge 1 - Keyword 2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
 	
 	<div class="content-wrapper">
 		<<include "sidebarcode">>
@@ -431,7 +431,7 @@ over secret files">
 :: Eight [nobr] {"position":"998.9999999999999,495.3333333333333","size":"100,100"}
 <div class="wrapper menu codeword question">
 <<include "headermenu">>
-	<main id="main" class=" menu codeword question "><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+	<main id="main" class=" menu codeword question "><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 		<div id="audiomount"></div>
 
 	<div class="content-wrapper">
@@ -483,8 +483,8 @@ over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer3">
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>>
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/5. Challenge 1 - end.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/5. Challenge 1 - end.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 
 	
 		<div class="content-wrapper">
@@ -513,7 +513,7 @@ over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer3">
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 	
 		<div class="content-wrapper">
 			<<include "sidebarcode">>
@@ -562,7 +562,7 @@ over secret files">
 <div class="wrapper menu">
 <<include "headermenugrid">>
 	<main id="main" class="menu">
-		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 		<<if $audioOn is true>><audio src="assets/audio/Challenge 2.mp3" autoplay >Audio is not supported on your device</audio><</if>>
 
 		/* GRID  */
@@ -632,7 +632,7 @@ over secret files">
 <<include "headermenu">>
 	<main id="main" class="menu">
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/6. Challenge 2 - intro pt 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/6. Challenge 2 - intro pt 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 	
 	<div class="content-wrapper">
 		<<include "sidebarfog">>
@@ -664,7 +664,7 @@ over secret files">
 <<include "headermenugrid">>
 	<main id="main" class="menu">
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 	
 	<div class="content-wrapper">
 		<<include "sidebarfog">>
@@ -684,7 +684,7 @@ over secret files">
 					</span></h3>
 				<div class="fog-content-wrapper">	
 					<div id="image" class="fog-img-wrapper">
-						<img src="assets/img/women2.jpeg" id="img1" alt="four women"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+						<img src="assets/img/women2.jpeg" id="img1" alt="four women"><<if $audioOn is true>><audio src="assets/sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 					</div>
 					<div class="timer ">
 						<span id="countdown" class="countdown"><h3 class="timer">$seconds</h3></span>
@@ -699,7 +699,7 @@ over secret files">
 	<<silently>>
 	<<timed 10s>>
 		<<replace "#countdown">>X<</replace>>
-		<<replace "#image">><img src="assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+		<<replace "#image">><img src="assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller"><<if $audioOn is true>><audio src="assets/sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 		<<replace "#image-text">><p>How many parrots?</p>
 			<<set $seconds to 10>>
 				<<silently>>
@@ -737,7 +737,7 @@ over secret files">
 	<<timed 32s>>
 	<<replace "#countdown">>X<</replace>>
 	<<replace "#image">><img src="assets/img/numberplate.jpeg" id="img4" alt="Car with the license plate YYX328T" class="smaller">
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/10. Challenge 2 - pic 4 EDIT.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+	<<if $audioOn is true>><audio src="assets/sounds/10. Challenge 2 - pic 4 EDIT.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 	<<replace "#image-text">><p>What are the numbers on the number plate?</p><<set $seconds to 10>><<silently>>
 	<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 		<<repeat 1s>>
@@ -754,7 +754,7 @@ over secret files">
 	<<timed 43s>>
 	<<replace "#countdown">><</replace>>
 	<<replace "#image">><img src="assets/img/moonlanding.jpeg" id="img5" alt="The telephone number on this telegram I 1622" class="smaller">
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/11. Challenge 2 - pic 5.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+	<<if $audioOn is true>><audio src="assets/sounds/11. Challenge 2 - pic 5.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 	<<replace "#image-text">><p>What's the telephone number of this restricted Moon Landing call?</p><<set $seconds to 10>>
 		<<silently>>
 		<<repeat 1s>>
@@ -807,7 +807,7 @@ over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question ">
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 
 		<div class="content-wrapper">
 			<<include "sidebarfog">>
@@ -844,7 +844,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 :: Fifteen [nobr video] {"position":"789.6666666666666,1177.6666666666667","size":"100,100"}
 <div class="wrapper">
 	<main id="main" class="video">
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay></audio><</if>><<set $title to "V3">>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay></audio><</if>><<set $title to "V3">>
 	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 3 video"><iframe src="https://player.vimeo.com/video/640379390?h=40c553c519&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 3"></iframe></div>
 	</main>
 		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwelveTwo">><</link>></div><div id="text"></div></nav></footer>
@@ -856,7 +856,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 :: Sixteen [nobr logo] {"position":"788,1319.6666666666667","size":"100,100"}
 /* MENU */
-<<set $title to "sfsd">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+<<set $title to "sfsd">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 <<if $audioOn is true>><audio src="assets/audio/Challenge 3.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 <div class="wrapper menu">
 <<include "headermenugrid">>
@@ -921,7 +921,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <div class="wrapper menu">
 <<include "headermenu">>
 	<main id="main" class="menu">
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/12. Challenge 3 - intro.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/12. Challenge 3 - intro.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 	
 	<div class="content-wrapper">
 		<<include "sidebarfire">>
@@ -1059,7 +1059,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 	<main id="main" class="flex-container-col-cen">
 		<div class="logo-wrapper right"><img src="assets/img/training-logo.png" class="logo na" aria-hidden="true"></div>
 		<img src="assets/img/mott-logo.png" id="MottLogo" class="logomott"><<set $next to "One">>
-		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/1. Question.mp3" autoplay>Audio not supported in your browser</audio><</if>>
+		<<if $audioOn is true>><audio src="assets/sounds/1. Question.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 	<div class="safeguard center">
 		<p> Are you here to safeguard the sands of time?</p>
 
@@ -1140,7 +1140,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 <div class="wrapper menu">
 <<include "headermenu">>
-	<main id="main" class="menu"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/17. Challenge 3 - Medieval message.mp3" autoplay>Audio is not supported on your device</audio><</if>> 
+	<main id="main" class="menu"><<if $audioOn is true>><audio src="assets/sounds/17. Challenge 3 - Medieval message.mp3" autoplay>Audio is not supported on your device</audio><</if>> 
 
 	<div class="content-wrapper">
 		<<include "sidebarfire">>
@@ -1184,7 +1184,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <div class="wrapper menu">
 <<include "headermenugrid">>
 	<main id="main" class="menu">
-		<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 	<<if $audioOn is true>><audio src="assets/audio/Challenge 4.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 		/* GRID  */
 
@@ -1251,8 +1251,8 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<set $challenge to 4>><<set $title to 5>>
 <div class="wrapper menu">
 	<<include "headermenu">>
-	<main id="main" class="menu"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 2.wav"   autoplay id="bgAudio">Sound plays</audio><</if>>
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/19. Challenge 4 - 1.mp3"  autoplay >Audio is not supported on your device</audio><</if>>
+	<main id="main" class="menu"><<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 2.wav"   autoplay id="bgAudio">Sound plays</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/19. Challenge 4 - 1.mp3"  autoplay >Audio is not supported on your device</audio><</if>>
 	<div class="content-wrapper">
 	<<include "sidebartime">>
 		<div class="content-item content text">
@@ -1278,7 +1278,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <div class="wrapper menu">
 	<<include "headermenu">>
 	<main id="main" class="menu">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/20. Challenge 4 - 2.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/20. Challenge 4 - 2.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 <div class="content-wrapper">
 		<<include "sidebartime">>
 		<div class="content-item content text">
@@ -1336,7 +1336,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <div class="wrapper menu"><<set $title to "cc">>
 <<include "headermenu">>
 <main id="main">
-<<timed 22s>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/code of conduct re-edit 23_11.mp3" autoplay >Sound plays</audio><</if>><</timed>>
+<<timed 22s>><<if $audioOn is true>><audio src="assets/sounds/code of conduct re-edit 23_11.mp3" autoplay >Sound plays</audio><</if>><</timed>>
 <<if $audioOn is true>><audio src="assets/audio/21b. Challenge 4 - 4 v2.mp3" autoplay >Sound plays</audio><</if>>
 
 <div class="content-wrapper">
@@ -1361,7 +1361,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <div id="code">
 <div id="CoC">
-<span class="Header"><img src="https://remote.co.com/MoTT/AgentTraining/Images/mottlogowords.png">
+<span class="Header"><img src="assets/img/mottlogowords.png">
 <h1>Code of Conduct</h1></span>
 
 <span class="CoCTitle"><h2>clean</h2>A clean desk is a clean mind, and saves on cleaning costs.</span>
@@ -1400,7 +1400,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 :: TwentyEight [nobr video] {"position":"1538,497.9999999999999","size":"100,100"}
 <div class="wrapper">
 	<main id="main" class="video">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<set $title to "V5">>
+<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<set $title to "V5">>
 <div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 5 video"><iframe src="https://player.vimeo.com/video/640381100?h=cad3056aaf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 5"></iframe>
 </div>
 </main>
@@ -1433,7 +1433,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <<include "headermenu">>
 	<main id="main" class=" menu  ">
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 
 		<div class="content-wrapper">
 			<<include "sidebarfire">>
@@ -1457,7 +1457,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 :: TwentyNine [nobr logo] {"position":"1555.3333333333335,352.3333333333333","size":"100,100"}
 /* MENU BAGUETTE  */
 
-<<set $title to "sdf">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+<<set $title to "sdf">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
 <<if $audioOn is true>><audio src="assets/audio/Secret Mission.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 
 <div class="wrapper menu">
@@ -1566,7 +1566,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	<main id="main" class="menu">
 <<set $title to 6>>
 <span id="audio">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/loading within challenge 5.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/loading within challenge 5.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>>
 </span>
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -1604,11 +1604,11 @@ but passing those will give you the power to nudge the past if your Time Mission
 
 <<timed 2s t8n>><<replace "#text">><</replace>>
 
-<<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/level 5 alarmv2.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>>
+<<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/level 5 alarmv2.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>>
 <</timed>>
 
 
-<<timed 4s t8n>><<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/23b. Challenge 5 - 2.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>><</timed>>
+<<timed 4s t8n>><<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/23b. Challenge 5 - 2.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>><</timed>>
 
 
 <</silently>>
@@ -1621,7 +1621,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	<main id="main" class="menu">
 
 <span id="audio">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/25. Challenge 5 - 3.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/25. Challenge 5 - 3.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 </span>
 
 <div class="content-wrapper">
@@ -1658,7 +1658,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	<main id="main" class="menu">
 
 	<span id="audio">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/27. Challenge 5 - 4.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/27. Challenge 5 - 4.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 </span>
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -1706,7 +1706,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 	<main id="main" class="menu">
 
 	<span id="audio">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/30. Challenge 5 - 6.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/30. Challenge 5 - 6.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 </span>
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -1907,7 +1907,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <img src="assets/img/oldman.png" class="disappear" alt="The Duke of Wellington"> */
 	<main id="main" class="conversation">
 
-<span id="audio"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/scovell welling convo no tadah.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
+<span id="audio"><<if $audioOn is true>><audio src="assets/sounds/scovell welling convo no tadah.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
 
 <div class="conversation-wrapper">
 		<div id="image"></div>
@@ -2022,7 +2022,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 <<timed 22s t8n>>
 <<append "#text">>
 <div class="cipher-wrapper">
-	<div class="cipherpaper joenap napoleon-letter" aria-label="The letter to Napoleon Bonaparte"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/33. Challenge 5 - French Letter with words.mp3" autoplay>Audio is not supported on your device</audio><</if>>From Joseph Bonaparte to Emperor Napoléon Bonaparte,<br>
+	<div class="cipherpaper joenap napoleon-letter" aria-label="The letter to Napoleon Bonaparte"><<if $audioOn is true>><audio src="assets/sounds/33. Challenge 5 - French Letter with words.mp3" autoplay>Audio is not supported on your device</audio><</if>>From Joseph Bonaparte to Emperor Napoléon Bonaparte,<br>
 	Brother, I hope the Army of the South will not delay in gathering in Murcia.
 	<br>We will have 100,000 troops along the lines of the Duero and Tagus Rivers.
 	<br>Our troops will not be in Corunna. 
@@ -2044,7 +2044,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 
 :: FourtyTwo [nobr] {"position":"2075,1550","size":"100,100"}
-<div id="audio"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
+<div id="audio"><<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="assets/sounds/Loading op 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
 
 
 <div class="wrapper menu mission" id="wrapper">
@@ -2073,7 +2073,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 
 :: FourtyTwoTwo [nobr] {"position":"2075,1550","size":"100,100"}
-<div id="audio"><<if $audioOn is true>><audio src="assets/audio/37. Well done v2.mp3" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/Loading op 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
+<div id="audio"><<if $audioOn is true>><audio src="assets/audio/37. Well done v2.mp3" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="assets/sounds/Loading op 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
 
 
 <div class="wrapper menu codeword question" id="wrapper">
@@ -2107,7 +2107,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 </div>
 
 <<silently>>
-<<timed 1s t8n>><<replace "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/37. Well done.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+<<timed 1s t8n>><<replace "#audio">><<if $audioOn is true>><audio src="assets/sounds/37. Well done.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
 <</timed>>
 <</silently>>
 
@@ -2137,7 +2137,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 			<p>Take a picture or screen shot of your certification below.</p> 
 			<p>Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   </p>
 		</div >
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 <div class="certificate-wrapper">
 	<img src="assets/img/certificateteal.png" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate"/>
 	<div class="certificate-text">
@@ -2201,7 +2201,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<include "headermenu">>
 	<main id="main" class="menu">
 
-<span id="audio"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/27. Challenge 5 - 7.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
+<span id="audio"><<if $audioOn is true>><audio src="assets/sounds/27. Challenge 5 - 7.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
 <div id="image"></div>
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -2237,7 +2237,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 	<main id="main" class="conversation">
 
-<span id="audio"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/29. Challenge 5 - Wellington tadah.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>></span>
+<span id="audio"><<if $audioOn is true>><audio src="assets/sounds/29. Challenge 5 - Wellington tadah.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>></span>
 
 <div class="conversation-wrapper">
 
@@ -2306,7 +2306,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<include "headermenu">>
 	<main id="main" class="menu">
 
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/34. Challenge 5 - 9.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/34. Challenge 5 - 9.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -2357,9 +2357,9 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 					<p></p>
 				</div>
 				<div class="content-item content text mission message">
-					/* <img src="https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif" class="gif signal" alt="Signal Fire system logo "> */
+					/* <img src="assets/img/signalfire.gif" class="gif signal" alt="Signal Fire system logo "> */
 					<span class="timer-wrapper gif signal" id="warning" alt="a lit match with signals pulsing out of it">
-					<<link [img[https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif]]>>
+					<<link [img[assets/img/signalfire.gif]]>>
 						<<replace "#warning">>
 							<<link [img[assets/img/signalfirestop.png]]>>
 						<</link>>
@@ -2381,14 +2381,14 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<include "footermission">>
 </div>
 <<timed 1s>>
-<<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav"  autoplay  id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
+<<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/sfx/SFS Message incoming.wav"  autoplay  id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
 <<done>>
 <<if $audioOn is true>>
 <<set $vol to setup.changeVol(0.5)>>
 <</if>><</done>><</timed>>
 
 <<timed 8s t8n>>
-<<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/24. Challenge 5 - French Message.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>>
+<<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/24. Challenge 5 - French Message.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>><</append>>
 <<replace "#text">>
 			<span lang="fr"><p>Bonjour, quelque chose a changé avec Napoléon.</p></span>
 							<span lang="fr"><p>Aide George Scovell.</p></span>
@@ -2414,7 +2414,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 				</div>
 				<div class="content-item content text mission message">
 						<span class="timer-wrapper gif signal" id="warning" alt="a lit match with signals pulsing out of it">
-					<<link [img[https://remote.co.com/MoTT/AgentTraining/Images/signalfire.gif]]>>
+					<<link [img[assets/img/signalfire.gif]]>>
 					<<replace "#warning">>
 						<<link [img[assets/img/signalfirestop.png]]>>
 		
@@ -2430,7 +2430,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	</main>
 	<<include "footermission">>
 </div>
-<<timed 0.2s>><<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/SFS Message incoming.wav" autoplay id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
+<<timed 0.2s>><<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/sfx/SFS Message incoming.wav" autoplay id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
 <<done>>
 <<if $audioOn is true>>
 <<set $vol to setup.changeVol(0.5)>>
@@ -2439,7 +2439,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 <<silently>>
 <<timed 10s t8n>>
 	<<set _finish to true>>
-	<<append "#audio">><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/26. Challenge 5 - English Message.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>>
+	<<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/26. Challenge 5 - English Message.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>>
 	<</append>>
 	<<replace "#text">>
 	<p>Hello, something has changed with Napoleon.</p>
@@ -2457,7 +2457,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 <div class="wrapper menu fire">
 	<<include "headermenu">>
 	<main id="main" class="menu">
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/18. Challenge 3 - 6.mp3" autoplay> Audio is not supported on your device</audio><</if>> 
+	<<if $audioOn is true>><audio src="assets/sounds/18. Challenge 3 - 6.mp3" autoplay> Audio is not supported on your device</audio><</if>> 
 	<div class="content-wrapper">
 		<<include "sidebarfire">>
 		<div class="content-item content text">
@@ -2483,7 +2483,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<set $title to "transition">>
 	
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Loading op 3.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 3.wav" autoplay>Audio not supported in your browser</audio><</if>>
 	
 	<div class="mottlogo-wrapper"><img src="assets/img/mott-logo.png" id="LogoRot" class="logomott logoRot" alt="The Ministry of Time Travel Logo is spinning"></div>
 
@@ -2501,7 +2501,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<include "header">>
 	<main id="main" class="flex-container-col"><<set $title to 1>>
 	<<if $audioClick isnot true>><<set $audioOn to true>><</if>>
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/assets/audio/Welcome1.mp3" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/audio/Welcome1.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 
 	<div class="intro-text">
 	  <p>Welcome to The National Archives.</p>
@@ -2520,7 +2520,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 <div class="wrapper cogs">
 	<<include "header">>
 <main id="main" class="cogs flex-container-col">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/Dinah NA intro 2.mp3" autoplay>Audio not supported in your browser</audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/Dinah NA intro 2.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 
 <div class="intro-text">
   <p>There may be times you have to choose between the options.</p>
@@ -2530,7 +2530,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
   <p>Once ready to enter, click the button below.</p>
 
 
-<div class="flex-container-row power"><poweron ><a data-passage="TransPass" class="link-internal link-image" role="link" tabindex="0" aria-label="Click this power on icon to begin experience" ><img src="https://remote.co.com/MoTT/AgentTraining/Images/onicon.png" alt="Power On button"></a><<set $next to "Zero">></poweron></div>
+<div class="flex-container-row power"><poweron ><a data-passage="TransPass" class="link-internal link-image" role="link" tabindex="0" aria-label="Click this power on icon to begin experience" ><img src="assets/img/onicon.png" alt="Power On button"></a><<set $next to "Zero">></poweron></div>
 </div>
 </main>
 <<include "footer">>
@@ -2573,7 +2573,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 <<include "headermenu">>
 	<main id="main" class=" menu time ">
 	
-	<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
 
 		<div class="content-wrapper">
 			<<include "sidebartime">>
@@ -2603,7 +2603,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<main id="main" class="menu">
 
 	<span id="audio">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/27. Challenge 5 - 6.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>>	
+<<if $audioOn is true>><audio src="assets/sounds/27. Challenge 5 - 6.mp3" autoplay><p>Audio is not supported on your device</p></audio><</if>>	
 </span>
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -2637,7 +2637,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<main id="main" class="menu">
 
 	<span id="audio">
-<<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/28. Challenge 5 - 5.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+<<if $audioOn is true>><audio src="assets/sounds/28. Challenge 5 - 5.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 </span>
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -2683,7 +2683,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<main id="main" class="menu">
 
 
-<span id="audio"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/32. Challenge 5 - 10 B.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
+<span id="audio"><<if $audioOn is true>><audio src="assets/sounds/32. Challenge 5 - 10 B.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
 
 <div class="content-wrapper">
 		<div class="content-item sidebar">
@@ -2717,7 +2717,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<include "headermenu">>
 	<main id="main" class="menu">
 
-<span id="audio"><<if $audioOn is true>><audio src="https://remote.co.com/MoTT/AgentTraining/Sounds/32. Challenge 5 - 10 C.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
+<span id="audio"><<if $audioOn is true>><audio src="assets/sounds/32. Challenge 5 - 10 C.mp3" autoplay>Audio is not supported on your device</audio><</if>></span>
 
 
 <div class="content-wrapper">

@@ -817,7 +817,7 @@ img.smaller {
 /* LETTER STUFF
 .letter {
   font-family: "IM Fell English", serif;
-  background-image: url("https://remote.co.com/MoTT/AgentTraining/Images/letterbackground2.png");
+  background-image: url("assets/img/letterbackground2.png");
   font-size: 1.4em;
   color: #241004;
   padding: 2em;
