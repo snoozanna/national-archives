@@ -100,6 +100,12 @@ setup.JSLoaded = false;
 
 :: Start [nobr] {"position":"134,244.33333333333337","size":"100,100"}
 
+<div style="display:none;">
+	<img src="assets/img/audiooff.png">
+	<img src="assets/img/onicon.png">
+	<img src="assets/img/mott-logo.png">
+	
+</div>
 
   <div class="wrapper audio" id="mount">
 	<div class="phone-warning"><p>MOTT is best experienced on a computer or tablet</p></div>
