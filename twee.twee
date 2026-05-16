@@ -2936,7 +2936,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 :: TutorialTwo [nobr tutorial] {"position":"484.33333333333337,121.33333333333334","size":"100,100"}
 <div class="wrapper cogs">
 	<<include "header">>
-<main id="main" class="cogs flex-container-col">
+<main id="main" class=" flex-container-col">
 <<if $audioOn is true>><audio src="assets/sounds/Dinah NA intro 2.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 
 <div class="intro-text">

@@ -87,6 +87,10 @@ body[data-tags~="t8n-dissolve"] .transition-out {
 
 
 
+.phone-warning {
+  display: none;
+}
+
 /* SHOW NOTHING ON A PHONE  */
 @media screen and (max-width: 420px) {
   .audio-container {
