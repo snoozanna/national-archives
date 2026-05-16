@@ -24,13 +24,12 @@ Ministry of Time Travel - National Archives
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fondamento:ital@1&family=Italianno&family=Cairo:wght@500&family=Noto+Sans+Mono:wght@700&family=Tangerine:wght@400;700&family=IM+Fell+Double+Pica+SC&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Niconne&family=Montserrat:wght@400;800&display=swap');
 
 @import url("generics.css");
-@import url("styles.css");s
+@import url("styles.css");
 /* @import url("ogstyles.css"); */
 
 
 :: Story JavaScript [script]
 UIBar.destroy();
-
 
 Macro.add('ScrollTo', {
 	skipArgs : false,
@@ -133,10 +132,11 @@ setup.JSLoaded = false;
 				<strong> <span class="inline-icon-wrap"><img src="assets/img/audio.png"></span> Audio On</strong>
 				<br>
 				<p>Press the power on button to continue</p>
-				<poweron><a data-passage="TutorialOne" class="link-internal link-image" role="link" tabindex="0" ><img src="assets/img/onicon.png" alt="Power On button"></a></poweron>
+				<poweron><a data-passage="TutorialOne" class="link-internal link-image clean-hover" role="link" tabindex="0" ><img src="assets/img/onicon.png" alt="Power On button"></a></poweron>
 				<br>
 			<br>
-				<<link "Back">><<goto "Start">><</link>>
+			
+				<span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Back">><<goto "Start">><</button>></span>
 				
 	<</replace>>
 		<</button>>
@@ -274,16 +274,84 @@ setup.JSLoaded = false;
 
 	
 	
+
+
 :: One [nobr video] {"position":"787.6666666666667,99.33333333333337","size":"100,100"}
+
 /* VIDEO  */
 <div class="wrapper">
-	<main id="main" class="video"><<set $title to "V1">>
-	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 1 video"><iframe src="https://player.vimeo.com/video/640377198?h=6aeee3d5c8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;speed=1&amp;controls=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen   title="MOTT Training 1"></iframe></div>
+	<main id="main" class="video">
+	<<set $title to "V1">>
+
+	<div id="videoContainer"></div>
+	<<timed 0.1s>>
+	<<if $adMode is true>>
+		<<replace "#videoContainer">>	
+				<!-- Audio Described Video (hidden by default) -->
+				<div id="video-ad" class="video-wrapper" role="video" aria-label="MOTT Training 1 video with audio description">
+					<iframe src="https://player.vimeo.com/video/984264156"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 1 Audio Described"></iframe>
+				</div>
+		<</replace>>
+		<<else>>
+<<replace "#videoContainer">>
+	<!-- Standard Video -->
+	<div id="video-normal" class="video-wrapper" role="video" aria-label="MOTT Training 1 video">
+		<iframe src="https://player.vimeo.com/video/640377198?h=6aeee3d5c8&badge=0&autopause=0&player_id=0&app_id=58479&speed=1&controls=1"
+		frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 1"></iframe>
+	</div>
+	<</replace>>
+		<</if>>
+		<</timed>>
+
 	</main>
-		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "Zero">><</link>></div><div id="text"></div></nav></footer>
+
+	<footer>
+		<nav>
+			<!-- Back button -->
+			<div id="back" class="button-wrapper">
+				<<link "Back" "Zero">><</link>>
+			</div>
+
+			<!-- Toggle Button (center bottom) -->
+		<<timed 0.1s>>
+			<span class="button-wrapper" aria-label="Click the button to toggle audio description">
+		
+			<<if $adMode is false>>
+				<<button "Play with Audio Description">>
+					<<set $adMode to true>>
+					<<goto "One">>
+					<</button>>
+					<<else>>
+				<<button "Play without Audio Description">>
+					<<set $adMode to false>>
+					<<goto "One">>
+				<</button>>
+				
+				<</if>>
+		
+				</span>
+			<</timed>>
+	
+
+			<div id="text"></div>
+		</nav>
+	</footer>
 </div>
-<<silently>><<timed 0.1s t8n>><<append "#text">>
-<br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button [[Next|Two]]>><<set $iconOnly to false>><</button>></span><</append>> <</timed>><</silently>>
+
+<<silently>>
+
+<<timed 0.1s t8n>>
+	
+<<append "#text">>
+<span class="button-wrapper" aria-label="Click a button or link to move on">
+	<<button [[Next|Two]]>>
+		<<set $iconOnly to false>>
+	<</button>>
+</span>
+<</append>>
+<</timed>>
+<</silently>>
 
 
 
@@ -307,7 +375,7 @@ setup.JSLoaded = false;
 		</div>
 	
 		<div class="menu-wrapper content-item content menu">
-		<a data-passage="Three" class="link-internal macro-link grid-item code" tabindex="0">
+		<a data-passage="Three" class="link-internal macro-link grid-item clean-hover code" tabindex="0">
 		<div class="menu-item ">
 		<div class="title-wrapper grid">
 				<img src="assets/img/code-w.png" alt="Codebreaking Button" id="Codebreaking" class="imaglink active challenges">
@@ -405,7 +473,7 @@ setup.JSLoaded = false;
 	<h3 class="subtitle" >QUESTION 1:</h3>
 	<span id="cdWrapper"><span id="countdown"><<set $seconds to 60>>60</span> seconds remaining</span>
 	<div id="scrambled" class="scrambled" tabindex="0"><span>RESECT</span></div>
-	
+
 	<<link "Click for a hint">>
 	<<toggleclass "#hint" "disappear">>
 	<<replace "#audiomount">><audio src="assets/audio/Challenge 1 - HINT 1.mp3" autoplay>Audio is not supported on your device</audio><</replace>>
@@ -590,10 +658,48 @@ over secret files">
 
 	<main id="main" class="video">
 	<<set $title to "V2">>
+	<div id="videoContainer"></div>
+	<<timed 0.1s>>
+	<<if $adMode is true>>
+		<<replace "#videoContainer">>	
+				<!-- Audio Described Video (hidden by default) -->
+				<div id="video-ad" class="video-wrapper" role="video" aria-label="MOTT Training 2 video with audio description">
+					<iframe src="https://player.vimeo.com/video/984271876"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 2 Audio Described"></iframe>
+				</div>
+		<</replace>>
+		<<else>>
+<<replace "#videoContainer">>
+	<!-- Standard Video -->
 	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 2 video"><iframe src="https://player.vimeo.com/video/640378731?h=99d45721b2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 2"></iframe></div>
+	<</replace>>
+		<</if>>
+		<</timed>>
+
+	
 	</main>
 	<footer>
-		<nav><div id="back" class="button-wrapper"><<link "Back" "Nine">><</link>></div><div id="text"></div></nav>
+		<nav><div id="back" class="button-wrapper"><<link "Back" "Nine">><</link>></div>
+		<!-- Toggle Button (center bottom) -->
+		<<timed 0.1s>>
+			<span class="button-wrapper" aria-label="Click the button to toggle audio description">
+		
+			<<if $adMode is false>>
+				<<button "Play with Audio Description">>
+					<<set $adMode to true>>
+					<<goto "Ten">>
+					<</button>>
+					<<else>>
+				<<button "Play without Audio Description">>
+					<<set $adMode to false>>
+					<<goto "Ten">>
+				<</button>>
+				
+				<</if>>
+		
+				</span>
+			<</timed>>
+		<div id="text"></div></nav>
 	</footer>
 </div>
 <<silently>>
@@ -732,7 +838,7 @@ over secret files">
 					</span></h3>
 				<div class="fog-content-wrapper">	
 					<div id="image" class="fog-img-wrapper">
-						<img src="assets/img/women2.jpeg" id="img1" alt="four women"><<if $audioOn is true>><audio src="assets/sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
+						<img src="assets/img/women2.jpeg" id="img1" alt="four women">
 					</div>
 					<div class="timer ">
 						<span id="countdown" class="countdown"><h3 class="timer">$seconds</h3></span>
@@ -747,7 +853,7 @@ over secret files">
 	<<silently>>
 	<<timed 10s>>
 		<<replace "#countdown">>X<</replace>>
-		<<replace "#image">><img src="assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller"><<if $audioOn is true>><audio src="assets/sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+		<<replace "#image">><img src="assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller"><</replace>>
 		<<replace "#image-text">><p>How many parrots?</p>
 			<<set $seconds to 10>>
 				<<silently>>
@@ -766,7 +872,7 @@ over secret files">
 	<<timed 21s>>
 		<<replace "#countdown">>X<</replace>>
 		<<replace "#image">><img src="assets/img/cats.jpg" id="img3" alt="Six cats are sat at the table. Three of them are ginger.">
-		<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+		<</replace>>
 		<<replace "#image-text">><p>How many ginger cats?</p>
 			<<set $seconds to 10>>
 			<<silently>>
@@ -784,8 +890,8 @@ over secret files">
 	
 	<<timed 32s>>
 	<<replace "#countdown">>X<</replace>>
-	<<replace "#image">><img src="assets/img/children.jpg" id="img4" alt="A teacher is reading an alphabet book to five young children" class="smaller">
-	<<if $audioOn is true>><audio src="assets/sounds/10. Challenge 2 - pic 4 EDIT.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+	<<replace "#image">><img src="assets/img/children.jpg" id="img4" alt="A teacher is reading an alphabet book to five young children" class="">
+	<</replace>>
 	<<replace "#image-text">><p>How many children? </p><<set $seconds to 10>><<silently>>
 	<<replace "#countdown">><h3 class="timer">$seconds</h3><</replace>>
 		<<repeat 1s>>
@@ -801,8 +907,8 @@ over secret files">
 	
 	<<timed 43s>>
 	<<replace "#countdown">><</replace>>
-	<<replace "#image">><img src="assets/img/chocolate.jpeg" id="img5" alt="Two women and a child are in a field. Behind them are four cows." class="smaller">
-	<<if $audioOn is true>><audio src="assets/sounds/11. Challenge 2 - pic 5.mp3" autoplay>Audio is not supported on your device</audio><</if>><</replace>>
+	<<replace "#image">><img src="assets/img/cows.jpg" id="img5" alt="Two women and a child are in a field. Behind them are four cows." class="smaller">
+	<</replace>>
 	<<replace "#image-text">><p>How many cows?</p><<set $seconds to 10>>
 		<<silently>>
 		<<repeat 1s>>
@@ -877,8 +983,7 @@ over secret files">
 <h3 class="subtitle"> <span id="image-text"><p>How many women are in the picture? </p></span></h3>
 	<div class="fog-content-wrapper">	
 		<div id="image" class="fog-img-wrapper"><img src="assets/img/women2.jpeg" id="img1" alt="four women">
-					<<if $audioOn is true>><audio src="assets/sounds/7. Challenge 2 - pic 1.mp3" autoplay>Audio is not supported on your device</audio>
-					<</if>></div>
+					</div>
 		<div class="button-wrapper" id="button-wrapper">
 			<<button "Next">>
 				<<replace "#gameContent">><<include "ThirteenNoTimer2">><</replace>>
@@ -892,7 +997,7 @@ over secret files">
 	<div class="fog-content-wrapper">	
 		<div id="image" class="fog-img-wrapper">
 			<img src="assets/img/parrots.jpeg" id="img2" alt="woman holding two parrots" class="smaller">
-			<<if $audioOn is true>><audio src="assets/sounds/8. Challenge 2 - pic 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
+			</div>
 		<div class="button-wrapper" >
 		<<button "Next">>
 				<<replace "#gameContent">><<include "ThirteenNoTimer3">><</replace>>
@@ -904,7 +1009,7 @@ over secret files">
 <h3 class="subtitle"> <span id="image-text"><p>How many ginger cats?</p></span></h3>
 	<div class="fog-content-wrapper">	
 		<div id="image" class="fog-img-wrapper"><img src="assets/img/cats.jpg" id="img3" alt="Six cats are sat at the table. Three of them are ginger.">
-							<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>></div>
+							</div>
 	<div class="button-wrapper" >
 		<<button "Next">>
 				<<replace "#gameContent">><<include "ThirteenNoTimer4">><</replace>>
@@ -915,8 +1020,8 @@ over secret files">
 :: ThirteenNoTimer4 [nobr]
 <h3 class="subtitle"> <span id="image-text"><p>How many children? </p></span></h3>
 	<div class="fog-content-wrapper">	
-		<div id="image" class="fog-img-wrapper"><img src="assets/img/children.jpg" id="img4" alt="A teacher is reading an alphabet book to five young children" class="smaller">
-	<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>></div>
+		<div id="image" class="fog-img-wrapper"><img src="assets/img/children.jpg" id="img4" alt="A teacher is reading an alphabet book to five young children" class="">
+	</div>
 	<div class="button-wrapper" >
 		<<button "Next">>
 				<<replace "#gameContent">><<include "ThirteenNoTimer5">><</replace>>
@@ -927,8 +1032,8 @@ over secret files">
 :: ThirteenNoTimer5 [nobr]
 <h3 class="subtitle"> <span id="image-text"><p>How many cows?</p></span></h3>
 	<div class="fog-content-wrapper">	
-		<div id="image" class="fog-img-wrapper"><img src="assets/img/chocolate.jpeg" id="img5" alt="Two women and a child are in a field. Behind them are four cows." class="smaller">
-	<<if $audioOn is true>><audio src="" autoplay>Audio is not supported on your device</audio><</if>></div>
+		<div id="image" class="fog-img-wrapper"><img src="assets/img/cows.jpg" id="img5" alt="Two women and a child are in a field. Behind them are four cows." class="smaller">
+	</div>
 	<div class="button-wrapper" >
 		<<button "Next">>
 				<<replace "#gameContent">><<include "ThirteenNoTimer6">><</replace>>
@@ -998,10 +1103,48 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 :: Fifteen [nobr video] {"position":"789.6666666666666,1177.6666666666667","size":"100,100"}
 <div class="wrapper">
 	<main id="main" class="video">
+	<div id="videoContainer"></div>
 	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay></audio><</if>><<set $title to "V3">>
+	<<timed 0.1s>>
+	<<if $adMode is true>>
+		<<replace "#videoContainer">>	
+				<!-- Audio Described Video (hidden by default) -->
+				<div id="video-ad" class="video-wrapper" role="video" aria-label="MOTT Training 3 video with audio description">
+					<iframe src="https://player.vimeo.com/video/984273490"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 3 Audio Described"></iframe>
+				</div>
+		<</replace>>
+		<<else>>
+<<replace "#videoContainer">>
+	<!-- Standard Video -->
 	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 3 video"><iframe src="https://player.vimeo.com/video/640379390?h=40c553c519&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 3"></iframe></div>
+	<</replace>>
+		<</if>>
+		<</timed>>
+	
 	</main>
-		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwelveTwo">><</link>></div><div id="text"></div></nav></footer>
+		<footer><nav>
+		<div id="back" class="button-wrapper"><<link "Back" "TwelveTwo">><</link>></div>
+<!-- Toggle Button (center bottom) -->
+		<<timed 0.1s>>
+			<span class="button-wrapper" aria-label="Click the button to toggle audio description">
+		
+			<<if $adMode is false>>
+				<<button "Play with Audio Description">>
+					<<set $adMode to true>>
+					<<goto "Fifteen">>
+					<</button>>
+					<<else>>
+				<<button "Play without Audio Description">>
+					<<set $adMode to false>>
+					<<goto "Fifteen">>
+				<</button>>
+				
+				<</if>>
+		
+				</span>
+			<</timed>>
+		<div id="text"></div></nav></footer>
 </div>
 <<silently>>
 
@@ -1555,10 +1698,48 @@ but passing those will give you the power to nudge the past if your Time Mission
 <div class="wrapper">
 	<main id="main" class="video">
 <<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<set $title to "V5">>
-<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 5 video"><iframe src="https://player.vimeo.com/video/640381100?h=cad3056aaf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 5"></iframe>
+<div id="videoContainer"></div>
+<<timed 0.1s>>
+	<<if $adMode is true>>
+		<<replace "#videoContainer">>	
+				<!-- Audio Described Video (hidden by default) -->
+				<div id="video-ad" class="video-wrapper" role="video" aria-label="MOTT Training 5 video with audio description">
+					<iframe src="https://player.vimeo.com/video/984277914"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 5 Audio Described"></iframe>
+				</div>
+		<</replace>>
+		<<else>>
+<<replace "#videoContainer">>
+	<!-- Standard Video -->
+	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 5 video"><iframe src="https://player.vimeo.com/video/640381100?h=cad3056aaf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 5"></iframe>
 </div>
+	<</replace>>
+		<</if>>
+		<</timed>>
+
 </main>
-	<footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwentySevenOne">><</link>></div><div id="text"></div></nav></footer>
+	<footer><nav>
+	<div id="back" class="button-wrapper"><<link "Back" "TwentySevenOne">><</link>></div>
+	<!-- Toggle Button (center bottom) -->
+		<<timed 0.1s>>
+			<span class="button-wrapper" aria-label="Click the button to toggle audio description">
+		
+			<<if $adMode is false>>
+				<<button "Play with Audio Description">>
+					<<set $adMode to true>>
+					<<goto "TwentyEight">>
+					<</button>>
+					<<else>>
+				<<button "Play without Audio Description">>
+					<<set $adMode to false>>
+					<<goto "TwentyEight">>
+				<</button>>
+				
+				<</if>>
+		
+				</span>
+			<</timed>>
+	<div id="text"></div></nav></footer>
 	</div>
 <<silently>>
 <<timed 0.1s t8n>><<append "#text">><br><span aria-label="Click a button or link to move on" class="button-wrapper"> <<button "Next" "TransPass">><<set $next to "TwentyNine">><<set $iconOnly to false>><</button>></span><</append>> <</timed>>
@@ -1571,11 +1752,49 @@ but passing those will give you the power to nudge the past if your Time Mission
 :: TwentyTwo [nobr video] {"position":"1545.3333333333335,1548.6666666666667","size":"100,100"}
 <div class="wrapper">
 	<main id="main" class="video"><<set $title to "V4">>
-<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 4 video">
+<div id="videoContainer"></div>
+<<timed 0.1s>>
+	<<if $adMode is true>>
+		<<replace "#videoContainer">>	
+				<!-- Audio Described Video (hidden by default) -->
+				<div id="video-ad" class="video-wrapper" role="video" aria-label="MOTT Training 4 video with audio description">
+					<iframe src="https://player.vimeo.com/video/984276114"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 4 Audio Described"></iframe>
+				</div>
+			
+		<</replace>>
+		<<else>>
+<<replace "#videoContainer">>
+	<!-- Standard Video -->
+	<div id="video" class="video-wrapper" role="video" aria-label="MOTT Training 4 video">
 	<iframe src="https://player.vimeo.com/video/640380360?h=f4e91c039a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  title="MOTT Training 4"></iframe>
 </div>
+	<</replace>>
+		<</if>>
+		<</timed>>
+
 </main>
-<footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwentyOneTwo">><</link>></div><div id="text"></div></nav></footer>
+<footer><nav><div id="back" class="button-wrapper"><<link "Back" "TwentyOneTwo">><</link>></div>
+<!-- Toggle Button (center bottom) -->
+		<<timed 0.1s>>
+			<span class="button-wrapper" aria-label="Click the button to toggle audio description">
+		
+			<<if $adMode is false>>
+				<<button "Play with Audio Description">>
+					<<set $adMode to true>>
+					<<goto "TwentyTwo">>
+					<</button>>
+					<<else>>
+				<<button "Play without Audio Description">>
+					<<set $adMode to false>>
+					<<goto "TwentyTwo">>
+				<</button>>
+				
+				<</if>>
+		
+				</span>
+			<</timed>>
+<div id="text"></div></nav></footer>
 
 <<silently>>
 <<timed 0.1s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "TransPass">><<set $iconOnly to false>><<set $next to "TwentyThree">><</button>></span><</append>> <</timed>>
@@ -2272,9 +2491,48 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 /* VIDEO  */
 <div class="wrapper">
 	<main id="main" class="video"><<set $title to "V6">>
+	<div id="videoContainer"></div>
+	<<timed 0.1s>>
+	<<if $adMode is true>>
+		<<replace "#videoContainer">>	
+				<!-- Audio Described Video (hidden by default) -->
+				<div id="video-ad" class="video-wrapper" role="video" aria-label="MOTT Training 1 video with audio description">
+					<iframe src="https://player.vimeo.com/video/984279226"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 1 Audio Described"></iframe>
+				</div>
+			
+		<</replace>>
+		<<else>>
+<<replace "#videoContainer">>
+	<!-- Standard Video -->
 	<div id="video" role="video" class="video-wrapper"  aria-label="MOTT Training 6 video"><iframe src="https://player.vimeo.com/video/640381678?h=9ce4d85b97&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="MOTT Training 6"></iframe></div>
+	<</replace>>
+		<</if>>
+		<</timed>>
+
+	
 	</main>
-		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "Zero">><</link>></div><div id="text"></div></nav></footer>
+		<footer><nav><div id="back" class="button-wrapper"><<link "Back" "Zero">><</link>></div>
+	<!-- Toggle Button (center bottom) -->
+		<<timed 0.1s>>
+			<span class="button-wrapper" aria-label="Click the button to toggle audio description">
+		
+			<<if $adMode is false>>
+				<<button "Play with Audio Description">>
+					<<set $adMode to true>>
+					<<goto "FourtyThree">>
+					<</button>>
+					<<else>>
+				<<button "Play without Audio Description">>
+					<<set $adMode to false>>
+					<<goto "FourtyThree">>
+				<</button>>
+				
+				<</if>>
+		
+				</span>
+			<</timed>>
+		<div id="text"></div></nav></footer>
 </div>
 <<silently>>
 <<timed 0.1s t8n>><<append "#text">><br><span class="button-wrapper" aria-label="Click a button or link to move on"><<button "Next" "TransPass">><<set $next to "FourtyFour-Cert">><</button>></span><</append>> <</timed>>
@@ -2670,7 +2928,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	</main>
 	<<include "footer">>
 </div>
-
+<<set $adMode to false>>
 
 :: TutorialTwo [nobr tutorial] {"position":"484.33333333333337,121.33333333333334","size":"100,100"}
 <div class="wrapper cogs">

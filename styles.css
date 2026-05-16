@@ -53,9 +53,16 @@ a:hover {
 }
 
 div#back > a {
-  border: white solid 1px;
+
   padding: 1rem;
   border-radius: 5px;
+}
+
+div#back > a:hover, 
+div#back > a:focus, 
+div#back > a:focus-visible
+ {
+  border-radius: 0;
 }
 
 div#back > a:hover {
@@ -244,12 +251,38 @@ img.logomott {
   text-transform: uppercase;
 }
 
-a.link-internal.macro-link:focus-visible,
-a.link-internal.link-image:focus-visible,
+
 .button-wrapper > button:focus-visible,
-.button-wrapper > a:focus-visible {
+.button-wrapper > a:focus-visible, 
+.button-wrapper > button:focus,
+.button-wrapper > a:focus, 
+.button-wrapper > button:hover,
+.button-wrapper > a:hover{
+  background-color: black;
+  color: white;
   outline: solid white 3px;
   outline-offset: 5px;
+}
+
+button:hover, html[data-outlines] button:focus {
+  background-color: black;
+  color: white;
+  border-color: transparent;
+}
+
+a:hover, html[data-outlines] a:focus{
+  color: white
+}
+
+
+
+a.link-internal.macro-link:focus-visible,
+a.link-internal.link-image:focus-visible,
+a.link-internal.macro-link:focus,
+a.link-internal.link-image:focus{
+  outline: solid white 3px;
+  outline-offset: 5px;
+  
 }
 
 #back.button-wrapper > a {
@@ -259,6 +292,12 @@ a.link-internal.link-image:focus-visible,
 
 .button-wrapper.restart > button {
   font-size: 1.8rem;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+  border-color: white;
 }
 
 /* plain buttons */
@@ -284,6 +323,14 @@ a.link-internal.link-image:focus-visible,
 .button-wrapper.inline {
   display: inline;
   padding: 2px;
+}
+
+.button-wrapper.inline > button:focus-visible, 
+.button-wrapper.inline > button:focus, 
+.button-wrapper.inline > button:hover{
+  background-color: transparent;
+  color:black;
+
 }
 
 .hint-button > button {
@@ -405,7 +452,8 @@ a.link-internal.link-image:focus-visible,
 .wrapper > main.video {
   height: 100%;
 }
-.video-wrapper {
+
+.video-wrapper, #videoContainer {
   display: flex;
   width: 100%;
   height: 100%;
@@ -552,6 +600,7 @@ header.menu-grid > .logo-wrapper > img.logo.na {
 .menu-item {
   display: flex;
   flex-direction: column;
+  padding: 0.5rem
 }
 
 .menu-item.grid-item > img.option,
@@ -740,6 +789,7 @@ input.macro-textbox {
   background-color: #fff;
   border: 2px solid var(--orange);
   border-radius: 5px;
+
 }
 
 h3.orange {
@@ -1572,3 +1622,4 @@ span.intext.cipher {
   align-items: flex-end;
   width: 100%;
 }
+
