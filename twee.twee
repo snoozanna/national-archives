@@ -2245,7 +2245,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 			<<textbox "$password22"  "">> 
 			</div>
 				<div class="answers-item" >
-			<label for="textbox-password3"  tabindex="0"><span aria-label="Enter Code Four here:" role="label" >Code One:</span> <span id="wrong3" class="status" > </span> 	</label>
+			<label for="textbox-password3"  tabindex="0"><span aria-label="Enter Code Four here:" role="label" >Code Four:</span> <span id="wrong3" class="status" > </span> 	</label>
 			<<textbox "$password3"  "">> 
 			</div>
 		
