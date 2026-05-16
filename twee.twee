@@ -104,7 +104,7 @@ setup.JSLoaded = false;
 	<img src="assets/img/audiooff.png">
 	<img src="assets/img/onicon.png">
 	<img src="assets/img/mott-logo.png">
-	
+	<img src="assets/img/na-logo.png">
 </div>
 
   <div class="wrapper audio" id="mount">
