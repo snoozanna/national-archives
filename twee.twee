@@ -368,7 +368,7 @@ setup.JSLoaded = false;
 
 :: Two [nobr logo] {"position":"931.3333333333334,103.66666666666664","size":"100,100"}
 /* MENU  */
-<<set $title to "343">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+<<set $title to "343">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 <<if $audioOn is true>><audio src="assets/audio/Challenge 1.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 <div class="wrapper menu">
 <<include "headermenugrid">>
@@ -435,7 +435,7 @@ setup.JSLoaded = false;
 <div class="wrapper menu">
 	<<include "headermenu">>
 	<main id="main" class="menu">
-	<p>/*<<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 2.wav" autoplay>Sound plays</audio><</if>>*/<<if $audioOn is true>><audio src="assets/audio/2. Challenge 1 - Keyword 1 V2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
+	<p><<if $audioOn is true>><audio src="assets/audio/2. Challenge 1 - Keyword 1 V2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
 	
 	<div class="content-wrapper">
 		<<include "sidebarcode">>
@@ -470,7 +470,7 @@ setup.JSLoaded = false;
 <div class="wrapper menu codeword question">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question">
-		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 		<div id="audiomount"></div>
 
 	<div class="content-wrapper">
@@ -530,7 +530,7 @@ setup.JSLoaded = false;
 over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer1">
-	<p><<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="assets/sounds/3. Challenge 1 - Keyword 2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
+	<p><<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.mp3" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="assets/sounds/3. Challenge 1 - Keyword 2.mp3" autoplay>Audio not supported in your browser</audio><</if>></p>
 	
 	<div class="content-wrapper">
 		<<include "sidebarcode">>
@@ -556,7 +556,7 @@ over secret files">
 :: Eight [nobr] {"position":"998.9999999999999,495.3333333333333","size":"100,100"}
 <div class="wrapper menu codeword question">
 <<include "headermenu">>
-	<main id="main" class=" menu codeword question "><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+	<main id="main" class=" menu codeword question "><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 		<div id="audiomount"></div>
 
 	<div class="content-wrapper">
@@ -608,7 +608,7 @@ over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer3">
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.mp3" autoplay>Sound plays</audio><</if>>
 	<<if $audioOn is true>><audio src="assets/sounds/5. Challenge 1 - end.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 
 	
@@ -638,7 +638,7 @@ over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question answer3">
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 	
 		<div class="content-wrapper">
 			<<include "sidebarcode">>
@@ -725,7 +725,7 @@ over secret files">
 <div class="wrapper menu">
 <<include "headermenugrid">>
 	<main id="main" class="menu">
-		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 		<<if $audioOn is true>><audio src="assets/audio/Challenge 2.mp3" autoplay >Audio is not supported on your device</audio><</if>>
 
 		/* GRID  */
@@ -827,7 +827,7 @@ over secret files">
 <<include "headermenugrid">>
 	<main id="main" class="menu">
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 	
 	<div class="content-wrapper">
 		<<include "sidebarfog">>
@@ -969,7 +969,7 @@ over secret files">
 <<include "headermenugrid">>
 	<main id="main" class="menu">
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 	
 	<div class="content-wrapper">
 		<<include "sidebarfog">>
@@ -1075,7 +1075,7 @@ over secret files">
 <<include "headermenu">>
 	<main id="main" class=" menu codeword question ">
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 
 		<div class="content-wrapper">
 			<<include "sidebarfog">>
@@ -1113,7 +1113,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <div class="wrapper">
 	<main id="main" class="video">
 	<div id="videoContainer"></div>
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay></audio><</if>><<set $title to "V3">>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.mp3" autoplay></audio><</if>><<set $title to "V3">>
 	<<timed 0.1s>>
 	<<if $adMode is true>>
 		<<replace "#videoContainer">>	
@@ -1162,7 +1162,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 
 :: Sixteen [nobr logo] {"position":"788,1319.6666666666667","size":"100,100"}
 /* MENU */
-<<set $title to "sfsd">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+<<set $title to "sfsd">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 <<if $audioOn is true>><audio src="assets/audio/Challenge 3.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 <div class="wrapper menu">
 <<include "headermenugrid">>
@@ -1490,7 +1490,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <div class="wrapper menu">
 <<include "headermenugrid">>
 	<main id="main" class="menu">
-		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+		<<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 	<<if $audioOn is true>><audio src="assets/audio/Challenge 4.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 		/* GRID  */
 
@@ -1557,7 +1557,7 @@ STUFF IN HERE HAS BEEN MOVED TO THE END OF THIRTEEN
 <<set $challenge to 4>><<set $title to 5>>
 <div class="wrapper menu">
 	<<include "headermenu">>
-	<main id="main" class="menu"><<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 2.wav"   autoplay id="bgAudio">Sound plays</audio><</if>>
+	<main id="main" class="menu"><<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 2.mp3"   autoplay id="bgAudio">Sound plays</audio><</if>>
 	<<if $audioOn is true>><audio src="assets/sounds/19. Challenge 4 - 1.mp3"  autoplay >Audio is not supported on your device</audio><</if>>
 	<div class="content-wrapper">
 	<<include "sidebartime">>
@@ -1706,7 +1706,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 :: TwentyEight [nobr video] {"position":"1538,497.9999999999999","size":"100,100"}
 <div class="wrapper">
 	<main id="main" class="video">
-<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<set $title to "V5">>
+<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.mp3" autoplay>Sound plays</audio><</if>><<set $title to "V5">>
 <div id="videoContainer"></div>
 <<timed 0.1s>>
 	<<if $adMode is true>>
@@ -1815,7 +1815,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 <<include "headermenu">>
 	<main id="main" class=" menu  ">
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 
 		<div class="content-wrapper">
 			<<include "sidebarfire">>
@@ -1839,7 +1839,7 @@ but passing those will give you the power to nudge the past if your Time Mission
 :: TwentyNine [nobr logo] {"position":"1555.3333333333335,352.3333333333333","size":"100,100"}
 /* MENU BAGUETTE  */
 
-<<set $title to "sdf">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.wav" autoplay loop>Audio is not supported on your device</audio><</if>>
+<<set $title to "sdf">><<if $audioOn is true>><audio src="assets/sounds/sfx/clock loop.mp3" autoplay loop>Audio is not supported on your device</audio><</if>>
 <<if $audioOn is true>><audio src="assets/audio/Secret Mission.mp3" autoplay>Audio is not supported on your device</audio><</if>>
 
 <div class="wrapper menu">
@@ -2426,7 +2426,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 
 
 :: FourtyTwo [nobr] {"position":"2075,1550","size":"100,100"}
-<div id="audio"><<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.wav" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="assets/sounds/Loading op 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
+<div id="audio"><<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 3.mp3" autoplay>Sound plays</audio><</if>><<if $audioOn is true>><audio src="assets/sounds/Loading op 2.mp3" autoplay>Audio is not supported on your device</audio><</if>></div>
 
 
 <div class="wrapper menu mission" id="wrapper">
@@ -2558,7 +2558,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 			<p>Take a picture or screen shot of your certification below.</p> 
 			<p>Next time you come into The National Archives, show the picture to a staff member (an undercover MoTT agent) in the bookshop to receive your official MoTT Mission Log Book and agent badge.   </p>
 		</div >
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 <div class="certificate-wrapper">
 	<img src="assets/img/certificateteal.png" alt="A certificate reading Eligible for Field Duty, Novice Nudger Grade 1, Signal Fire System access granted. Signed by Chief Timer Beatrix Vanderburg" class="certificate"/>
 	<div class="certificate-text">
@@ -2804,7 +2804,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<include "footermission">>
 </div>
 <<timed 1s>>
-<<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/sfx/SFS Message incoming.wav"  autoplay  id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
+<<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/sfx/SFS Message incoming.mp3"  autoplay  id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
 <<done>>
 <<if $audioOn is true>>
 <<set $vol to setup.changeVol(0.5)>>
@@ -2853,7 +2853,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	</main>
 	<<include "footermission">>
 </div>
-<<timed 0.2s>><<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/sfx/SFS Message incoming.wav" autoplay id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
+<<timed 0.2s>><<append "#audio">><<if $audioOn is true>><audio src="assets/sounds/sfx/SFS Message incoming.mp3" autoplay id="bgAudio">Audio is not supported on your device</audio><</if>><</append>>
 <<done>>
 <<if $audioOn is true>>
 <<set $vol to setup.changeVol(0.5)>>
@@ -2906,7 +2906,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 	<<set $title to "transition">>
 	
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 3.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Loading op 3.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 	
 	<div class="mottlogo-wrapper"><img src="assets/img/mott-logo.png" id="LogoRot" class="logomott logoRot" alt="The Ministry of Time Travel Logo is spinning"></div>
 
@@ -2996,7 +2996,7 @@ armies.</p> </span><<ScrollTo "bottom3" false>>
 <<include "headermenu">>
 	<main id="main" class=" menu time ">
 	
-	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.wav" autoplay>Audio not supported in your browser</audio><</if>>
+	<<if $audioOn is true>><audio src="assets/sounds/sfx/Correct answer op 1.mp3" autoplay>Audio not supported in your browser</audio><</if>>
 
 		<div class="content-wrapper">
 			<<include "sidebartime">>
